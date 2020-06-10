@@ -17,7 +17,7 @@
           <e p="TerrainGenerator.cs" t="Include" />
           <e p="UI_EscapeMenu.cs" t="Include" />
         </e>
-        <e p="12 - Imported Packages" t="Include">
+        <e p="12-ImportedPackages" t="Include">
           <e p="com" t="Include">
             <e p="heparo" t="Include">
               <e p="terrain" t="Include">

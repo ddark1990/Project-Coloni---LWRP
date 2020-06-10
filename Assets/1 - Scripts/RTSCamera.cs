@@ -5,15 +5,18 @@ using UnityEngine;
 
 public class RTSCamera : MonoBehaviour
 {
+    //singleton
+    public static RTSCamera Instance { get; private set; }
+
     [Header("Movement Settings")]
-    public float panSpeed = 1;
-    public float panTime = 5;
-    public float rotationAmount = 2;
+    public float panSpeed = 0.3f;
+    public float panTime = 4f;
+    public float rotationAmount = 1.5f;
 
     [Header("Zoom Settings")]
-    public float minHeight;
-    public float maxHeight;
-    public float scrollZoomSensitivity = 2;
+    public float minHeight = 10f;
+    public float maxHeight = 75f;
+    public float scrollZoomSensitivity = 10f;
     public float heightDampening = 5f;
 
     [Header("Axis Strings")]
@@ -35,9 +38,16 @@ public class RTSCamera : MonoBehaviour
     private float _targetHeight;
     private float _distanceToGround;
     private bool _rotating;
+    public bool cameraSmoothing;
 
     [Header("Cache")]
     public Transform refTransform;
+
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -58,12 +68,12 @@ public class RTSCamera : MonoBehaviour
         HandleMouseInput();
     }
     
-    private void HandleMovementInput()
+    private void HandleMovementInput() //add camera smoothing
     {
         var facing = _inputAxis.magnitude > 0 ? refTransform.forward.normalized * _inputAxis.y + refTransform.right.normalized * _inputAxis.x : Vector3.zero;
         
         _newPos += facing * panSpeed;
-        
+
         _transform.position = Vector3.Lerp(_transform.position, new Vector3(_newPos.x, _targetHeight + _difference, _newPos.z) + facing, Time.deltaTime * panTime);
     }
 
