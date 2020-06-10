@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b94e7643-efd0-4934-b8a0-0256359f3c2b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../FPS Bolt/Assets/1 - Scripts/PlayerScripts/ControllerInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/TerrainGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../UnityEditor/2019.4.0f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/LayoutElement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/12 - Imported Packages/RTS_Camera/Scripts/RTS_Camera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI_EscapeMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../FPS Bolt/Assets/1 - Scripts/PlayerScripts/FPSController.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/TerrainGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/12 - Imported Packages/RTS_Camera/Scripts/RTS_Camera.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI_EscapeMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1clKxL78qGAQbyqn933MIl6iCY2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b94e7643-efd0-4934-b8a0-0256359f3c2b" name="Default Changelist" comment="" />
+      <created>1591097994858</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591097994858</updated>
+      <workItem from="1591098031754" duration="190000" />
+      <workItem from="1591098438742" duration="1630000" />
+      <workItem from="1591173319416" duration="2451000" />
+      <workItem from="1591182243155" duration="15966000" />
+      <workItem from="1591256600126" duration="1198000" />
+      <workItem from="1591289902604" duration="13548000" />
+      <workItem from="1591342434905" duration="735000" />
+      <workItem from="1591376562326" duration="11393000" />
+      <workItem from="1591420353995" duration="9469000" />
+      <workItem from="1591466725210" duration="1282000" />
+      <workItem from="1591591677143" duration="629000" />
+      <workItem from="1591601976108" duration="750000" />
+      <workItem from="1591639472594" duration="1894000" />
+      <workItem from="1591726570256" duration="5200000" />
+      <workItem from="1591776005105" duration="3934000" />
+      <workItem from="1591810910322" duration="1100000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1040" y="165" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1591470370259">
+      <screen x="-1440" y="0" width="1440" height="860" />
+    </state>
+    <state x="-1040" y="165" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591470370259" />
+    <state x="-1440" y="0" width="1456" height="948" maximized="true" key="dock-window-1" timestamp="1591384167841">
+      <screen x="-1440" y="0" width="1440" height="860" />
+    </state>
+    <state x="-1440" y="0" width="1456" height="948" maximized="true" key="dock-window-1/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1591384167841" />
+  </component>
+</project>
