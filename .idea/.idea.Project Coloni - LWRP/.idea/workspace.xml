@@ -20,20 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b94e7643-efd0-4934-b8a0-0256359f3c2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI_EscapeMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI_EscapeMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/10 - FX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/13 - Settigns/LWRP-HighQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/13 - Settigns/LWRP-HighQuality.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/6 - Fonts/Balsamiq_Sans/BalsamiqSans-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/6 - Fonts/Balsamiq_Sans/BalsamiqSans-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/6 - Fonts/Piedra/Piedra-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/6 - Fonts/Piedra/Piedra-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/6 - Fonts/Roboto/Roboto-Black SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/6 - Fonts/Roboto/Roboto-Black SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/6 - Fonts/Roboto/Roboto-Light SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/6 - Fonts/Roboto/Roboto-Light SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/6 - Fonts/Roboto/Roboto-Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/6 - Fonts/Roboto/Roboto-Medium SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/6 - Fonts/Roboto/Roboto-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/6 - Fonts/Roboto/Roboto-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/6 - Fonts/Roboto/Roboto-Thin SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/6 - Fonts/Roboto/Roboto-Thin SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForwardRenderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForwardRenderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonNature/Shaders/SyntyStudios_SkyGradient.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonNature/Shaders/SyntyStudios_SkyGradient.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +47,15 @@
     <setting file="file://$PROJECT_DIR$/../FPS Bolt/Assets/1 - Scripts/PlayerScripts/ControllerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/TerrainGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/_preload.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/623DD1C5-ED6E-43BC-8659-6AF9203BEC21/48/9795866d/TweenSettingsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/QuickOutline/Scripts/OutlineObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UnityEditor/2019.4.0f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/LayoutElement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI_EscapeMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/ColonistController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../FPS Bolt/Assets/1 - Scripts/PlayerScripts/FPSController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -56,8 +63,17 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/TerrainGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/12 - Imported Packages/RTS_Camera/Scripts/RTS_Camera.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SelectionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/ColonistController.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI_EscapeMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/_preload.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/10 - Shaders/OutlineDiffuse.shader" />
+        <option value="$PROJECT_DIR$/Assets/Outline Shader/Tutorial/Shaders/Outline.hlsl" />
+        <option value="$PROJECT_DIR$/Assets/QuickOutline/Scripts/OutlineObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/QuickOutline/Scripts/Outline.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" />
       </list>
     </option>
   </component>
@@ -122,7 +138,8 @@
       <workItem from="1591726570256" duration="5200000" />
       <workItem from="1591776005105" duration="3934000" />
       <workItem from="1591810910322" duration="2071000" />
-      <workItem from="1591822333843" duration="3227000" />
+      <workItem from="1591822333843" duration="7268000" />
+      <workItem from="1591895360791" duration="14383000" />
     </task>
     <servers />
   </component>

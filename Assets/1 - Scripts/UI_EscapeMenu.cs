@@ -5,7 +5,9 @@ using Doozy.Engine.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_EscapeMenu : MonoBehaviour
+namespace ProjectColoni
+{
+    public class UI_EscapeMenu : MonoBehaviour
 {
     [SerializeField] private Slider moveSpeedSlider;
     [SerializeField] private Slider stopSpeedSlider;
@@ -82,4 +84,11 @@ public class UI_EscapeMenu : MonoBehaviour
     {
         _showControlOptionsMenu = !_showControlOptionsMenu;
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+}
+
 }

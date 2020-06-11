@@ -8,6 +8,14 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="1 - Scripts" t="Include">
+          <e p="_preload.cs" t="Include" />
+          <e p="ColonistScripts" t="Include">
+            <e p="ColonistController.cs" t="Include" />
+          </e>
+          <e p="GameScripts" t="Include">
+            <e p="Selectable.cs" t="Include" />
+            <e p="SelectionManager.cs" t="Include" />
+          </e>
           <e p="ObjectPlacer" t="Include">
             <e p="ObjectSpawner.cs" t="Include" />
             <e p="ObjectSpawnerDataset.cs" t="Include" />
@@ -862,6 +870,32 @@
               <e p="SimplePoolManager.cs" t="Include" />
             </e>
           </e>
+          <e p="Kevin Iglesias" t="Include">
+            <e p="IKHelperTool" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="IKHelperTool.cs" t="Include" />
+                <e p="IKHelperToolCustomInspector.cs" t="Include" />
+                <e p="IKHelperToolSequenceSMB.cs" t="Include" />
+                <e p="IKHelperToolSMB.cs" t="Include" />
+                <e p="IKHelperToolSMBRemover.cs" t="Include" />
+                <e p="IKHelperToolUtils.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Villager Animations Pack" t="Include">
+              <e p="Example Scene" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="BucketRoute.cs" t="Include" />
+                  <e p="BucketRouteAnimator.cs" t="Include" />
+                  <e p="CookingScript.cs" t="Include" />
+                  <e p="CookingSMB.cs" t="Include" />
+                  <e p="GatherResource.cs" t="Include" />
+                  <e p="LiftScript.cs" t="Include" />
+                  <e p="LiftSMB.cs" t="Include" />
+                  <e p="RunningVillagers.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
           <e p="Modern UI Pack" t="Include">
             <e p="Editor" t="Include">
               <e p="InitMUIP.cs" t="Include" />
@@ -1079,6 +1113,18 @@
               <e p="Shaders" t="Include">
                 <e p="POLYGON_Zombies.shader" t="Include" />
               </e>
+            </e>
+          </e>
+          <e p="QuickOutline" t="Include">
+            <e p="readme.txt" t="Include" />
+            <e p="Resources" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="OutlineFill.shader" t="Include" />
+                <e p="OutlineMask.shader" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="OutlineObject.cs" t="Include" />
             </e>
           </e>
           <e p="RTS_Camera" t="Include">

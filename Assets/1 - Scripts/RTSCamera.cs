@@ -1,8 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
+namespace ProjectColoni
+{
 [RequireComponent(typeof(Camera))]
-
 public class RTSCamera : MonoBehaviour
 {
     //singleton
@@ -125,4 +126,6 @@ public class RTSCamera : MonoBehaviour
 
         return distanceToGround;
     }
+}
+
 }
