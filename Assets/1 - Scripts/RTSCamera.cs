@@ -6,13 +6,12 @@ namespace ProjectColoni
 [RequireComponent(typeof(Camera))]
 public class RTSCamera : MonoBehaviour
 {
-    //singleton
     public static RTSCamera Instance { get; private set; }
 
     [Header("Movement Settings")]
-    public float panSpeed = 0.3f;
-    public float panTime = 4f;
-    public float rotationAmount = 1.5f;
+    public float panSens = 0.3f;
+    public float smoothDamp = 4f;
+    public float rotationSens = 1.5f;
 
     [Header("Zoom Settings")]
     public float minHeight = 10f;
@@ -41,13 +40,18 @@ public class RTSCamera : MonoBehaviour
     private bool _rotating;
     public bool cameraSmoothing;
 
-    [Header("Cache")]
-    public Transform refTransform;
-
 
     private void Awake()
     {
-        Instance = this;
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
@@ -61,7 +65,7 @@ public class RTSCamera : MonoBehaviour
     private void Update()
     {
         _inputAxis = new Vector2(Input.GetAxis(horizontalAxis), Input.GetAxis(verticalAxis)).normalized;
-        _mouseAxis = new Vector2(Input.GetAxisRaw(mouseHorizontalAxis), Input.GetAxisRaw(mouseVerticalAxis)).normalized;
+        _mouseAxis = new Vector2(Input.GetAxis(mouseHorizontalAxis), Input.GetAxis(mouseVerticalAxis)).normalized;
         _mouseScroll = Input.GetAxisRaw(zoomingAxis);
         
         HandleMovementInput();
@@ -71,33 +75,35 @@ public class RTSCamera : MonoBehaviour
     
     private void HandleMovementInput() //add camera smoothing
     {
-        var facing = _inputAxis.magnitude > 0 ? refTransform.forward.normalized * _inputAxis.y + refTransform.right.normalized * _inputAxis.x : Vector3.zero;
+        var transform1 = transform;
+        var facing = _inputAxis.magnitude > 0 ? transform1.forward.normalized * _inputAxis.y + transform1.right.normalized * _inputAxis.x : Vector3.zero;
         
-        _newPos += facing * panSpeed;
+        _newPos = _newPos += facing * panSens;
 
-        _transform.position = Vector3.Lerp(_transform.position, new Vector3(_newPos.x, _targetHeight + _difference, _newPos.z) + facing, Time.deltaTime * panTime);
+        _transform.position = Vector3.Lerp(_transform.position, new Vector3(_newPos.x, _targetHeight + _difference, _newPos.z), Time.deltaTime * smoothDamp);
     }
 
     private void HandleRotationInput()
     {
-        Cursor.visible = _rotating ? Cursor.visible = false : Cursor.visible = true; //shows and hides mouse when rotating, convert to event*
-        /*if (Input.GetKey(KeyCode.Q))
-       {
-           _newRot *= Quaternion.Euler(_transform.InverseTransformDirection(Vector3.up) * rotationAmount);
-       }
-       else if (Input.GetKey(KeyCode.E))
-       {
-           _newRot *= Quaternion.Euler(_transform.InverseTransformDirection(Vector3.up) * -rotationAmount);
-       }*/
-        
+        Cursor.visible = _rotating ? Cursor.visible = false : Cursor.visible = true; //shows and hides mouse when rotating
+
+        var transformEulerAngles = _transform.eulerAngles;
+
         if (Input.GetKey(KeyCode.Mouse2))
         {
             _rotating = true;
-            _newRot *= Quaternion.Euler(_transform.InverseTransformDirection(new Vector3(0, _mouseAxis.x, 0)) * rotationAmount);
+
+            //_newRot *= Quaternion.Euler(_transform.InverseTransformDirection(new Vector3(0, _mouseAxis.x, 0)) * panTime); //old
+            
+            transformEulerAngles.x = 45;
+            transformEulerAngles.z = 0;
+            transformEulerAngles.y += _mouseAxis.x;
         }
         else _rotating = false;
 
-        _transform.rotation = Quaternion.Lerp(_transform.rotation, _newRot, Time.deltaTime * panTime);
+        //_transform.rotation = Quaternion.Lerp(_transform.rotation, _newRot, Time.deltaTime * rotationAmount); //old
+        
+        _transform.eulerAngles = Vector3.Lerp(_transform.eulerAngles, transformEulerAngles, Time.deltaTime * rotationSens);
     }
 
     private void HandleMouseInput()

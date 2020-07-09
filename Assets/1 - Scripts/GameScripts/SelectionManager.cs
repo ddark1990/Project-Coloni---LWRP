@@ -8,7 +8,7 @@ namespace ProjectColoni
 {
     public class SelectionManager : MonoBehaviour
     {
-        private static SelectionManager Instance;
+        private static SelectionManager Instance { get; set; }
 
         public List<Selectable> currentlySelectedObjects;
         public Selectable currentlySelectedObject;
@@ -16,13 +16,26 @@ namespace ProjectColoni
         public LayerMask selectableMask;
         
         private Camera _cam;
-        private Selectable _selected;
+        private Selectable _selectable;
         private RaycastHit _hit;
+
+        public delegate void ObjectSelected();
+
+
+        private void OnEnable()
+        {
+            EventRelay.ObjectSelected += OnSelectEvent;
+            EventRelay.ObjectDeSelected += OnDeSelectEvent;
+        }
+
+        private void OnDisable()
+        {
+            //EventRelay.ObjectSelected -= OnSelectEvent;
+            //EventRelay.ObjectDeSelected -= OnDeSelectEvent;
+        }
 
         private void Awake()
         {
-            Instance = this;
-
             InitializeSelectionManager();
         }
 
@@ -35,6 +48,16 @@ namespace ProjectColoni
 
         private void InitializeSelectionManager()
         {
+            if(Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+
             DontDestroyOnLoad(this);
             
             _cam = Camera.main;
@@ -43,8 +66,10 @@ namespace ProjectColoni
 
         private void SelectObject()
         {
-            if (_selected != null) _selected.selected = false;
+            //Debug.Log("FUCK");
             
+            OnDeSelectEvent(_selectable); 
+
             currentlySelectedObjects.Clear();
             if (currentlySelectedObjects.Count == 0) currentlySelectedObject = null;
             
@@ -56,16 +81,31 @@ namespace ProjectColoni
             var ray = _cam.ScreenPointToRay(Input.mousePosition);
 
             if (!Physics.Raycast(ray, out _hit, Mathf.Infinity, selectableMask)) return;
-            
-            _selected = _hit.collider.transform.root.gameObject.GetComponent<Selectable>();
 
-            _selected.selected = true;
-            currentlySelectedObject = _selected;
+            //Debug.Log(_hit.collider.name);
+
+            _selectable = _hit.collider.transform.root.GetComponent<Selectable>();
+                
+            OnSelectEvent(_selectable);
+        }
+        
+        #region Events
+
+        private void OnSelectEvent(Selectable selectable)
+        {
+            selectable.selected = true;
+            currentlySelectedObject = selectable;
                     
             if (!currentlySelectedObjects.Contains(currentlySelectedObject))
             {
-                currentlySelectedObjects.Add(_selected);
+                currentlySelectedObjects.Add(selectable);
             }
         }
+        private void OnDeSelectEvent(Selectable selectable)
+        {
+            if(selectable != null) selectable.selected = false;
+        }
+        
+        #endregion
     }
 }

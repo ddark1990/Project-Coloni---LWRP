@@ -57,9 +57,9 @@ namespace ProjectColoni
 
     private void InitializeSliders()
     {
-        moveSpeedSlider.value = RTSCamera.Instance.panSpeed;
-        stopSpeedSlider.value = RTSCamera.Instance.panTime;
-        rotationSpeedSlider.value = RTSCamera.Instance.rotationAmount;
+        moveSpeedSlider.value = RTSCamera.Instance.panSens;
+        stopSpeedSlider.value = RTSCamera.Instance.smoothDamp;
+        rotationSpeedSlider.value = RTSCamera.Instance.rotationSens;
         scrollSensSlider.value = RTSCamera.Instance.scrollZoomSensitivity;
         zoomMaxHeightSlider.value = RTSCamera.Instance.maxHeight;
         zoomSmoothingSlider.value = RTSCamera.Instance.heightDampening;
@@ -67,9 +67,9 @@ namespace ProjectColoni
 
     private void UpdateSliders()
     {
-        RTSCamera.Instance.panSpeed = moveSpeedSlider.value;
-        RTSCamera.Instance.panTime = stopSpeedSlider.value;
-        RTSCamera.Instance.rotationAmount = rotationSpeedSlider.value;
+        RTSCamera.Instance.panSens = moveSpeedSlider.value;
+        RTSCamera.Instance.smoothDamp = stopSpeedSlider.value;
+        RTSCamera.Instance.rotationSens = rotationSpeedSlider.value;
         RTSCamera.Instance.scrollZoomSensitivity = scrollSensSlider.value;
         RTSCamera.Instance.maxHeight = zoomMaxHeightSlider.value;
         RTSCamera.Instance.heightDampening = zoomSmoothingSlider.value;

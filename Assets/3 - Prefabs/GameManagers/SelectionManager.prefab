@@ -45,3 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentlySelectedObjects: []
   currentlySelectedObject: {fileID: 0}
+  selectableMask:
+    serializedVersion: 2
+    m_Bits: 2147483648
