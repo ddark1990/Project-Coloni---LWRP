@@ -28,7 +28,6 @@ namespace ProjectColoni
         public bool IsThirsty => thirst <= 50;
         public bool IsFatigued => stamina <= 25;
         public bool IsTired => energy <= 20;
-        
         public bool IsDead { get; set; }
         
         private void Update()
