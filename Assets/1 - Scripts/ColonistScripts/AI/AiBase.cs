@@ -6,11 +6,11 @@ using UnityEngine;
 
 namespace ProjectColoni
 {
-    [RequireComponent(typeof(AiVitals))]
+    [RequireComponent(typeof(AiStats))]
     [RequireComponent(typeof(AiSensors))]
     public class AiBase : MonoBehaviour
     {
-        [HideInInspector] public AiVitals vitals;
+        [HideInInspector] public AiStats stats;
         [HideInInspector] public AiSensors sensors;
         
         [HideInInspector] public bool enableSensors;
@@ -18,7 +18,7 @@ namespace ProjectColoni
         
         private void Awake()
         {
-            vitals = GetComponent<AiVitals>();
+            stats = GetComponent<AiStats>();
             sensors = GetComponent<AiSensors>();
         }
 

@@ -3,7 +3,7 @@ using UnityEditor;
 
 namespace ColonistScripts.AI.CustomInspector
 {
-    [CustomEditor(typeof(AiVitals))]
+    [CustomEditor(typeof(AiStats))]
     public class AiVitalsCustomInspector : Editor
     {
         private bool _enableDefaultInspector;

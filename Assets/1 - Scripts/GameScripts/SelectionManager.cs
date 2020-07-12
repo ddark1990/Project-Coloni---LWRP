@@ -8,13 +8,19 @@ namespace ProjectColoni
 {
     public class SelectionManager : MonoBehaviour
     {
-        private static SelectionManager Instance { get; set; }
+        public static SelectionManager Instance { get; private set; }
 
         public List<Selectable> currentlySelectedObjects;
         public Selectable currentlySelectedObject;
+        public Selectable hoveringObject;
 
         public LayerMask selectableMask;
         
+        public Color hoverOverColor;
+        public Color selectedColor;
+        public float fadeSpeed = 1;
+        public float outlineWidth = 2;
+
         private Camera _cam;
         private Selectable _selectable;
         private RaycastHit _hit;
@@ -41,6 +47,8 @@ namespace ProjectColoni
 
         private void Update()
         {
+            //hoveringObject = _hit.collider.transform.root.GetComponent<Selectable>();
+            
             if (!Input.GetKeyDown(KeyCode.Mouse0)) return;
 
             SelectObject();
@@ -71,7 +79,10 @@ namespace ProjectColoni
             OnDeSelectEvent(_selectable); 
 
             currentlySelectedObjects.Clear();
-            if (currentlySelectedObjects.Count == 0) currentlySelectedObject = null;
+            if (currentlySelectedObjects.Count == 0)
+            {
+                currentlySelectedObject = null;
+            }
             
             if (EventSystem.current.IsPointerOverGameObject())
             {
@@ -107,5 +118,7 @@ namespace ProjectColoni
         }
         
         #endregion
+
+        
     }
 }

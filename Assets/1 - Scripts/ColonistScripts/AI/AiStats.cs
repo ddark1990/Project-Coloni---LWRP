@@ -5,48 +5,43 @@ using UnityEngine;
 
 namespace ProjectColoni
 {
-    public class AiVitals : MonoBehaviour
+    public class AiStats : MonoBehaviour
     {
-        [Range(0, 1000)] public float health;
-        [Range(0, 1000)] public float hunger;
-        [Range(0, 1000)] public float thirst;
-        [Range(0, 1000)] public float stamina;
-        [Range(0, 1000)] public float energy;
-
-        public AiVitalsObject defaultVitals;
+        [Header("Stats")]
+        [Range(0, 100)] public float health = 100;
+        [Range(0, 100)] public float hunger = 100;
+        [Range(0, 100)] public float thirst = 100;
+        [Range(0, 100)] public float stamina = 100;
+        [Range(0, 100)] public float energy = 100;
+        [Range(0, 100)] public float comfort = 100;
+        [Range(0, 100)] public float happiness = 100;
+        
+        [Header("Rates")]
+        [Range(0, 10)] public float hungerRate;
+        [Range(0, 10)] public float thirstRate;
+        [Range(0, 10)] public float staminaRate;
+        [Range(0, 10)] public float energyRate;
+        
+        private float _damageOverTimeTimer;
 
         public bool IsHungry => hunger <= 50;
         public bool IsThirsty => thirst <= 50;
         public bool IsFatigued => stamina <= 25;
         public bool IsTired => energy <= 20;
-        public bool isDead;
-
-        private void Awake()
-        {
-            InitializeVitals();
-        }
-
+        public bool IsDead { get; set; }
+        
         private void Update()
         {
             UpdateVitals();
         }
-
-        private void InitializeVitals()
-        {
-            health = defaultVitals.health;
-            thirst = defaultVitals.hydration;
-            hunger = defaultVitals.hunger;
-            stamina = defaultVitals.stamina;
-            energy = defaultVitals.energy;
-        }
         
         private void UpdateVitals()
         {
-            if (isDead) return;
+            if (IsDead) return;
 
-            DecreaseClampedFloat(hunger, defaultVitals.hungerRate, out hunger);
-            DecreaseClampedFloat(energy, defaultVitals.energyRate, out energy);
-            DecreaseClampedFloat(thirst, defaultVitals.hydrationRate, out thirst);
+            DecreaseClampedFloat(hunger, hungerRate, out hunger);
+            DecreaseClampedFloat(energy, energyRate, out energy);
+            DecreaseClampedFloat(thirst, thirstRate, out thirst);
 
             if (hunger <= 0)
             {
@@ -54,7 +49,7 @@ namespace ProjectColoni
             }
         }
 
-        private void DecreaseClampedFloat(float floatToClamp, float rate, out float returnedFloat)
+        private void DecreaseClampedFloat(float floatToClamp, float rate, out float returnedFloat) //utility
         {
             if (floatToClamp > 0)
             {
@@ -76,7 +71,6 @@ namespace ProjectColoni
             }
         }
 
-        private float _damageOverTimeTimer;
         public void TakeDamageOverTime(float damage, float waitTime)
         {
             _damageOverTimeTimer -= Time.deltaTime;
@@ -89,7 +83,7 @@ namespace ProjectColoni
 
         public void Die(object obj)
         {
-            isDead = true;
+            IsDead = true;
 
             Debug.Log("Died " + obj);
         }
