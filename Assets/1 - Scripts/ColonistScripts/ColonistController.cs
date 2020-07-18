@@ -35,12 +35,7 @@ namespace ProjectColoni
         {
             GetComponents(); //must come before anything
         }
-
-        private void Start()
-        {
-            RandomColorOnStart();
-        }
-
+        
         private void Update()
         {
             DrawLineRendererPaths(_myNavMeshAgent, _destinationLineRenderer);
@@ -82,13 +77,6 @@ namespace ProjectColoni
             obj.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             
             Destroy(obj, 3);
-        }
-
-        private void RandomColorOnStart() //will be replaced with a modular creation system for each colonist, or presets might be used
-        {
-            var newColor = new Color(Random.Range(0, 1f),Random.Range(0, 1f),Random.Range(0, 1f));
-
-            _skinnedMeshRenderer.material.color = newColor;
         }
         
         private void DrawLineRendererPaths(NavMeshAgent agent, LineRenderer lineRenderer) //navigation path render line for in game *currently allocates 88 bytes per line drawn

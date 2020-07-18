@@ -21,7 +21,7 @@ namespace ProjectColoni
         public float fadeSpeed = 1;
         public float outlineWidth = 2;
 
-        private Camera _cam;
+        public Camera cam;
         private Selectable _selectable;
         private RaycastHit _hit;
 
@@ -68,7 +68,7 @@ namespace ProjectColoni
 
             DontDestroyOnLoad(this);
             
-            _cam = Camera.main;
+            cam = Camera.main;
 
         }
 
@@ -89,8 +89,8 @@ namespace ProjectColoni
                 return;
             }
                 
-            var ray = _cam.ScreenPointToRay(Input.mousePosition);
-
+            var ray = cam.ScreenPointToRay(Input.mousePosition);
+            
             if (!Physics.Raycast(ray, out _hit, Mathf.Infinity, selectableMask)) return;
 
             //Debug.Log(_hit.collider.name);

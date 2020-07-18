@@ -7,29 +7,44 @@ namespace ProjectColoni
 {
     public class AiStats : MonoBehaviour
     {
-        [Header("Stats")]
-        [Range(0, 100)] public float health = 100;
-        [Range(0, 100)] public float hunger = 100;
-        [Range(0, 100)] public float thirst = 100;
-        [Range(0, 100)] public float stamina = 100;
-        [Range(0, 100)] public float energy = 100;
-        [Range(0, 100)] public float comfort = 100;
-        [Range(0, 100)] public float happiness = 100;
-        
-        [Header("Rates")]
-        [Range(0, 10)] public float hungerRate;
-        [Range(0, 10)] public float thirstRate;
-        [Range(0, 10)] public float staminaRate;
-        [Range(0, 10)] public float energyRate;
+        public Stats.AiStatsObject objectStats;
+        public Stats stats;
         
         private float _damageOverTimeTimer;
 
-        public bool IsHungry => hunger <= 50;
-        public bool IsThirsty => thirst <= 50;
-        public bool IsFatigued => stamina <= 25;
-        public bool IsTired => energy <= 20;
+        public bool IsHungry => stats.Food <= 50;
+        public bool IsFatigued => stats.Stamina <= 25;
+        public bool IsTired => stats.Energy <= 20;
         public bool IsDead { get; set; }
-        
+
+        private void Start()
+        {
+            if (objectStats != null)
+            {
+                stats = new Stats
+                {
+                    AiName = objectStats.aiName,
+                    Age = objectStats.age,
+                    Description = objectStats.description,
+                    gender = objectStats.gender,
+                    Health = objectStats.health,
+                    Food = objectStats.food,
+                    Stamina = objectStats.stamina,
+                    Energy = objectStats.energy,
+                    EnableSecondaryStats = objectStats.enableSecondaryStats,
+                    Comfort = objectStats.comfort,
+                    Recreation = objectStats.recreation,
+                    HungerRate = objectStats.hungerRate,
+                    StaminaRate = objectStats.staminaRate,
+                    EnergyRate = objectStats.energyRate
+                }; 
+            }
+            else
+            {
+                stats = new Stats();
+            }
+        }
+
         private void Update()
         {
             UpdateVitals();
@@ -39,11 +54,10 @@ namespace ProjectColoni
         {
             if (IsDead) return;
 
-            DecreaseClampedFloat(hunger, hungerRate, out hunger);
-            DecreaseClampedFloat(energy, energyRate, out energy);
-            DecreaseClampedFloat(thirst, thirstRate, out thirst);
+            DecreaseClampedFloat(stats.Food, stats.HungerRate, out stats.Food);
+            DecreaseClampedFloat(stats.Energy, stats.EnergyRate, out stats.Energy);
 
-            if (hunger <= 0)
+            if (stats.Food <= 0)
             {
                 TakeDamageOverTime(10,3);
             }
@@ -62,10 +76,10 @@ namespace ProjectColoni
 
         public void TakeDamage(float damage)
         {
-            health -= damage;
+            stats.Health -= damage;
             Debug.Log(gameObject.name + " took " + damage + " damage.");
             
-            if (health <= 0)
+            if (stats.Health <= 0)
             {
                 Die(this);
             }
@@ -79,6 +93,8 @@ namespace ProjectColoni
             
             _damageOverTimeTimer = waitTime;
             TakeDamage(damage);
+            
+            
         }
 
         public void Die(object obj)
@@ -86,24 +102,6 @@ namespace ProjectColoni
             IsDead = true;
 
             Debug.Log("Died " + obj);
-        }
-
-        
-        [CreateAssetMenu(fileName = "VitalsDefault", menuName = "AI/DefaultVitalsObject")]
-        public class AiVitalsObject : ScriptableObject
-        {
-            [Header("Default Values")]
-            [Range(0, 1000)] public float health;
-            [Range(0, 1000)] public float hydration;
-            [Range(0, 1000)] public float hunger;
-            [Range(0, 1000)] public float stamina;
-            [Range(0, 1000)] public float energy;
-            
-            [Header("Rates")]
-            public float hungerRate = 1;
-            public float hydrationRate = 1;
-            public float staminaRate = 1;
-            public float energyRate = 1;
         }
     }
 }

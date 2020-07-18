@@ -23,11 +23,10 @@ namespace ColonistScripts.AI.CustomInspector
             //EditorWindow.focusedWindow.Repaint();
             if(Application.isPlaying) Repaint();
             
-            var healthFloat = Application.isPlaying ? EditorGUILayout.FloatField("Health", controller.stats.health) : EditorGUILayout.FloatField("Health", 0);
-            var hungerFloat = Application.isPlaying ? EditorGUILayout.FloatField("Hunger", controller.stats.hunger) : EditorGUILayout.FloatField("Hunger", 0);
-            var hydrationFloat = Application.isPlaying ? EditorGUILayout.FloatField("Hydration", controller.stats.thirst) : EditorGUILayout.FloatField("Hydration", 0);
-            var staminaFloat = Application.isPlaying ? EditorGUILayout.FloatField("Stamina", controller.stats.stamina) : EditorGUILayout.FloatField("Stamina", 0);
-            var energyFloat = Application.isPlaying ? EditorGUILayout.FloatField("Energy", controller.stats.energy) : EditorGUILayout.FloatField("Energy", 0);
+            var healthFloat = Application.isPlaying ? EditorGUILayout.FloatField("Health", controller.stats.stats.Health) : EditorGUILayout.FloatField("Health", 0);
+            var hungerFloat = Application.isPlaying ? EditorGUILayout.FloatField("Hunger", controller.stats.stats.Food) : EditorGUILayout.FloatField("Hunger", 0);
+            var staminaFloat = Application.isPlaying ? EditorGUILayout.FloatField("Stamina", controller.stats.stats.Stamina) : EditorGUILayout.FloatField("Stamina", 0);
+            var energyFloat = Application.isPlaying ? EditorGUILayout.FloatField("Energy", controller.stats.stats.Energy) : EditorGUILayout.FloatField("Energy", 0);
 
             EditorGUILayout.EndVertical();
 

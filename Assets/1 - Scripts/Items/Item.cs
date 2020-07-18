@@ -1,9 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Item : MonoBehaviour
+namespace ProjectColoni
 {
-    public int itemCount;
-    public ItemType itemType;
+    public class Item : MonoBehaviour
+    {
+        public int itemCount;
+        public ItemType itemType;
+    }
 }
