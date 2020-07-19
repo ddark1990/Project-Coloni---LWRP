@@ -1,7 +1,6 @@
-﻿using ProjectColoni;
+﻿#if UNITY_EDITOR
 using UnityEditor;
-
-namespace ColonistScripts.AI.CustomInspector
+namespace ProjectColoni
 {
     [CustomEditor(typeof(AiSensors))]
     public class AiSensorsCustomInspector : Editor
@@ -17,3 +16,5 @@ namespace ColonistScripts.AI.CustomInspector
         }
     }
 }
+#endif
+

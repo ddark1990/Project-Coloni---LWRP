@@ -7,7 +7,7 @@ namespace ProjectColoni
     {
         public enum Gender
         {
-            Male,
+            Male = 0,
             Female,
             Robot,
             Alien

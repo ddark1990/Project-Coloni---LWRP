@@ -28,8 +28,9 @@ namespace ProjectColoni
 
     void Update()
     {
-        ToggleEscapeMenu();
-        UpdateSliders();
+        if (Input.GetKeyDown(KeyCode.Escape)) ToggleEscapeMenu();
+
+        UpdateSliders(); //update sliders every time slider is moved instead of every frame
         
         if(_showEscapeMenu && _showOptionsMenu) UIView.ShowView("UI" ,"EscapeMenuOptions");
         else
@@ -46,10 +47,9 @@ namespace ProjectColoni
         }
     }
 
-    private void ToggleEscapeMenu()
+    public void ToggleEscapeMenu()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            _showEscapeMenu = !_showEscapeMenu;
+        _showEscapeMenu = !_showEscapeMenu;
         
         if(_showEscapeMenu) UIView.ShowView("UI" ,"EscapeMenu");
         else UIView.HideView("UI" ,"EscapeMenu");

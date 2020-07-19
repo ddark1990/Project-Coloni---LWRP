@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ namespace ProjectColoni
     [CustomEditor (typeof (AiSensors))]
     public class FieldOfViewEditor : Editor
     {
+        
         private void OnSceneGUI()
         {
             var fow = (AiSensors)target;
@@ -28,3 +30,5 @@ namespace ProjectColoni
         }
     }
 }
+#endif
+

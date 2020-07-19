@@ -48,6 +48,14 @@
           </e>
           <e p="RTSCamera.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
+          <e p="SkillsAndTraits - SnowFul" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="ColonistSkills.cs" t="Include" />
+              <e p="Skill.cs" t="Include" />
+              <e p="SkillSet.cs" t="Include" />
+              <e p="Trait.cs" t="Include" />
+            </e>
+          </e>
           <e p="SnapshotCamera.cs" t="Include" />
           <e p="TerrainGenerator.cs" t="Include" />
           <e p="ThirdPersonCharacter.cs" t="Include" />
@@ -906,6 +914,13 @@
               <e p="SimplePoolManager.cs" t="Include" />
             </e>
           </e>
+          <e p="IconGenerator" t="Include">
+            <e p="HowToUse.txt" t="Include" />
+            <e p="IconGenerator.cs" t="Include" />
+            <e p="IconGeneratorUIExample.cs" t="Include" />
+            <e p="readme.txt" t="Include" />
+            <e p="TextureScale.cs" t="Include" />
+          </e>
           <e p="Kevin Iglesias" t="Include">
             <e p="IKHelperTool" t="Include">
               <e p="Scripts" t="Include">
@@ -1580,6 +1595,14 @@
             <e p="Sprites" t="Include">
               <e p="EmojiOne Attribution.txt" t="Include" />
             </e>
+          </e>
+          <e p="TransparencyCapture" t="Include">
+            <e p="example" t="Include">
+              <e p="zzTransparencyCaptureExample.cs" t="Include" />
+            </e>
+            <e p="readme.txt" t="Include" />
+            <e p="TransparencyCaptureToFile.cs" t="Include" />
+            <e p="zzTransparencyCapture.cs" t="Include" />
           </e>
         </e>
         <e p="6 - Fonts" t="Include">
