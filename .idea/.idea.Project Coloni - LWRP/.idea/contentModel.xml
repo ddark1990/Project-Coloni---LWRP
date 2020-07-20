@@ -70,6 +70,18 @@
           <e p="BlurRenderer.cs" t="Include" />
         </e>
         <e p="12-ImportedPackages" t="Include">
+          <e p="Capture" t="Include">
+            <e p="Demo" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="AlwaysFace.cs" t="Include" />
+                <e p="Capture_Example.cs" t="Include" />
+                <e p="Rotate.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Capture.cs" t="Include" />
+            </e>
+          </e>
           <e p="com" t="Include">
             <e p="heparo" t="Include">
               <e p="terrain" t="Include">
