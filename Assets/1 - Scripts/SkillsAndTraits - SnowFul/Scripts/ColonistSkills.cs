@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class ColonistSkills : MonoBehaviour {
@@ -10,9 +12,7 @@ public class ColonistSkills : MonoBehaviour {
 	[SerializeField] int id;
 
 	/// <summary>Unique colonist ID</summary>
-	public int ID {
-		get { return id; }
-	}
+	public int ID => id;
 
 	// For debugging only
 	public void LoadSkills (int id) { skillSet.LoadSkills (id); }

@@ -74,8 +74,11 @@ namespace ProjectColoni
 
         private void SelectObject()
         {
-            //Debug.Log("FUCK");
-            
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
+
             OnDeSelectEvent(_selectable); 
 
             currentlySelectedObjects.Clear();
@@ -84,11 +87,6 @@ namespace ProjectColoni
                 currentlySelectedObject = null;
             }
             
-            if (EventSystem.current.IsPointerOverGameObject())
-            {
-                return;
-            }
-                
             var ray = cam.ScreenPointToRay(Input.mousePosition);
             
             if (!Physics.Raycast(ray, out _hit, Mathf.Infinity, selectableMask)) return;
