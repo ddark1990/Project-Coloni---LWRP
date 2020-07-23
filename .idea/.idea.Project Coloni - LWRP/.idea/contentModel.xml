@@ -65,6 +65,8 @@
             <e p="UI_ExpandableBar.cs" t="Include" />
             <e p="UI_MainMenu.cs" t="Include" />
             <e p="UI_SelectionController.cs" t="Include" />
+            <e p="UI_SkillPanel.cs" t="Include" />
+            <e p="UI_SkillTab.cs" t="Include" />
           </e>
         </e>
         <e p="10 - Shaders" t="Include">

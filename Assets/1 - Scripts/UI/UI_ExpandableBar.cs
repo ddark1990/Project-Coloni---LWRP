@@ -11,21 +11,21 @@ namespace ProjectColoni
         [HideInInspector] public bool expand;
     
         [HideInInspector] public RectTransform rect;
-        [HideInInspector] public Text amountText;
+        public Text fadeText;
         public Image iconImage; //manual
 
+        public bool fadeInText;
+        
         private float _expandFrom;
         private Vector2 _sizeDelta;
 
         private void Start()
         {
             rect = GetComponent<RectTransform>();
-            amountText = GetComponentInChildren<Text>();
 
             if (iconImage == null)
             {
-                Debug.LogWarning("No Icon Image component has been found! Check gameObject.", this);
-                return;
+                //Debug.LogWarning("No Icon Image component has been found! Check gameObject.", this);
             }
         
             _sizeDelta = rect.sizeDelta;
@@ -40,15 +40,17 @@ namespace ProjectColoni
 
         private void FadeInText()
         {
-            if (amountText == null)
+            if (!fadeInText) return;
+            
+            if (fadeText == null)
             {
                 Debug.LogWarning("No Text component has been found! Check gameObject.", this);
                 return;
             }
         
-            var color = amountText.color;
+            var color = fadeText.color;
             color = expand ? new Color(color.r, color.g, color.b, Mathf.Lerp(color.a, 1, Time.deltaTime * expandSpeed)) : new Color(color.r, color.g, color.b, Mathf.Lerp(color.a, 0, Time.deltaTime * expandSpeed));
-            amountText.color = color;
+            fadeText.color = color;
         }
 
         private void ExpandBar()

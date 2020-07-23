@@ -10,13 +10,17 @@ namespace ProjectColoni
 
         [SerializeField] private GameObject canvas;
 
-        public bool _skillWindowOpen;
-        public bool _healthWindowOpen;
-        public bool _inventoryWindowOpen;
+        private UI_SkillPanel _skillPanel;
+
+        private bool _skillWindowOpen;
+        private bool _healthWindowOpen;
+        private bool _inventoryWindowOpen;
     
         private void Start()
         {
             _selectionManager = SelectionManager.Instance;
+
+            _skillPanel = GetComponentInChildren<UI_SkillPanel>();
         }
 
         private void Update()
@@ -33,10 +37,9 @@ namespace ProjectColoni
             
             if(_healthWindowOpen) UIView.ShowView("Selected", "HealthInfoPanel");
             else UIView.HideView("Selected", "HealthInfoPanel");
-            
+
             if(_inventoryWindowOpen) UIView.ShowView("Selected", "InventoryInfoPanel");
             else UIView.HideView("Selected", "InventoryInfoPanel");
-
         }
         
         public void ToggleSkillWindow()
@@ -60,6 +63,8 @@ namespace ProjectColoni
             _inventoryWindowOpen = !_inventoryWindowOpen;
         }
 
+        
+        
         private void ResetWindows(bool active)
         {
             if (active)

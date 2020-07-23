@@ -13,8 +13,8 @@ public class Skill : ScriptableObject {
 	[Header ("Constant values")]
 	[SerializeField] float difficultyLearnMult;
 
-	private const float defaultLearnSpeed = 0.33f;
-	private float levelWorkspeedMultiplier;
+	private const float DEFAULT_LEARN_SPEED = 0.33f;
+	private float _levelWorkSpeedMultiplier;
     public float xpToNextLevel;
 
     // Cool shorthand for properties
@@ -33,7 +33,7 @@ public class Skill : ScriptableObject {
 
     void Awake () {
 
-		levelWorkspeedMultiplier = level / 4f - level / 8f;
+		_levelWorkSpeedMultiplier = level / 4f - level / 8f;
 	}
 
 	/** Getters/Setters */
@@ -67,7 +67,7 @@ public class Skill : ScriptableObject {
 	}
 
 	/// <summary>The constant default learn speed when passionLevel = 0.</summary>
-	public float DefaultLearnSpeed { get { return defaultLearnSpeed; } }
+	public float DefaultLearnSpeed { get { return DEFAULT_LEARN_SPEED; } }
 
 	/// <summary>The rate at which learning is hindered based on how difficult the skill is to learn
 	/// (i.e. Medicine takes longer than Mining to learn).</summary>
