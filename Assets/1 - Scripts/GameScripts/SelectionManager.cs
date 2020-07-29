@@ -22,6 +22,7 @@ namespace ProjectColoni
         public float outlineWidth = 2;
 
         public Camera cam;
+        public Selectable selectedType;
         private Selectable _selectable;
         private RaycastHit _hit;
 
@@ -93,7 +94,7 @@ namespace ProjectColoni
 
             //Debug.Log(_hit.collider.name);
 
-            _selectable = _hit.collider.transform.root.GetComponent<Selectable>();
+            _selectable = _hit.collider.transform.root.GetComponent<Selectable>(); //fix later
                 
             OnSelectEvent(_selectable);
         }
@@ -109,6 +110,9 @@ namespace ProjectColoni
             {
                 currentlySelectedObjects.Add(selectable);
             }
+            
+            //Let ui know what we selected
+            UI_SelectionController.Instance.TogglePanelHolder();
         }
         private void OnDeSelectEvent(Selectable selectable)
         {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu (fileName = "New Trait")]
+[CreateAssetMenu (fileName = "Trait", menuName = "ProjectColoni/Objects/AI/Skills/New Trait", order = 4)]
 public class Trait : ScriptableObject {
 
 	[Header ("Player visible")]

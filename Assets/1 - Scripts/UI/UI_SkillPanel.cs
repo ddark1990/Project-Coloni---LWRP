@@ -10,6 +10,8 @@ namespace ProjectColoni
 
         private void OnEnable()
         {
+            if (SelectionManager.Instance.currentlySelectedObject == null) return;
+        
             PopulateSkills();
         }
 

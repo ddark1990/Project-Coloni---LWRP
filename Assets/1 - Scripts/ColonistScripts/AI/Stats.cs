@@ -14,15 +14,15 @@ namespace ProjectColoni
         }
 
         //primary info
-        public string AiName = "PoonGalore";
-        public string Description = "Pleb.";
         public int Age = 21;
         public Gender gender = Gender.Male;
             
         //primary stats
         public float Health = 100;
-        public float Food = 100;
+        public float MaxHealth = 100;
         public float Stamina = 100;
+        public float MaxStamina = 100;
+        public float Food = 100;
         public float Energy = 100;
         
         public bool EnableSecondaryStats = false;
@@ -36,7 +36,7 @@ namespace ProjectColoni
         public float EnergyRate = .2f;
 
         
-        [CreateAssetMenu(fileName = "AiStats", menuName = "AI/AiStats")]
+        [CreateAssetMenu(fileName = "AiStats", menuName = "ProjectColoni/Objects/AI/New AiStats", order = 4)]
         public class AiStatsObject : ScriptableObject //pre made Ai Stats using scriptable objects
         {
             public enum Gender
@@ -48,15 +48,13 @@ namespace ProjectColoni
             }
 
             [Header("Info")] 
-            public string aiName;
-            [TextArea] public string description;
             public int age;
             public Stats.Gender gender;
             
             [Header("Vital Stats")]
-            [Range(0, 100)] public float health;
+            [Range(0, 500)] public float maxHealth;
+            [Range(0, 500)] public float maxStamina;
             [Range(0, 100)] public float food;
-            [Range(0, 100)] public float stamina;
             [Range(0, 100)] public float energy;
 
             [Header("Secondary Stats")] 

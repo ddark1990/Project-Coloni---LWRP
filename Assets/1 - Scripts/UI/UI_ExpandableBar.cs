@@ -8,7 +8,7 @@ namespace ProjectColoni
     {
         [SerializeField] public float expandTo = 20;
         [SerializeField] public float expandSpeed = 10;
-        [HideInInspector] public bool expand;
+        public bool expand;
     
         [HideInInspector] public RectTransform rect;
         public Text fadeText;
@@ -44,7 +44,7 @@ namespace ProjectColoni
             
             if (fadeText == null)
             {
-                Debug.LogWarning("No Text component has been found! Check gameObject.", this);
+                //Debug.LogWarning("No Text component has been found! Check gameObject.", this);
                 return;
             }
         
@@ -57,7 +57,7 @@ namespace ProjectColoni
         {
             if (rect == null)
             {
-                Debug.LogWarning("No Rect Transform has been found! Check gameObject.", this);
+                //Debug.LogWarning("No Rect Transform has been found! Check gameObject.", this);
                 return;
             }
 

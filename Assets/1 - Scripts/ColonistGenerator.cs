@@ -59,13 +59,10 @@ public class ColonistGenerator : MonoBehaviour
     {
         var stats = new Stats
         {
-            AiName = _nameGen.GetNextRandomName(),
-            Description = "A Colonist.",
             Age = Random.Range(10, 50),
             gender = (Stats.Gender)Random.Range(0,1)
 
         };
         
-        Debug.Log(stats.AiName);
     }
 }

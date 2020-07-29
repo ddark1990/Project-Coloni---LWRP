@@ -9,6 +9,7 @@
       <e p="Assets" t="Include">
         <e p="1 - Scripts" t="Include">
           <e p="_preload.cs" t="Include" />
+          <e p="BaseObjectData.cs" t="Include" />
           <e p="ColonistGenerator.cs" t="Include" />
           <e p="ColonistScripts" t="Include">
             <e p="AI" t="Include">
@@ -20,7 +21,7 @@
               <e p="CustomInspector" t="Include">
                 <e p="AiBaseCustomInspector.cs" t="Include" />
                 <e p="AiSensorsCustomInspector.cs" t="Include" />
-                <e p="AiVitalsCustomInspector.cs" t="Include" />
+                <e p="AiStatsCustomInspector.cs" t="Include" />
               </e>
               <e p="Stats.cs" t="Include" />
             </e>
@@ -33,7 +34,7 @@
             <e p="SelectionManager.cs" t="Include" />
           </e>
           <e p="Harvestables" t="Include">
-            <e p="Resource.cs" t="Include" />
+            <e p="Harvestable.cs" t="Include" />
           </e>
           <e p="Items" t="Include">
             <e p="Consumable.cs" t="Include" />
@@ -60,10 +61,12 @@
           <e p="TerrainGenerator.cs" t="Include" />
           <e p="ThirdPersonCharacter.cs" t="Include" />
           <e p="UI" t="Include">
+            <e p="UI_ColonistPanelRelay.cs" t="Include" />
             <e p="UI_DevTools.cs" t="Include" />
             <e p="UI_EscapeMenu.cs" t="Include" />
             <e p="UI_ExpandableBar.cs" t="Include" />
             <e p="UI_MainMenu.cs" t="Include" />
+            <e p="UI_PanelHolderRelay.cs" t="Include" />
             <e p="UI_SelectionController.cs" t="Include" />
             <e p="UI_SkillPanel.cs" t="Include" />
             <e p="UI_SkillTab.cs" t="Include" />
@@ -1645,6 +1648,7 @@
           </e>
         </e>
         <e p="AnimationIdleStates.cs" t="Include" />
+        <e p="test123.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

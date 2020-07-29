@@ -4,7 +4,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
-[CreateAssetMenu (fileName = "New SkillSet")]
+[CreateAssetMenu (fileName = "SkillSet", menuName = "ProjectColoni/Objects/AI/Skills/New SkillSet", order = 4)]
 public class SkillSet : ScriptableObject {
 
     [SerializeField] List<Skill> skills;

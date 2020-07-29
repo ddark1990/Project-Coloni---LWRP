@@ -7,6 +7,7 @@ namespace ProjectColoni
 {
     public class AiStats : MonoBehaviour
     {
+        //add base stats 
         public Stats.AiStatsObject objectStats;
         public Stats stats;
         
@@ -19,17 +20,22 @@ namespace ProjectColoni
 
         private void Start()
         {
+            InitializeStats();
+        }
+
+        private void InitializeStats()
+        {
             if (objectStats != null)
             {
                 stats = new Stats
                 {
-                    AiName = objectStats.aiName,
                     Age = objectStats.age,
-                    Description = objectStats.description,
                     gender = objectStats.gender,
-                    Health = objectStats.health,
+                    Health = objectStats.maxHealth,
+                    MaxHealth = objectStats.maxHealth,
                     Food = objectStats.food,
-                    Stamina = objectStats.stamina,
+                    Stamina = objectStats.maxStamina,
+                    MaxStamina = objectStats.maxStamina,
                     Energy = objectStats.energy,
                     EnableSecondaryStats = objectStats.enableSecondaryStats,
                     Comfort = objectStats.comfort,
@@ -44,7 +50,7 @@ namespace ProjectColoni
                 stats = new Stats();
             }
         }
-
+        
         private void Update()
         {
             UpdateVitals();

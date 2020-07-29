@@ -22,12 +22,36 @@
     <list default="true" id="b94e7643-efd0-4934-b8a0-0256359f3c2b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiBaseCustomInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiBaseCustomInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiVitalsCustomInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiStatsCustomInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiVitalsCustomInspector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiStatsCustomInspector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/DefaultScriptableObjects/Sats/Colonist.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/DefaultScriptableObjects/Sats/Colonist.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Stats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/Resource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/Harvestable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/Resource.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/Harvestable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/ObjectSpawnerDataset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/ObjectSpawnerDataset.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Data/Skills/Templates/Skills/Cooking.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Data/Skills/Templates/Skills/Cooking.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Data/Skills/Templates/Skills/Shooting.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Data/Skills/Templates/Skills/Shooting.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/Skill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/Skill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/SkillSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/SkillSet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/Trait.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/Trait.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ExpandableBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ExpandableBar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/UI/SkillPanel/SkillTab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/UI/SkillPanel/SkillTab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/ColonistDummy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/ColonistDummy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,35 +71,53 @@
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Stats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensorFOVEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiVitalsCustomInspector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/test123.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiStatsCustomInspector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/2d/f6c2fbe5/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiBaseCustomInspector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/NetworkPlayerCar.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/TransparencyCapture/example/zzTransparencyCaptureExample.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/ColonyGame 0.0.19/ColonyGame 0.0.18/ColonyGame/Assets/MainGame/Scripts/UI Scripts/InfoPanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiSensorsCustomInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ExpandableBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/RacingGame.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LWRP-FPS/FPS - LWRP/Assets/_Scripts/Jobs/JobManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillTab.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/ColonyGame 0.0.19/ColonyGame 0.0.18/ColonyGame/Assets/MainGame/Scripts/UI Scripts/ColonistSelectionUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/LobbyTopPanel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/NetworkConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/BuildScriptsOnly.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/GameSetup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LWRP-FPS/FPS - LWRP/Assets/_Scripts/AI/AiSensor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/ColonyGame 0.0.19/ColonyGame 0.0.18/ColonyGame/Assets/DownloadedAssets/Standard Assets/Characters/ThirdPersonCharacter/Scripts/ThirdPersonCharacter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/Lexic/Demo/NameGenDemo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/PhotonPlayer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/LobbyCreator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/Lexic/Scripts/NameGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/BaseObjectData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/StartUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/_preload.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/ColonistSkills.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/GameManagerTut.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/623DD1C5-ED6E-43BC-8659-6AF9203BEC21/98/e44c47ce/DOTween.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ThirdPersonCharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/SkillSet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/TerrainGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/MusicPlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/Skill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SnapshotCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/MenuPanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/Trait.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/PlayerListEntry.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/10 - Shaders/BlurRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/MainLobby.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/EventRelay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/LobbySystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_DevTools.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AnimationIdleStates.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_EscapeMenu.cs" root0="FORCE_HIGHLIGHTING" />
@@ -85,12 +127,16 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/623DD1C5-ED6E-43BC-8659-6AF9203BEC21/48/9795866d/TweenSettingsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3DC54541-A257-4AC7-826A-004A212A4332/fe/332bdb73/LayerMask.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_PanelHolderRelay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UnityEditor/2019.4.0f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/LayoutElement.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/Resource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/Harvestable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/SpawnGameObjectsEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/ObjectSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/ObjectSpawnerDataset.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4BEC26B5-CBC7-4715-8442-F1499E984732/a9/2c65772c/CultureInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ColonistPanelRelay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../FPS Bolt/Assets/1 - Scripts/PlayerScripts/FPSController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../FPS Bolt/Assets/1 - Scripts/Inventory/InventoryManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../FPS Bolt/Assets/1 - Scripts/EventRelay.cs" root0="SKIP_HIGHLIGHTING" />
@@ -105,57 +151,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/10 - Shaders/OutlineDiffuse.shader" />
-        <option value="$PROJECT_DIR$/Assets/Outline Shader/Tutorial/Shaders/Outline.hlsl" />
-        <option value="$PROJECT_DIR$/Assets/QuickOutline/Scripts/OutlineObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/QuickOutline/Scripts/Outline.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI_MainMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AnimationController.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ThirdPersonCharacter.cs" />
-        <option value="$PROJECT_DIR$/Assets/AnimationIdleStates.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/EventRelay.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/BaseVitals.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AISensors.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AIController.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AIBase.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiCustomInspector.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensor.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AIVitals.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/SnapshotCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/Resource.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensors.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiBase.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiVitals.cs" />
         <option value="$PROJECT_DIR$/Assets/10 - Shaders/BlurRenderer.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_DevTools.cs" />
         <option value="$PROJECT_DIR$/Assets/12-ImportedPackages/Lexic/Demo/NameGenDemo.cs" />
         <option value="$PROJECT_DIR$/Assets/12-ImportedPackages/Lexic/Scripts/NameGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/ColonistController.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Stats.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/Trait.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_EscapeMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/SpawnGameObjectsEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensorFOVEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiSensorsCustomInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiVitalsCustomInspector.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiBaseCustomInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/12-ImportedPackages/TransparencyCapture/TransparencyCaptureToFile.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/ColonistSkills.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/ExpandableBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/Skill.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ExpandableBar.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillTab.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiStatsCustomInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/Resource.cs" />
+        <option value="$PROJECT_DIR$/Assets/test123.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/Harvestable.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiBaseCustomInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ColonisPanelRelay.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ColonistPanelRelay.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/ObjectSpawnerDataset.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/SkillSet.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/Trait.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/Skill.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/BaseObjectData.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Stats.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ExpandableBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_PanelHolderRelay.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" />
       </list>
     </option>
   </component>
@@ -245,7 +291,12 @@
       <workItem from="1595358991464" duration="2175000" />
       <workItem from="1595403895943" duration="794000" />
       <workItem from="1595443313877" duration="27765000" />
-      <workItem from="1595523702303" duration="5352000" />
+      <workItem from="1595523702303" duration="14280000" />
+      <workItem from="1595612425495" duration="27520000" />
+      <workItem from="1595957529604" duration="4225000" />
+      <workItem from="1596015037845" duration="61000" />
+      <workItem from="1596016684976" duration="941000" />
+      <workItem from="1596045297617" duration="15526000" />
     </task>
     <servers />
   </component>
@@ -274,95 +325,95 @@
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
     <state x="-1040" y="165" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591470370259" />
-    <state width="1921" height="382" key="GridCell.Tab.0.bottom" timestamp="1595496205062">
+    <state width="1921" height="382" key="GridCell.Tab.0.bottom" timestamp="1595795456198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141885" />
-    <state width="1921" height="382" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205062" />
-    <state width="1921" height="382" key="GridCell.Tab.0.center" timestamp="1595496205062">
+    <state width="1921" height="382" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
+    <state width="1921" height="382" key="GridCell.Tab.0.center" timestamp="1595795456198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141885" />
-    <state width="1921" height="382" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205062" />
-    <state width="1921" height="382" key="GridCell.Tab.0.left" timestamp="1595496205061">
+    <state width="1921" height="382" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
+    <state width="1921" height="382" key="GridCell.Tab.0.left" timestamp="1595795456198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141885" />
-    <state width="1921" height="382" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205061" />
-    <state width="1921" height="382" key="GridCell.Tab.0.right" timestamp="1595496205062">
+    <state width="1921" height="382" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
+    <state width="1921" height="382" key="GridCell.Tab.0.right" timestamp="1595795456198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141885" />
-    <state width="1921" height="382" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205062" />
-    <state width="1921" height="382" key="GridCell.Tab.1.bottom" timestamp="1595496205062">
+    <state width="1921" height="382" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
+    <state width="1921" height="382" key="GridCell.Tab.1.bottom" timestamp="1595795456199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141886" />
-    <state width="1921" height="382" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205062" />
-    <state width="1921" height="382" key="GridCell.Tab.1.center" timestamp="1595496205062">
+    <state width="1921" height="382" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
+    <state width="1921" height="382" key="GridCell.Tab.1.center" timestamp="1595795456198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.1.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141886" />
-    <state width="1921" height="382" key="GridCell.Tab.1.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205062" />
-    <state width="1921" height="382" key="GridCell.Tab.1.left" timestamp="1595496205062">
+    <state width="1921" height="382" key="GridCell.Tab.1.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
+    <state width="1921" height="382" key="GridCell.Tab.1.left" timestamp="1595795456198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.1.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141886" />
-    <state width="1921" height="382" key="GridCell.Tab.1.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205062" />
-    <state width="1921" height="382" key="GridCell.Tab.1.right" timestamp="1595496205062">
+    <state width="1921" height="382" key="GridCell.Tab.1.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
+    <state width="1921" height="382" key="GridCell.Tab.1.right" timestamp="1595795456199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.1.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141886" />
-    <state width="1921" height="382" key="GridCell.Tab.1.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205062" />
-    <state width="1921" height="382" key="GridCell.Tab.2.bottom" timestamp="1595496205062">
+    <state width="1921" height="382" key="GridCell.Tab.1.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
+    <state width="1921" height="382" key="GridCell.Tab.2.bottom" timestamp="1595795456199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141886" />
-    <state width="1921" height="382" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205062" />
-    <state width="1921" height="382" key="GridCell.Tab.2.center" timestamp="1595496205062">
+    <state width="1921" height="382" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
+    <state width="1921" height="382" key="GridCell.Tab.2.center" timestamp="1595795456199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.2.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141886" />
-    <state width="1921" height="382" key="GridCell.Tab.2.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205062" />
-    <state width="1921" height="382" key="GridCell.Tab.2.left" timestamp="1595496205062">
+    <state width="1921" height="382" key="GridCell.Tab.2.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
+    <state width="1921" height="382" key="GridCell.Tab.2.left" timestamp="1595795456199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.2.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141886" />
-    <state width="1921" height="382" key="GridCell.Tab.2.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205062" />
-    <state width="1921" height="382" key="GridCell.Tab.2.right" timestamp="1595496205062">
+    <state width="1921" height="382" key="GridCell.Tab.2.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
+    <state width="1921" height="382" key="GridCell.Tab.2.right" timestamp="1595795456199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.2.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141886" />
-    <state width="1921" height="382" key="GridCell.Tab.2.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205062" />
-    <state width="1921" height="382" key="GridCell.Tab.3.bottom" timestamp="1595496205063">
+    <state width="1921" height="382" key="GridCell.Tab.2.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
+    <state width="1921" height="382" key="GridCell.Tab.3.bottom" timestamp="1595795456199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141886" />
-    <state width="1921" height="382" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205063" />
-    <state width="1921" height="382" key="GridCell.Tab.3.center" timestamp="1595496205062">
+    <state width="1921" height="382" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
+    <state width="1921" height="382" key="GridCell.Tab.3.center" timestamp="1595795456199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.3.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141886" />
-    <state width="1921" height="382" key="GridCell.Tab.3.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205062" />
-    <state width="1921" height="382" key="GridCell.Tab.3.left" timestamp="1595496205062">
+    <state width="1921" height="382" key="GridCell.Tab.3.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
+    <state width="1921" height="382" key="GridCell.Tab.3.left" timestamp="1595795456199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.3.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141886" />
-    <state width="1921" height="382" key="GridCell.Tab.3.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205062" />
-    <state width="1921" height="382" key="GridCell.Tab.3.right" timestamp="1595496205063">
+    <state width="1921" height="382" key="GridCell.Tab.3.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
+    <state width="1921" height="382" key="GridCell.Tab.3.right" timestamp="1595795456199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1441" height="311" key="GridCell.Tab.3.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591995141886" />
-    <state width="1921" height="382" key="GridCell.Tab.3.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595496205063" />
-    <state x="764" y="221" key="RiderGenerateDialog" timestamp="1595464161062">
+    <state width="1921" height="382" key="GridCell.Tab.3.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
+    <state x="764" y="221" key="RiderGenerateDialog" timestamp="1596052827399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="764" y="221" key="RiderGenerateDialog/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595464161062" />
-    <state x="-1231" y="143" width="1457" height="870" key="dock-window-1" timestamp="1595193901467">
-      <screen x="-1440" y="0" width="1440" height="860" />
+    <state x="764" y="221" key="RiderGenerateDialog/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1596052827399" />
+    <state x="598" y="139" width="1456" height="948" key="dock-window-1" timestamp="1595877992033">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1231" y="143" width="1457" height="870" key="dock-window-1/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1595193901467" />
-    <state x="-1440" y="0" width="1456" height="948" maximized="true" key="dock-window-1/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1591384167841" />
+    <state x="598" y="139" width="1456" height="948" key="dock-window-1/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1595877992033" />
+    <state x="-1440" y="0" width="1456" height="948" maximized="true" key="dock-window-1/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595873992478" />
     <state x="-973" y="186" width="670" height="561" key="search.everywhere.popup" timestamp="1593651247628">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>

@@ -3,11 +3,12 @@ using UnityEngine;
 
 namespace ProjectColoni
 {
-    public class Item : Selectable
+    public class Harvestable : Selectable
     {
-        public int itemCount;
-        public ItemType itemType;
+        public BaseScriptableData data;
+        public int amount;
 
+        
         private void Start()
         {
             InitializeSelectable();

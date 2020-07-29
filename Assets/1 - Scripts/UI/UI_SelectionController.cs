@@ -1,15 +1,27 @@
-﻿using Doozy.Engine.UI;
+﻿using System;
+using System.Globalization;
+using Doozy.Engine.UI;
 using ProjectColoni;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ProjectColoni
 {
     public class UI_SelectionController : MonoBehaviour
     {
-        private SelectionManager _selectionManager;
+        public static UI_SelectionController Instance { get; private set; }
 
+        [Header("Canvases")]
         [SerializeField] private GameObject canvas;
+        [Header("Panels")]
+        [SerializeField] private GameObject selectedBasePanel;
+        [SerializeField] private GameObject selectedColonistPanel;
+        [SerializeField] private GameObject selectedObjectPanel;
+        [Header("PanelCache")]
+        public Image selectedImage;
+        public Text selectedName;
 
+        private SelectionManager _selectionManager;
         private UI_SkillPanel _skillPanel;
 
         private bool _skillWindowOpen;
@@ -18,6 +30,16 @@ namespace ProjectColoni
     
         private void Start()
         {
+            if(Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            
             _selectionManager = SelectionManager.Instance;
 
             _skillPanel = GetComponentInChildren<UI_SkillPanel>();
@@ -30,6 +52,89 @@ namespace ProjectColoni
             SwitchActiveInfoWindow();
         }
 
+        private void LateUpdate()
+        {
+            if(selectedColonistPanel.activeSelf) PopulateColonistVitalsUiData();
+        }
+
+        private void SetActivePanel(string activePanel)
+        {
+            selectedColonistPanel.SetActive(activePanel.Equals(selectedColonistPanel.name));
+            selectedObjectPanel.SetActive(activePanel.Equals(selectedObjectPanel.name));
+        }
+        
+        public void TogglePanelHolder()
+        {
+            if (_selectionManager.currentlySelectedObject == null) return;
+            /*
+            var harvestablePanelRelay = selectedColonistPanel.GetComponentInChildren<UI_ColonisPanelRelay>();
+            var itemPanelRelay = selectedColonistPanel.GetComponentInChildren<UI_ColonisPanelRelay>();
+            */
+
+            switch (_selectionManager.selectedType)
+            {
+                case AiController aiController:
+                    SetActivePanel(selectedColonistPanel.name);
+                    
+                    PopulateBaseData(aiController);
+                    break;
+                case Harvestable harvestable:
+                    SetActivePanel(selectedObjectPanel.name);
+
+                    PopulateBaseData(harvestable);
+                    break;
+                case Item item:
+                    SetActivePanel(selectedObjectPanel.name);
+
+                    PopulateBaseData(item);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        private void PopulateColonistVitalsUiData() //allocates 84 bytes
+        {
+            var colonistPanelRelay = selectedColonistPanel.GetComponentInChildren<UI_ColonistPanelRelay>();
+            var aiController = _selectionManager.selectedType.GetComponentInChildren<AiController>();
+
+            //bars
+            colonistPanelRelay.healthBar.fillAmount = aiController.aiStats.stats.Health / aiController.aiStats.stats.MaxHealth;
+            colonistPanelRelay.staminaBar.fillAmount = aiController.aiStats.stats.Stamina / aiController.aiStats.stats.MaxStamina;
+            colonistPanelRelay.foodBar.fillAmount = aiController.aiStats.stats.Food / 100;
+            colonistPanelRelay.energyBar.fillAmount = aiController.aiStats.stats.Energy / 100;
+            colonistPanelRelay.comfortBar.fillAmount = aiController.aiStats.stats.Comfort / 100;
+            colonistPanelRelay.recreationBar.fillAmount = aiController.aiStats.stats.Recreation / 100;
+                    
+            //text
+            colonistPanelRelay.healthText.text = (aiController.aiStats.stats.Health).ToString("#");
+            colonistPanelRelay.staminaText.text = (aiController.aiStats.stats.Stamina).ToString("#");
+            colonistPanelRelay.foodText.text = (aiController.aiStats.stats.Food).ToString("#");
+            colonistPanelRelay.energyText.text = (aiController.aiStats.stats.Energy).ToString("#");
+            colonistPanelRelay.comfortText.text = (aiController.aiStats.stats.Comfort).ToString("#");
+            colonistPanelRelay.recreationText.text = (aiController.aiStats.stats.Recreation).ToString("#");
+            
+        }
+
+        private void PopulateBaseData(Selectable selected)
+        {
+            var panelHolderRelay = selectedBasePanel.GetComponentInChildren<UI_PanelHolderRelay>();
+            switch (selected)
+            {
+                case AiController aiController:
+                    //panelHolderRelay.objectName = aiController.aiStats.obj
+                    break;
+                case Harvestable harvestable:
+                    
+                    break;
+                case Item item:
+                    
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+        
         private void SwitchActiveInfoWindow()
         {
             if(_skillWindowOpen) UIView.ShowView("Selected", "SkillInfoPanel");

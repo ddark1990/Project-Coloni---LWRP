@@ -1,19 +1,19 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemType : ScriptableObject
+namespace ProjectColoni
 {
-    [Serializable]
-    public struct ItemData
+    public class ItemType : ScriptableObject
     {
-        public string itemName;
-        [TextArea] public string itemDescription;
-        public Sprite itemSprite;
-        public int stackLimit;
-    }
-    /*
+        [Serializable]
+        public struct ItemData
+        {
+            public string itemName;
+            [TextArea] public string itemDescription;
+            public Sprite itemSprite;
+            public int stackLimit;
+        }
+        /*
     [Serializable]
     public struct ItemSoundData
     {
@@ -31,6 +31,7 @@ public class ItemType : ScriptableObject
     }
     */
 
-    public ItemData itemData;
-    //public ItemSoundData itemSoundData;
+        public ItemData itemData;
+        //public ItemSoundData itemSoundData;
+    }
 }

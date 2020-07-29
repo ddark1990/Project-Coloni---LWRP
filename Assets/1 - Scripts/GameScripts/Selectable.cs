@@ -8,13 +8,14 @@ namespace ProjectColoni
 {
     public class Selectable : MonoBehaviour
     {
+        [Header("Selectable")]
         public bool selected;
         
         private OutlineObject _outline;
         private SelectionManager _selectionManager;
 
 
-        private void Start()
+        protected void InitializeSelectable()
         {
             _selectionManager = SelectionManager.Instance;
             _outline = GetComponentInChildren<OutlineObject>();
@@ -24,10 +25,10 @@ namespace ProjectColoni
 
         private void Update()
         {
-            OutlineHighlight();
+            OutlineHighlight(); //if inheriting, must update from top class
         }
 
-        private void OutlineHighlight()
+        protected void OutlineHighlight()
         {
             if (selected)
             {
@@ -48,6 +49,11 @@ namespace ProjectColoni
         private void OnMouseEnter()
         {
             _selectionManager.hoveringObject = this;
+        }
+
+        private void OnMouseDown()
+        {
+            _selectionManager.selectedType = this;
         }
 
         private void OnMouseExit()

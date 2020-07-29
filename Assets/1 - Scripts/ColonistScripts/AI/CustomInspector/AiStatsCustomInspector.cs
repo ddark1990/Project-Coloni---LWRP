@@ -4,7 +4,7 @@ using UnityEditor;
 namespace ProjectColoni
 {
     [CustomEditor(typeof(AiStats))]
-    public class AiVitalsCustomInspector : Editor
+    public class AiStatsCustomInspector : Editor
     {
         private bool _enableDefaultInspector;
         

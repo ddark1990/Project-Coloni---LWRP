@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu (fileName = "New Skill")]
+[CreateAssetMenu (fileName = "Skill", menuName = "ProjectColoni/Objects/AI/Skills/New Skill", order = 4)]
 public class Skill : ScriptableObject {
 
 	[Header ("Instance values")] // Overridden on load.

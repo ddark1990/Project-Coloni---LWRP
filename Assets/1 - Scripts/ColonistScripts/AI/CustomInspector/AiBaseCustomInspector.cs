@@ -1,4 +1,5 @@
-﻿using ProjectColoni;
+﻿/*
+using ProjectColoni;
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
@@ -61,3 +62,4 @@ namespace ColonistScripts.AI.CustomInspector
     }
 }
 #endif
+*/
