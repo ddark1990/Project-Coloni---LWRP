@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace ProjectColoni
@@ -19,5 +20,10 @@ namespace ProjectColoni
         public Text foodText;
         public Text comfortText;
         public Text recreationText;
+
+        private void OnEnable()
+        {
+            UI_SelectionController.Instance.colonistPanelRelay = this;
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Text;
 using Doozy.Engine.UI;
 using ProjectColoni;
 using UnityEngine;
@@ -44,13 +45,6 @@ namespace ProjectColoni
             _selectionManager = SelectionManager.Instance;
 
             _skillPanel = GetComponentInChildren<UI_SkillPanel>();
-        }
-
-        private void Update()
-        {
-            //canvas.SetActive(_selectionManager.currentlySelectedObject != null);
-            
-            //SwitchActiveInfoWindow();
         }
 
         private void LateUpdate()
@@ -110,19 +104,24 @@ namespace ProjectColoni
 
                     break;
                 case Item item:
-                    panelHolderRelay.objectName.text = item.itemType.itemData.itemName;
-                    panelHolderRelay.objectImage.sprite = item.itemType.itemData.itemSprite;
+                    panelHolderRelay.objectName.text = item.baseObjectInfo.ObjectName;
+                    panelHolderRelay.objectImage.sprite = item.baseObjectInfo.Sprite;
 
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
         }
+
+        [HideInInspector] public UI_ColonistPanelRelay colonistPanelRelay;
         
-        private void PopulateColonistVitalsData() //allocates 84 bytes
+        private void PopulateColonistVitalsData() 
         {
-            var colonistPanelRelay = selectedColonistPanel.GetComponentInChildren<UI_ColonistPanelRelay>();
             var aiController = _selectionManager.selectedType.GetComponentInChildren<AiController>();
+            
+            //_time += Time.deltaTime;
+            //var seconds = Mathf.FloorToInt( aiController.aiStats.stats.Food );
+            //_displaySeconds.text = cacheSeconds[ (int)aiController.aiStats.stats.Food ];
 
             //bars
             colonistPanelRelay.healthBar.fillAmount = aiController.aiStats.stats.Health / aiController.aiStats.stats.MaxHealth;
@@ -133,29 +132,31 @@ namespace ProjectColoni
             colonistPanelRelay.recreationBar.fillAmount = aiController.aiStats.stats.Recreation / 100;
                     
             //text
-            colonistPanelRelay.healthText.text = (aiController.aiStats.stats.Health).ToString("#");
-            colonistPanelRelay.staminaText.text = (aiController.aiStats.stats.Stamina).ToString("#");
-            colonistPanelRelay.foodText.text = (aiController.aiStats.stats.Food).ToString("#");
-            colonistPanelRelay.energyText.text = (aiController.aiStats.stats.Energy).ToString("#");
-            colonistPanelRelay.comfortText.text = (aiController.aiStats.stats.Comfort).ToString("#");
-            colonistPanelRelay.recreationText.text = (aiController.aiStats.stats.Recreation).ToString("#");
+            colonistPanelRelay.healthText.text = _cachedIntToString[(int)aiController.aiStats.stats.Health];
+            colonistPanelRelay.staminaText.text = _cachedIntToString[(int)aiController.aiStats.stats.Stamina];
+            colonistPanelRelay.foodText.text = _cachedIntToString[(int)aiController.aiStats.stats.Food ];
+            colonistPanelRelay.energyText.text = _cachedIntToString[(int) aiController.aiStats.stats.Energy];
+            colonistPanelRelay.comfortText.text = _cachedIntToString[(int)aiController.aiStats.stats.Comfort];
+            colonistPanelRelay.recreationText.text = _cachedIntToString[(int)aiController.aiStats.stats.Recreation ];
             
         }
 
+        [HideInInspector] public UI_ResourcePanelRelay resourcePanelRelay;
+        
         private void PopulateResourceData()
         {
-            var resourcePanelRelay = selectedResourcePanel.GetComponentInChildren<UI_ResourcePanelRelay>();
             var resource = _selectionManager.selectedType.GetComponentInChildren<ResourceNode>();
 
-            resourcePanelRelay.amountText.text = resource.amount.ToString();
+            resourcePanelRelay.amountText.text = "Amount: " + _cachedIntToString[resource.amount];
         }
+
+        [HideInInspector] public UI_ItemPanelRelay itemPanelRelay;
         
         private void PopulateItemData()
         {
-            var itemPanelRelay = selectedItemPanel.GetComponentInChildren<UI_ItemPanelRelay>();
             var item = _selectionManager.selectedType.GetComponentInChildren<Item>();
 
-            itemPanelRelay.amountText.text = item.itemCount.ToString();
+            itemPanelRelay.amountText.text = "Amount: " + _cachedIntToString[item.itemCount];
         }
 
         
@@ -233,10 +234,20 @@ namespace ProjectColoni
 
         public void ResetWindows()
         {
+            selectedColonistPanel.SetActive(false);
+            selectedResourcePanel.SetActive(false);
+            selectedItemPanel.SetActive(false);
+
             _inventoryWindowOpen = false;
             _healthWindowOpen = false;
             _skillWindowOpen = false;
             CloseSelectedPanel();
         }
+        
+        private readonly CacheIntString _cachedIntToString = new CacheIntString(
+            (seconds)=>seconds , //describe how seconds (key) are translated to useful value (hash)
+            (second)=>second.ToString("00") //you describe how string is built based on value (hash)
+            , 0 , 59 , 1 //initialization range and step, so cache will be warmed up and ready
+        );
     }
 }

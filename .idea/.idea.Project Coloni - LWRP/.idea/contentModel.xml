@@ -10,6 +10,7 @@
         <e p="1 - Scripts" t="Include">
           <e p="_preload.cs" t="Include" />
           <e p="BaseObjectData.cs" t="Include" />
+          <e p="CacheStrings.cs" t="Include" />
           <e p="ColonistGenerator.cs" t="Include" />
           <e p="ColonistScripts" t="Include">
             <e p="AI" t="Include">

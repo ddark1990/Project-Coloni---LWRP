@@ -8,10 +8,8 @@ namespace ProjectColoni
         [Serializable]
         public struct ItemData
         {
-            public string itemName;
-            [TextArea] public string itemDescription;
-            public Sprite itemSprite;
             public int stackLimit;
+            public Sprite inventorySprite;
         }
         /*
     [Serializable]

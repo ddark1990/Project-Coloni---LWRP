@@ -10,16 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da18a3a920f6fd2418cbcd67ec413e83, type: 3}
-  m_Name: CookedMeat
+  m_Name: Food_CookedMeat(ItemData)
   m_EditorClassIdentifier: 
   itemData:
-    itemName: Cooked Meat
-    itemDescription: Cooked meat that satisfies.
-    itemSprite: {fileID: 21300000, guid: 2ca6c52d1b461a543817a75d49b82530, type: 3}
-    stackLimit: 1
+    stackLimit: 75
+    inventorySprite: {fileID: 21300000, guid: 2ca6c52d1b461a543817a75d49b82530, type: 3}
   consumableSettings:
-    cookable: 0
-    raw: 0
     giveHealthAmount: 10
-    giveCaloriesAmount: 45
-    giveHydrationAmount: -5
+    giveFoodAmount: 10
