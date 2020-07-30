@@ -14,9 +14,10 @@ namespace ProjectColoni
         [Header("Canvases")]
         [SerializeField] private GameObject canvas;
         [Header("Panels")]
-        [SerializeField] private GameObject selectedBasePanel;
+        [SerializeField] private GameObject selectedPanelHolder;
         [SerializeField] private GameObject selectedColonistPanel;
-        [SerializeField] private GameObject selectedObjectPanel;
+        [SerializeField] private GameObject selectedResourcePanel;
+        [SerializeField] private GameObject selectedItemPanel;
         [Header("PanelCache")]
         public Image selectedImage;
         public Text selectedName;
@@ -47,24 +48,22 @@ namespace ProjectColoni
 
         private void Update()
         {
-            canvas.SetActive(_selectionManager.currentlySelectedObject != null);
+            //canvas.SetActive(_selectionManager.currentlySelectedObject != null);
             
-            SwitchActiveInfoWindow();
+            //SwitchActiveInfoWindow();
         }
 
         private void LateUpdate()
         {
-            if(selectedColonistPanel.activeSelf) PopulateColonistVitalsUiData();
+            if(selectedColonistPanel.activeSelf) PopulateColonistVitalsData();
+            if(selectedResourcePanel.activeSelf) PopulateResourceData();
+            if(selectedItemPanel.activeSelf) PopulateItemData();
         }
 
-        private void SetActivePanel(string activePanel)
+        public void TogglePanelHolder() 
         {
-            selectedColonistPanel.SetActive(activePanel.Equals(selectedColonistPanel.name));
-            selectedObjectPanel.SetActive(activePanel.Equals(selectedObjectPanel.name));
-        }
-        
-        public void TogglePanelHolder()
-        {
+            OpenSelectedPanel();
+
             if (_selectionManager.currentlySelectedObject == null) return;
             /*
             var harvestablePanelRelay = selectedColonistPanel.GetComponentInChildren<UI_ColonisPanelRelay>();
@@ -78,13 +77,14 @@ namespace ProjectColoni
                     
                     PopulateBaseData(aiController);
                     break;
-                case Harvestable harvestable:
-                    SetActivePanel(selectedObjectPanel.name);
-
+                case ResourceNode harvestable:
+                    SetActivePanel(selectedResourcePanel.name);
                     PopulateBaseData(harvestable);
+                    
+                    
                     break;
                 case Item item:
-                    SetActivePanel(selectedObjectPanel.name);
+                    SetActivePanel(selectedItemPanel.name);
 
                     PopulateBaseData(item);
                     break;
@@ -92,8 +92,34 @@ namespace ProjectColoni
                     throw new ArgumentOutOfRangeException();
             }
         }
+        
+        private void PopulateBaseData(Selectable selected)
+        {
+            var panelHolderRelay = selectedPanelHolder.GetComponentInChildren<UI_PanelHolderRelay>();
+            
+            switch (selected)
+            {
+                case AiController aiController:
+                    panelHolderRelay.objectName.text = aiController.aiStats.baseObjectInfo.ObjectName;
+                    panelHolderRelay.objectImage.sprite = aiController.aiStats.baseObjectInfo.Sprite;
+                    
+                    break;
+                case ResourceNode harvestable:
+                    panelHolderRelay.objectName.text = harvestable.baseObjectInfo.ObjectName;
+                    panelHolderRelay.objectImage.sprite = harvestable.baseObjectInfo.Sprite;
 
-        private void PopulateColonistVitalsUiData() //allocates 84 bytes
+                    break;
+                case Item item:
+                    panelHolderRelay.objectName.text = item.itemType.itemData.itemName;
+                    panelHolderRelay.objectImage.sprite = item.itemType.itemData.itemSprite;
+
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+        
+        private void PopulateColonistVitalsData() //allocates 84 bytes
         {
             var colonistPanelRelay = selectedColonistPanel.GetComponentInChildren<UI_ColonistPanelRelay>();
             var aiController = _selectionManager.selectedType.GetComponentInChildren<AiController>();
@@ -116,71 +142,101 @@ namespace ProjectColoni
             
         }
 
-        private void PopulateBaseData(Selectable selected)
+        private void PopulateResourceData()
         {
-            var panelHolderRelay = selectedBasePanel.GetComponentInChildren<UI_PanelHolderRelay>();
-            switch (selected)
-            {
-                case AiController aiController:
-                    //panelHolderRelay.objectName = aiController.aiStats.obj
-                    break;
-                case Harvestable harvestable:
-                    
-                    break;
-                case Item item:
-                    
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-        }
-        
-        private void SwitchActiveInfoWindow()
-        {
-            if(_skillWindowOpen) UIView.ShowView("Selected", "SkillInfoPanel");
-            else UIView.HideView("Selected", "SkillInfoPanel");
-            
-            if(_healthWindowOpen) UIView.ShowView("Selected", "HealthInfoPanel");
-            else UIView.HideView("Selected", "HealthInfoPanel");
+            var resourcePanelRelay = selectedResourcePanel.GetComponentInChildren<UI_ResourcePanelRelay>();
+            var resource = _selectionManager.selectedType.GetComponentInChildren<ResourceNode>();
 
-            if(_inventoryWindowOpen) UIView.ShowView("Selected", "InventoryInfoPanel");
-            else UIView.HideView("Selected", "InventoryInfoPanel");
+            resourcePanelRelay.amountText.text = resource.amount.ToString();
         }
         
+        private void PopulateItemData()
+        {
+            var itemPanelRelay = selectedItemPanel.GetComponentInChildren<UI_ItemPanelRelay>();
+            var item = _selectionManager.selectedType.GetComponentInChildren<Item>();
+
+            itemPanelRelay.amountText.text = item.itemCount.ToString();
+        }
+
+        
+        
+        //button events
         public void ToggleSkillWindow()
         {
-            ResetWindows(_skillWindowOpen);
-
+            ResetColonistWindows(_skillWindowOpen);
             _skillWindowOpen = !_skillWindowOpen;
+
+            ToggleWindowView(_skillWindowOpen, "Selected", "SkillInfoPanel");
         }
         
         public void ToggleHealthWindow()
         {
-            ResetWindows(_healthWindowOpen);
-            
+            ResetColonistWindows(_healthWindowOpen);
             _healthWindowOpen = !_healthWindowOpen;
+            
+            ToggleWindowView(_healthWindowOpen, "Selected", "HealthInfoPanel");
         }
         
         public void ToggleInventoryWindow()
         {
-            ResetWindows(_inventoryWindowOpen);
-            
+            ResetColonistWindows(_inventoryWindowOpen);
             _inventoryWindowOpen = !_inventoryWindowOpen;
+            
+            ToggleWindowView(_inventoryWindowOpen, "Selected", "InventoryInfoPanel");
+        }
+        //
+        
+        private void OpenSelectedPanel()
+        {
+            if(_selectionManager.currentlySelectedObject != null) UIView.ShowView("Selected", "SelectedInfoPanel");
+        }
+        
+        private void CloseSelectedPanel()
+        {
+            UIView.HideViewCategory("Selected");
         }
 
+        private string _tempCategoryName;
+        private string _tempPanelName;
         
+        private void ToggleWindowView(bool active, string categoryName, string panelName)
+        {
+            if (_tempPanelName != string.Empty && _tempCategoryName != string.Empty)
+            {
+                UIView.HideView(_tempCategoryName, _tempPanelName);
+            }
+            
+            _tempPanelName = panelName;
+            _tempCategoryName = categoryName;
+            
+            if(active) UIView.ShowView(categoryName, panelName);
+        }
         
-        private void ResetWindows(bool active)
+        private void SetActivePanel(string activePanel)
+        {
+            selectedColonistPanel.SetActive(activePanel.Equals(selectedColonistPanel.name));
+            selectedResourcePanel.SetActive(activePanel.Equals(selectedResourcePanel.name));
+            selectedItemPanel.SetActive(activePanel.Equals(selectedItemPanel.name));
+        }
+
+        private void ResetColonistWindows(bool active)
         {
             if (active)
             {
-                active = false;
                 return;
             }
             
             _inventoryWindowOpen = false;
             _healthWindowOpen = false;
             _skillWindowOpen = false;
+        }
+
+        public void ResetWindows()
+        {
+            _inventoryWindowOpen = false;
+            _healthWindowOpen = false;
+            _skillWindowOpen = false;
+            CloseSelectedPanel();
         }
     }
 }

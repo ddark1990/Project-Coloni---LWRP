@@ -34,7 +34,8 @@
             <e p="SelectionManager.cs" t="Include" />
           </e>
           <e p="Harvestables" t="Include">
-            <e p="Harvestable.cs" t="Include" />
+            <e p="ResourceNode.cs" t="Include" />
+            <e p="ResourceType.cs" t="Include" />
           </e>
           <e p="Items" t="Include">
             <e p="Consumable.cs" t="Include" />
@@ -65,8 +66,10 @@
             <e p="UI_DevTools.cs" t="Include" />
             <e p="UI_EscapeMenu.cs" t="Include" />
             <e p="UI_ExpandableBar.cs" t="Include" />
+            <e p="UI_ItemPanelRelay.cs" t="Include" />
             <e p="UI_MainMenu.cs" t="Include" />
             <e p="UI_PanelHolderRelay.cs" t="Include" />
+            <e p="UI_ResourcePanelRelay.cs" t="Include" />
             <e p="UI_SelectionController.cs" t="Include" />
             <e p="UI_SkillPanel.cs" t="Include" />
             <e p="UI_SkillTab.cs" t="Include" />

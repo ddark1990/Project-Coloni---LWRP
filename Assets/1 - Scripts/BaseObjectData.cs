@@ -7,35 +7,35 @@ using UnityEngine.UI;
 
 public class BaseObjectData
 {
-    private string _name;
-    private string _description;
-    private Sprite _sprite;
+    public string ObjectName;
+    public string Description;
+    public Sprite Sprite;
 
-    public BaseObjectData(string name, string description, Sprite sprite)
+    public BaseObjectData(string baseName, string description, Sprite sprite)
     {
-        _name = name;
-        _description = description;
-        _sprite = sprite;
+        ObjectName = baseName;
+        Description = description;
+        Sprite = sprite;
     }
 
     public void SetName(string name)
     {
-        _name = name;
+        ObjectName = name;
     }
     public void SetDescription(string description)
     {
-        _description = description;
+        Description = description;
     }
     public void SetIcon(Sprite sprite)
     {
-        _sprite = sprite;
+        Sprite = sprite;
     }
 }
 
 [CreateAssetMenu(fileName = "ObjectData", menuName = "ProjectColoni/Objects/BaseScriptableData", order = 0)]
 public class BaseScriptableData : ScriptableObject
 {
-    public new string name;
+    public string objectName;
     [TextArea] public string description;
     public Sprite sprite;
 }

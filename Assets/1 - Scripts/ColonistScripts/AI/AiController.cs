@@ -21,7 +21,6 @@ namespace ProjectColoni
             
             OnStartInitializeComponents();
             InitializeSelectable();
-            InitializeBaseObjectData();
         }
 
         private void GetComponents()

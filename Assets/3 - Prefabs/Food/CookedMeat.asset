@@ -15,7 +15,7 @@ MonoBehaviour:
   itemData:
     itemName: Cooked Meat
     itemDescription: Cooked meat that satisfies.
-    itemSprite: {fileID: 21300000, guid: 02fbaba8afef6654595ab4e701e14a17, type: 3}
+    itemSprite: {fileID: 21300000, guid: 2ca6c52d1b461a543817a75d49b82530, type: 3}
     stackLimit: 1
   consumableSettings:
     cookable: 0

@@ -1196,6 +1196,7 @@ RectTransform:
   - {fileID: 469542530}
   - {fileID: 370479423}
   - {fileID: 1881870413}
+  - {fileID: 1940070240}
   m_Father: {fileID: 907576949}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1232,7 +1233,7 @@ MonoBehaviour:
   AutoHideAfterShow: 0
   AutoHideAfterShowDelay: 3
   AutoSelectButtonAfterShow: 0
-  BehaviorAtStart: 0
+  BehaviorAtStart: 1
   CustomStartAnchoredPosition: {x: 0, y: 0, z: 0}
   DeselectAnyButtonSelectedOnHide: 0
   DeselectAnyButtonSelectedOnShow: 0
@@ -1253,45 +1254,162 @@ MonoBehaviour:
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
-        Direction: 0
+        Direction: 3
         CustomPosition: {x: 0, y: 0, z: 0}
-        EaseType: 0
-        Ease: 1
+        EaseType: 1
+        Ease: 29
         AnimationCurve:
           serializedVersion: 2
-          m_Curve: []
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 2.7912683
+            outSlope: 2.7912683
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.1591474
+            value: 0.27871615
+            inSlope: -3.5244074
+            outSlope: -3.5244074
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.36119476
+            value: 0.4033309
+            inSlope: -2.5759792
+            outSlope: -2.5759792
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.6268808
+            value: 0.69904834
+            inSlope: -2.6110096
+            outSlope: -2.6110096
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.8133894
+            value: 0.8256105
+            inSlope: -1.7523863
+            outSlope: -1.7523863
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.5
       Rotate:
         AnimationType: 2
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
-        To: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 180, z: 0}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
         Vibrato: 10
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
-        RotateMode: 1
+        RotateMode: 0
         EaseType: 0
-        Ease: 1
+        Ease: 26
         AnimationCurve:
           serializedVersion: 2
-          m_Curve: []
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 7.0383096
+            outSlope: 7.0383096
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.017583081
+            value: 0.18718478
+            inSlope: 0.08300995
+            outSlope: 0.08300995
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.057600502
+            value: 0.12739694
+            inSlope: 4.0301647
+            outSlope: 4.0301647
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.09568673
+            value: 0.25189704
+            inSlope: -3.516668
+            outSlope: -3.516668
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.15432346
+            value: 0.2683969
+            inSlope: -4.011477
+            outSlope: -4.011477
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.6206393
+            value: 0.37496966
+            inSlope: -1.7194864
+            outSlope: -1.7194864
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 4.481586
+            outSlope: 4.481586
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.4
       Scale:
         AnimationType: 2
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
-        To: {x: 0, y: 0, z: 0}
+        To: {x: 2, y: 2, z: 1}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
         Vibrato: 10
@@ -1299,18 +1417,72 @@ MonoBehaviour:
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
-        Ease: 1
+        Ease: 25
         AnimationCurve:
           serializedVersion: 2
-          m_Curve: []
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: -6.503698
+            outSlope: -6.503698
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.10492328
+            value: -0.2293109
+            inSlope: 4.185171
+            outSlope: 4.185171
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.24543402
+            value: 0.03323266
+            inSlope: -1.7219948
+            outSlope: -1.7219948
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.4196215
+            value: 0.15156424
+            inSlope: -2.7061355
+            outSlope: -2.7061355
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.592863
+            value: 0.27791208
+            inSlope: -1.6045417
+            outSlope: -1.6045417
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: -0.5640811
+            outSlope: -0.5640811
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.4
       Fade:
         AnimationType: 2
-        Enabled: 0
+        Enabled: 1
         From: 0
         To: 0
         By: 0.5
@@ -1326,7 +1498,7 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.2
     AutoStartLoopAnimation: 1
     LoadSelectedPresetAtRuntime: 0
     InstantAnimation: 0
@@ -1370,8 +1542,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Uncategorized
-    PresetName: Default
+    PresetCategory: Fade
+    PresetName: SoftShrink
   HideProgressor: {fileID: 0}
   LoopBehavior:
     Animation:
@@ -1518,7 +1690,7 @@ MonoBehaviour:
       AnimationType: 1
       Move:
         AnimationType: 1
-        Enabled: 1
+        Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
         By: {x: 0, y: 0, z: 0}
@@ -1527,10 +1699,10 @@ MonoBehaviour:
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
-        Direction: 2
+        Direction: 3
         CustomPosition: {x: 0, y: 0, z: 0}
         EaseType: 0
-        Ease: 30
+        Ease: 3
         AnimationCurve:
           serializedVersion: 2
           m_Curve:
@@ -1583,11 +1755,11 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.4
+        Duration: 0.2
       Rotate:
         AnimationType: 1
-        Enabled: 1
-        From: {x: 0, y: 180, z: 0}
+        Enabled: 0
+        From: {x: 0, y: 0, z: -15}
         To: {x: 0, y: 0, z: 0}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
@@ -1596,61 +1768,79 @@ MonoBehaviour:
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 0
-        EaseType: 1
-        Ease: 27
+        EaseType: 0
+        Ease: 18
         AnimationCurve:
           serializedVersion: 2
           m_Curve:
           - serializedVersion: 3
             time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
+            value: 0.0051574707
+            inSlope: 0
+            outSlope: 0
             tangentMode: 0
             weightedMode: 0
             inWeight: 0.33333334
             outWeight: 0.33333334
           - serializedVersion: 3
-            time: 0.25052124
-            value: 1.1037213
-            inSlope: 0.4145312
-            outSlope: 0.4145312
+            time: 0.048303347
+            value: 0.28854316
+            inSlope: 7.8732495
+            outSlope: 7.8732495
             tangentMode: 0
             weightedMode: 0
             inWeight: 0.33333334
             outWeight: 0.33333334
           - serializedVersion: 3
-            time: 0.6542171
-            value: 0.58992076
-            inSlope: -1.7674943
-            outSlope: -1.7674943
+            time: 0.10184101
+            value: -0.07756907
+            inSlope: 3.7581615
+            outSlope: 3.7581615
             tangentMode: 0
             weightedMode: 0
             inWeight: 0.33333334
             outWeight: 0.33333334
           - serializedVersion: 3
-            time: 0.7522569
-            value: 0.711958
-            inSlope: -3.719012
-            outSlope: -3.719012
+            time: 0.1691427
+            value: 0.5604678
+            inSlope: 5.091666
+            outSlope: 5.091666
             tangentMode: 0
             weightedMode: 0
             inWeight: 0.33333334
             outWeight: 0.33333334
           - serializedVersion: 3
-            time: 0.86391234
-            value: 0.89230204
-            inSlope: -6.187496
-            outSlope: -6.187496
+            time: 0.6416942
+            value: -0.5875959
+            inSlope: 1.8110614
+            outSlope: 1.8110614
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.9733818
+            value: 0.67883307
+            inSlope: -4.2502594
+            outSlope: -4.2502594
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.98996425
+            value: 0.88832426
+            inSlope: -2.3853254
+            outSlope: -2.3853254
             tangentMode: 0
             weightedMode: 0
             inWeight: 0.33333334
             outWeight: 0.33333334
           - serializedVersion: 3
             time: 1
-            value: 1
-            inSlope: -0.3624121
-            outSlope: -0.3624121
+            value: 1.0051575
+            inSlope: 2
+            outSlope: 2
             tangentMode: 0
             weightedMode: 0
             inWeight: 0.33333334
@@ -1659,11 +1849,11 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.6
+        Duration: 0.2
       Scale:
         AnimationType: 1
-        Enabled: 0
-        From: {x: 0.2, y: 0.2, z: 1}
+        Enabled: 1
+        From: {x: 2, y: 2, z: 1}
         To: {x: 0, y: 0, z: 0}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
@@ -1724,12 +1914,12 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        StartDelay: 0.2
+        StartDelay: 0
         Duration: 0.1
       Fade:
         AnimationType: 1
-        Enabled: 0
-        From: 1
+        Enabled: 1
+        From: 0
         To: 1
         By: 0.5
         UseCustomFromAndTo: 0
@@ -1743,8 +1933,8 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        StartDelay: 0
-        Duration: 0.4
+        StartDelay: 0.1
+        Duration: 0.1
     AutoStartLoopAnimation: 1
     LoadSelectedPresetAtRuntime: 0
     InstantAnimation: 0
@@ -1788,8 +1978,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Drop
-    PresetName: Flutter
+    PresetCategory: Fade
+    PresetName: SoftShrink
   ShowProgressor: {fileID: 0}
   TargetOrientation: 2
   UpdateHideProgressorOnShow: 0
@@ -2570,8 +2760,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: 0
-  data: {fileID: 11400000, guid: 56dbcd2539c6bc64f9ca180f9db6db49, type: 2}
-  amount: 0
+  baseData: {fileID: 11400000, guid: 56dbcd2539c6bc64f9ca180f9db6db49, type: 2}
+  amount: 100
 --- !u!1 &410691031
 GameObject:
   m_ObjectHideFlags: 0
@@ -2783,6 +2973,7 @@ GameObject:
   - component: {fileID: 469542530}
   - component: {fileID: 469542532}
   - component: {fileID: 469542531}
+  - component: {fileID: 469542533}
   m_Layer: 0
   m_Name: PanelHolder/Bkg
   m_TagString: Untagged
@@ -2848,6 +3039,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469542529}
   m_CullTransparentMesh: 0
+--- !u!114 &469542533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469542529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4685269a0107fc4ea6143ef2fb9886a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectImage: {fileID: 1523907584}
+  objectName: {fileID: 76874496}
 --- !u!1 &476680805
 GameObject:
   m_ObjectHideFlags: 0
@@ -2927,8 +3132,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 907576944}
+  selectedPanelHolder: {fileID: 469542529}
   selectedColonistPanel: {fileID: 370479422}
-  selectedObjectPanel: {fileID: 1881870412}
+  selectedResourcePanel: {fileID: 1881870412}
+  selectedItemPanel: {fileID: 1940070239}
   selectedImage: {fileID: 1523907584}
   selectedName: {fileID: 76874496}
 --- !u!114 &486683080
@@ -6852,6 +7059,115 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 713077415}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &721971457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 721971458}
+  - component: {fileID: 721971462}
+  - component: {fileID: 721971461}
+  - component: {fileID: 721971460}
+  - component: {fileID: 721971459}
+  m_Layer: 0
+  m_Name: ItemAmount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &721971458
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721971457}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1940070240}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 297, y: -123.1}
+  m_SizeDelta: {x: 145.97, y: 31}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &721971459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721971457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &721971460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721971457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &721971461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721971457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: d28b7ab1938d4a54688d690d38893fe4, type: 3}
+    m_FontSize: 17
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: x100
+--- !u!222 &721971462
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721971457}
+  m_CullTransparentMesh: 0
 --- !u!114 &739103033 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1206679100, guid: 9851a5c63acdea74a844df6dd2bd111f,
@@ -8360,7 +8676,7 @@ MonoBehaviour:
         AnimationType: 2
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
-        To: {x: 0, y: 0, z: -15}
+        To: {x: 0, y: 180, z: 0}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
         Vibrato: 10
@@ -8369,7 +8685,7 @@ MonoBehaviour:
         LoopType: 1
         RotateMode: 0
         EaseType: 0
-        Ease: 17
+        Ease: 26
         AnimationCurve:
           serializedVersion: 2
           m_Curve:
@@ -8440,12 +8756,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.2
+        Duration: 0.4
       Scale:
         AnimationType: 2
-        Enabled: 1
+        Enabled: 0
         From: {x: 0, y: 0, z: 0}
-        To: {x: 1, y: 1, z: 1}
+        To: {x: 2, y: 2, z: 1}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
         Vibrato: 10
@@ -8453,7 +8769,7 @@ MonoBehaviour:
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
-        Ease: 26
+        Ease: 25
         AnimationCurve:
           serializedVersion: 2
           m_Curve:
@@ -8515,7 +8831,7 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.8
+        Duration: 0.4
       Fade:
         AnimationType: 2
         Enabled: 1
@@ -8533,7 +8849,7 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        StartDelay: 0.2
+        StartDelay: 0
         Duration: 0.2
     AutoStartLoopAnimation: 1
     LoadSelectedPresetAtRuntime: 0
@@ -8579,7 +8895,7 @@ MonoBehaviour:
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Fade
-    PresetName: SoftShrink
+    PresetName: OutFast
   HideProgressor: {fileID: 0}
   LoopBehavior:
     Animation:
@@ -8795,7 +9111,7 @@ MonoBehaviour:
       Rotate:
         AnimationType: 1
         Enabled: 0
-        From: {x: 0, y: 0, z: -15}
+        From: {x: 0, y: 180, z: 0}
         To: {x: 0, y: 0, z: 0}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
@@ -8805,7 +9121,7 @@ MonoBehaviour:
         LoopType: 1
         RotateMode: 0
         EaseType: 0
-        Ease: 18
+        Ease: 27
         AnimationCurve:
           serializedVersion: 2
           m_Curve:
@@ -8885,11 +9201,11 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.2
+        Duration: 0.4
       Scale:
         AnimationType: 1
-        Enabled: 1
-        From: {x: 1, y: 1, z: 1}
+        Enabled: 0
+        From: {x: 0, y: 0, z: 1}
         To: {x: 0, y: 0, z: 0}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
@@ -8969,7 +9285,7 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        StartDelay: 0.2
+        StartDelay: 0
         Duration: 0.2
     AutoStartLoopAnimation: 1
     LoadSelectedPresetAtRuntime: 0
@@ -9015,7 +9331,7 @@ MonoBehaviour:
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Fade
-    PresetName: SoftShrink
+    PresetName: InFast
   ShowProgressor: {fileID: 0}
   TargetOrientation: 2
   UpdateHideProgressorOnShow: 0
@@ -12099,7 +12415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 27fc609d15c12ae4f9dc43bd0598ac75, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -15930,7 +16246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1849544061
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16070,7 +16386,7 @@ MonoBehaviour:
         AnimationType: 2
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
-        To: {x: 0, y: 0, z: -15}
+        To: {x: 0, y: 180, z: 0}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
         Vibrato: 10
@@ -16079,7 +16395,7 @@ MonoBehaviour:
         LoopType: 1
         RotateMode: 0
         EaseType: 0
-        Ease: 17
+        Ease: 26
         AnimationCurve:
           serializedVersion: 2
           m_Curve:
@@ -16150,12 +16466,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.2
+        Duration: 0.4
       Scale:
         AnimationType: 2
-        Enabled: 1
+        Enabled: 0
         From: {x: 0, y: 0, z: 0}
-        To: {x: 1, y: 1, z: 1}
+        To: {x: 2, y: 2, z: 1}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
         Vibrato: 10
@@ -16163,7 +16479,7 @@ MonoBehaviour:
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
-        Ease: 26
+        Ease: 25
         AnimationCurve:
           serializedVersion: 2
           m_Curve:
@@ -16225,7 +16541,7 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.8
+        Duration: 0.4
       Fade:
         AnimationType: 2
         Enabled: 1
@@ -16243,7 +16559,7 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        StartDelay: 0.2
+        StartDelay: 0
         Duration: 0.2
     AutoStartLoopAnimation: 1
     LoadSelectedPresetAtRuntime: 0
@@ -16289,7 +16605,7 @@ MonoBehaviour:
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Fade
-    PresetName: SoftShrink
+    PresetName: OutFast
   HideProgressor: {fileID: 0}
   LoopBehavior:
     Animation:
@@ -16505,7 +16821,7 @@ MonoBehaviour:
       Rotate:
         AnimationType: 1
         Enabled: 0
-        From: {x: 0, y: 0, z: -15}
+        From: {x: 0, y: 180, z: 0}
         To: {x: 0, y: 0, z: 0}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
@@ -16515,7 +16831,7 @@ MonoBehaviour:
         LoopType: 1
         RotateMode: 0
         EaseType: 0
-        Ease: 18
+        Ease: 27
         AnimationCurve:
           serializedVersion: 2
           m_Curve:
@@ -16595,11 +16911,11 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.2
+        Duration: 0.4
       Scale:
         AnimationType: 1
-        Enabled: 1
-        From: {x: 1, y: 1, z: 1}
+        Enabled: 0
+        From: {x: 0, y: 0, z: 1}
         To: {x: 0, y: 0, z: 0}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
@@ -16679,7 +16995,7 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        StartDelay: 0.2
+        StartDelay: 0
         Duration: 0.2
     AutoStartLoopAnimation: 1
     LoadSelectedPresetAtRuntime: 0
@@ -16725,7 +17041,7 @@ MonoBehaviour:
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Fade
-    PresetName: SoftShrink
+    PresetName: InFast
   ShowProgressor: {fileID: 0}
   TargetOrientation: 2
   UpdateHideProgressorOnShow: 0
@@ -16799,8 +17115,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1881870413}
   - component: {fileID: 1881870414}
+  - component: {fileID: 1881870415}
   m_Layer: 0
-  m_Name: SelectedObjectPanel
+  m_Name: SelectedResourcePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16834,6 +17151,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881870412}
   m_CullTransparentMesh: 0
+--- !u!114 &1881870415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881870412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db83f05b6a5509e499a5bba2cefbb195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountText: {fileID: 539929099}
 --- !u!1001 &1899591833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17332,6 +17662,65 @@ MonoBehaviour:
   fadeText: {fileID: 192081361}
   iconImage: {fileID: 607698346}
   fadeInText: 1
+--- !u!1 &1940070239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1940070240}
+  - component: {fileID: 1940070242}
+  - component: {fileID: 1940070241}
+  m_Layer: 0
+  m_Name: SelectedItemPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1940070240
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940070239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 721971458}
+  m_Father: {fileID: 187444435}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 331.65, y: 107}
+  m_SizeDelta: {x: 663.3, y: 138.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1940070241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940070239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c3b3189af965844b2b7a2351c58ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountText: {fileID: 721971461}
+--- !u!222 &1940070242
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940070239}
+  m_CullTransparentMesh: 0
 --- !u!1 &1966827399 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1869315555436706123, guid: d09af01f7822c3d4ab4c66d38c666ed9,
@@ -17446,7 +17835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2053967856
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17586,7 +17975,7 @@ MonoBehaviour:
         AnimationType: 2
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
-        To: {x: 0, y: 0, z: -15}
+        To: {x: 0, y: 180, z: 0}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
         Vibrato: 10
@@ -17595,7 +17984,7 @@ MonoBehaviour:
         LoopType: 1
         RotateMode: 0
         EaseType: 0
-        Ease: 17
+        Ease: 26
         AnimationCurve:
           serializedVersion: 2
           m_Curve:
@@ -17666,12 +18055,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.2
+        Duration: 0.4
       Scale:
         AnimationType: 2
-        Enabled: 1
+        Enabled: 0
         From: {x: 0, y: 0, z: 0}
-        To: {x: 1, y: 1, z: 1}
+        To: {x: 2, y: 2, z: 1}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
         Vibrato: 10
@@ -17679,7 +18068,7 @@ MonoBehaviour:
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
-        Ease: 26
+        Ease: 25
         AnimationCurve:
           serializedVersion: 2
           m_Curve:
@@ -17741,7 +18130,7 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.8
+        Duration: 0.4
       Fade:
         AnimationType: 2
         Enabled: 1
@@ -17759,7 +18148,7 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        StartDelay: 0.2
+        StartDelay: 0
         Duration: 0.2
     AutoStartLoopAnimation: 1
     LoadSelectedPresetAtRuntime: 0
@@ -17805,7 +18194,7 @@ MonoBehaviour:
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Fade
-    PresetName: SoftShrink
+    PresetName: OutFast
   HideProgressor: {fileID: 0}
   LoopBehavior:
     Animation:
@@ -18021,7 +18410,7 @@ MonoBehaviour:
       Rotate:
         AnimationType: 1
         Enabled: 0
-        From: {x: 0, y: 0, z: -15}
+        From: {x: 0, y: 180, z: 0}
         To: {x: 0, y: 0, z: 0}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
@@ -18031,7 +18420,7 @@ MonoBehaviour:
         LoopType: 1
         RotateMode: 0
         EaseType: 0
-        Ease: 18
+        Ease: 27
         AnimationCurve:
           serializedVersion: 2
           m_Curve:
@@ -18111,11 +18500,11 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.2
+        Duration: 0.4
       Scale:
         AnimationType: 1
-        Enabled: 1
-        From: {x: 1, y: 1, z: 1}
+        Enabled: 0
+        From: {x: 0, y: 0, z: 1}
         To: {x: 0, y: 0, z: 0}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
@@ -18195,7 +18584,7 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        StartDelay: 0.2
+        StartDelay: 0
         Duration: 0.2
     AutoStartLoopAnimation: 1
     LoadSelectedPresetAtRuntime: 0
@@ -18241,7 +18630,7 @@ MonoBehaviour:
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Fade
-    PresetName: SoftShrink
+    PresetName: InFast
   ShowProgressor: {fileID: 0}
   TargetOrientation: 2
   UpdateHideProgressorOnShow: 0
@@ -22128,8 +22517,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: 0
-  data: {fileID: 0}
-  amount: 0
+  baseData: {fileID: 11400000, guid: c8f25efb157a8714eb5a42f60e159e9b, type: 2}
+  amount: 50
 --- !u!64 &3662615150303574101
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22288,9 +22677,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4304678335175400362, guid: cace6fd95abe87f419bdcc49aedd5360,
         type: 3}
-      propertyPath: objectStats
+      propertyPath: baseData
       value: 
-      objectReference: {fileID: 11400000, guid: 3594f6719a4a93b42b0f38d5bc5d29a7,
+      objectReference: {fileID: 11400000, guid: 46921c67b1fea1e40b6ef42a6f524c97,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cace6fd95abe87f419bdcc49aedd5360, type: 3}

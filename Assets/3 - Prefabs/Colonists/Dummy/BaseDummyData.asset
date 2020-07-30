@@ -10,11 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: DummyBaseData
+  m_Name: BaseDummyData
   m_EditorClassIdentifier: Assembly-CSharp::BaseScriptableData
-  name: Gucci "Robert" Gang
-  description: 'Gucci Gang. Lorem ipsum dolor sit amet, ei ius oratio omnium instructior,
-    sea an maiorum detracto. Vim eu molestiae posidonium. Usu unum natum splendide
-    ea, at atqui veritus signiferumque nam, te pro decore ridens volutpat. Usu doctus
-    noluisse persecuti te. '
+  objectName: Gucci "Berg" Mane
+  description: A guy.
   sprite: {fileID: 21300000, guid: 27fc609d15c12ae4f9dc43bd0598ac75, type: 3}

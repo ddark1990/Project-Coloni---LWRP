@@ -117,6 +117,7 @@ namespace ProjectColoni
         private void OnDeSelectEvent(Selectable selectable)
         {
             if(selectable != null) selectable.selected = false;
+            UI_SelectionController.Instance.ResetWindows();
         }
         
         #endregion

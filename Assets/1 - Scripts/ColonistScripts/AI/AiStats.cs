@@ -7,8 +7,12 @@ namespace ProjectColoni
 {
     public class AiStats : MonoBehaviour
     {
-        //add base stats 
-        public Stats.AiStatsObject objectStats;
+        [Header("Ai Object Data")]
+        [Tooltip("If null, will generate random values for the base data.")] 
+        [SerializeField] private BaseScriptableData baseData;
+        [SerializeField] private Stats.AiStatsObject aiObjectStats;
+        
+        public BaseObjectData baseObjectInfo;
         public Stats stats;
         
         private float _damageOverTimeTimer;
@@ -21,28 +25,38 @@ namespace ProjectColoni
         private void Start()
         {
             InitializeStats();
+            InitializeBaseObjectData();
         }
-
+        
+        /// <summary>
+        /// Initialize base data from a scriptable object if one is available .
+        /// </summary>
+        private void InitializeBaseObjectData()
+        {
+            baseObjectInfo = baseData != null ? new BaseObjectData(baseData.objectName, baseData.description, baseData.sprite) 
+                : new BaseObjectData("", "", null); //should generate random base stats, maybe
+        }
+        
         private void InitializeStats()
         {
-            if (objectStats != null)
+            if (aiObjectStats != null)
             {
                 stats = new Stats
                 {
-                    Age = objectStats.age,
-                    gender = objectStats.gender,
-                    Health = objectStats.maxHealth,
-                    MaxHealth = objectStats.maxHealth,
-                    Food = objectStats.food,
-                    Stamina = objectStats.maxStamina,
-                    MaxStamina = objectStats.maxStamina,
-                    Energy = objectStats.energy,
-                    EnableSecondaryStats = objectStats.enableSecondaryStats,
-                    Comfort = objectStats.comfort,
-                    Recreation = objectStats.recreation,
-                    HungerRate = objectStats.hungerRate,
-                    StaminaRate = objectStats.staminaRate,
-                    EnergyRate = objectStats.energyRate
+                    Age = aiObjectStats.age,
+                    gender = aiObjectStats.gender,
+                    Health = aiObjectStats.maxHealth,
+                    MaxHealth = aiObjectStats.maxHealth,
+                    Food = aiObjectStats.food,
+                    Stamina = aiObjectStats.maxStamina,
+                    MaxStamina = aiObjectStats.maxStamina,
+                    Energy = aiObjectStats.energy,
+                    EnableSecondaryStats = aiObjectStats.enableSecondaryStats,
+                    Comfort = aiObjectStats.comfort,
+                    Recreation = aiObjectStats.recreation,
+                    HungerRate = aiObjectStats.hungerRate,
+                    StaminaRate = aiObjectStats.staminaRate,
+                    EnergyRate = aiObjectStats.energyRate
                 }; 
             }
             else

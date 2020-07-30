@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: BaseObjectData
+  m_Name: Base_Data_Tree_Small_01
   m_EditorClassIdentifier: Assembly-CSharp::BaseScriptableData
-  name: 
-  description: 
-  icon: {fileID: 0}
+  objectName: Small Tree Node
+  description: A Tree.
+  sprite: {fileID: 21300000, guid: c86394c7963405a43b982ebadebf6077, type: 3}
