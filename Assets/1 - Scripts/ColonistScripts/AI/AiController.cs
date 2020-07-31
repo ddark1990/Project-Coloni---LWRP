@@ -9,7 +9,7 @@ namespace ProjectColoni
 {
     public class AiController : AiBase
     {
-        private NavMeshAgent _navMeshAgent;
+        [HideInInspector] public NavMeshAgent navMeshAgent;
         private Selectable _selectable;
         private Camera _camera;
         private LineRenderer _destinationLineRenderer;
@@ -25,7 +25,7 @@ namespace ProjectColoni
 
         private void GetComponents()
         {
-            _navMeshAgent = GetComponent<NavMeshAgent>();
+            navMeshAgent = GetComponent<NavMeshAgent>();
             _selectable = GetComponent<Selectable>();
             _destinationLineRenderer = GetComponent<LineRenderer>();
             _camera = SelectionManager.Instance.cam;
@@ -33,7 +33,7 @@ namespace ProjectColoni
         
         private void Update()
         {
-            DrawLineRendererPaths(_navMeshAgent, _destinationLineRenderer);
+            DrawLineRendererPaths(navMeshAgent, _destinationLineRenderer);
             OutlineHighlight();
             
             if (Input.GetMouseButtonDown(1) && _selectable.selected)
@@ -49,7 +49,7 @@ namespace ProjectColoni
             var ray = _camera.ScreenPointToRay(Input.mousePosition);
             if (!Physics.Raycast(ray, out var hit)) return;
                 
-            _navMeshAgent.SetDestination(hit.point);
+            navMeshAgent.SetDestination(hit.point);
             OnGroundClickSpawn(hit.point);
         }
         

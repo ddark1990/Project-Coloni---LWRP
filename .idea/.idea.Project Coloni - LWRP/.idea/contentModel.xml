@@ -25,6 +25,32 @@
                 <e p="AiSensorsCustomInspector.cs" t="Include" />
                 <e p="AiStatsCustomInspector.cs" t="Include" />
               </e>
+              <e p="GOAP" t="Include">
+                <e p="MainGOAP" t="Include">
+                  <e p="Actions" t="Include">
+                    <e p="EquipWeaponGoapAction.cs" t="Include" />
+                    <e p="MeleeAttackGoapAction.cs" t="Include" />
+                    <e p="PickUpItemGoapAction.cs" t="Include" />
+                    <e p="RangedAttackGoapAction.cs" t="Include" />
+                    <e p="UnEquipWeaponGoapAction.cs" t="Include" />
+                    <e p="WanderGoapAction.cs" t="Include" />
+                  </e>
+                  <e p="AgentTypes" t="Include">
+                    <e p="AgressiveHumanoidAgent.cs" t="Include" />
+                    <e p="PassiveAnimalAgent.cs" t="Include" />
+                  </e>
+                  <e p="FSM" t="Include">
+                    <e p="FSM.cs" t="Include" />
+                    <e p="FSMState.cs" t="Include" />
+                  </e>
+                  <e p="GOAP" t="Include">
+                    <e p="GoapAction.cs" t="Include" />
+                    <e p="GoapAgent.cs" t="Include" />
+                    <e p="GoapPlanner.cs" t="Include" />
+                    <e p="IGoap.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
               <e p="Stats.cs" t="Include" />
               <e p="StatusModifiers.cs" t="Include" />
               <e p="StatusNotifications.cs" t="Include" />
