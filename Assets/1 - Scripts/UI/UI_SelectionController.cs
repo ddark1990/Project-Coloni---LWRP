@@ -29,6 +29,7 @@ namespace ProjectColoni
         private bool _skillWindowOpen;
         private bool _healthWindowOpen;
         private bool _inventoryWindowOpen;
+        private bool _infoWindowOpen;
     
         private void Start()
         {
@@ -49,9 +50,9 @@ namespace ProjectColoni
 
         private void LateUpdate()
         {
-            if(selectedColonistPanel.activeSelf) PopulateColonistVitalsData();
-            if(selectedResourcePanel.activeSelf) PopulateResourceData();
-            if(selectedItemPanel.activeSelf) PopulateItemData();
+            if(selectedColonistPanel.activeInHierarchy) PopulateColonistVitalsData();
+            if(selectedResourcePanel.activeInHierarchy) PopulateResourceData();
+            if(selectedItemPanel.activeInHierarchy) PopulateItemData();
         }
 
         public void TogglePanelHolder() 
@@ -59,10 +60,6 @@ namespace ProjectColoni
             OpenSelectedPanel();
 
             if (_selectionManager.currentlySelectedObject == null) return;
-            /*
-            var harvestablePanelRelay = selectedColonistPanel.GetComponentInChildren<UI_ColonisPanelRelay>();
-            var itemPanelRelay = selectedColonistPanel.GetComponentInChildren<UI_ColonisPanelRelay>();
-            */
 
             switch (_selectionManager.selectedType)
             {
@@ -73,9 +70,8 @@ namespace ProjectColoni
                     break;
                 case ResourceNode harvestable:
                     SetActivePanel(selectedResourcePanel.name);
+                    
                     PopulateBaseData(harvestable);
-                    
-                    
                     break;
                 case Item item:
                     SetActivePanel(selectedItemPanel.name);
@@ -86,6 +82,8 @@ namespace ProjectColoni
                     throw new ArgumentOutOfRangeException();
             }
         }
+
+        [SerializeField] private UI_InfoPanelRelay infoPanelRelay;
         
         private void PopulateBaseData(Selectable selected)
         {
@@ -96,17 +94,23 @@ namespace ProjectColoni
                 case AiController aiController:
                     panelHolderRelay.objectName.text = aiController.aiStats.baseObjectInfo.ObjectName;
                     panelHolderRelay.objectImage.sprite = aiController.aiStats.baseObjectInfo.Sprite;
+
+                    infoPanelRelay.descriptionText.text = aiController.aiStats.baseObjectInfo.Description;
                     
                     break;
                 case ResourceNode harvestable:
                     panelHolderRelay.objectName.text = harvestable.baseObjectInfo.ObjectName;
                     panelHolderRelay.objectImage.sprite = harvestable.baseObjectInfo.Sprite;
 
+                    infoPanelRelay.descriptionText.text = harvestable.baseObjectInfo.Description;
+                        
                     break;
                 case Item item:
                     panelHolderRelay.objectName.text = item.baseObjectInfo.ObjectName;
                     panelHolderRelay.objectImage.sprite = item.baseObjectInfo.Sprite;
 
+                    infoPanelRelay.descriptionText.text = item.baseObjectInfo.Description;
+                    
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -118,10 +122,6 @@ namespace ProjectColoni
         private void PopulateColonistVitalsData() 
         {
             var aiController = _selectionManager.selectedType.GetComponentInChildren<AiController>();
-            
-            //_time += Time.deltaTime;
-            //var seconds = Mathf.FloorToInt( aiController.aiStats.stats.Food );
-            //_displaySeconds.text = cacheSeconds[ (int)aiController.aiStats.stats.Food ];
 
             //bars
             colonistPanelRelay.healthBar.fillAmount = aiController.aiStats.stats.Health / aiController.aiStats.stats.MaxHealth;
@@ -147,7 +147,7 @@ namespace ProjectColoni
         {
             var resource = _selectionManager.selectedType.GetComponentInChildren<ResourceNode>();
 
-            resourcePanelRelay.amountText.text = "Amount: " + _cachedIntToString[resource.amount];
+            resourcePanelRelay.amountText.text = _cachedIntToString[resource.amount];
         }
 
         [HideInInspector] public UI_ItemPanelRelay itemPanelRelay;
@@ -156,11 +156,9 @@ namespace ProjectColoni
         {
             var item = _selectionManager.selectedType.GetComponentInChildren<Item>();
 
-            itemPanelRelay.amountText.text = "Amount: " + _cachedIntToString[item.itemCount];
+            itemPanelRelay.amountText.text = _cachedIntToString[item.itemCount];
         }
-
-        
-        
+       
         //button events
         public void ToggleSkillWindow()
         {
@@ -185,22 +183,25 @@ namespace ProjectColoni
             
             ToggleWindowView(_inventoryWindowOpen, "Selected", "InventoryInfoPanel");
         }
+        
+        public void ToggleInfoWindow()
+        {
+            ResetColonistWindows(_infoWindowOpen);
+            _infoWindowOpen = !_infoWindowOpen;
+            
+            ToggleWindowView(_infoWindowOpen, "General", "InfoPanel");
+        }
         //
         
         private void OpenSelectedPanel()
         {
             if(_selectionManager.currentlySelectedObject != null) UIView.ShowView("Selected", "SelectedInfoPanel");
         }
-        
-        private void CloseSelectedPanel()
-        {
-            UIView.HideViewCategory("Selected");
-        }
 
         private string _tempCategoryName;
         private string _tempPanelName;
         
-        private void ToggleWindowView(bool active, string categoryName, string panelName)
+        private void ToggleWindowView(bool active, string categoryName, string panelName) //toggles views while caching old view and category names
         {
             if (_tempPanelName != string.Empty && _tempCategoryName != string.Empty)
             {
@@ -230,24 +231,30 @@ namespace ProjectColoni
             _inventoryWindowOpen = false;
             _healthWindowOpen = false;
             _skillWindowOpen = false;
+            _infoWindowOpen = false;
         }
 
         public void ResetWindows()
         {
-            selectedColonistPanel.SetActive(false);
-            selectedResourcePanel.SetActive(false);
-            selectedItemPanel.SetActive(false);
-
             _inventoryWindowOpen = false;
             _healthWindowOpen = false;
             _skillWindowOpen = false;
+            _infoWindowOpen = false;
+            
             CloseSelectedPanel();
         }
         
+        private void CloseSelectedPanel()
+        {
+            if(_selectionManager.hoveringObject == null) UIView.HideViewCategory("General");
+
+            UIView.HideViewCategory("Selected");
+        }
+        
         private readonly CacheIntString _cachedIntToString = new CacheIntString(
-            (seconds)=>seconds , //describe how seconds (key) are translated to useful value (hash)
-            (second)=>second.ToString("00") //you describe how string is built based on value (hash)
-            , 0 , 59 , 1 //initialization range and step, so cache will be warmed up and ready
+            (values)=>values , //describe how seconds (key) are translated to useful value (hash)
+            (value)=>value.ToString("00") //you describe how string is built based on value (hash)
+            , 0 , 150 , 1 //initialization range and step, so cache will be warmed up and ready
         );
     }
 }

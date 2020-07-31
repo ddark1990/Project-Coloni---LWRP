@@ -1173,7 +1173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9c8d1991b11484880b2fed3a5513d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aiBaseData: {fileID: 11400000, guid: 16cfc9a11d0e22b42b15501aaa264bb1, type: 2}
+  baseData: {fileID: 11400000, guid: 46921c67b1fea1e40b6ef42a6f524c97, type: 2}
   aiObjectStats: {fileID: 11400000, guid: 3594f6719a4a93b42b0f38d5bc5d29a7, type: 2}
 --- !u!114 &4303725912926133582
 MonoBehaviour:

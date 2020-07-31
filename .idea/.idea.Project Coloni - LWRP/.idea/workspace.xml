@@ -22,17 +22,11 @@
     <list default="true" id="b94e7643-efd0-4934-b8a0-0256359f3c2b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ColonistPanelRelay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ColonistPanelRelay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ItemPanelRelay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ItemPanelRelay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ResourcePanelRelay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ResourcePanelRelay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/CookedMeat.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/CookedMeat.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/ColonistDummy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/ColonistDummy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/DummyStats.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/DummyStats.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +85,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/SkillSet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/TerrainGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/MusicPlayer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_InfoPanelRelay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/Skill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SnapshotCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/MenuPanel.cs" root0="SKIP_HIGHLIGHTING" />
@@ -118,6 +113,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/SpawnGameObjectsEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/ObjectSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/StatusNotifications.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/ObjectSpawnerDataset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4BEC26B5-CBC7-4715-8442-F1499E984732/a9/2c65772c/CultureInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ColonistPanelRelay.cs" root0="FORCE_HIGHLIGHTING" />
@@ -136,9 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensor.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AIVitals.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SnapshotCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensors.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiVitals.cs" />
@@ -178,7 +171,6 @@
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceType.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" />
@@ -186,7 +178,11 @@
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ResourcePanelRelay.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ItemPanelRelay.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/CacheStrings.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_InfoPanelRelay.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/StatusModifiers.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/StatusNotifications.cs" />
       </list>
     </option>
   </component>
@@ -282,7 +278,7 @@
       <workItem from="1596015037845" duration="61000" />
       <workItem from="1596016684976" duration="941000" />
       <workItem from="1596045297617" duration="36698000" />
-      <workItem from="1596129921595" duration="4645000" />
+      <workItem from="1596129921595" duration="13321000" />
     </task>
     <servers />
   </component>

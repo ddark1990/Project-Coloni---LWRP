@@ -922,6 +922,79 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 077c847ed78177e438ae9862887e3307, type: 3}
+--- !u!1 &158614252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 158614253}
+  - component: {fileID: 158614255}
+  - component: {fileID: 158614254}
+  m_Layer: 0
+  m_Name: SelectedImgBorder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &158614253
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158614252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 717842712}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &158614254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158614252}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5ae9699973efa3e438597eba336d6e65, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &158614255
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158614252}
+  m_CullTransparentMesh: 0
 --- !u!1001 &176270803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1198,7 +1271,7 @@ RectTransform:
   - {fileID: 1881870413}
   - {fileID: 1940070240}
   m_Father: {fileID: 907576949}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2535,7 +2608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 98.149994, y: -16.195}
+  m_AnchoredPosition: {x: 14.25, y: -16.195}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &351279655
@@ -3138,14 +3211,10 @@ MonoBehaviour:
   selectedItemPanel: {fileID: 1940070239}
   selectedImage: {fileID: 1523907584}
   selectedName: {fileID: 76874496}
+  infoPanelRelay: {fileID: 1589195392}
   colonistPanelRelay: {fileID: 0}
   resourcePanelRelay: {fileID: 0}
   itemPanelRelay: {fileID: 0}
-  _displaySeconds: {fileID: 627610598}
-  _displayMinutes: {fileID: 875201951}
-  _displayHours: {fileID: 1477451927}
-  _displayDays: {fileID: 1341710757}
-  _time: 0
 --- !u!114 &486683080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3296,6 +3365,115 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!1 &493725559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493725560}
+  - component: {fileID: 493725564}
+  - component: {fileID: 493725563}
+  - component: {fileID: 493725562}
+  - component: {fileID: 493725561}
+  m_Layer: 0
+  m_Name: ItemAmount (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &493725560
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493725559}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1940070240}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 225.26, y: -15.5}
+  m_SizeDelta: {x: 70.28, y: 31}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &493725561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493725559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &493725562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493725559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &493725563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493725559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: d28b7ab1938d4a54688d690d38893fe4, type: 3}
+    m_FontSize: 17
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Amount:'
+--- !u!222 &493725564
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493725559}
+  m_CullTransparentMesh: 0
 --- !u!1 &508493000
 GameObject:
   m_ObjectHideFlags: 0
@@ -3310,8 +3488,10 @@ GameObject:
   - component: {fileID: 508493002}
   - component: {fileID: 508493006}
   - component: {fileID: 508493005}
+  - component: {fileID: 508493008}
+  - component: {fileID: 508493007}
   m_Layer: 0
-  m_Name: InfoButton
+  m_Name: Button - InfoButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3324,7 +3504,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508493000}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3333,7 +3513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 650.5, y: 15.789925}
+  m_AnchoredPosition: {x: 650.5, y: 16}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508493002
@@ -3343,13 +3523,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508493000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -3445,6 +3625,2321 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!225 &508493007
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508493000}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &508493008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508493000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d12bfc32d0d797428cf0191288caabd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DebugMode: 0
+  StartPosition: {x: 0, y: 0, z: 0}
+  StartRotation: {x: 0, y: 0, z: 0}
+  StartScale: {x: 1, y: 1, z: 1}
+  StartAlpha: 1
+  AllowMultipleClicks: 1
+  ButtonCategory: SelectedButtons
+  ButtonName: InfoButton
+  ClickMode: 0
+  DeselectButtonAfterClick: 0
+  DisableButtonBetweenClicksInterval: 0.2
+  DoubleClickRegisterInterval: 0.2
+  InputData:
+    EnableAlternateInputs: 1
+    InputMode: 2
+    KeyCode: 13
+    KeyCodeAlt: 32
+    VirtualButtonName: Submit
+    VirtualButtonNameAlt: Jump
+  LongClickRegisterInterval: 0.5
+  OnPointerEnter:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0.4
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Stretch
+    PresetName: VerticalVibrate
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 5, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 8
+        Elasticity: 0.5
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.4
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 90, z: 30}
+        UseCustomFromAndTo: 0
+        Vibrato: 32
+        Elasticity: 0.5
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0.1
+        Duration: 0.3
+      Scale:
+        AnimationType: 4
+        Enabled: 1
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: -0.1, y: 0.2, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 14
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.3
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 3
+  OnPointerExit:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0.4
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 4
+  OnPointerDown:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 5
+  OnPointerUp:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 6
+  OnClick:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0.4
+    Enabled: 1
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 486683079}
+            m_MethodName: ToggleInfoWindow
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Scale
+    PresetName: ClickInSlow
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: -5, y: 5, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 4
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.2
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: -30, z: -15}
+        UseCustomFromAndTo: 0
+        Vibrato: 4
+        Elasticity: 0.5
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.3
+      Scale:
+        AnimationType: 4
+        Enabled: 1
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: -0.2, y: -0.2, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 8
+        Elasticity: 0.5
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.5
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 0
+  OnDoubleClick:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0.2
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 1
+  OnLongClick:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0.2
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 2
+  OnRightClick:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 9
+  OnSelected:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 7
+  OnDeselected:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 8
+  NormalLoopAnimation:
+    Animation:
+      AnimationType: 3
+      Move:
+        AnimationType: 3
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 3
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 3
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 3
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Enabled: 0
+    IsPlaying: 0
+    LoopAnimationType: 0
+    LoadSelectedPresetAtRuntime: 0
+    PresetCategory: 
+    PresetName: 
+  SelectedLoopAnimation:
+    Animation:
+      AnimationType: 3
+      Move:
+        AnimationType: 3
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 3
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 3
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 3
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Enabled: 0
+    IsPlaying: 0
+    LoopAnimationType: 1
+    LoadSelectedPresetAtRuntime: 0
+    PresetCategory: 
+    PresetName: 
+  TargetLabel: 0
+  TextLabel: {fileID: 0}
 --- !u!1 &539929095
 GameObject:
   m_ObjectHideFlags: 0
@@ -3481,8 +5976,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 263.1, y: -15.5}
-  m_SizeDelta: {x: 145.97, y: 31}
+  m_AnchoredPosition: {x: 329.97, y: -15.5}
+  m_SizeDelta: {x: 139.15, y: 31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &539929097
 MonoBehaviour:
@@ -3545,7 +6040,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x100
+  m_Text: 100
 --- !u!222 &539929100
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3575,111 +6070,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.84313726}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
---- !u!1 &563163885
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 563163886}
-  - component: {fileID: 563163890}
-  - component: {fileID: 563163889}
-  - component: {fileID: 563163888}
-  - component: {fileID: 563163887}
-  m_Layer: 0
-  m_Name: ComfortIcon (10)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &563163886
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 563163885}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1674604204}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 136.36499, y: -47.49}
-  m_SizeDelta: {x: 25, y: 25}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &563163887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 563163885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!114 &563163888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 563163885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2.5, y: -2.5}
-  m_UseGraphicAlpha: 1
---- !u!114 &563163889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 563163885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.12164397, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8157caebf8dea0c41bfb8f7372609ca7, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &563163890
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 563163885}
-  m_CullTransparentMesh: 0
 --- !u!1 &577982122
 GameObject:
   m_ObjectHideFlags: 0
@@ -3994,188 +6384,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613196405}
   m_CullTransparentMesh: 0
---- !u!1 &625326383
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 625326384}
-  - component: {fileID: 625326388}
-  - component: {fileID: 625326387}
-  - component: {fileID: 625326386}
-  - component: {fileID: 625326385}
-  m_Layer: 0
-  m_Name: ComfortIcon (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &625326384
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625326383}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1674604204}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 136.36499, y: -17.490002}
-  m_SizeDelta: {x: 25, y: 25}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &625326385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625326383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!114 &625326386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625326383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2.5, y: -2.5}
-  m_UseGraphicAlpha: 1
---- !u!114 &625326387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625326383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.16443026, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8e2f63c61d69ebb4da7f7de01519dbc8, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &625326388
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625326383}
-  m_CullTransparentMesh: 0
---- !u!1 &627610595
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 627610596}
-  - component: {fileID: 627610597}
-  - component: {fileID: 627610598}
-  m_Layer: 0
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &627610596
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627610595}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 706292219}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 30}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &627610597
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627610595}
-  m_CullTransparentMesh: 0
---- !u!114 &627610598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627610595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: New Text
 --- !u!1 &633446893
 GameObject:
   m_ObjectHideFlags: 0
@@ -6700,6 +8908,115 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644801805}
   m_CullTransparentMesh: 0
+--- !u!1 &657096960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 657096961}
+  - component: {fileID: 657096965}
+  - component: {fileID: 657096964}
+  - component: {fileID: 657096963}
+  - component: {fileID: 657096962}
+  m_Layer: 0
+  m_Name: ItemAmount (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &657096961
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657096960}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1881870413}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 225.26, y: -15.5}
+  m_SizeDelta: {x: 70.28, y: 31}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &657096962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657096960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &657096963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657096960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &657096964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657096960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: d28b7ab1938d4a54688d690d38893fe4, type: 3}
+    m_FontSize: 17
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Amount:'
+--- !u!222 &657096965
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657096960}
+  m_CullTransparentMesh: 0
 --- !u!1 &683980199
 GameObject:
   m_ObjectHideFlags: 0
@@ -6811,10 +9128,6 @@ RectTransform:
   m_Children:
   - {fileID: 1739500403}
   - {fileID: 2067236284}
-  - {fileID: 627610596}
-  - {fileID: 875201949}
-  - {fileID: 1477451925}
-  - {fileID: 1341710759}
   m_Father: {fileID: 486683081}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6918,111 +9231,6 @@ MonoBehaviour:
   textBox: {fileID: 1334942124}
   iconSelector: {fileID: 2218339785311865, guid: 51bd327f9e0a5e84fb32364ec37933ec,
     type: 3}
---- !u!1 &708545288
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 708545289}
-  - component: {fileID: 708545293}
-  - component: {fileID: 708545292}
-  - component: {fileID: 708545291}
-  - component: {fileID: 708545290}
-  m_Layer: 0
-  m_Name: ComfortIcon (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &708545289
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708545288}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1674604204}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 106.365, y: -47.49}
-  m_SizeDelta: {x: 25, y: 25}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &708545290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708545288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!114 &708545291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708545288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2.5, y: -2.5}
-  m_UseGraphicAlpha: 1
---- !u!114 &708545292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708545288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.12164397, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8157caebf8dea0c41bfb8f7372609ca7, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &708545293
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708545288}
-  m_CullTransparentMesh: 0
 --- !u!1001 &713077415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7148,6 +9356,80 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 713077415}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &717842711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 717842712}
+  - component: {fileID: 717842714}
+  - component: {fileID: 717842713}
+  m_Layer: 0
+  m_Name: SelectedImg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &717842712
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717842711}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.52914, y: 0.52914, z: 0.52914}
+  m_Children:
+  - {fileID: 158614253}
+  m_Father: {fileID: 1589195387}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 94.8, y: 83.2}
+  m_SizeDelta: {x: 360, y: 460.68}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &717842713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717842711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &717842714
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717842711}
+  m_CullTransparentMesh: 0
 --- !u!1 &721971457
 GameObject:
   m_ObjectHideFlags: 0
@@ -7184,8 +9466,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 263.4, y: -15.5}
-  m_SizeDelta: {x: 145.97, y: 31}
+  m_AnchoredPosition: {x: 308.24, y: -15.5}
+  m_SizeDelta: {x: 95.66, y: 31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &721971459
 MonoBehaviour:
@@ -7248,7 +9530,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x100
+  m_Text: 100
 --- !u!222 &721971462
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7307,7 +9589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 127.149994, y: -16.195}
+  m_AnchoredPosition: {x: 43.25, y: -16.195}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &743222380
@@ -7532,111 +9814,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758178943}
-  m_CullTransparentMesh: 0
---- !u!1 &774391907
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 774391908}
-  - component: {fileID: 774391912}
-  - component: {fileID: 774391911}
-  - component: {fileID: 774391910}
-  - component: {fileID: 774391909}
-  m_Layer: 0
-  m_Name: ComfortIcon (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &774391908
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 774391907}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1674604204}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 76.365, y: -17.490002}
-  m_SizeDelta: {x: 25, y: 25}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &774391909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 774391907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!114 &774391910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 774391907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2.5, y: -2.5}
-  m_UseGraphicAlpha: 1
---- !u!114 &774391911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 774391907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.7372549, g: 0.64425135, b: 0.31764704, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 020058290f6b25b4e82be9fb32a79536, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &774391912
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 774391907}
   m_CullTransparentMesh: 0
 --- !u!114 &781045297 stripped
 MonoBehaviour:
@@ -8365,83 +10542,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
---- !u!1 &875201948
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 875201949}
-  - component: {fileID: 875201950}
-  - component: {fileID: 875201951}
-  m_Layer: 0
-  m_Name: Text (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &875201949
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875201948}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 706292219}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &875201950
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875201948}
-  m_CullTransparentMesh: 0
---- !u!114 &875201951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875201948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: New Text
 --- !u!114 &899860235 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4373832682608806022, guid: 4f57707a972cb7a4b94094b312adb559,
@@ -8565,6 +10665,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1589195387}
   - {fileID: 187444435}
   - {fileID: 916567947}
   - {fileID: 2053967856}
@@ -8577,111 +10678,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &912029524
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 912029525}
-  - component: {fileID: 912029529}
-  - component: {fileID: 912029528}
-  - component: {fileID: 912029527}
-  - component: {fileID: 912029526}
-  m_Layer: 0
-  m_Name: ComfortIcon (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &912029525
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912029524}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1674604204}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 76.365, y: -47.49}
-  m_SizeDelta: {x: 25, y: 25}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &912029526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912029524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!114 &912029527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912029524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2.5, y: -2.5}
-  m_UseGraphicAlpha: 1
---- !u!114 &912029528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912029524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.12164397, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8157caebf8dea0c41bfb8f7372609ca7, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &912029529
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912029524}
-  m_CullTransparentMesh: 0
 --- !u!1 &916567946
 GameObject:
   m_ObjectHideFlags: 0
@@ -8716,7 +10712,7 @@ RectTransform:
   m_Children:
   - {fileID: 1477543903}
   m_Father: {fileID: 907576949}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -9680,111 +11676,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 929450892}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &937431801
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 937431802}
-  - component: {fileID: 937431806}
-  - component: {fileID: 937431805}
-  - component: {fileID: 937431804}
-  - component: {fileID: 937431803}
-  m_Layer: 0
-  m_Name: ModifierIcon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &937431802
+--- !u!224 &937431802 stripped
 RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+    type: 3}
+  m_PrefabInstance: {fileID: 2483030733141582085}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937431801}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1674604204}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 16.364998, y: -17.490002}
-  m_SizeDelta: {x: 25, y: 25}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &937431803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937431801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!114 &937431804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937431801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2.5, y: -2.5}
-  m_UseGraphicAlpha: 1
---- !u!114 &937431805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937431801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.41665715, g: 0.735849, b: 0.31585974, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d90b2ae7de112e04badf78bbd6fdf70d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &937431806
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937431801}
-  m_CullTransparentMesh: 0
 --- !u!1 &949197802
 GameObject:
   m_ObjectHideFlags: 0
@@ -10620,111 +12517,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1114571879}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1128386418
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1128386419}
-  - component: {fileID: 1128386423}
-  - component: {fileID: 1128386422}
-  - component: {fileID: 1128386421}
-  - component: {fileID: 1128386420}
-  m_Layer: 0
-  m_Name: ComfortIcon (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1128386419
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128386418}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1674604204}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 46.364998, y: -47.49}
-  m_SizeDelta: {x: 25, y: 25}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1128386420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128386418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!114 &1128386421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128386418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2.5, y: -2.5}
-  m_UseGraphicAlpha: 1
---- !u!114 &1128386422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128386418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.12164397, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8157caebf8dea0c41bfb8f7372609ca7, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1128386423
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128386418}
-  m_CullTransparentMesh: 0
 --- !u!114 &1137267553 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4373832682846042404, guid: 4f57707a972cb7a4b94094b312adb559,
@@ -11003,7 +12795,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209524499}
   m_CullTransparentMesh: 0
---- !u!1 &1228356189
+--- !u!1 &1286425381
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11011,102 +12803,90 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1228356190}
-  - component: {fileID: 1228356194}
-  - component: {fileID: 1228356193}
-  - component: {fileID: 1228356192}
-  - component: {fileID: 1228356191}
+  - component: {fileID: 1286425382}
+  - component: {fileID: 1286425385}
+  - component: {fileID: 1286425384}
+  - component: {fileID: 1286425383}
   m_Layer: 0
-  m_Name: ComfortIcon (2)
+  m_Name: DescriptionHeader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1228356190
+--- !u!224 &1286425382
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228356189}
+  m_GameObject: {fileID: 1286425381}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1674604204}
-  m_RootOrder: 1
+  m_Father: {fileID: 1964149295}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 46.364998, y: -17.490002}
-  m_SizeDelta: {x: 25, y: 25}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -328.49997, y: 56.309994}
+  m_SizeDelta: {x: 90.02, y: 23.01}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1228356191
+--- !u!114 &1286425383
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228356189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!114 &1228356192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228356189}
+  m_GameObject: {fileID: 1286425381}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 2.5, y: -2.5}
   m_UseGraphicAlpha: 1
---- !u!114 &1228356193
+--- !u!114 &1286425384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228356189}
+  m_GameObject: {fileID: 1286425381}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8773585, g: 0.35190824, b: 0.22761661, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 85e0d740ba42f124ba6dc38418848860, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1228356194
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 7033d39644c19cf4793037ac36761d1d, type: 3}
+    m_FontSize: 15
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 'Description:'
+--- !u!222 &1286425385
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228356189}
+  m_GameObject: {fileID: 1286425381}
   m_CullTransparentMesh: 0
 --- !u!1001 &1288221294
 PrefabInstance:
@@ -11974,83 +13754,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334942124}
   m_CullTransparentMesh: 0
---- !u!1 &1341710756
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1341710759}
-  - component: {fileID: 1341710758}
-  - component: {fileID: 1341710757}
-  m_Layer: 0
-  m_Name: Text (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1341710757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341710756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: New Text
---- !u!222 &1341710758
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341710756}
-  m_CullTransparentMesh: 0
---- !u!224 &1341710759
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341710756}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 706292219}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -60}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1361305936
 GameObject:
   m_ObjectHideFlags: 0
@@ -12305,111 +14008,6 @@ MonoBehaviour:
   fadeText: {fileID: 1058670295}
   iconImage: {fileID: 835439641}
   fadeInText: 1
---- !u!1 &1421269120
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1421269121}
-  - component: {fileID: 1421269125}
-  - component: {fileID: 1421269124}
-  - component: {fileID: 1421269123}
-  - component: {fileID: 1421269122}
-  m_Layer: 0
-  m_Name: ComfortIcon (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1421269121
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421269120}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1674604204}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 16.364998, y: -47.49}
-  m_SizeDelta: {x: 25, y: 25}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1421269122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421269120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!114 &1421269123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421269120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2.5, y: -2.5}
-  m_UseGraphicAlpha: 1
---- !u!114 &1421269124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421269120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9921569, g: 0.53333336, b: 0.14901961, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c04a8a617316f5541868d6c45b8d5c00, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1421269125
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421269120}
-  m_CullTransparentMesh: 0
 --- !u!114 &1458943484 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1206679100, guid: 9851a5c63acdea74a844df6dd2bd111f,
@@ -12422,83 +14020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236639ab8da5ae34c8517cb549e7edb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1477451924
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1477451925}
-  - component: {fileID: 1477451926}
-  - component: {fileID: 1477451927}
-  m_Layer: 0
-  m_Name: Text (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1477451925
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1477451924}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 706292219}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -30}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1477451926
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1477451924}
-  m_CullTransparentMesh: 0
---- !u!114 &1477451927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1477451924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: New Text
 --- !u!1 &1477543902
 GameObject:
   m_ObjectHideFlags: 0
@@ -12573,111 +14094,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477543902}
-  m_CullTransparentMesh: 0
---- !u!1 &1491620144
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1491620145}
-  - component: {fileID: 1491620149}
-  - component: {fileID: 1491620148}
-  - component: {fileID: 1491620147}
-  - component: {fileID: 1491620146}
-  m_Layer: 0
-  m_Name: ComfortIcon (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1491620145
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491620144}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1674604204}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 106.365, y: -17.490002}
-  m_SizeDelta: {x: 25, y: 25}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1491620146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491620144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!114 &1491620147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491620144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2.5, y: -2.5}
-  m_UseGraphicAlpha: 1
---- !u!114 &1491620148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491620144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.6886792, g: 0.44772008, b: 0.068218224, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6f4ae601729cc5c43b508c14d3792428, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1491620149
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491620144}
   m_CullTransparentMesh: 0
 --- !u!1 &1523907582
 GameObject:
@@ -13281,6 +14697,923 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588872650}
   m_CullTransparentMesh: 0
+--- !u!1 &1589195386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1589195387}
+  - component: {fileID: 1589195394}
+  - component: {fileID: 1589195393}
+  - component: {fileID: 1589195392}
+  - component: {fileID: 1589195391}
+  - component: {fileID: 1589195390}
+  - component: {fileID: 1589195389}
+  - component: {fileID: 1589195388}
+  m_Layer: 0
+  m_Name: View - InfoPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1589195387
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589195386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 717842712}
+  - {fileID: 1964149295}
+  m_Father: {fileID: 907576949}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1014, y: 107}
+  m_SizeDelta: {x: 663, y: 139}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1589195388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589195386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 314affd16bceddb4c99fbaa07de901d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DebugMode: 0
+  StartPosition: {x: 1014.0019, y: 107.19841, z: 0}
+  StartRotation: {x: -0, y: 0, z: 0}
+  StartScale: {x: 1, y: 1, z: 1}
+  StartAlpha: 1
+  AutoHideAfterShow: 0
+  AutoHideAfterShowDelay: 3
+  AutoSelectButtonAfterShow: 0
+  BehaviorAtStart: 1
+  CustomStartAnchoredPosition: {x: 0, y: 0, z: 0}
+  DeselectAnyButtonSelectedOnHide: 0
+  DeselectAnyButtonSelectedOnShow: 0
+  DisableCanvasWhenHidden: 1
+  DisableGameObjectWhenHidden: 1
+  DisableGraphicRaycasterWhenHidden: 1
+  HideBehavior:
+    Animation:
+      AnimationType: 2
+      Move:
+        AnimationType: 2
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 3
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 1
+        Ease: 29
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 2.7912683
+            outSlope: 2.7912683
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.1591474
+            value: 0.27871615
+            inSlope: -3.5244074
+            outSlope: -3.5244074
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.36119476
+            value: 0.4033309
+            inSlope: -2.5759792
+            outSlope: -2.5759792
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.6268808
+            value: 0.69904834
+            inSlope: -2.6110096
+            outSlope: -2.6110096
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.8133894
+            value: 0.8256105
+            inSlope: -1.7523863
+            outSlope: -1.7523863
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.5
+      Rotate:
+        AnimationType: 2
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 180, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 0
+        EaseType: 0
+        Ease: 26
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 7.0383096
+            outSlope: 7.0383096
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.017583081
+            value: 0.18718478
+            inSlope: 0.08300995
+            outSlope: 0.08300995
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.057600502
+            value: 0.12739694
+            inSlope: 4.0301647
+            outSlope: 4.0301647
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.09568673
+            value: 0.25189704
+            inSlope: -3.516668
+            outSlope: -3.516668
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.15432346
+            value: 0.2683969
+            inSlope: -4.011477
+            outSlope: -4.011477
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.6206393
+            value: 0.37496966
+            inSlope: -1.7194864
+            outSlope: -1.7194864
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 4.481586
+            outSlope: 4.481586
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.4
+      Scale:
+        AnimationType: 2
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 2, y: 2, z: 1}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 25
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: -6.503698
+            outSlope: -6.503698
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.10492328
+            value: -0.2293109
+            inSlope: 4.185171
+            outSlope: 4.185171
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.24543402
+            value: 0.03323266
+            inSlope: -1.7219948
+            outSlope: -1.7219948
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.4196215
+            value: 0.15156424
+            inSlope: -2.7061355
+            outSlope: -2.7061355
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.592863
+            value: 0.27791208
+            inSlope: -1.6045417
+            outSlope: -1.6045417
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: -0.5640811
+            outSlope: -0.5640811
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.4
+      Fade:
+        AnimationType: 2
+        Enabled: 1
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.2
+    AutoStartLoopAnimation: 1
+    LoadSelectedPresetAtRuntime: 0
+    InstantAnimation: 0
+    OnFinished:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    OnStart:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Fade
+    PresetName: OutFast
+  HideProgressor: {fileID: 0}
+  LoopBehavior:
+    Animation:
+      AnimationType: 3
+      Move:
+        AnimationType: 3
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 3
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 3
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 3
+        Enabled: 0
+        From: 0
+        To: 0
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    AutoStartLoopAnimation: 1
+    LoadSelectedPresetAtRuntime: 0
+    InstantAnimation: 0
+    OnFinished:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    OnStart:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+  OnInverseVisibilityChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnVisibilityChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  SelectedButton: {fileID: 0}
+  ShowBehavior:
+    Animation:
+      AnimationType: 1
+      Move:
+        AnimationType: 1
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 3
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 3
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.22816835
+            value: 1.2861733
+            inSlope: -0.08982998
+            outSlope: -0.08982998
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.6220915
+            value: 1.1371747
+            inSlope: 0.94856524
+            outSlope: 0.94856524
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.72613853
+            value: 0.73627746
+            inSlope: -1.5867386
+            outSlope: -1.5867386
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.2
+      Rotate:
+        AnimationType: 1
+        Enabled: 0
+        From: {x: 0, y: 180, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 0
+        EaseType: 0
+        Ease: 27
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0.0051574707
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.048303347
+            value: 0.28854316
+            inSlope: 7.8732495
+            outSlope: 7.8732495
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.10184101
+            value: -0.07756907
+            inSlope: 3.7581615
+            outSlope: 3.7581615
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.1691427
+            value: 0.5604678
+            inSlope: 5.091666
+            outSlope: 5.091666
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.6416942
+            value: -0.5875959
+            inSlope: 1.8110614
+            outSlope: 1.8110614
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.9733818
+            value: 0.67883307
+            inSlope: -4.2502594
+            outSlope: -4.2502594
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.98996425
+            value: 0.88832426
+            inSlope: -2.3853254
+            outSlope: -2.3853254
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 1.0051575
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.4
+      Scale:
+        AnimationType: 1
+        Enabled: 0
+        From: {x: 0, y: 0, z: 1}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 27
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.22024798
+            value: 1.9692707
+            inSlope: 0.9352582
+            outSlope: 0.9352582
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.65045136
+            value: 1.0910703
+            inSlope: 0.5003349
+            outSlope: 0.5003349
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.7293131
+            value: 0.8114508
+            inSlope: 1.217737
+            outSlope: 1.217737
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: -0.943337
+            outSlope: -0.943337
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.8
+      Fade:
+        AnimationType: 1
+        Enabled: 1
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.2
+    AutoStartLoopAnimation: 1
+    LoadSelectedPresetAtRuntime: 0
+    InstantAnimation: 0
+    OnFinished:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    OnStart:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Fade
+    PresetName: InFast
+  ShowProgressor: {fileID: 0}
+  TargetOrientation: 2
+  UpdateHideProgressorOnShow: 0
+  UpdateShowProgressorOnHide: 0
+  UseCustomStartAnchoredPosition: 0
+  ViewCategory: General
+  ViewName: InfoPanel
+--- !u!225 &1589195389
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589195386}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1589195390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589195386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!223 &1589195391
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589195386}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &1589195392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589195386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdaf276c89a90ec46b182e24ebaeb575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionText: {fileID: 1964149297}
+--- !u!114 &1589195393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589195386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.08627451}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 41c4a91b2df17f34686b693b5df0ab9f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1589195394
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589195386}
+  m_CullTransparentMesh: 0
 --- !u!1 &1673211705
 GameObject:
   m_ObjectHideFlags: 0
@@ -13389,15 +15722,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 937431802}
-  - {fileID: 1228356190}
-  - {fileID: 774391908}
-  - {fileID: 1491620145}
-  - {fileID: 625326384}
-  - {fileID: 1421269121}
-  - {fileID: 1128386419}
-  - {fileID: 912029525}
-  - {fileID: 708545289}
-  - {fileID: 563163886}
   m_Father: {fileID: 370479423}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13419,16 +15743,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: 2
     m_Right: 0
-    m_Top: 0
+    m_Top: 2
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 25, y: 25}
   m_Spacing: {x: 5, y: 5}
-  m_Constraint: 2
+  m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &1674604206
 MonoBehaviour:
@@ -16580,7 +18904,7 @@ RectTransform:
   m_Children:
   - {fileID: 1097616815}
   m_Father: {fileID: 907576949}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -17455,6 +19779,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 539929096}
+  - {fileID: 657096961}
   m_Father: {fileID: 187444435}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17801,6 +20126,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1907331067}
   - component: {fileID: 1907331068}
+  - component: {fileID: 1907331070}
+  - component: {fileID: 1907331069}
   m_Layer: 0
   m_Name: SelectionButtonHolder
   m_TagString: Untagged
@@ -17827,8 +20154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -111.77991, y: 16.189941}
-  m_SizeDelta: {x: 168.65, y: 32.39}
+  m_AnchoredPosition: {x: -69.83, y: 16.189941}
+  m_SizeDelta: {x: 84.75, y: 32.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1907331068
 MonoBehaviour:
@@ -17855,6 +20182,42 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+--- !u!114 &1907331069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907331066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1907331070
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907331066}
+  m_CullTransparentMesh: 0
 --- !u!1 &1908148261
 GameObject:
   m_ObjectHideFlags: 0
@@ -18012,6 +20375,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 721971458}
+  - {fileID: 493725560}
   m_Father: {fileID: 187444435}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18040,6 +20404,107 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940070239}
+  m_CullTransparentMesh: 0
+--- !u!1 &1964149294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1964149295}
+  - component: {fileID: 1964149298}
+  - component: {fileID: 1964149297}
+  - component: {fileID: 1964149296}
+  m_Layer: 0
+  m_Name: DescriptionText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1964149295
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964149294}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1286425382}
+  m_Father: {fileID: 1589195387}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 373.51, y: -1.6799965}
+  m_SizeDelta: {x: 566.98, y: 135.64}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1964149296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964149294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2.5, y: -2.5}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1964149297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964149294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 7033d39644c19cf4793037ac36761d1d, type: 3}
+    m_FontSize: 15
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Lorem ipsum dolor sit amet, tortor ad ac volutpat ante risus, sit neque
+    quis lacus ultricies viverra, metus magna nulLorem ipsum dolor sit amet, tortor
+    ad ac volutpat ante risus, sit neque quis lacus ultricies viverra, metus magna
+    nulLorem ipsum dolor sit amet, tortor ad ac volutpat ante risus, sit neque quis
+    lacus ultricies viverra, metus magna nulLorem ipsum dolor sit amet, tortor ad
+    ac volutpat ante risus, sit neque quis lacus ultricies viverra, metus magna nulLorem
+    ipsum dolor sit amet, tortor ad ac volutpat ante risus, sit neque quis lacus
+    ultricies viverra, metus magna nul
+--- !u!222 &1964149298
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964149294}
   m_CullTransparentMesh: 0
 --- !u!1 &1966827399 stripped
 GameObject:
@@ -18169,7 +20634,7 @@ RectTransform:
   m_Children:
   - {fileID: 1209524500}
   m_Father: {fileID: 907576949}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -22727,6 +25192,125 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 0
   TextLabel: {fileID: 0}
+--- !u!1001 &2483030733141582085
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1674604204}
+    m_Modifications:
+    - target: {fileID: 2483030733835744252, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_Name
+      value: ModifierIcon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 14.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -14.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483030733835744255, guid: 84c808706ede89641b6e875f0f117ced,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 84c808706ede89641b6e875f0f117ced, type: 3}
 --- !u!1001 &3662615150303574094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23001,12 +25585,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ColonistDummy
       objectReference: {fileID: 0}
-    - target: {fileID: 4304678335175400362, guid: cace6fd95abe87f419bdcc49aedd5360,
-        type: 3}
-      propertyPath: baseData
-      value: 
-      objectReference: {fileID: 11400000, guid: 46921c67b1fea1e40b6ef42a6f524c97,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cace6fd95abe87f419bdcc49aedd5360, type: 3}
 --- !u!1001 &4373832683443554081
@@ -28143,7 +30721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 156.15, y: -16.195}
+  m_AnchoredPosition: {x: 72.25, y: -16.195}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7259922865395822287
