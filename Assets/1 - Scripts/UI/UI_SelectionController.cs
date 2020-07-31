@@ -139,6 +139,9 @@ namespace ProjectColoni
             colonistPanelRelay.comfortText.text = _cachedIntToString[(int)aiController.aiStats.stats.Comfort];
             colonistPanelRelay.recreationText.text = _cachedIntToString[(int)aiController.aiStats.stats.Recreation ];
             
+            //status notifications
+            
+            
         }
 
         [HideInInspector] public UI_ResourcePanelRelay resourcePanelRelay;

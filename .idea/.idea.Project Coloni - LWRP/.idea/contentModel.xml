@@ -19,17 +19,20 @@
               <e p="AiSensorFOVEditor.cs" t="Include" />
               <e p="AISensors.cs" t="Include" />
               <e p="AiStats.cs" t="Include" />
+              <e p="AiStatus.cs" t="Include" />
               <e p="CustomInspector" t="Include">
                 <e p="AiBaseCustomInspector.cs" t="Include" />
                 <e p="AiSensorsCustomInspector.cs" t="Include" />
                 <e p="AiStatsCustomInspector.cs" t="Include" />
               </e>
               <e p="Stats.cs" t="Include" />
+              <e p="StatusModifiers.cs" t="Include" />
               <e p="StatusNotifications.cs" t="Include" />
             </e>
             <e p="AnimationController.cs" t="Include" />
             <e p="ColonistController.cs" t="Include" />
           </e>
+          <e p="Constants.cs" t="Include" />
           <e p="EventRelay.cs" t="Include" />
           <e p="GameScripts" t="Include">
             <e p="Selectable.cs" t="Include" />

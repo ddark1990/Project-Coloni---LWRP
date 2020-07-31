@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Modifier_WellFed
+  m_EditorClassIdentifier: Assembly-CSharp:ProjectColoni:StatusModifier
+  notificationInfo:
+    statusName: Well Fed
+    statusDescription: Ate good.
+    statusSprite: {fileID: 21300000, guid: e4e5417590c077c4aa3d6665ebe19cfe, type: 3}
+    statusColor: {r: 0.24731681, g: 0.4339623, b: 0.16171236, a: 1}
+  stackable: 0
+  stackLimit: 0
+  modifierTimer: 180
+  modifiers:
+  - modifiedStat: 6
+    modifierValue: 10
+  - modifiedStat: 7
+    modifierValue: 10

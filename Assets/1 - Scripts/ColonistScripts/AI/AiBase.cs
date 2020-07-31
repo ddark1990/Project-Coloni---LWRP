@@ -9,10 +9,12 @@ namespace ProjectColoni
 {
     [RequireComponent(typeof(AiStats))]
     [RequireComponent(typeof(AiSensors))]
+    [RequireComponent(typeof(AiStatus))]
     public class AiBase : Selectable
     {
         [HideInInspector] public AiStats aiStats;
         [HideInInspector] public AiSensors sensors;
+        [HideInInspector] public AiStatus status;
         
         [HideInInspector] public bool enableGizmos;
 
@@ -21,7 +23,7 @@ namespace ProjectColoni
         {
             aiStats = GetComponent<AiStats>();
             sensors = GetComponent<AiSensors>();
-
+            status = GetComponent<AiStatus>();
         }
 
         #region Gizmos

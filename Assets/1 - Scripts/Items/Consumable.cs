@@ -9,10 +9,10 @@ namespace ProjectColoni
         [Serializable]
         public struct ConsumableSettings
         {
-            public float giveHealthAmount;
-            public float giveFoodAmount;
+            public float health;
+            public float food;
         }
 
-        public ConsumableSettings consumableSettings;
+        [Tooltip("How much & what you will gain from consuming this item.")] public ConsumableSettings consumableSettings;
     }
 }

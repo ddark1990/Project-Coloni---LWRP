@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: BaseDummyData
   m_EditorClassIdentifier: Assembly-CSharp::BaseScriptableData
-  objectName: Gucci "Berg" Mane
-  description: A guy.
+  objectName: Gucci "Siggard" Mane
+  description: A guy who loves eft.
   sprite: {fileID: 21300000, guid: 27fc609d15c12ae4f9dc43bd0598ac75, type: 3}
