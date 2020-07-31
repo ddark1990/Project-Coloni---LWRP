@@ -22,7 +22,10 @@
     <list default="true" id="b94e7643-efd0-4934-b8a0-0256359f3c2b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/WanderGoapAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/WanderGoapAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AgressiveHumanoidAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AgressiveHumanoidAgent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidAgent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAgent.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +41,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/UnEquipWeaponGoapAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/ColonyGame 0.0.19/ColonyGame 0.0.18/ColonyGame/Assets/MainGame/Scripts/Colonist Scripts/ColonistAnimationController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/RangedAttackGoapAction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AgressiveHumanoidAgent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidAgent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/MeleeAttackGoapAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/WanderGoapAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/PickUpItemGoapAction.cs" root0="FORCE_HIGHLIGHTING" />
@@ -48,6 +51,7 @@
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/RacingGame.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/PassiveAnimalAgent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LWRP-FPS/FPS - LWRP/Assets/_Scripts/Jobs/JobManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/StaticUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ItemPanelRelay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/ColonyGame 0.0.19/ColonyGame 0.0.18/ColonyGame/Assets/MainGame/Scripts/UI Scripts/ColonistSelectionUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/LobbyTopPanel.cs" root0="SKIP_HIGHLIGHTING" />
@@ -148,8 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillTab.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiStatsCustomInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/test123.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiBaseCustomInspector.cs" />
@@ -188,17 +190,19 @@
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/FSM/FSMState.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAction.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/WanderGoapAction.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/UnEquipWeaponGoapAction.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/SoldierAgent.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/IGoap.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapPlanner.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAgent.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AgressiveHumanoidAgent.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/EquipWeaponGoapAction.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/MeleeAttackGoapAction.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/PickUpItemGoapAction.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/RangedAttackGoapAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidAgent.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAgent.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/StaticUtility.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/WanderGoapAction.cs" />
       </list>
     </option>
   </component>
@@ -296,6 +300,7 @@
       <workItem from="1596045297617" duration="36698000" />
       <workItem from="1596129921595" duration="28941000" />
       <workItem from="1596177425627" duration="3860000" />
+      <workItem from="1596218130148" duration="1947000" />
     </task>
     <servers />
   </component>

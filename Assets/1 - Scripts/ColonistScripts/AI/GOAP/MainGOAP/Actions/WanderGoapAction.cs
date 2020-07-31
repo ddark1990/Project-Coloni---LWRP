@@ -49,21 +49,21 @@ namespace ProjectColoni
 
         public override bool perform(AiController controller)
         {
-            /*if (controller.pickUpAvailable || controller.target || controller.aiVitals.isDead) return false;
+            if (controller.aiStats.IsDead) return false;
         
-            if (_elapsedTime == 0 && !controller.navAgent.hasPath)
+            if (_elapsedTime == 0 && !controller.navMeshAgent.hasPath)
             {
                 //Debug.Log("Starting to wander.");
 
                 _path = new NavMeshPath();
 
-                NavMesh.CalculatePath(controller.navAgent.transform.position, controller.GetRandomRadialPos(wanderRadius), NavMesh.AllAreas, _path);
+                NavMesh.CalculatePath(controller.navMeshAgent.transform.position, StaticUtility.GetRandomRadialPos(transform, wanderRadius), NavMesh.AllAreas, _path);
                 //Debug.Log("Path Calculated for " + agent.name);
 
-                controller.navAgent.SetPath(_path);
+                controller.navMeshAgent.SetPath(_path);
                 //Debug.Log("Path Set for " + agent.name);
             }
-            if (controller.navAgent.remainingDistance <= controller.navAgent.stoppingDistance)
+            if (controller.navMeshAgent.remainingDistance <= controller.navMeshAgent.stoppingDistance)
             {
                 //Debug.Log("Started waiting.");
                 _elapsedTime += Time.deltaTime;
@@ -71,10 +71,10 @@ namespace ProjectColoni
                 if(_elapsedTime >= _tempWaitTime)
                 {
                     //Debug.Log("Finished waiting.");
-                    controller.navAgent.ResetPath();
+                    controller.navMeshAgent.ResetPath();
                     _completed = true;
                 }
-            }*/
+            }
 
             return true;
         }

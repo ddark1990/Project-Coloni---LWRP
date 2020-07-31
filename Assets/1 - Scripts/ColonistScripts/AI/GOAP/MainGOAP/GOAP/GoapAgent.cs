@@ -7,6 +7,7 @@ namespace ProjectColoni
 	public class GoapAgent : MonoBehaviour {
 
 		public GoapAction[] actionArr;
+		public bool debugPlanner;
 
 		private FSM stateMachine;
 
@@ -75,7 +76,6 @@ namespace ProjectColoni
 			_goal = dataProvider.createGoalState();
 		}
 
-		public bool debugPlanner;
 	
 		private void createIdleState() {
 			idleState = (fsm, aiStateController) => {

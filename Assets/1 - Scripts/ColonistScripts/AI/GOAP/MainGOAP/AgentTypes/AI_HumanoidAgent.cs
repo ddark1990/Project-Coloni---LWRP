@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ProjectColoni
 {
-    public class AgressiveHumanoidAgent : GoapAgent, IGoap
+    public class AI_HumanoidAgent : GoapAgent, IGoap
     {
         public bool goalDebug;
     
