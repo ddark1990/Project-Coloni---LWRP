@@ -1,10 +1,9 @@
 ﻿/*
-using ProjectColoni;
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 
-namespace ColonistScripts.AI.CustomInspector
+namespace ProjectColoni
 {
     [CustomEditor(typeof(AiController))]
     public class AiBaseCustomInspector : Editor

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ProjectColoni
 {
-    [CreateAssetMenu(fileName = "ConsumableItem", menuName = "ProjectColoni/Objects/Create Item/New Consumable", order = 4)]
+    [CreateAssetMenu(fileName = "(ItemData)", menuName = "ProjectColoni/Objects/Create Item/New Consumable", order = 4)]
     public class Consumable : ItemType
     {
         [Serializable]

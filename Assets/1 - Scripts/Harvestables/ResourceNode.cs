@@ -15,6 +15,8 @@ namespace ProjectColoni
         {
             InitializeSelectable();
             InitializeBaseObjectData();
+            
+            //Debug.Log(baseObjectInfo.Id);
         }
 
         /// <summary>
@@ -22,8 +24,8 @@ namespace ProjectColoni
         /// </summary>
         private void InitializeBaseObjectData()
         {
-            baseObjectInfo = baseData != null ? new BaseObjectData(baseData.objectName, baseData.description, baseData.sprite) 
-                : new BaseObjectData("", "", null);
+            baseObjectInfo = baseData != null ? new BaseObjectData(StaticUtility.GenerateUniqueHashId(), baseData.objectName, baseData.description, baseData.sprite) 
+                : new BaseObjectData(StaticUtility.GenerateUniqueHashId(), "", "", null);
         }
     }
 }

@@ -24,6 +24,7 @@
                 <e p="AiBaseCustomInspector.cs" t="Include" />
                 <e p="AiSensorsCustomInspector.cs" t="Include" />
                 <e p="AiStatsCustomInspector.cs" t="Include" />
+                <e p="GlobalObjectDictionaryInspector.cs" t="Include" />
               </e>
               <e p="GOAP" t="Include">
                 <e p="MainGOAP" t="Include">
@@ -64,6 +65,7 @@
             <e p="Selectable.cs" t="Include" />
             <e p="SelectionManager.cs" t="Include" />
           </e>
+          <e p="GlobalObjectDictionary.cs" t="Include" />
           <e p="Harvestables" t="Include">
             <e p="ResourceNode.cs" t="Include" />
             <e p="ResourceType.cs" t="Include" />

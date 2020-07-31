@@ -7,12 +7,14 @@ using UnityEngine.UI;
 
 public class BaseObjectData
 {
+    public string Id;
     public string ObjectName;
     public string Description;
     public Sprite Sprite;
 
-    public BaseObjectData(string baseName, string description, Sprite sprite)
+    public BaseObjectData(string id, string baseName, string description, Sprite sprite)
     {
+        Id = id; //must be unique
         ObjectName = baseName;
         Description = description;
         Sprite = sprite;
@@ -32,7 +34,7 @@ public class BaseObjectData
     }
 }
 
-[CreateAssetMenu(fileName = "ObjectData", menuName = "ProjectColoni/Objects/BaseScriptableData", order = 0)]
+[CreateAssetMenu(fileName = "(BaseData)", menuName = "ProjectColoni/Objects/BaseScriptableData", order = 0)]
 public class BaseScriptableData : ScriptableObject
 {
     public string objectName;

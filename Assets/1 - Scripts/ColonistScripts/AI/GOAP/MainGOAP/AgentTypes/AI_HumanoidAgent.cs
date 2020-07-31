@@ -24,17 +24,15 @@ namespace ProjectColoni
         {
             worldData = new HashSet<KeyValuePair<string, object>>();
 
-            /*
-            worldData.Add(new KeyValuePair<string, object>("pickUpAvailable", aiController.pickUpAvailable));
-            worldData.Add(new KeyValuePair<string, object>("inCombat", aiController.inCombat));
-            worldData.Add(new KeyValuePair<string, object>("hasTarget", aiController.target != null));
-            worldData.Add(new KeyValuePair<string, object>("hasWeaponInInventory", aiController.inventory.HasWeaponInInventory()));
+            //worldData.Add(new KeyValuePair<string, object>("isHungry", aiController.vitals.IsHungry()));
+            //worldData.Add(new KeyValuePair<string, object>("pickUpAvailable", aiController.pickUpAvailable));
+            //worldData.Add(new KeyValuePair<string, object>("inCombat", aiController.inCombat));
+            //worldData.Add(new KeyValuePair<string, object>("hasTarget", aiController.target != null));
+            //worldData.Add(new KeyValuePair<string, object>("hasWeaponInInventory", aiController.inventory.HasWeaponInInventory()));
             //worldData.Add(new KeyValuePair<string, object>("weaponEquipAvailable", aiStateController.weaponEquipped == null));
-            worldData.Add(new KeyValuePair<string, object>("weaponEquipped", aiController.rangedWeaponEquiped != null));
-            worldData.Add(new KeyValuePair<string, object>("isHungry", aiController.vitals.IsHungry()));
-            worldData.Add(new KeyValuePair<string, object>("isThirsty", aiController.vitals.IsThirsty()));
+            //worldData.Add(new KeyValuePair<string, object>("weaponEquipped", aiController.rangedWeaponEquiped != null));
+            //worldData.Add(new KeyValuePair<string, object>("isThirsty", aiController.vitals.IsThirsty()));
             //worldData.Add(new KeyValuePair<string, object>("targetAlive", aiStateController.target)); 
-            */
         
             return worldData;
         }
@@ -44,14 +42,14 @@ namespace ProjectColoni
             goalData = new HashSet<KeyValuePair<string, object>>( );
 
             goalData.Add(new KeyValuePair<string, object>("wander", true));
-            goalData.Add(new KeyValuePair<string, object>("pickUpItem", true));
-            goalData.Add(new KeyValuePair<string, object>("meleeAttack", true));
+            //goalData.Add(new KeyValuePair<string, object>("pickUpItem", true));
+            //goalData.Add(new KeyValuePair<string, object>("meleeAttack", true));
             //goalData.Add(new KeyValuePair<string, object>("killTarget", true));
             //goalData.Add(new KeyValuePair<string, object>("attackFromCover", true));
             //goalData.Add(new KeyValuePair<string, object>("coverFire", true));
             //goalData.Add(new KeyValuePair<string, object>("throwGrenade", true));
-            goalData.Add(new KeyValuePair<string, object>("equipWeapon", true));
-            goalData.Add(new KeyValuePair<string, object>("unEquipWeapon", true));
+            //goalData.Add(new KeyValuePair<string, object>("equipWeapon", true));
+            //goalData.Add(new KeyValuePair<string, object>("unEquipWeapon", true));
             //goalData.Add(new KeyValuePair<string, object>("eat", true));
             //goalData.Add(new KeyValuePair<string, object>("drink", true));
         
@@ -63,7 +61,7 @@ namespace ProjectColoni
             // Not handling this here since we are making sure our goals will always succeed.
             // But normally you want to make sure the world state has changed before running
             // the same goal again, or else it will just fail.
-            //Debug.Log("failedGoal");
+            Debug.Log("failedGoal");
         }
 
         public void planFound(HashSet<KeyValuePair<string,object>> goal, Queue<GoapAction> actions)

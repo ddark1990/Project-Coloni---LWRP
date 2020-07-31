@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 2096582228485514485}
   - component: {fileID: 2111443076045072747}
   - component: {fileID: 2111443076045072746}
-  m_Layer: 30
-  m_Name: Food_CookedMeat
-  m_TagString: Untagged
+  - component: {fileID: 1849608053832689}
+  m_Layer: 31
+  m_Name: Item_Food_Cooked_Meat
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111443076045072757}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 82.49235, y: 0.022833731, z: 78.05364}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -107,5 +108,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2609271587cd2594abdbd5ebef823b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selected: 0
+  baseData: {fileID: 11400000, guid: 82785182f88634440b493d4e8653b05f, type: 2}
   itemCount: 1
-  itemType: {fileID: 11400000, guid: 6ff58406727353c43a1667cd446356dc, type: 2}
+  itemData: {fileID: 11400000, guid: 6ff58406727353c43a1667cd446356dc, type: 2}
+--- !u!114 &1849608053832689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111443076045072757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.13830544, g: 0.7924528, b: 0.143231, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

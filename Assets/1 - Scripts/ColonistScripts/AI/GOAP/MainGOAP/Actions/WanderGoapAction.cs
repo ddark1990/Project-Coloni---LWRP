@@ -19,9 +19,11 @@ namespace ProjectColoni
 
         public WanderGoapAction()
         {
+            /*
             addPrecondition("hasTarget", false);
             addPrecondition("pickUpAvailable", false);
             addPrecondition("inCombat", false);
+            */
             addEffect("wander", true);
         }
 
@@ -51,10 +53,9 @@ namespace ProjectColoni
         {
             if (controller.aiStats.IsDead) return false;
         
-            if (_elapsedTime == 0 && !controller.navMeshAgent.hasPath)
+            if (_elapsedTime <= 0 && !controller.navMeshAgent.hasPath)
             {
                 //Debug.Log("Starting to wander.");
-
                 _path = new NavMeshPath();
 
                 NavMesh.CalculatePath(controller.navMeshAgent.transform.position, StaticUtility.GetRandomRadialPos(transform, wanderRadius), NavMesh.AllAreas, _path);
@@ -63,18 +64,17 @@ namespace ProjectColoni
                 controller.navMeshAgent.SetPath(_path);
                 //Debug.Log("Path Set for " + agent.name);
             }
-            if (controller.navMeshAgent.remainingDistance <= controller.navMeshAgent.stoppingDistance)
-            {
-                //Debug.Log("Started waiting.");
-                _elapsedTime += Time.deltaTime;
 
-                if(_elapsedTime >= _tempWaitTime)
-                {
-                    //Debug.Log("Finished waiting.");
-                    controller.navMeshAgent.ResetPath();
-                    _completed = true;
-                }
-            }
+            if (!(controller.navMeshAgent.remainingDistance <= controller.navMeshAgent.stoppingDistance)) return true;
+            
+            //Debug.Log("Started waiting.");
+            _elapsedTime += Time.deltaTime;
+
+            if (!(_elapsedTime >= _tempWaitTime)) return true;
+            
+            //Debug.Log("Finished waiting.");
+            controller.navMeshAgent.ResetPath();
+            _completed = true;
 
             return true;
         }

@@ -5,22 +5,30 @@ namespace ProjectColoni
 {
     public class Item : Selectable
     {
-        [SerializeField] private BaseScriptableData baseData; //for manual creation from scriptableObjects 
-
+        [Header("Item")]
         public int itemCount;
-        public ItemType itemType;
+        
+        [SerializeField] private BaseScriptableData baseData; 
+        public ItemType itemData;
+        
         public BaseObjectData baseObjectInfo;
+
+        private void Awake()
+        {
+            InitializeBaseObjectData();
+        }
 
         private void Start()
         {
             InitializeSelectable();
-            InitializeBaseObjectData();
+            
+            GlobalObjectDictionary.Instance.AddToGlobalDictionary(baseObjectInfo.Id, this);
         }
         
         private void InitializeBaseObjectData()
         {
-            baseObjectInfo = baseData != null ? new BaseObjectData(baseData.objectName, baseData.description, baseData.sprite) 
-                : new BaseObjectData("", "", null);
+            baseObjectInfo = baseData != null ? new BaseObjectData(StaticUtility.GenerateUniqueHashId(), baseData.objectName, baseData.description, baseData.sprite) 
+                : new BaseObjectData(StaticUtility.GenerateUniqueHashId(), "", "", null);
         }
     }
 }
