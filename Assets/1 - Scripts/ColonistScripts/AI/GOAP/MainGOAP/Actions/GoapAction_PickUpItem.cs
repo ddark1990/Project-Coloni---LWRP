@@ -2,7 +2,7 @@
 
 namespace ProjectColoni
 {
-    public class PickUpItemGoapAction : GoapAction
+    public class GoapAction_PickUpItem : GoapAction
     {
         public float extraWaitTime = 0.5f;
     
@@ -11,9 +11,9 @@ namespace ProjectColoni
         private Item _targetItem;
         private static readonly int pickUpItem = Animator.StringToHash("PickUpItem");
 
-        public PickUpItemGoapAction()
+        public GoapAction_PickUpItem()
         {
-            addPrecondition("pickUpAvailable", true);
+            addPrecondition("hasPickUp", true);
             addEffect("pickUpItem", true);
         }
 
@@ -35,18 +35,11 @@ namespace ProjectColoni
 
         public override bool checkProceduralPrecondition(AiController controller)
         {
-            /*if (!controller.pickUpAvailable) return false;
-
-            var closestItem = controller.FindClosestItemInCollection(controller.fieldOfView.resultTargetArr, transform);
-        
-            target = closestItem.transform;*/
-        
             return true;
         }
     
         public override bool perform(AiController controller)
         {
-            /*Debug.Log(controller.animator.GetCurrentAnimatorStateInfo(1).length);
             if (_startTime == 0)
             {
                 _targetItem = target.GetComponent<Item>();
@@ -61,11 +54,11 @@ namespace ProjectColoni
             {
                 //Debug.Log("Picked up item.");
         
-                controller.inventory.AddItemToInventory(_targetItem);
+                //controller.inventory.AddItemToInventory(_targetItem);
             
-                controller.pickUpAvailable = false; //reset 
+                //controller.pickUpAvailable = false; //reset 
                 _completed = true;
-            }*/
+            }
        
             return true;
         }

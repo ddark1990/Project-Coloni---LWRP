@@ -53,7 +53,10 @@ namespace ProjectColoni
 
         private void OnMouseDown()
         {
-            _selectionManager.selectedType = this;
+            _selectionManager.currentlySelectedObject = this;
+            selected = true;
+            
+            _selectionManager.OnSelectEvent();
         }
 
         private void OnMouseExit()

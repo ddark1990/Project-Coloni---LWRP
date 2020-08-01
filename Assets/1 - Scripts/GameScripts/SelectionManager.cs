@@ -10,7 +10,7 @@ namespace ProjectColoni
     {
         public static SelectionManager Instance { get; private set; }
 
-        public List<Selectable> currentlySelectedObjects;
+        //rewrite selection manager to use all unity events 
         public Selectable currentlySelectedObject;
         public Selectable hoveringObject;
 
@@ -22,25 +22,15 @@ namespace ProjectColoni
         public float outlineWidth = 2;
 
         public Camera cam;
-        public Selectable selectedType;
-        private Selectable _selectable;
         private RaycastHit _hit;
-
-        public delegate void ObjectSelected();
-
+        
 
         private void OnEnable()
         {
             EventRelay.ObjectSelected += OnSelectEvent;
             EventRelay.ObjectDeSelected += OnDeSelectEvent;
         }
-
-        private void OnDisable()
-        {
-            //EventRelay.ObjectSelected -= OnSelectEvent;
-            //EventRelay.ObjectDeSelected -= OnDeSelectEvent;
-        }
-
+        
         private void Awake()
         {
             InitializeSelectionManager();
@@ -48,11 +38,9 @@ namespace ProjectColoni
 
         private void Update()
         {
-            //hoveringObject = _hit.collider.transform.root.GetComponent<Selectable>();
-            
             if (!Input.GetKeyDown(KeyCode.Mouse0)) return;
 
-            SelectObject();
+            DeselectObject();
         }
 
         private void InitializeSelectionManager()
@@ -69,55 +57,28 @@ namespace ProjectColoni
 
             DontDestroyOnLoad(this);
             
-            cam = Camera.main;
+            cam = RTSCamera.Instance.GetComponent<Camera>();
 
         }
 
-        private void SelectObject()
+        private void DeselectObject()
         {
-            if (EventSystem.current.IsPointerOverGameObject())
-            {
-                return;
-            }
-
-            OnDeSelectEvent(_selectable); 
-
-            currentlySelectedObjects.Clear();
-            if (currentlySelectedObjects.Count == 0)
-            {
-                currentlySelectedObject = null;
-            }
-            
-            var ray = cam.ScreenPointToRay(Input.mousePosition);
-            
-            if (!Physics.Raycast(ray, out _hit, Mathf.Infinity, selectableMask)) return;
-
-            //Debug.Log(_hit.collider.name);
-
-            _selectable = _hit.collider.transform.root.GetComponent<Selectable>(); //fix later
-                
-            OnSelectEvent(_selectable);
+            if(currentlySelectedObject != null && currentlySelectedObject != hoveringObject && !EventSystem.current.IsPointerOverGameObject())
+                OnDeSelectEvent();
         }
         
         #region Events
 
-        private void OnSelectEvent(Selectable selectable)
+        public void OnSelectEvent()
         {
-            selectable.selected = true;
-            currentlySelectedObject = selectable;
-                    
-            if (!currentlySelectedObjects.Contains(currentlySelectedObject))
-            {
-                currentlySelectedObjects.Add(selectable);
-            }
-            
             //Let ui know what we selected
-            UI_SelectionController.Instance.TogglePanelHolder();
+            UI_SelectionController.Instance.TogglePanelHolder(); //rewrite how this works
         }
-        private void OnDeSelectEvent(Selectable selectable)
+        private void OnDeSelectEvent()
         {
-            if(selectable != null) selectable.selected = false;
-            
+            currentlySelectedObject.selected = false;
+            currentlySelectedObject = null;
+
             UI_SelectionController.Instance.ResetWindows();
         }
         

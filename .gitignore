@@ -9,6 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+.idea/
 5-Models/
 12-ImportedPackages
 
@@ -61,3 +62,4 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml

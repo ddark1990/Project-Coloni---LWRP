@@ -48,7 +48,7 @@ namespace ProjectColoni
             _skillPanel = GetComponentInChildren<UI_SkillPanel>();
         }
 
-        private void LateUpdate()
+        private void Update()
         {
             if(selectedColonistPanel.activeInHierarchy) PopulateColonistVitalsData();
             if(selectedResourcePanel.activeInHierarchy) PopulateResourceData();
@@ -61,12 +61,13 @@ namespace ProjectColoni
 
             if (_selectionManager.currentlySelectedObject == null) return;
 
-            switch (_selectionManager.selectedType)
+            switch (_selectionManager.currentlySelectedObject)
             {
                 case AiController aiController:
                     SetActivePanel(selectedColonistPanel.name);
                     
                     PopulateBaseData(aiController);
+                    
                     break;
                 case ResourceNode harvestable:
                     SetActivePanel(selectedResourcePanel.name);
@@ -121,7 +122,7 @@ namespace ProjectColoni
         
         private void PopulateColonistVitalsData() 
         {
-            var aiController = _selectionManager.selectedType.GetComponentInChildren<AiController>();
+            var aiController = _selectionManager.currentlySelectedObject.GetComponentInChildren<AiController>();
 
             //bars
             colonistPanelRelay.healthBar.fillAmount = aiController.aiStats.stats.Health / aiController.aiStats.stats.MaxHealth;
@@ -148,7 +149,7 @@ namespace ProjectColoni
         
         private void PopulateResourceData()
         {
-            var resource = _selectionManager.selectedType.GetComponentInChildren<ResourceNode>();
+            var resource = _selectionManager.currentlySelectedObject.GetComponentInChildren<ResourceNode>();
 
             resourcePanelRelay.amountText.text = _cachedIntToString[resource.amount];
         }
@@ -157,7 +158,7 @@ namespace ProjectColoni
         
         private void PopulateItemData()
         {
-            var item = _selectionManager.selectedType.GetComponentInChildren<Item>();
+            var item = _selectionManager.currentlySelectedObject.GetComponentInChildren<Item>();
 
             itemPanelRelay.amountText.text = _cachedIntToString[item.itemCount];
         }
@@ -256,7 +257,7 @@ namespace ProjectColoni
         
         private readonly CacheIntString _cachedIntToString = new CacheIntString(
             (values)=>values , //describe how seconds (key) are translated to useful value (hash)
-            (value)=>value.ToString("00") //you describe how string is built based on value (hash)
+            (value)=>value.ToString("0") //you describe how string is built based on value (hash)
             , 0 , 150 , 1 //initialization range and step, so cache will be warmed up and ready
         );
     }

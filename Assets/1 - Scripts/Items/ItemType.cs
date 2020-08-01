@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ProjectColoni
 {
@@ -12,8 +13,8 @@ namespace ProjectColoni
             public Sprite inventorySprite;
             [Tooltip("Create modifiers by right clicking and going to ProjectColoni/Objects/AI/StatusNotifications/New StatusModifier")] 
             public StatusModifier[] statusModifiers;
-            
         }
+
         /*
     [Serializable]
     public struct ItemSoundData

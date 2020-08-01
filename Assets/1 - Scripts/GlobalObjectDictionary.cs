@@ -30,7 +30,7 @@ namespace ProjectColoni
             if (dictionary.ContainsKey(id)) return;
             
             dictionary.Add(id, obj);
-            Debug.Log("Added: " + dictionary[id] + " | Hash Id: " + id, obj);
+            //Debug.Log("Added: " + dictionary[id] + " | Hash Id: " + id, obj);
         }
     }
 }

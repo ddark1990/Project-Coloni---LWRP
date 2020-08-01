@@ -30,11 +30,12 @@
                 <e p="MainGOAP" t="Include">
                   <e p="Actions" t="Include">
                     <e p="EquipWeaponGoapAction.cs" t="Include" />
+                    <e p="GoapAction_Eat.cs" t="Include" />
+                    <e p="GoapAction_PickUpItem.cs" t="Include" />
+                    <e p="GoapAction_Wander.cs" t="Include" />
                     <e p="MeleeAttackGoapAction.cs" t="Include" />
-                    <e p="PickUpItemGoapAction.cs" t="Include" />
                     <e p="RangedAttackGoapAction.cs" t="Include" />
                     <e p="UnEquipWeaponGoapAction.cs" t="Include" />
-                    <e p="WanderGoapAction.cs" t="Include" />
                   </e>
                   <e p="AgentTypes" t="Include">
                     <e p="AI_HumanoidAgent.cs" t="Include" />
@@ -80,6 +81,9 @@
             <e p="ObjectSpawner.cs" t="Include" />
             <e p="ObjectSpawnerDataset.cs" t="Include" />
             <e p="SpawnGameObjectsEditor.cs" t="Include" />
+          </e>
+          <e p="RightClickManager" t="Include">
+            <e p="RightClickManager.cs" t="Include" />
           </e>
           <e p="RTSCamera.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />

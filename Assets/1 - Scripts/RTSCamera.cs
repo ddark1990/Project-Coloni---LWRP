@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace ProjectColoni
 {
@@ -40,6 +41,7 @@ public class RTSCamera : MonoBehaviour
     private bool _rotating;
     public bool cameraSmoothing;
 
+    private PhysicsRaycaster _physicsRaycaster;
 
     private void Awake()
     {
@@ -52,6 +54,8 @@ public class RTSCamera : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        _physicsRaycaster = GetComponent<PhysicsRaycaster>();
     }
 
     private void Start()
@@ -71,6 +75,7 @@ public class RTSCamera : MonoBehaviour
         HandleMovementInput();
         HandleRotationInput();
         HandleMouseInput();
+
     }
     
     private void HandleMovementInput() //add camera smoothing

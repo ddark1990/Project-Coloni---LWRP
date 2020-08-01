@@ -10,6 +10,7 @@ namespace ProjectColoni
     public class AiController : AiBase
     {
         [HideInInspector] public NavMeshAgent navMeshAgent;
+        [HideInInspector] public Animator animator;
         private Selectable _selectable;
         private Camera _camera;
         private LineRenderer _destinationLineRenderer;
@@ -26,6 +27,7 @@ namespace ProjectColoni
         private void GetComponents()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
+            animator = GetComponent<Animator>();
             _selectable = GetComponent<Selectable>();
             _destinationLineRenderer = GetComponent<LineRenderer>();
             _camera = SelectionManager.Instance.cam;

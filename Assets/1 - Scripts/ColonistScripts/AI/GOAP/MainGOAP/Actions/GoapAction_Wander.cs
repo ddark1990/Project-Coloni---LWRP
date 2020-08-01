@@ -4,7 +4,7 @@ using Random = UnityEngine.Random;
 
 namespace ProjectColoni
 {
-    public class WanderGoapAction : GoapAction
+    public class GoapAction_Wander : GoapAction
     {
         public float waitMinTime = 1f;
         public float waitMaxTime = 1f;
@@ -17,7 +17,7 @@ namespace ProjectColoni
         private NavMeshPath _path;
         private bool _completed;
 
-        public WanderGoapAction()
+        public GoapAction_Wander()
         {
             /*
             addPrecondition("hasTarget", false);

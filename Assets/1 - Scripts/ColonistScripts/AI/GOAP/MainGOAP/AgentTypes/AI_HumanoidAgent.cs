@@ -24,15 +24,13 @@ namespace ProjectColoni
         {
             worldData = new HashSet<KeyValuePair<string, object>>();
 
-            //worldData.Add(new KeyValuePair<string, object>("isHungry", aiController.vitals.IsHungry()));
-            //worldData.Add(new KeyValuePair<string, object>("pickUpAvailable", aiController.pickUpAvailable));
+            worldData.Add(new KeyValuePair<string, object>("isHungry", aiController.aiStats.IsHungry));
+            worldData.Add(new KeyValuePair<string, object>("hasPickUp", aiController.aiStats.IsHungry));
             //worldData.Add(new KeyValuePair<string, object>("inCombat", aiController.inCombat));
             //worldData.Add(new KeyValuePair<string, object>("hasTarget", aiController.target != null));
             //worldData.Add(new KeyValuePair<string, object>("hasWeaponInInventory", aiController.inventory.HasWeaponInInventory()));
             //worldData.Add(new KeyValuePair<string, object>("weaponEquipAvailable", aiStateController.weaponEquipped == null));
             //worldData.Add(new KeyValuePair<string, object>("weaponEquipped", aiController.rangedWeaponEquiped != null));
-            //worldData.Add(new KeyValuePair<string, object>("isThirsty", aiController.vitals.IsThirsty()));
-            //worldData.Add(new KeyValuePair<string, object>("targetAlive", aiStateController.target)); 
         
             return worldData;
         }
@@ -42,7 +40,7 @@ namespace ProjectColoni
             goalData = new HashSet<KeyValuePair<string, object>>( );
 
             goalData.Add(new KeyValuePair<string, object>("wander", true));
-            //goalData.Add(new KeyValuePair<string, object>("pickUpItem", true));
+            goalData.Add(new KeyValuePair<string, object>("pickUpItem", true));
             //goalData.Add(new KeyValuePair<string, object>("meleeAttack", true));
             //goalData.Add(new KeyValuePair<string, object>("killTarget", true));
             //goalData.Add(new KeyValuePair<string, object>("attackFromCover", true));
