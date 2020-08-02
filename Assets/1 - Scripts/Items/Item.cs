@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 namespace ProjectColoni
 {
-    public class Item : Selectable, IPointerClickHandler
+    public class Item : Selectable
     {
         [Header("Item")]
         public int itemCount;
@@ -30,14 +30,6 @@ namespace ProjectColoni
         {
             baseObjectInfo = baseData != null ? new BaseObjectData(StaticUtility.GenerateUniqueHashId(), baseData.objectName, baseData.description, baseData.sprite) 
                 : new BaseObjectData(StaticUtility.GenerateUniqueHashId(), "", "", null);
-        }
-
-        public void OnPointerClick(PointerEventData eventData)
-        {
-            if (eventData.button == PointerEventData.InputButton.Right)
-            {
-                Debug.Log("Right Mouse Button Clicked on: " + name);
-            }
         }
     }
 }

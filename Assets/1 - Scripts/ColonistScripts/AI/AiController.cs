@@ -40,7 +40,7 @@ namespace ProjectColoni
             
             if (Input.GetMouseButtonDown(1) && _selectable.selected)
             {
-                SetDestinationToMousePosition();
+                //SetDestinationToMousePosition();
             }
         }
         

@@ -10,7 +10,6 @@ namespace ProjectColoni
     {
         public static SelectionManager Instance { get; private set; }
 
-        //rewrite selection manager to use all unity events 
         public Selectable currentlySelectedObject;
         public Selectable hoveringObject;
 
@@ -23,13 +22,8 @@ namespace ProjectColoni
 
         public Camera cam;
         private RaycastHit _hit;
+        [HideInInspector] public Selectable selectedTemp;
         
-
-        private void OnEnable()
-        {
-            EventRelay.ObjectSelected += OnSelectEvent;
-            EventRelay.ObjectDeSelected += OnDeSelectEvent;
-        }
         
         private void Awake()
         {
@@ -61,29 +55,39 @@ namespace ProjectColoni
 
         }
 
-        private void DeselectObject()
+        public void SelectObject(Selectable selectedObject)
         {
-            if(currentlySelectedObject != null && currentlySelectedObject != hoveringObject && !EventSystem.current.IsPointerOverGameObject())
-                OnDeSelectEvent();
-        }
-        
-        #region Events
-
-        public void OnSelectEvent()
-        {
+            if (selectedTemp != null)
+            {
+                selectedTemp.selected = false;
+                
+                //ui
+                UI_SelectionController.Instance.ResetWindows();
+            }
+            
+            currentlySelectedObject = selectedObject;
+            currentlySelectedObject.selected = true;
+            
             //Let ui know what we selected
             UI_SelectionController.Instance.TogglePanelHolder(); //rewrite how this works
         }
-        private void OnDeSelectEvent()
+        
+        private void DeselectObject()
         {
-            currentlySelectedObject.selected = false;
-            currentlySelectedObject = null;
+            if (EventSystem.current.IsPointerOverGameObject()) return;
+            
+            if (currentlySelectedObject != null)
+            {
+                selectedTemp = currentlySelectedObject;
 
-            UI_SelectionController.Instance.ResetWindows();
+                if (hoveringObject != null) return;
+                
+                currentlySelectedObject.selected = false;
+                currentlySelectedObject = null;
+                
+                //ui
+                UI_SelectionController.Instance.ResetWindows();
+            }
         }
-        
-        #endregion
-
-        
     }
 }

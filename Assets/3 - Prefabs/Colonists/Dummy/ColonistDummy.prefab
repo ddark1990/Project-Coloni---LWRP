@@ -1194,6 +1194,7 @@ MonoBehaviour:
   status: {fileID: 0}
   enableGizmos: 0
   navMeshAgent: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &4304678335175400363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1271,8 +1272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fde4dbf9d1535747abb51533d4c15c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionArr:
-  - {fileID: 0}
+  actionArr: []
   debugPlanner: 0
   aiController: {fileID: 0}
   goalDebug: 0

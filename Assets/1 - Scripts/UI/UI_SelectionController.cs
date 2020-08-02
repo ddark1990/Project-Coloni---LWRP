@@ -122,7 +122,7 @@ namespace ProjectColoni
         
         private void PopulateColonistVitalsData() 
         {
-            var aiController = _selectionManager.currentlySelectedObject.GetComponentInChildren<AiController>();
+            var aiController = _selectionManager.selectedTemp.GetComponentInChildren<AiController>();
 
             //bars
             colonistPanelRelay.healthBar.fillAmount = aiController.aiStats.stats.Health / aiController.aiStats.stats.MaxHealth;
@@ -149,7 +149,7 @@ namespace ProjectColoni
         
         private void PopulateResourceData()
         {
-            var resource = _selectionManager.currentlySelectedObject.GetComponentInChildren<ResourceNode>();
+            var resource = _selectionManager.selectedTemp.GetComponentInChildren<ResourceNode>();
 
             resourcePanelRelay.amountText.text = _cachedIntToString[resource.amount];
         }
@@ -158,7 +158,7 @@ namespace ProjectColoni
         
         private void PopulateItemData()
         {
-            var item = _selectionManager.currentlySelectedObject.GetComponentInChildren<Item>();
+            var item = _selectionManager.selectedTemp.GetComponentInChildren<Item>();
 
             itemPanelRelay.amountText.text = _cachedIntToString[item.itemCount];
         }
