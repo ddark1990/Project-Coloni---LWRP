@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -32,9 +33,15 @@ namespace ProjectColoni
 
         private void Update()
         {
-            if (!Input.GetKeyDown(KeyCode.Mouse0)) return;
-
-            DeselectObject();
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                RightClickObject();
+            }
+            
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                DeselectObject();
+            }
         }
 
         private void InitializeSelectionManager()
@@ -55,6 +62,16 @@ namespace ProjectColoni
 
         }
 
+        private void RightClickObject()
+        {
+            var ray = cam.ScreenPointToRay (Input.mousePosition);
+            
+            if (Physics.Raycast (ray, out _hit, 200, selectableMask)) 
+            {
+                Debug.Log("Right Clicked On: " + _hit.collider);
+            }  
+        }
+        
         public void SelectObject(Selectable selectedObject)
         {
             if (selectedTemp != null)

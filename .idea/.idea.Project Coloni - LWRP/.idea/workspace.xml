@@ -21,14 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b94e7643-efd0-4934-b8a0-0256359f3c2b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/EventRelay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/EventRelay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/ColonistDummy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/ColonistDummy.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,7 +303,7 @@
       <workItem from="1596045297617" duration="36698000" />
       <workItem from="1596129921595" duration="28941000" />
       <workItem from="1596177425627" duration="3860000" />
-      <workItem from="1596218130148" duration="36687000" />
+      <workItem from="1596218130148" duration="37346000" />
     </task>
     <servers />
   </component>
