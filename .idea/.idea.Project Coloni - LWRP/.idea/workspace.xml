@@ -20,8 +20,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b94e7643-efd0-4934-b8a0-0256359f3c2b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BaseObjectData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BaseObjectData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensors.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Stats.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/ColonistDummy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/ColonistDummy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/Dummy(BaseData).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/Dummy(BaseData).asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/Dummy(StatsData).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/Dummy(StatsData).asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusModifiers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusModifiers/Modifier_Bleeding.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusModifiers/Modifier_Bleeding.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusModifiers/Modifier_Crippled.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusModifiers/Modifier_Crippled.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusModifiers/Modifier_WellFed.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusModifiers/Modifier_WellFed.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusNotifications.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusNotifications/Notification_Hungry.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusNotifications/Notification_Hungry.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Alcohol_JackDaniels.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels(BaseData).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels(BaseData).asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels(ItemData).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels(ItemData).asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatCooked.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatCooked/Food_CookedMeat(BaseData).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatCooked/Food_CookedMeat(BaseData).asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatCooked/Food_CookedMeat(ItemData).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatCooked/Food_CookedMeat(ItemData).asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatCooked/Item_Food_Cooked_Meat.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatCooked/Item_Food_Cooked_Meat.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatUncooked.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat(BaseData).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat(BaseData).asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat(ItemData).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat(ItemData).asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Base_Data_Node_Stone_01.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Base_Data_Node_Stone_01.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Base_Data_Tree_Small_01.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Base_Data_Tree_Small_01.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Node_Stone_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Node_Stone_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Tree_Small_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Tree_Small_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Tree_Willow_Small_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Tree_Willow_Small_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/RTSCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/RTSCamera.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +192,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4BEC26B5-CBC7-4715-8442-F1499E984732/15/ae87830c/Enum.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Eat.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/BaseObjectData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UnityEditor/2019.3.0f6/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/IconGenerator/IconGenerator.cs" root0="FORCE_HIGHLIGHTING" />
@@ -141,11 +202,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_PanelHolderRelay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/StatusNotifications.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/BaseScriptableData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../FPS Bolt/Assets/1 - Scripts/EventRelay.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/ColonyGame 0.0.19/ColonyGame 0.0.18/ColonyGame/Assets/MainGame/Scripts/UI Scripts/ColonistUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/FSM/FSMState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/FSM/FSM.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../FPS Bolt/Assets/1 - Scripts/PlayerScripts/ControllerInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStatsObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/IGoap.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAgent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAction.cs" root0="FORCE_HIGHLIGHTING" />
@@ -155,11 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Stats.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/Resource.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceType.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ColonistPanelRelay.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ResourcePanelRelay.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ItemPanelRelay.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/CacheStrings.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_InfoPanelRelay.cs" />
@@ -183,29 +241,34 @@
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/WanderGoapAction.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/GlobalObjectList.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/StaticUtility.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiStatsCustomInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiBaseCustomInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/GlobalObjectDictionaryInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/12-ImportedPackages/IconGenerator/IconGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/BaseObjectData.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/GlobalObjectDictionary.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Wander.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/PickUpItemGoapAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidAgent.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_PickUpItem.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Eat.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/RightClickManager/RightClickManager.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/EventRelay.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidAgent.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensors.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/BaseObjectData.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/BaseScriptableData.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Stats.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStatsObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" />
       </list>
     </option>
   </component>
@@ -303,7 +366,7 @@
       <workItem from="1596045297617" duration="36698000" />
       <workItem from="1596129921595" duration="28941000" />
       <workItem from="1596177425627" duration="3860000" />
-      <workItem from="1596218130148" duration="37346000" />
+      <workItem from="1596218130148" duration="41564000" />
     </task>
     <servers />
   </component>
@@ -412,15 +475,15 @@
     </state>
     <state width="1441" height="310" key="GridCell.Tab.3.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
     <state width="1921" height="382" key="GridCell.Tab.3.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state x="-867" y="183" key="RiderGenerateDialog" timestamp="1596401332124">
+    <state x="-867" y="183" key="RiderGenerateDialog" timestamp="1596407081596">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state x="-867" y="183" key="RiderGenerateDialog/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596401332124" />
+    <state x="-867" y="183" key="RiderGenerateDialog/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596407081596" />
     <state x="764" y="221" key="RiderGenerateDialog/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1596052827399" />
-    <state x="-1348" y="92" width="1256" height="676" maximized="true" key="VCS.FileHistoryDialog" timestamp="1596403902271">
+    <state x="-1348" y="92" width="1256" height="676" maximized="true" key="VCS.FileHistoryDialog" timestamp="1596409545737">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state x="-1348" y="92" width="1256" height="676" maximized="true" key="VCS.FileHistoryDialog/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596403902271" />
+    <state x="-1348" y="92" width="1256" height="676" maximized="true" key="VCS.FileHistoryDialog/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596409545737" />
     <state x="598" y="139" width="1456" height="948" key="dock-window-1" timestamp="1595877992033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

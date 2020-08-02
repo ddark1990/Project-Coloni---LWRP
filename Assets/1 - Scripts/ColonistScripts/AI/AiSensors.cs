@@ -29,7 +29,7 @@ namespace ProjectColoni
 
         private void Update()
         {
-            UpdateOverlapSphereNonAlloc();
+            //UpdateOverlapSphereNonAlloc();
             
         }
 

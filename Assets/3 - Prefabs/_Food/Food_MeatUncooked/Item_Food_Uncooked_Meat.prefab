@@ -109,8 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: 0
-  baseData: {fileID: 11400000, guid: c07ad0c4a5c180d41af4ef10db858826, type: 2}
   itemCount: 1
+  baseData: {fileID: 11400000, guid: c07ad0c4a5c180d41af4ef10db858826, type: 2}
   itemData: {fileID: 11400000, guid: 178ff5ca87ecf1a428789682e052ab25, type: 2}
 --- !u!114 &3846261238220724138
 MonoBehaviour:

@@ -13,10 +13,11 @@ GameObject:
   - component: {fileID: 4262500320172003621}
   - component: {fileID: 4284091883318039685}
   - component: {fileID: 4284091883318039687}
-  - component: {fileID: 4284091883318039684}
+  - component: {fileID: -2839472518067650618}
+  - component: {fileID: 397950264}
   m_Layer: 31
   m_Name: Tree_Small_01
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -854,7 +855,7 @@ MonoBehaviour:
     - {x: 0.27384102, y: 0.3808617, z: -0.8831509}
     - {x: 0.8735033, y: 0.4530692, z: -0.1781017}
     - {x: 0.9255713, y: 0.321193, z: -0.20038138}
---- !u!114 &4284091883318039684
+--- !u!114 &-2839472518067650618
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -863,7 +864,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 4285134091226167725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 380df897128e1f049b8b4ecf61b2fbe6, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b80179d96502c44bb3ac388c7b55553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selected: 0
+  baseData: {fileID: 11400000, guid: 608b46739f9a9564281f1719465619f4, type: 2}
+  amount: 100
+--- !u!114 &397950264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4285134091226167725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b80179d96502c44bb3ac388c7b55553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selected: 0
+  baseData: {fileID: 11400000, guid: 608b46739f9a9564281f1719465619f4, type: 2}
+  amount: 100

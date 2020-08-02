@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 7f0dcfa3f4172b14598d4ff4c79d992b, type: 3}
   m_Name: Dummy(BaseData)
-  m_EditorClassIdentifier: Assembly-CSharp::BaseScriptableData
-  objectName: Gucci "Siggard" Mane
-  description: A guy who loves eft.
+  m_EditorClassIdentifier: 
+  objectName: Gucci "Siggard" Galore
+  description: Gucci mang.
   sprite: {fileID: 21300000, guid: 27fc609d15c12ae4f9dc43bd0598ac75, type: 3}

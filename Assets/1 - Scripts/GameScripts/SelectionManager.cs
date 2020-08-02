@@ -22,7 +22,7 @@ namespace ProjectColoni
         public float outlineWidth = 2;
 
         public Camera cam;
-        private RaycastHit _hit;
+        //private RaycastHit _hit;
         [HideInInspector] public Selectable selectedTemp;
         
         
@@ -59,17 +59,40 @@ namespace ProjectColoni
             DontDestroyOnLoad(this);
             
             cam = RTSCamera.Instance.GetComponent<Camera>();
-
         }
 
         private void RightClickObject()
         {
             var ray = cam.ScreenPointToRay (Input.mousePosition);
             
-            if (Physics.Raycast (ray, out _hit, 200, selectableMask)) 
+            if (Physics.Raycast (ray, out var hit, 200, selectableMask)) 
             {
-                Debug.Log("Right Clicked On: " + _hit.collider);
+                //Debug.Log("Right Clicked On: " + _hit.collider);
+                //DebugSelectedRightClick(currentlySelectedObject, hit);
+                
+                switch (currentlySelectedObject)
+                {
+                    case AiController aiController:
+
+                        if (aiController.selected)
+                        {
+                            
+                        }
+                        
+                        break;
+                    case Item item:
+                        break;
+                    case ResourceNode resourceNode:
+                        break;
+                }
             }  
+        }
+
+        private void DebugSelectedRightClick(Selectable selectedObject, RaycastHit hit)
+        {
+            if(selectedObject.selected)
+                Debug.Log("Right clicked on " + hit.collider.name + " while " + selectedObject.name + " is selected.");
+
         }
         
         public void SelectObject(Selectable selectedObject)

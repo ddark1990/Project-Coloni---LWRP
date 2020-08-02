@@ -1228,8 +1228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9c8d1991b11484880b2fed3a5513d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseData: {fileID: 11400000, guid: 46921c67b1fea1e40b6ef42a6f524c97, type: 2}
-  aiObjectStats: {fileID: 11400000, guid: 3594f6719a4a93b42b0f38d5bc5d29a7, type: 2}
+  baseData: {fileID: 11400000, guid: 5388313f3111c8e439e7d7eddf23254e, type: 2}
+  statsData: {fileID: 11400000, guid: 3594f6719a4a93b42b0f38d5bc5d29a7, type: 2}
 --- !u!114 &4303725912926133582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1272,7 +1272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fde4dbf9d1535747abb51533d4c15c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionArr: []
+  actionArr:
+  - {fileID: 261508970}
   debugPlanner: 0
   aiController: {fileID: 0}
   goalDebug: 0

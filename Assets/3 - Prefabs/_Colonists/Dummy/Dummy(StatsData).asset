@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: d8771d5b8c9027749935ef4ee64d1856, type: 3}
   m_Name: Dummy(StatsData)
-  m_EditorClassIdentifier: Assembly-CSharp:ProjectColoni:Stats/AiStatsObject
-  age: 21
+  m_EditorClassIdentifier: 
+  age: 36
   gender: 0
   maxHealth: 150
   maxStamina: 125
@@ -21,6 +21,6 @@ MonoBehaviour:
   enableSecondaryStats: 1
   comfort: 100
   recreation: 100
-  hungerRate: 0.2
-  staminaRate: 1
-  energyRate: 0.1
+  hungerRate: 0.5
+  staminaRate: 0.1
+  energyRate: 0.05

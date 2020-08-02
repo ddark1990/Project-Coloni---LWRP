@@ -10,7 +10,7 @@ namespace ProjectColoni
         [Header("Ai Object Data")]
         [Tooltip("If null, will generate random values for the base data.")] 
         [SerializeField] private BaseScriptableData baseData;
-        [SerializeField] private Stats.AiStatsObject aiObjectStats;
+        [SerializeField] private AiStatsObject statsData;
         
         public BaseObjectData baseObjectInfo;
         public Stats stats;
@@ -41,24 +41,24 @@ namespace ProjectColoni
         
         private void InitializeStats()
         {
-            if (aiObjectStats != null)
+            if (statsData != null)
             {
                 stats = new Stats
                 {
-                    Age = aiObjectStats.age,
-                    gender = aiObjectStats.gender,
-                    Health = aiObjectStats.maxHealth,
-                    MaxHealth = aiObjectStats.maxHealth,
-                    Food = aiObjectStats.food,
-                    Stamina = aiObjectStats.maxStamina,
-                    MaxStamina = aiObjectStats.maxStamina,
-                    Energy = aiObjectStats.energy,
-                    EnableSecondaryStats = aiObjectStats.enableSecondaryStats,
-                    Comfort = aiObjectStats.comfort,
-                    Recreation = aiObjectStats.recreation,
-                    HungerRate = aiObjectStats.hungerRate,
-                    StaminaRate = aiObjectStats.staminaRate,
-                    EnergyRate = aiObjectStats.energyRate
+                    Age = statsData.age,
+                    gender = statsData.gender,
+                    Health = statsData.maxHealth,
+                    MaxHealth = statsData.maxHealth,
+                    Food = statsData.food,
+                    Stamina = statsData.maxStamina,
+                    MaxStamina = statsData.maxStamina,
+                    Energy = statsData.energy,
+                    EnableSecondaryStats = statsData.enableSecondaryStats,
+                    Comfort = statsData.comfort,
+                    Recreation = statsData.recreation,
+                    HungerRate = statsData.hungerRate,
+                    StaminaRate = statsData.staminaRate,
+                    EnergyRate = statsData.energyRate
                 }; 
             }
             else

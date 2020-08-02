@@ -48,7 +48,7 @@ namespace ProjectColoni
             _skillPanel = GetComponentInChildren<UI_SkillPanel>();
         }
 
-        private void Update()
+        private void LateUpdate()
         {
             if(selectedColonistPanel.activeInHierarchy) PopulateColonistVitalsData();
             if(selectedResourcePanel.activeInHierarchy) PopulateResourceData();

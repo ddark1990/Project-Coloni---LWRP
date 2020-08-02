@@ -25,7 +25,7 @@ namespace ProjectColoni
             worldData = new HashSet<KeyValuePair<string, object>>();
 
             worldData.Add(new KeyValuePair<string, object>("isHungry", aiController.aiStats.IsHungry));
-            worldData.Add(new KeyValuePair<string, object>("hasPickUp", aiController.aiStats.IsHungry));
+            worldData.Add(new KeyValuePair<string, object>("forcePickUp", aiController.aiStats.IsHungry));
             //worldData.Add(new KeyValuePair<string, object>("inCombat", aiController.inCombat));
             //worldData.Add(new KeyValuePair<string, object>("hasTarget", aiController.target != null));
             //worldData.Add(new KeyValuePair<string, object>("hasWeaponInInventory", aiController.inventory.HasWeaponInInventory()));
@@ -59,7 +59,7 @@ namespace ProjectColoni
             // Not handling this here since we are making sure our goals will always succeed.
             // But normally you want to make sure the world state has changed before running
             // the same goal again, or else it will just fail.
-            Debug.Log("failedGoal");
+            if(goalDebug) Debug.Log("failedGoal");
         }
 
         public void planFound(HashSet<KeyValuePair<string,object>> goal, Queue<GoapAction> actions)
