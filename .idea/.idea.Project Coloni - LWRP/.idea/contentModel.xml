@@ -78,14 +78,12 @@
             <e p="Inventory.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="ItemType.cs" t="Include" />
+            <e p="Resource.cs" t="Include" />
           </e>
           <e p="ObjectPlacer" t="Include">
             <e p="ObjectSpawner.cs" t="Include" />
             <e p="ObjectSpawnerDataset.cs" t="Include" />
             <e p="SpawnGameObjectsEditor.cs" t="Include" />
-          </e>
-          <e p="RightClickManager" t="Include">
-            <e p="RightClickManager.cs" t="Include" />
           </e>
           <e p="RTSCamera.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
@@ -102,6 +100,10 @@
           <e p="TerrainGenerator.cs" t="Include" />
           <e p="ThirdPersonCharacter.cs" t="Include" />
           <e p="UI" t="Include">
+            <e p="RightClickManager" t="Include">
+              <e p="UI_RightClickActionButton.cs" t="Include" />
+              <e p="UI_RightClickManager.cs" t="Include" />
+            </e>
             <e p="UI_ColonistPanelRelay.cs" t="Include" />
             <e p="UI_DevTools.cs" t="Include" />
             <e p="UI_EscapeMenu.cs" t="Include" />

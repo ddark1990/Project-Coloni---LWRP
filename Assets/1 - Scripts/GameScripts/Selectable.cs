@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace ProjectColoni
@@ -14,9 +15,13 @@ namespace ProjectColoni
         private OutlineObject _outline;
         private SelectionManager _selectionManager;
 
+        public Dictionary<string, UnityAction> rightClickActions;
+        
 
         protected void InitializeSelectable()
         {
+            rightClickActions = new Dictionary<string, UnityAction>();
+            
             _selectionManager = SelectionManager.Instance;
             _outline = GetComponentInChildren<OutlineObject>();
             
@@ -60,6 +65,12 @@ namespace ProjectColoni
         {
             if(_selectionManager.hoveringObject.Equals(this))
                 _selectionManager.hoveringObject = null;
+        }
+
+        protected void AddActionToCollection(string actionName, UnityAction action)
+        {
+            if(!rightClickActions.ContainsKey(actionName))
+                rightClickActions.Add(actionName, action);
         }
     }
 }

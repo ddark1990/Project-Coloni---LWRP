@@ -31,6 +31,7 @@ namespace ProjectColoni
         private bool _inventoryWindowOpen;
         private bool _infoWindowOpen;
     
+        
         private void Start()
         {
             if(Instance == null)

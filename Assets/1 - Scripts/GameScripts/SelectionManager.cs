@@ -33,11 +33,6 @@ namespace ProjectColoni
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Mouse1))
-            {
-                RightClickObject();
-            }
-            
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 DeselectObject();
@@ -61,32 +56,7 @@ namespace ProjectColoni
             cam = RTSCamera.Instance.GetComponent<Camera>();
         }
 
-        private void RightClickObject()
-        {
-            var ray = cam.ScreenPointToRay (Input.mousePosition);
-            
-            if (Physics.Raycast (ray, out var hit, 200, selectableMask)) 
-            {
-                //Debug.Log("Right Clicked On: " + _hit.collider);
-                //DebugSelectedRightClick(currentlySelectedObject, hit);
-                
-                switch (currentlySelectedObject)
-                {
-                    case AiController aiController:
-
-                        if (aiController.selected)
-                        {
-                            
-                        }
-                        
-                        break;
-                    case Item item:
-                        break;
-                    case ResourceNode resourceNode:
-                        break;
-                }
-            }  
-        }
+        
 
         private void DebugSelectedRightClick(Selectable selectedObject, RaycastHit hit)
         {

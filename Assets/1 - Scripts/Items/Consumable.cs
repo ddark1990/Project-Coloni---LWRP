@@ -14,5 +14,10 @@ namespace ProjectColoni
         }
 
         [Tooltip("How much & what you will gain from consuming this item.")] public ConsumableSettings consumableSettings;
+
+        public void Eat()
+        {
+            Debug.Log("Eating " + this);
+        }
     }
 }

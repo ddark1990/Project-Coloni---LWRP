@@ -22,68 +22,20 @@
     <list default="true" id="b94e7643-efd0-4934-b8a0-0256359f3c2b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BaseObjectData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BaseObjectData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensors.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Stats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RightClickManager.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RightClickManager/RightClickActionButton.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RightClickManager/RightClickActionButton.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RightClickManager/RightClickManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RightClickManager/RightClickManager.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/ColonistDummy.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/ColonistDummy.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/Dummy(BaseData).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/Dummy(BaseData).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/Dummy(StatsData).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/Dummy/Dummy(StatsData).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusModifiers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusModifiers/Modifier_Bleeding.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusModifiers/Modifier_Bleeding.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusModifiers/Modifier_Crippled.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusModifiers/Modifier_Crippled.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusModifiers/Modifier_WellFed.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusModifiers/Modifier_WellFed.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusNotifications.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusNotifications/Notification_Hungry.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Colonists/StatusNotifications/Notification_Hungry.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Alcohol_JackDaniels.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels(BaseData).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels(BaseData).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels(ItemData).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels(ItemData).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatCooked.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatCooked/Food_CookedMeat(BaseData).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatCooked/Food_CookedMeat(BaseData).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatCooked/Food_CookedMeat(ItemData).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatCooked/Food_CookedMeat(ItemData).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatCooked/Item_Food_Cooked_Meat.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatCooked/Item_Food_Cooked_Meat.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatUncooked.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat(BaseData).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat(BaseData).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat(ItemData).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat(ItemData).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Base_Data_Node_Stone_01.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Base_Data_Node_Stone_01.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Base_Data_Tree_Small_01.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Base_Data_Tree_Small_01.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Node_Stone_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Node_Stone_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Tree_Small_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Tree_Small_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Tree_Willow_Small_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/Harvestables/Tree_Willow_Small_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/RTSCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/RTSCamera.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +52,6 @@
     <setting file="file://$PROJECT_DIR$/../../UnityGame/ColonyGame 0.0.19/ColonyGame 0.0.18/ColonyGame/Assets/MainGame/Scripts/Colonist Scripts/ColonistAnimationController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/RangedAttackGoapAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidAgent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/RightClickManager/RightClickManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/MeleeAttackGoapAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Wander.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_PickUpItem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -145,6 +96,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/EventRelay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/LobbySystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_DevTools.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_EscapeMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" root0="FORCE_HIGHLIGHTING" />
@@ -193,6 +145,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Eat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Items/Resource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UnityEditor/2019.3.0f6/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/IconGenerator/IconGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/10 - Shaders/BlurRenderer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -201,6 +154,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6F28216F-EA9F-453A-BF2E-05B770ED3EE4/79/0b7b50b0/GUID.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_PanelHolderRelay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickActionButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/StatusNotifications.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/BaseScriptableData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../FPS Bolt/Assets/1 - Scripts/EventRelay.cs" root0="SKIP_HIGHLIGHTING" />
@@ -218,9 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ItemPanelRelay.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/CacheStrings.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_InfoPanelRelay.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Constants.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/StatusNotifications.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiBase.cs" />
@@ -245,7 +196,6 @@
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiBaseCustomInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/GlobalObjectDictionaryInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/12-ImportedPackages/IconGenerator/IconGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/GlobalObjectDictionary.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Wander.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" />
@@ -253,22 +203,26 @@
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_PickUpItem.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Eat.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/RightClickManager/RightClickManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/EventRelay.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidAgent.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensors.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/BaseObjectData.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/BaseScriptableData.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Stats.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStatsObject.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickActionButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Resource.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" />
       </list>
     </option>
   </component>
@@ -301,10 +255,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13260">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="13260" />
+      <option name="pid" />
       <method v="2" />
     </configuration>
   </component>
@@ -366,7 +320,9 @@
       <workItem from="1596045297617" duration="36698000" />
       <workItem from="1596129921595" duration="28941000" />
       <workItem from="1596177425627" duration="3860000" />
-      <workItem from="1596218130148" duration="41564000" />
+      <workItem from="1596218130148" duration="42277000" />
+      <workItem from="1596448183569" duration="2962000" />
+      <workItem from="1596478890698" duration="19550000" />
     </task>
     <servers />
   </component>
@@ -395,90 +351,90 @@
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
     <state x="-1040" y="165" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591470370259" />
-    <state width="1441" height="310" key="GridCell.Tab.0.bottom" timestamp="1596405167953">
+    <state width="1441" height="310" key="GridCell.Tab.0.bottom" timestamp="1596441755902">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
+    <state width="1441" height="310" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755902" />
     <state width="1921" height="382" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
-    <state width="1441" height="310" key="GridCell.Tab.0.center" timestamp="1596405167953">
+    <state width="1441" height="310" key="GridCell.Tab.0.center" timestamp="1596441755902">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
+    <state width="1441" height="310" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755902" />
     <state width="1921" height="382" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
-    <state width="1441" height="310" key="GridCell.Tab.0.left" timestamp="1596405167953">
+    <state width="1441" height="310" key="GridCell.Tab.0.left" timestamp="1596441755901">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
+    <state width="1441" height="310" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755901" />
     <state width="1921" height="382" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
-    <state width="1441" height="310" key="GridCell.Tab.0.right" timestamp="1596405167953">
+    <state width="1441" height="310" key="GridCell.Tab.0.right" timestamp="1596441755902">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
+    <state width="1441" height="310" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755902" />
     <state width="1921" height="382" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
-    <state width="1441" height="310" key="GridCell.Tab.1.bottom" timestamp="1596405167953">
+    <state width="1441" height="310" key="GridCell.Tab.1.bottom" timestamp="1596441755902">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
+    <state width="1441" height="310" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755902" />
     <state width="1921" height="382" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.1.center" timestamp="1596405167953">
+    <state width="1441" height="310" key="GridCell.Tab.1.center" timestamp="1596441755902">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.1.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
+    <state width="1441" height="310" key="GridCell.Tab.1.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755902" />
     <state width="1921" height="382" key="GridCell.Tab.1.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
-    <state width="1441" height="310" key="GridCell.Tab.1.left" timestamp="1596405167953">
+    <state width="1441" height="310" key="GridCell.Tab.1.left" timestamp="1596441755902">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.1.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
+    <state width="1441" height="310" key="GridCell.Tab.1.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755902" />
     <state width="1921" height="382" key="GridCell.Tab.1.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
-    <state width="1441" height="310" key="GridCell.Tab.1.right" timestamp="1596405167953">
+    <state width="1441" height="310" key="GridCell.Tab.1.right" timestamp="1596441755902">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.1.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
+    <state width="1441" height="310" key="GridCell.Tab.1.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755902" />
     <state width="1921" height="382" key="GridCell.Tab.1.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.2.bottom" timestamp="1596405167953">
+    <state width="1441" height="310" key="GridCell.Tab.2.bottom" timestamp="1596441755904">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
+    <state width="1441" height="310" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755904" />
     <state width="1921" height="382" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.2.center" timestamp="1596405167953">
+    <state width="1441" height="310" key="GridCell.Tab.2.center" timestamp="1596441755903">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.2.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
+    <state width="1441" height="310" key="GridCell.Tab.2.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755903" />
     <state width="1921" height="382" key="GridCell.Tab.2.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.2.left" timestamp="1596405167953">
+    <state width="1441" height="310" key="GridCell.Tab.2.left" timestamp="1596441755903">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.2.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
+    <state width="1441" height="310" key="GridCell.Tab.2.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755903" />
     <state width="1921" height="382" key="GridCell.Tab.2.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.2.right" timestamp="1596405167953">
+    <state width="1441" height="310" key="GridCell.Tab.2.right" timestamp="1596441755903">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.2.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
+    <state width="1441" height="310" key="GridCell.Tab.2.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755903" />
     <state width="1921" height="382" key="GridCell.Tab.2.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.3.bottom" timestamp="1596405167954">
+    <state width="1441" height="310" key="GridCell.Tab.3.bottom" timestamp="1596441755904">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167954" />
+    <state width="1441" height="310" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755904" />
     <state width="1921" height="382" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.3.center" timestamp="1596405167953">
+    <state width="1441" height="310" key="GridCell.Tab.3.center" timestamp="1596441755904">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.3.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
+    <state width="1441" height="310" key="GridCell.Tab.3.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755904" />
     <state width="1921" height="382" key="GridCell.Tab.3.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.3.left" timestamp="1596405167953">
+    <state width="1441" height="310" key="GridCell.Tab.3.left" timestamp="1596441755904">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.3.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
+    <state width="1441" height="310" key="GridCell.Tab.3.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755904" />
     <state width="1921" height="382" key="GridCell.Tab.3.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.3.right" timestamp="1596405167953">
+    <state width="1441" height="310" key="GridCell.Tab.3.right" timestamp="1596441755904">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.3.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596405167953" />
+    <state width="1441" height="310" key="GridCell.Tab.3.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596441755904" />
     <state width="1921" height="382" key="GridCell.Tab.3.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state x="-867" y="183" key="RiderGenerateDialog" timestamp="1596407081596">
+    <state x="-867" y="183" key="RiderGenerateDialog" timestamp="1596606050558">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state x="-867" y="183" key="RiderGenerateDialog/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596407081596" />
+    <state x="-867" y="183" key="RiderGenerateDialog/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596606050558" />
     <state x="764" y="221" key="RiderGenerateDialog/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1596052827399" />
     <state x="-1348" y="92" width="1256" height="676" maximized="true" key="VCS.FileHistoryDialog" timestamp="1596409545737">
       <screen x="-1440" y="0" width="1440" height="860" />

@@ -40,9 +40,8 @@ public class RTSCamera : MonoBehaviour
     private float _distanceToGround;
     private bool _rotating;
     public bool cameraSmoothing;
-
-    private PhysicsRaycaster _physicsRaycaster;
-
+    
+    
     private void Awake()
     {
         if(Instance == null)
@@ -55,7 +54,6 @@ public class RTSCamera : MonoBehaviour
             Destroy(gameObject);
         }
 
-        _physicsRaycaster = GetComponent<PhysicsRaycaster>();
     }
 
     private void Start()
@@ -83,7 +81,7 @@ public class RTSCamera : MonoBehaviour
         var transform1 = transform;
         var facing = _inputAxis.magnitude > 0 ? transform1.forward.normalized * _inputAxis.y + transform1.right.normalized * _inputAxis.x : Vector3.zero;
         
-        _newPos = _newPos += facing * panSens;
+        _newPos += facing * panSens;
 
         _transform.position = Vector3.Lerp(_transform.position, new Vector3(_newPos.x, _targetHeight + _difference, _newPos.z), Time.deltaTime * smoothDamp);
     }
