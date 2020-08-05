@@ -20,11 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b94e7643-efd0-4934-b8a0-0256359f3c2b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/RightClickActionButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/RightClickActionButton.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" afterDir="false" />
     </list>
@@ -206,16 +205,16 @@
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickActionButton.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Resource.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SpriteContainer.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SpriteContainer.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs" />
       </list>
     </option>
   </component>
@@ -315,7 +314,7 @@
       <workItem from="1596177425627" duration="3860000" />
       <workItem from="1596218130148" duration="42277000" />
       <workItem from="1596448183569" duration="2962000" />
-      <workItem from="1596478890698" duration="24000000" />
+      <workItem from="1596478890698" duration="25939000" />
     </task>
     <servers />
   </component>

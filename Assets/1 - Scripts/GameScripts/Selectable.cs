@@ -30,6 +30,8 @@ namespace ProjectColoni
 
         private void Update()
         {
+            if (EventSystem.current.IsPointerOverGameObject()) return;
+
             OutlineHighlight(); //if inheriting, must update from top class
         }
 

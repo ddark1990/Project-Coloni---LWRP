@@ -1,6 +1,7 @@
 ﻿using System;
 using Doozy.Engine.UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace ProjectColoni
@@ -36,9 +37,8 @@ namespace ProjectColoni
 
         private void Update()
         {
-            SetPanelPosToMouse();
             PanelDistanceCheck();
-            
+
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 RightClickSelection();
@@ -87,6 +87,7 @@ namespace ProjectColoni
         private void ToggleRightClickPanel()
         {
             ClearRightClickButtons();
+            SetPanelPosToMouse(_panelOffset);
             
             rightClickPanel.Show();
             //rightClickPanel.gameObject.SetActive(true);
@@ -124,16 +125,15 @@ namespace ProjectColoni
             }
         }
 
-        private void SetPanelPosToMouse()
+        private void SetPanelPosToMouse(float offset)
         {
-            if (!rightClickPanel.gameObject.activeSelf)
-            {
-                rightClickPanel.transform.position = Input.mousePosition * _panelOffset;
-            }
+            rightClickPanel.transform.position = Input.mousePosition * offset;
         }
         
         private void PanelDistanceCheck()
         {
+            if (!rightClickPanel.gameObject.activeSelf) return;
+            
             var distBetween = Vector3.Distance(rightClickPanel.transform.position, Input.mousePosition);
             
             if (distBetween > 200)

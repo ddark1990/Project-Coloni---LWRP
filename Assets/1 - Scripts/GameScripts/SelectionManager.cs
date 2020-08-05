@@ -67,6 +67,8 @@ namespace ProjectColoni
         
         public void SelectObject(Selectable selectedObject)
         {
+            if (EventSystem.current.IsPointerOverGameObject()) return;
+            
             if (selectedTemp != null)
             {
                 selectedTemp.selected = false;
