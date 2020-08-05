@@ -64,6 +64,7 @@
           </e>
           <e p="Constants.cs" t="Include" />
           <e p="EventRelay.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
           <e p="GameScripts" t="Include">
             <e p="Selectable.cs" t="Include" />
             <e p="SelectionManager.cs" t="Include" />
@@ -96,6 +97,7 @@
             </e>
           </e>
           <e p="SnapshotCamera.cs" t="Include" />
+          <e p="SpriteContainer.cs" t="Include" />
           <e p="StaticUtility.cs" t="Include" />
           <e p="TerrainGenerator.cs" t="Include" />
           <e p="ThirdPersonCharacter.cs" t="Include" />

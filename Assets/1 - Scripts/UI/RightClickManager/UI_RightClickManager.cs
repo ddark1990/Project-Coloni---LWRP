@@ -1,4 +1,5 @@
 ﻿using System;
+using Doozy.Engine.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ namespace ProjectColoni
     {
         public static UI_RightClickManager Instance { get; private set; }
 
-        [SerializeField] private GameObject rightClickPanel;
+        [SerializeField] private UIView rightClickPanel;
 
         private Transform[] _actionButtons;
         private SelectionManager _selectionManager;
@@ -53,6 +54,7 @@ namespace ProjectColoni
                 var child = rightClickPanel.transform.GetChild(i);
 
                 _actionButtons[i] = child;
+                _actionButtons[i].gameObject.SetActive(false);
             }
         }
         
@@ -86,12 +88,13 @@ namespace ProjectColoni
         {
             ClearRightClickButtons();
             
-            rightClickPanel.SetActive(true);
+            rightClickPanel.Show();
+            //rightClickPanel.gameObject.SetActive(true);
             
-            PopulateActionButtonData();
+            PopulateActionButtonsData();
         }
 
-        private void PopulateActionButtonData()
+        private void PopulateActionButtonsData()
         {
             var collectionOfActions = _selectionManager.hoveringObject.GetComponent<Selectable>().rightClickActions;
 
@@ -104,9 +107,9 @@ namespace ProjectColoni
                 var button = _actionButtons[collectionIndex].GetComponent<UI_RightClickActionButton>();
                 button.gameObject.SetActive(true);
 
-                button.actionName.text = action.Key;
+                button.actionName.text = action.Value.Method.Name;
                 button.actionButton.onClick.AddListener(action.Value);
-                //button.actionImage.sprite = action.Key;
+                button.actionImage.sprite = action.Key;
             }
         }
         
@@ -123,7 +126,7 @@ namespace ProjectColoni
 
         private void SetPanelPosToMouse()
         {
-            if (!rightClickPanel.activeSelf)
+            if (!rightClickPanel.gameObject.activeSelf)
             {
                 rightClickPanel.transform.position = Input.mousePosition * _panelOffset;
             }
@@ -135,7 +138,8 @@ namespace ProjectColoni
             
             if (distBetween > 200)
             {
-                rightClickPanel.SetActive(false);
+                rightClickPanel.Hide();
+                //rightClickPanel.gameObject.SetActive(false);
             }
         }
     }

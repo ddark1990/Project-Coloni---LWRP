@@ -33,8 +33,8 @@ namespace ProjectColoni
 
         private void InitializeRightClickActions()
         {
-            AddActionToCollection("Gather", Gather);
-            AddActionToCollection("Inspect", Inspect);
+            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Gather"], Gather);
+            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Inspect"], Inspect);
         }
         
         private void Gather()

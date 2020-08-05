@@ -15,12 +15,12 @@ namespace ProjectColoni
         private OutlineObject _outline;
         private SelectionManager _selectionManager;
 
-        public Dictionary<string, UnityAction> rightClickActions;
+        public Dictionary<Sprite, UnityAction> rightClickActions; //dont rly need name cuz can get name from the actual action method
         
 
         protected void InitializeSelectable()
         {
-            rightClickActions = new Dictionary<string, UnityAction>();
+            rightClickActions = new Dictionary<Sprite, UnityAction>();
             
             _selectionManager = SelectionManager.Instance;
             _outline = GetComponentInChildren<OutlineObject>();
@@ -67,10 +67,9 @@ namespace ProjectColoni
                 _selectionManager.hoveringObject = null;
         }
 
-        protected void AddActionToCollection(string actionName, UnityAction action)
+        protected void AddActionToCollection(Sprite actionSprite, UnityAction action)
         {
-            if(!rightClickActions.ContainsKey(actionName))
-                rightClickActions.Add(actionName, action);
+            rightClickActions.Add(actionSprite, action);
         }
     }
 }

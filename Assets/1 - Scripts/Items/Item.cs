@@ -22,19 +22,19 @@ namespace ProjectColoni
 
         private void InitializeRightClickActions()
         {
-            AddActionToCollection("PickUp", PickUp);
-
+            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["PickUp"], PickUp);
+ 
             switch (itemData)
             {
                 case Consumable consumable:
-                    AddActionToCollection("Eat", consumable.Eat);
+                    AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Eat"], consumable.Eat);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(itemData));
             }
             
-            AddActionToCollection("Drop", Drop);
-            AddActionToCollection("HaulAway", HaulAway);
+            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Drop"], Drop);
+            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["HaulAway"], HaulAway);
         }
         
         private void Start()

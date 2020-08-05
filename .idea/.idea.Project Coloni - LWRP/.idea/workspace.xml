@@ -23,18 +23,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RightClickManager.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RightClickManager/RightClickActionButton.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RightClickManager/RightClickActionButton.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RightClickManager/RightClickManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RightClickManager/RightClickManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,6 +137,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Eat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Items/Resource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UnityEditor/2019.3.0f6/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/IconGenerator/IconGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/10 - Shaders/BlurRenderer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -158,6 +150,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/StatusNotifications.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/BaseScriptableData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../FPS Bolt/Assets/1 - Scripts/EventRelay.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SpriteContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/ColonyGame 0.0.19/ColonyGame 0.0.18/ColonyGame/Assets/MainGame/Scripts/UI Scripts/ColonistUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/FSM/FSMState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/FSM/FSM.cs" root0="FORCE_HIGHLIGHTING" />
@@ -172,8 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Constants.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/StatusNotifications.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiBase.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/StatusModifiers.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStatus.cs" />
@@ -216,13 +207,15 @@
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickActionButton.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Resource.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SpriteContainer.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" />
       </list>
     </option>
   </component>
@@ -322,7 +315,7 @@
       <workItem from="1596177425627" duration="3860000" />
       <workItem from="1596218130148" duration="42277000" />
       <workItem from="1596448183569" duration="2962000" />
-      <workItem from="1596478890698" duration="19550000" />
+      <workItem from="1596478890698" duration="24000000" />
     </task>
     <servers />
   </component>
