@@ -6,10 +6,8 @@ using UnityEngine.UI;
 
 namespace ProjectColoni
 {
-    public class UI_RightClickManager : MonoBehaviour
+    public class SmartActionManager : MonoBehaviour
     {
-        public static UI_RightClickManager Instance { get; private set; }
-
         [SerializeField] private UIView rightClickPanel;
 
         private Transform[] _actionButtons;
@@ -23,16 +21,6 @@ namespace ProjectColoni
             _selectionManager = SelectionManager.Instance;
 
             GetActionButtons();
-
-            if(Instance == null)
-            {
-                Instance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
         }
 
         private void Update()
@@ -105,7 +93,7 @@ namespace ProjectColoni
             {
                 collectionIndex++;
                 
-                var button = _actionButtons[collectionIndex].GetComponent<UI_RightClickActionButton>();
+                var button = _actionButtons[collectionIndex].GetComponent<UI_SmartActionButton>();
                 button.gameObject.SetActive(true);
 
                 button.actionName.text = action.Value.Method.Name;

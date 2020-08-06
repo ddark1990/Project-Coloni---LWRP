@@ -3,14 +3,14 @@ using UnityEngine;
 
 namespace ProjectColoni
 {
-    public class ResourceNode : Selectable
+    public class ResourceNode : SmartObject
     {
         public int amount;
+        
         [SerializeField] private BaseScriptableData baseData; //for manual creation from scriptableObjects 
-
         public BaseObjectData baseObjectInfo;
-
-
+        
+        
         private void Awake()
         {
             InitializeBaseObjectData();
@@ -19,7 +19,7 @@ namespace ProjectColoni
         private void Start()
         {
             InitializeSelectable();
-            InitializeRightClickActions();
+            InitializeSmartActions();
         }
 
         /// <summary>
@@ -31,12 +31,13 @@ namespace ProjectColoni
                 : new BaseObjectData(StaticUtility.GenerateUniqueHashId(), "", "", null);
         }
 
-        private void InitializeRightClickActions()
+        private void InitializeSmartActions()
         {
-            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Gather"], Gather);
             AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Inspect"], Inspect);
+            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Gather"], Gather);
         }
         
+        //smart actions
         private void Gather()
         {
             Debug.Log("Gathering " + this);
@@ -44,6 +45,11 @@ namespace ProjectColoni
 
         private void Inspect()
         {
+            var aiController = SelectionManager.Instance.currentlySelectedObject as AiController;
+            aiController.performingForcedAction = true;
+            
+            aiController.MoveAgent(objectCollider.ClosestPointOnBounds(aiController.transform.position));
+
             Debug.Log("Inspecting " + this);
         }
     }

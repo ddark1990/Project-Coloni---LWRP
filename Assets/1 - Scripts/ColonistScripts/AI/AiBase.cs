@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
+﻿using UnityEngine;
 
 namespace ProjectColoni
 {
     [RequireComponent(typeof(AiStats))]
     [RequireComponent(typeof(AiSensors))]
     [RequireComponent(typeof(AiStatus))]
-    public class AiBase : Selectable
+    public class AiBase : SmartObject
     {
         [HideInInspector] public AiStats aiStats;
         [HideInInspector] public AiSensors sensors;

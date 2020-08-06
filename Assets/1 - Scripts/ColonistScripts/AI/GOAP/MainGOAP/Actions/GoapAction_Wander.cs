@@ -51,8 +51,6 @@ namespace ProjectColoni
 
         public override bool perform(AiController controller)
         {
-            if (controller.aiStats.IsDead) return false;
-        
             if (_elapsedTime <= 0 && !controller.navMeshAgent.hasPath)
             {
                 //Debug.Log("Starting to wander.");

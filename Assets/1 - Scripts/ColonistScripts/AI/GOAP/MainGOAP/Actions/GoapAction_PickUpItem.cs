@@ -13,7 +13,7 @@ namespace ProjectColoni
 
         public GoapAction_PickUpItem()
         {
-            addPrecondition("hasPickUp", true);
+            addPrecondition("forcePickUp", true);
             addEffect("pickUpItem", true);
         }
 

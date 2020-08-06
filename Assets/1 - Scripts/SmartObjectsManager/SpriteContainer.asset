@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprites:
   - spriteName: Eat
-    sprite: {fileID: 21300000, guid: e27cc78e31c66af43bef70a45ee4d6fc, type: 3}
+    sprite: {fileID: 21300000, guid: 3ba07e00a7f5b034591e1d3dbc902575, type: 3}
   - spriteName: PickUp
-    sprite: {fileID: 21300000, guid: 9d815cda13fcca24e9b1964fd48f3231, type: 3}
+    sprite: {fileID: 21300000, guid: 1f6966c43423f6748bdedd7f6840fe6a, type: 3}
   - spriteName: Drop
-    sprite: {fileID: 21300000, guid: dea404296e218aa4d92f931f1b76e0c7, type: 3}
+    sprite: {fileID: 21300000, guid: 7e303cbbd38b3a44ab198009e85bfe6d, type: 3}
   - spriteName: HaulAway
-    sprite: {fileID: 21300000, guid: 71d3e6c8ebf204341bb3ce79284a9182, type: 3}
+    sprite: {fileID: 21300000, guid: 3d4f42b0795735240adcd0546bd600f7, type: 3}
   - spriteName: Gather
-    sprite: {fileID: 21300000, guid: 71d3e6c8ebf204341bb3ce79284a9182, type: 3}
+    sprite: {fileID: 21300000, guid: 685efcabdc632ba4a97ed043bf09990e, type: 3}
   - spriteName: Inspect
-    sprite: {fileID: 21300000, guid: 03123d872c10a79489eea328e595b9b0, type: 3}
+    sprite: {fileID: 21300000, guid: 4d2ddf02c6801164fa1ec9f9a4ef20d8, type: 3}

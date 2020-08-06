@@ -4,14 +4,17 @@ using UnityEngine.EventSystems;
 
 namespace ProjectColoni
 {
-    public class Item : Selectable
+    public class Item : SmartObject
     {
         [Header("Item")]
         public int itemCount;
-        
+
         [SerializeField] private BaseScriptableData baseData; 
-        public ItemType itemData;
         
+        [Header("Debug")]
+        public bool ignore;
+        
+        public ItemType itemData;
         public BaseObjectData baseObjectInfo;
 
         
@@ -20,7 +23,7 @@ namespace ProjectColoni
             InitializeBaseObjectData();
         }
 
-        private void InitializeRightClickActions()
+        private void InitializeSmartActions()
         {
             AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["PickUp"], PickUp);
  
@@ -40,7 +43,7 @@ namespace ProjectColoni
         private void Start()
         {
             InitializeSelectable();
-            InitializeRightClickActions();
+            InitializeSmartActions();
 
             GlobalObjectDictionary.Instance.AddToGlobalDictionary(baseObjectInfo.Id, this);
         }
@@ -51,8 +54,14 @@ namespace ProjectColoni
                 : new BaseObjectData(StaticUtility.GenerateUniqueHashId(), "", "", null);
         }
 
+        //smart actions
         private void PickUp()
         {
+            var aiController = SelectionManager.Instance.currentlySelectedObject as AiController;
+            aiController.performingForcedAction = true;
+            
+            aiController.MoveAgent(objectCollider.ClosestPointOnBounds(aiController.transform.position));
+
             Debug.Log("Picking Up " + this);
         }
         private void Drop()

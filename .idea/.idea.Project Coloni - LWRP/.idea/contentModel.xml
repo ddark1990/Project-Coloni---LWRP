@@ -53,6 +53,7 @@
                   </e>
                 </e>
               </e>
+              <e p="SmartObject.cs" t="Include" />
               <e p="Stats.cs" t="Include" />
               <e p="StatusModifiers.cs" t="Include" />
               <e p="StatusNotifications.cs" t="Include" />
@@ -96,16 +97,16 @@
               <e p="Trait.cs" t="Include" />
             </e>
           </e>
+          <e p="SmartObjectsManager" t="Include">
+            <e p="SmartActionManager.cs" t="Include" />
+            <e p="UI_SmartActionButton.cs" t="Include" />
+          </e>
           <e p="SnapshotCamera.cs" t="Include" />
           <e p="SpriteContainer.cs" t="Include" />
           <e p="StaticUtility.cs" t="Include" />
           <e p="TerrainGenerator.cs" t="Include" />
           <e p="ThirdPersonCharacter.cs" t="Include" />
           <e p="UI" t="Include">
-            <e p="RightClickManager" t="Include">
-              <e p="UI_RightClickActionButton.cs" t="Include" />
-              <e p="UI_RightClickManager.cs" t="Include" />
-            </e>
             <e p="UI_ColonistPanelRelay.cs" t="Include" />
             <e p="UI_DevTools.cs" t="Include" />
             <e p="UI_EscapeMenu.cs" t="Include" />

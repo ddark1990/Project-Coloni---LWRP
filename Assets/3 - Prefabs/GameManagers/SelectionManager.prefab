@@ -43,7 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6cca825200b784a9663a3e03433038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentlySelectedObjects: []
   currentlySelectedObject: {fileID: 0}
   hoveringObject: {fileID: 0}
   selectableMask:
@@ -53,3 +52,5 @@ MonoBehaviour:
   selectedColor: {r: 0.11764706, g: 0.8980392, b: 0.14117648, a: 1}
   fadeSpeed: 5
   outlineWidth: 2
+  cam: {fileID: 0}
+  selectedTemp: {fileID: 0}

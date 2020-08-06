@@ -111,6 +111,8 @@ public class RTSCamera : MonoBehaviour
 
     private void HandleMouseInput()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+    
         _distanceToGround = DistanceToGround();
         
         _zoomPos += _mouseScroll * Time.deltaTime * scrollZoomSensitivity;

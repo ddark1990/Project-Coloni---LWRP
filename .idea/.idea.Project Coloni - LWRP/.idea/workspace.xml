@@ -20,12 +20,182 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b94e7643-efd0-4934-b8a0-0256359f3c2b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_PickUpItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_PickUpItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Wander.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Wander.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAgent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/RightClickActionButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/RightClickActionButton.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/RightClickActionButton.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/RightClickActionButton.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/SpriteContainer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/SpriteContainer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickActionButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickActionButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ExpandableBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ExpandableBar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/GameManagers/SelectionManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/GameManagers/SelectionManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Colonists/Dummy/ColonistDummy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Colonists/Dummy/ColonistDummy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/ColonistDummy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/ColonistDummy.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Food_CookedMeat.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Food_CookedMeat.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Item_Food_Jack_Daniels.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Item_Food_Jack_Daniels.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Item_Food_Uncooked_Meat.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Item_Food_Uncooked_Meat.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Node_Stone_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Node_Stone_01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Tree_Small_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Tree_Small_01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Tree_Willow_Small_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Tree_Willow_Small_01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/brokenbone_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/brokenbone_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/droplet_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/droplet_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energY_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energY_inverse_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_1024_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_1024_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_512_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_512_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_heavy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_heavy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_inverse_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_med_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_med_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_1024_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_1024_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_512_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_512_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_heavy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_heavy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_inverse_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_inverse_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_med_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_med_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_inverse_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_inverse_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_1024_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_1024_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_512_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_512_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_heavy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_heavy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_inverse_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_inverse_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_med_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_med_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_1024_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_1024_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_512_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_512_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_heavy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_heavy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_inverse_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_inverse_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_med_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_med_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_1024_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_1024_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_512_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_512_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_heavy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_heavy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_inverse_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_inverse_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_med_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_med_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_heavy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_heavy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_inverse_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_inverse_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_med_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_med_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/player-buttons-png-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/player-buttons-png-2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_med_256.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +247,7 @@
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/MusicPlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_InfoPanelRelay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/Skill.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/SmartObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SnapshotCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/MenuPanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStatus.cs" root0="FORCE_HIGHLIGHTING" />
@@ -86,7 +257,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/EventRelay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/LobbySystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_DevTools.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_EscapeMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" root0="FORCE_HIGHLIGHTING" />
@@ -122,6 +292,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/test123.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiStatsCustomInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiBaseCustomInspector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartActionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/TransparencyCapture/example/zzTransparencyCaptureExample.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiSensorsCustomInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ExpandableBar.cs" root0="FORCE_HIGHLIGHTING" />
@@ -145,7 +316,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6F28216F-EA9F-453A-BF2E-05B770ED3EE4/79/0b7b50b0/GUID.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_PanelHolderRelay.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickActionButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/StatusNotifications.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/BaseScriptableData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../FPS Bolt/Assets/1 - Scripts/EventRelay.cs" root0="SKIP_HIGHLIGHTING" />
@@ -164,11 +334,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/StatusModifiers.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStatus.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/FSM/FSM.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/FSM/FSMState.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAction.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/UnEquipWeaponGoapAction.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/SoldierAgent.cs" />
@@ -178,7 +343,6 @@
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/EquipWeaponGoapAction.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/MeleeAttackGoapAction.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/RangedAttackGoapAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAgent.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/WanderGoapAction.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/GlobalObjectList.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/StaticUtility.cs" />
@@ -187,14 +351,11 @@
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/GlobalObjectDictionaryInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/12-ImportedPackages/IconGenerator/IconGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/GlobalObjectDictionary.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Wander.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/PickUpItemGoapAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_PickUpItem.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Eat.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/RightClickManager/RightClickManager.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/EventRelay.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidAgent.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensors.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/BaseObjectData.cs" />
@@ -203,18 +364,27 @@
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStatsObject.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickActionButton.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Resource.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/SpriteContainer.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_PickUpItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/SmartActionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAgent.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartActionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Wander.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/SmartObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ExpandableBar.cs" />
       </list>
     </option>
   </component>
@@ -314,7 +484,9 @@
       <workItem from="1596177425627" duration="3860000" />
       <workItem from="1596218130148" duration="42277000" />
       <workItem from="1596448183569" duration="2962000" />
-      <workItem from="1596478890698" duration="25939000" />
+      <workItem from="1596478890698" duration="31046000" />
+      <workItem from="1596683689055" duration="324000" />
+      <workItem from="1596684029456" duration="18639000" />
     </task>
     <servers />
   </component>
@@ -428,10 +600,10 @@
     </state>
     <state x="-867" y="183" key="RiderGenerateDialog/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596606050558" />
     <state x="764" y="221" key="RiderGenerateDialog/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1596052827399" />
-    <state x="-1348" y="92" width="1256" height="676" maximized="true" key="VCS.FileHistoryDialog" timestamp="1596409545737">
+    <state x="-1348" y="92" width="1256" height="676" maximized="true" key="VCS.FileHistoryDialog" timestamp="1596681868279">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state x="-1348" y="92" width="1256" height="676" maximized="true" key="VCS.FileHistoryDialog/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596409545737" />
+    <state x="-1348" y="92" width="1256" height="676" maximized="true" key="VCS.FileHistoryDialog/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1596681868279" />
     <state x="598" y="139" width="1456" height="948" key="dock-window-1" timestamp="1595877992033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

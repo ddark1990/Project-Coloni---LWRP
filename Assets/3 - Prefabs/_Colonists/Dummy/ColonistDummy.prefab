@@ -1189,10 +1189,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: 0
+  objectCollider: {fileID: 0}
+  beingUsed: 0
+  usedBy: {fileID: 0}
+  stoppingDistance: 0.2
   aiStats: {fileID: 0}
   sensors: {fileID: 0}
   status: {fileID: 0}
   enableGizmos: 0
+  performingForcedAction: 0
   navMeshAgent: {fileID: 0}
   animator: {fileID: 0}
 --- !u!114 &4304678335175400363

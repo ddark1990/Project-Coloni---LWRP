@@ -15,6 +15,8 @@ namespace ProjectColoni
         private OutlineObject _outline;
         private SelectionManager _selectionManager;
 
+        [HideInInspector] public Collider objectCollider;
+
         public Dictionary<Sprite, UnityAction> rightClickActions; //dont rly need name cuz can get name from the actual action method
         
 
@@ -24,6 +26,7 @@ namespace ProjectColoni
             
             _selectionManager = SelectionManager.Instance;
             _outline = GetComponentInChildren<OutlineObject>();
+            objectCollider = GetComponent<Collider>();
             
             _outline.OutlineWidth = _selectionManager.outlineWidth;
         }

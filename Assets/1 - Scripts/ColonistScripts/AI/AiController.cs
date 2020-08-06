@@ -9,6 +9,9 @@ namespace ProjectColoni
 {
     public class AiController : AiBase
     {
+        [Header("Ai")]
+        public bool performingForcedAction;
+        
         [HideInInspector] public NavMeshAgent navMeshAgent;
         [HideInInspector] public Animator animator;
         private Selectable _selectable;
@@ -23,7 +26,19 @@ namespace ProjectColoni
             OnStartInitializeComponents();
             InitializeSelectable();
         }
-
+        
+        private void Update()
+        {
+            DrawLineRendererPaths(navMeshAgent, _destinationLineRenderer);
+            OutlineHighlight();
+            
+            /*
+            if (Input.GetMouseButtonDown(1) && _selectable.selected)
+            {
+                //SetDestinationToMousePosition();
+            }
+        */
+        }
         private void GetComponents()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
@@ -33,28 +48,16 @@ namespace ProjectColoni
             _camera = SelectionManager.Instance.cam;
         }
         
-        private void Update()
-        {
-            DrawLineRendererPaths(navMeshAgent, _destinationLineRenderer);
-            OutlineHighlight();
-            
-            if (Input.GetMouseButtonDown(1) && _selectable.selected)
-            {
-                //SetDestinationToMousePosition();
-            }
-        }
-        
-        private void SetDestinationToMousePosition()
+        /*private void SetDestinationToMousePosition()
         {
             if (_camera == null) return;
             
             var ray = _camera.ScreenPointToRay(Input.mousePosition);
             if (!Physics.Raycast(ray, out var hit)) return;
-                
-            navMeshAgent.SetDestination(hit.point);
+
+            MoveAgent(hit.point);
             OnGroundClickSpawn(hit.point);
         }
-        
         private void OnGroundClickSpawn(Vector3 posClicked)
         {
             var obj = Instantiate(GameObject.CreatePrimitive(PrimitiveType.Sphere), posClicked, Quaternion.identity);
@@ -62,8 +65,7 @@ namespace ProjectColoni
             obj.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             
             Destroy(obj, 3);
-        }
-        
+        }*/
         private void DrawLineRendererPaths(NavMeshAgent agent, LineRenderer lineRenderer) //navigation path render line for in game *currently allocates 88 bytes per line drawn
         {
             
@@ -78,6 +80,34 @@ namespace ProjectColoni
             lineRenderer.positionCount = agentPath.corners.Length;
             lineRenderer.SetPositions(agentPath.corners);
             lineRenderer.enabled = true;
+        }
+
+        //ai
+        public void MoveAgent(Vector3 targetPosition)
+        {
+            navMeshAgent.ResetPath();
+            
+            navMeshAgent.SetDestination(targetPosition);
+        }
+
+        public void PerformAction()
+        {
+            
+        }
+
+        public void PlayAnimation(Animation anim)
+        {
+            
+        }
+        
+        public void RotateTowardsObject()
+        {
+            //Vector3.RotateTowards(transform.)
+        }
+        
+        public bool InRange(float stoppingDistance)
+        {
+            return navMeshAgent.remainingDistance >= stoppingDistance;
         }
     }
 }

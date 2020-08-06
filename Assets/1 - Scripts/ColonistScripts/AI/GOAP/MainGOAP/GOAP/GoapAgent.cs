@@ -41,7 +41,7 @@ namespace ProjectColoni
 		}
 
 		private void Update () {
-			if (aiController.aiStats.IsDead) return;
+			if (aiController.aiStats.IsDead || aiController.performingForcedAction) return;
 	    
 			stateMachine.Update (aiController);
 		}
