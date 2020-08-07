@@ -25251,22 +25251,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1558656083}
     m_Modifications:
-    - target: {fileID: 1206679104, guid: 9851a5c63acdea74a844df6dd2bd111f, type: 3}
-      propertyPath: expandHeight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1206679104, guid: 9851a5c63acdea74a844df6dd2bd111f, type: 3}
-      propertyPath: expandWidthTo
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1206679104, guid: 9851a5c63acdea74a844df6dd2bd111f, type: 3}
-      propertyPath: heightRect
-      value: 
-      objectReference: {fileID: 1206679095}
-    - target: {fileID: 1206679104, guid: 9851a5c63acdea74a844df6dd2bd111f, type: 3}
-      propertyPath: fadeInText
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5335716669193684816, guid: 9851a5c63acdea74a844df6dd2bd111f,
         type: 3}
       propertyPath: m_Name
@@ -37646,6 +37630,11 @@ PrefabInstance:
       propertyPath: bakeValues.Array.data[0].data.Array.data[103].z
       value: 0.23770757
       objectReference: {fileID: 0}
+    - target: {fileID: 2111443076045072747, guid: e2fe778f13be9654596a99502d113e00,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2111443076045072757, guid: e2fe778f13be9654596a99502d113e00,
         type: 3}
       propertyPath: m_Name
@@ -37774,6 +37763,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Item_Food_Jack_Daniels
+      objectReference: {fileID: 0}
+    - target: {fileID: 2179615322724669612, guid: 0a59d4fdd8315124b948d5fb9575f3d8,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a59d4fdd8315124b948d5fb9575f3d8, type: 3}
@@ -40294,6 +40288,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Item_Food_Uncooked_Meat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846261238220724140, guid: 9066464d6a88d5349b1070aa27fccc09,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3849048391745938813, guid: 9066464d6a88d5349b1070aa27fccc09,
         type: 3}

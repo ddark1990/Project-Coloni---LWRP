@@ -23,23 +23,6 @@ namespace ProjectColoni
             InitializeBaseObjectData();
         }
 
-        private void InitializeSmartActions()
-        {
-            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["PickUp"], PickUp);
- 
-            switch (itemData)
-            {
-                case Consumable consumable:
-                    AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Eat"], consumable.Eat);
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(itemData));
-            }
-            
-            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Drop"], Drop);
-            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["HaulAway"], HaulAway);
-        }
-        
         private void Start()
         {
             InitializeSelectable();
@@ -48,29 +31,30 @@ namespace ProjectColoni
             GlobalObjectDictionary.Instance.AddToGlobalDictionary(baseObjectInfo.Id, this);
         }
         
+        /// <summary>
+        /// Adds all the required contextual right click actions for object.
+        /// </summary>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        private void InitializeSmartActions()
+        {
+            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["PickUp"], PickUp);
+ 
+            switch (itemData)
+            {
+                case Consumable consumable:
+                    AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Eat"], Eat);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(itemData));
+            }
+            
+            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Drop"], Drop);
+            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["HaulAway"], HaulAway);
+        }
         private void InitializeBaseObjectData()
         {
             baseObjectInfo = baseData != null ? new BaseObjectData(StaticUtility.GenerateUniqueHashId(), baseData.objectName, baseData.description, baseData.sprite) 
                 : new BaseObjectData(StaticUtility.GenerateUniqueHashId(), "", "", null);
-        }
-
-        //smart actions
-        private void PickUp()
-        {
-            var aiController = SelectionManager.Instance.currentlySelectedObject as AiController;
-            aiController.performingForcedAction = true;
-            
-            aiController.MoveAgent(objectCollider.ClosestPointOnBounds(aiController.transform.position));
-
-            Debug.Log("Picking Up " + this);
-        }
-        private void Drop()
-        {
-            Debug.Log("Dropping " + this);
-        }
-        private void HaulAway()
-        {
-            Debug.Log("Hauling Away " + this);
         }
     }
 }

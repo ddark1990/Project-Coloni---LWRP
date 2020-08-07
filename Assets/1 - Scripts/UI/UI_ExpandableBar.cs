@@ -84,11 +84,6 @@ namespace ProjectColoni
                 icon.color = _iconColor;
             }
         }
-        private Color GetUpdatedColor()
-        {
-            var color = Color.white;
-            return expand ? new Color(color.r, color.g, color.b, Mathf.Lerp(color.a, 1, Time.deltaTime * expandSpeed)) : new Color(color.r, color.g, color.b, Mathf.Lerp(color.a, 0, Time.deltaTime * expandSpeed));
-        }
         
         private void FadeInCanvas()
         {

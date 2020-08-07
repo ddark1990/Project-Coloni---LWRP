@@ -17,12 +17,12 @@ namespace ProjectColoni
 
         [HideInInspector] public Collider objectCollider;
 
-        public Dictionary<Sprite, UnityAction> rightClickActions; //dont rly need name cuz can get name from the actual action method
+        public Dictionary<Sprite, UnityAction<AiController>> rightClickActions; //dont rly need name cuz can get name from the actual action method
         
 
         protected void InitializeSelectable()
         {
-            rightClickActions = new Dictionary<Sprite, UnityAction>();
+            rightClickActions = new Dictionary<Sprite, UnityAction<AiController>>();
             
             _selectionManager = SelectionManager.Instance;
             _outline = GetComponentInChildren<OutlineObject>();
@@ -72,7 +72,7 @@ namespace ProjectColoni
                 _selectionManager.hoveringObject = null;
         }
 
-        protected void AddActionToCollection(Sprite actionSprite, UnityAction action)
+        protected void AddActionToCollection(Sprite actionSprite, UnityAction<AiController> action)
         {
             rightClickActions.Add(actionSprite, action);
         }

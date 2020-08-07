@@ -31,26 +31,14 @@ namespace ProjectColoni
                 : new BaseObjectData(StaticUtility.GenerateUniqueHashId(), "", "", null);
         }
 
+        /// <summary>
+        /// Adds all the required contextual right click actions for object.
+        /// </summary>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         private void InitializeSmartActions()
         {
             AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Inspect"], Inspect);
             AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Gather"], Gather);
-        }
-        
-        //smart actions
-        private void Gather()
-        {
-            Debug.Log("Gathering " + this);
-        }
-
-        private void Inspect()
-        {
-            var aiController = SelectionManager.Instance.currentlySelectedObject as AiController;
-            aiController.performingForcedAction = true;
-            
-            aiController.MoveAgent(objectCollider.ClosestPointOnBounds(aiController.transform.position));
-
-            Debug.Log("Inspecting " + this);
         }
     }
 }

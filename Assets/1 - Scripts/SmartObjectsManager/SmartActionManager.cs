@@ -1,6 +1,7 @@
 ﻿using System;
 using Doozy.Engine.UI;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -82,13 +83,13 @@ namespace ProjectColoni
             
             PopulateActionButtonsData();
         }
-
+        
         private void PopulateActionButtonsData()
         {
             var collectionOfActions = _selectionManager.hoveringObject.GetComponent<Selectable>().rightClickActions;
-
+            var aiController = _selectionManager.currentlySelectedObject as AiController;
+            
             var collectionIndex = 0;
-
             foreach (var action in collectionOfActions)
             {
                 collectionIndex++;
@@ -97,7 +98,7 @@ namespace ProjectColoni
                 button.gameObject.SetActive(true);
 
                 button.actionName.text = action.Value.Method.Name;
-                button.actionButton.onClick.AddListener(action.Value);
+                button.actionButton.onClick.AddListener(delegate { action.Value(aiController); });
                 button.actionImage.sprite = action.Key;
             }
         }
