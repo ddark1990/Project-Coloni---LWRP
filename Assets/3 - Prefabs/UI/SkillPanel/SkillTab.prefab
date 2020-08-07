@@ -503,13 +503,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c33d6c7ce8963a4d93379e2e3726da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expandTo: 50
-  expandSpeed: 15
-  expand: 0
-  rect: {fileID: 0}
-  fadeText: {fileID: 0}
-  iconImage: {fileID: 0}
+  expandHeight: 1
+  heightRect: {fileID: 5335716669193684817}
+  expandHeightTo: 50
+  expandWidth: 0
+  widthRect: {fileID: 0}
+  expandWidthTo: 0
   fadeInText: 0
+  fadeTextArray: []
+  fadeInIcon: 0
+  iconImagesArray: []
+  fadeInCanvas: 0
+  canvasGroupsArray: []
+  expandSpeed: 15
+  fadeSpeed: 10
+  expand: 0
 --- !u!1 &5335716669270210802
 GameObject:
   m_ObjectHideFlags: 0
