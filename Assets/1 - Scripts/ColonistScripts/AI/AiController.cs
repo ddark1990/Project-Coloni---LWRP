@@ -86,15 +86,17 @@ namespace ProjectColoni
         //ai
         private void UpdateAction(SmartObject smartObject)
         {
-            if (smartObject == null || !performingForcedAction || !InRange(smartObject)) return;
-            
+            if (smartObject == null || !performingForcedAction) return;
+
             PerformAction(smartObject);
         }
 
         private SmartObject _tempSmartObject;
-        private float _tempActionCounter;
+        public float _tempActionCounter;
         public void StartAction(SmartObject smartObject)
         {
+            //animator.ResetTrigger(animator.);
+
             performingForcedAction = true;
             
             //cache the data
@@ -103,59 +105,104 @@ namespace ProjectColoni
             
             smartObject.SetSmartObjectData(this);
 
-            if (InRange(smartObject))
-            {
-                navMeshAgent.isStopped = true;
-                PerformAction(smartObject);
-                return;
-            }
+            if (InRange(smartObject)) return;
             
+            Debug.Log("Going to object!");
             MoveAgent(smartObject.objectCollider.ClosestPointOnBounds(transform.position));
         }
 
+        public float rotSpeed = 5;
         private void PerformAction(SmartObject smartObject)
         {
-            _tempActionCounter -= Time.deltaTime;
+            if (!InRange(smartObject)) return;
             
-            //Debug.Log("Perform action.");
-            //finish action
+            navMeshAgent.isStopped = true;
+            
+            _tempActionCounter -= Time.deltaTime;
+
+            RotateTowardsObject(smartObject, rotSpeed);
+            PlayAnimation(smartObject.animationTrigger);
+            
+            Debug.Log("Starting Action!");
+
             if (_tempActionCounter <= 0)
             {
+                Debug.Log("Finished Action!");
                 
+                ResetAction(smartObject);
                 return;
             }
             
-            //reset in the end
-            ResetAction();
         }
 
         private void MoveAgent(Vector3 targetPosition)
         {
-            navMeshAgent.isStopped = false;
-            navMeshAgent.ResetPath();
+            ResetAgent();
+            
             navMeshAgent.SetDestination(targetPosition);
         }
 
-        private void ResetAction()
+        private void ResetAction(SmartObject smartObject)
         {
+            ResetAgent();
+            
+            smartObject.ResetSmartObject();
+            
             performingForcedAction = false;
             _tempSmartObject = null;
+        }
+
+        private void ResetAgent()
+        {
+            navMeshAgent.ResetPath();
+            navMeshAgent.isStopped = false;
+            _animationStop = false;
+        }
+
+        private bool _animationStop;
+        private void PlayAnimation(string animName)
+        {
+            if (_animationStop) return;
+            
+            animator.SetTrigger(animName);
+            _animationStop = true;
+        }
+
+        private void CancelAnimation() //finish canceling animation 
+        {
+            Debug.Log("SHITFUCKASS");
 
         }
         
-        public void PlayAnimation(string animName)
+        private void RotateTowardsObject(SmartObject smartObject, float rotationSpeed)
         {
-            animator.SetTrigger(animName);
-        }
-        
-        public void RotateTowardsObject()
-        {
-            //Vector3.RotateTowards(transform.)
+            var step = Time.deltaTime * rotationSpeed;
+
+            var direction = (smartObject.transform.position - transform.position).normalized;
+            var lookRotation = Quaternion.LookRotation(direction);
+ 
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, step);
         }
 
         private bool InRange(SmartObject smartObject)
         {
             return (smartObject.transform.position - transform.position).magnitude <= smartObject.stoppingDistance;
+        }
+
+        public AnimationClip GetRuntimeAnimationClipInfo(string animationName)
+        {
+            var clips = animator.runtimeAnimatorController.animationClips;
+            var animationClip = new AnimationClip();
+            
+            foreach(var clip in clips)
+            {
+                if (clip.name.Equals(animationName))
+                {
+                    animationClip = clip;
+                }
+            }
+
+            return animationClip;
         }
     }
 }

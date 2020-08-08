@@ -1,4 +1,5 @@
-﻿using ProjectColoni;
+﻿using System;
+using ProjectColoni;
 using UnityEngine;
 
 namespace ProjectColoni
@@ -10,7 +11,7 @@ namespace ProjectColoni
         public AiController usedBy;
         public float actionLength = 1;
         public float stoppingDistance = 0.2f;
-
+        public string animationTrigger;
 
         public void SetSmartObjectData(AiController aiController)
         {
@@ -27,14 +28,20 @@ namespace ProjectColoni
         //general
         protected void Inspect(AiController aiController) //should be able to inspect pretty much anything selectable 
         {
-            aiController.StartAction(this);
+            animationTrigger = "Inspect";
 
+            actionLength = aiController.GetRuntimeAnimationClipInfo(animationTrigger).length;
+            
+            aiController.StartAction(this);
             
         }
         
         //items
         protected void PickUp(AiController aiController) //pick up mostly items
         {
+            animationTrigger = "PickUp";
+            actionLength = 1;
+            
             aiController.StartAction(this);
 
         }
@@ -56,7 +63,15 @@ namespace ProjectColoni
         {
             
         }
+
+        public bool debugGizmosEnabled;
         
-       
+        private void OnDrawGizmos()
+        {
+            if (debugGizmosEnabled)
+            {
+                Gizmos.DrawWireSphere(transform.position, stoppingDistance);
+            }
+        }
     }
 }

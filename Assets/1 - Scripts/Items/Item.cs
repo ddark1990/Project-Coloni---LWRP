@@ -8,7 +8,6 @@ namespace ProjectColoni
     {
         [Header("Item")]
         public int itemCount;
-
         [SerializeField] private BaseScriptableData baseData; 
         
         [Header("Debug")]

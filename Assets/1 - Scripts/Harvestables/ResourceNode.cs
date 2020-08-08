@@ -5,6 +5,7 @@ namespace ProjectColoni
 {
     public class ResourceNode : SmartObject
     {
+        [Header("Node")]
         public int amount;
         
         [SerializeField] private BaseScriptableData baseData; //for manual creation from scriptableObjects 
