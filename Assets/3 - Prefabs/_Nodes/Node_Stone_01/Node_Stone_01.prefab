@@ -96,8 +96,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: 0
-  baseData: {fileID: 11400000, guid: 868cb4cf5e6fddf46b81f34da6078640, type: 2}
+  objectCollider: {fileID: 0}
+  beingUsed: 0
+  usedBy: {fileID: 0}
+  actionLength: 1
+  stoppingDistance: 0.2
+  animationTrigger: 
+  debugGizmosEnabled: 0
   amount: 1
+  baseData: {fileID: 11400000, guid: 868cb4cf5e6fddf46b81f34da6078640, type: 2}
+  nodeData: {fileID: 11400000, guid: a0e2ef5faecf0bc45a911ef8035f9c85, type: 2}
 --- !u!64 &3662615150303574101
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -267,5 +275,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: 0
-  baseData: {fileID: 11400000, guid: 868cb4cf5e6fddf46b81f34da6078640, type: 2}
+  objectCollider: {fileID: 0}
+  beingUsed: 0
+  usedBy: {fileID: 0}
+  actionLength: 1
+  stoppingDistance: 0.2
+  animationTrigger: 
+  debugGizmosEnabled: 0
   amount: 50
+  baseData: {fileID: 11400000, guid: 868cb4cf5e6fddf46b81f34da6078640, type: 2}
+  nodeData: {fileID: 0}

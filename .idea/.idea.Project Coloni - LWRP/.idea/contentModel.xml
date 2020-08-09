@@ -71,16 +71,15 @@
             <e p="SelectionManager.cs" t="Include" />
           </e>
           <e p="GlobalObjectDictionary.cs" t="Include" />
-          <e p="Harvestables" t="Include">
-            <e p="ResourceNode.cs" t="Include" />
-            <e p="ResourceType.cs" t="Include" />
-          </e>
           <e p="Items" t="Include">
             <e p="Consumable.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="ItemType.cs" t="Include" />
+            <e p="Node.cs" t="Include" />
+            <e p="NodeType.cs" t="Include" />
             <e p="Resource.cs" t="Include" />
+            <e p="ResourceNode.cs" t="Include" />
           </e>
           <e p="ObjectPlacer" t="Include">
             <e p="ObjectSpawner.cs" t="Include" />

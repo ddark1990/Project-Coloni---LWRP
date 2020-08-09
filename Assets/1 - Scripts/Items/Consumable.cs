@@ -9,6 +9,12 @@ namespace ProjectColoni
         [Serializable]
         public struct ConsumableSettings
         {
+            public enum ConsumableType
+            {
+                Food, Medical, Boost
+            }
+            
+            public ConsumableType consumableType;
             public float health;
             public float food;
         }

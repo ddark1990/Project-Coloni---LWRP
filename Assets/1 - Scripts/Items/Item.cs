@@ -43,8 +43,9 @@ namespace ProjectColoni
                 case Consumable consumable:
                     AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Eat"], Eat);
                     break;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(itemData));
+                case Resource resource:
+
+                    break;
             }
             
             AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Drop"], Drop);

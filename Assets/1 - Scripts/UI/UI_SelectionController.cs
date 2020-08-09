@@ -70,7 +70,7 @@ namespace ProjectColoni
                     PopulateBaseData(aiController);
                     
                     break;
-                case ResourceNode harvestable:
+                case Node harvestable:
                     SetActivePanel(selectedResourcePanel.name);
                     
                     PopulateBaseData(harvestable);
@@ -100,7 +100,7 @@ namespace ProjectColoni
                     infoPanelRelay.descriptionText.text = aiController.aiStats.baseObjectInfo.Description;
                     
                     break;
-                case ResourceNode harvestable:
+                case Node harvestable:
                     panelHolderRelay.objectName.text = harvestable.baseObjectInfo.ObjectName;
                     panelHolderRelay.objectImage.sprite = harvestable.baseObjectInfo.Sprite;
 
@@ -150,7 +150,7 @@ namespace ProjectColoni
         
         private void PopulateResourceData()
         {
-            var resource = _selectionManager.selectedTemp.GetComponentInChildren<ResourceNode>();
+            var resource = _selectionManager.selectedTemp.GetComponentInChildren<Node>();
 
             resourcePanelRelay.amountText.text = _cachedIntToString[resource.amount];
         }

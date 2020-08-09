@@ -95,7 +95,6 @@ namespace ProjectColoni
         public float _tempActionCounter;
         public void StartAction(SmartObject smartObject)
         {
-            //animator.ResetTrigger(animator.);
 
             performingForcedAction = true;
             
@@ -107,7 +106,7 @@ namespace ProjectColoni
 
             if (InRange(smartObject)) return;
             
-            Debug.Log("Going to object!");
+            //Debug.Log("Going to object!");
             MoveAgent(smartObject.objectCollider.ClosestPointOnBounds(transform.position));
         }
 
@@ -123,16 +122,15 @@ namespace ProjectColoni
             RotateTowardsObject(smartObject, rotSpeed);
             PlayAnimation(smartObject.animationTrigger);
             
-            Debug.Log("Starting Action!");
+            //Debug.Log("Starting Action!");
 
-            if (_tempActionCounter <= 0)
-            {
-                Debug.Log("Finished Action!");
-                
-                ResetAction(smartObject);
-                return;
-            }
+            if (!(_tempActionCounter <= 0)) return;
             
+            //Debug.Log("Finished Action!");
+                
+            
+            
+            ResetAction(smartObject);
         }
 
         private void MoveAgent(Vector3 targetPosition)
@@ -159,19 +157,13 @@ namespace ProjectColoni
             _animationStop = false;
         }
 
-        private bool _animationStop;
+        private bool _animationStop; //needed to run once in update loop
         private void PlayAnimation(string animName)
         {
             if (_animationStop) return;
             
             animator.SetTrigger(animName);
             _animationStop = true;
-        }
-
-        private void CancelAnimation() //finish canceling animation 
-        {
-            Debug.Log("SHITFUCKASS");
-
         }
         
         private void RotateTowardsObject(SmartObject smartObject, float rotationSpeed)

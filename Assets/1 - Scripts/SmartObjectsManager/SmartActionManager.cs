@@ -68,7 +68,7 @@ namespace ProjectColoni
                     break;
                 case Item item:
                     break;
-                case ResourceNode resourceNode:
+                case Node resourceNode:
                     break;
             }
         }

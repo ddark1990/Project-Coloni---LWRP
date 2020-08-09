@@ -3,12 +3,13 @@ using UnityEngine;
 
 namespace ProjectColoni
 {
-    public class ResourceNode : SmartObject
+    public class Node : SmartObject
     {
         [Header("Node")]
         public int amount;
-        
         [SerializeField] private BaseScriptableData baseData; //for manual creation from scriptableObjects 
+        public NodeType nodeData;
+        
         public BaseObjectData baseObjectInfo;
         
         

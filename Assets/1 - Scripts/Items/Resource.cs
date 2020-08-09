@@ -6,13 +6,11 @@ namespace ProjectColoni
     [CreateAssetMenu(fileName = "(ItemData)", menuName = "ProjectColoni/Objects/Create Item/New Resource", order = 4)]
     public class Resource : ItemType
     {
-        [Serializable]
-        public struct ResourceSettings
+        public enum ResourceType
         {
-            public float health;
-            public float food;
+            Stone, Wood
         }
-
-        [Tooltip("How much & what you will gain from consuming this item.")] public ResourceSettings resourceSettings;
+            
+        public ResourceType resourceType;
     }
 }

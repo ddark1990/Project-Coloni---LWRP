@@ -868,8 +868,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: 0
-  baseData: {fileID: 11400000, guid: 608b46739f9a9564281f1719465619f4, type: 2}
+  objectCollider: {fileID: 0}
+  beingUsed: 0
+  usedBy: {fileID: 0}
+  actionLength: 1
+  stoppingDistance: 0.2
+  animationTrigger: 
+  debugGizmosEnabled: 0
   amount: 100
+  baseData: {fileID: 11400000, guid: 608b46739f9a9564281f1719465619f4, type: 2}
+  nodeData: {fileID: 11400000, guid: fae27e751b437e046932e4d1e02d59a6, type: 2}
 --- !u!114 &397950264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,5 +891,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: 0
-  baseData: {fileID: 11400000, guid: 608b46739f9a9564281f1719465619f4, type: 2}
+  objectCollider: {fileID: 0}
+  beingUsed: 0
+  usedBy: {fileID: 0}
+  actionLength: 1
+  stoppingDistance: 0.2
+  animationTrigger: 
+  debugGizmosEnabled: 0
   amount: 100
+  baseData: {fileID: 11400000, guid: 608b46739f9a9564281f1719465619f4, type: 2}
+  nodeData: {fileID: 0}
