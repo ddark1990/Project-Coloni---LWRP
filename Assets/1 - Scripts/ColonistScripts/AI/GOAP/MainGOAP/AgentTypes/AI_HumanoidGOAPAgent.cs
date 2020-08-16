@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ProjectColoni
 {
-    public class AI_HumanoidAgent : GoapAgent, IGoap
+    public class AI_HumanoidGOAPAgent : GoapAgent, IGoap
     {
         public bool goalDebug;
     
@@ -25,7 +25,7 @@ namespace ProjectColoni
             worldData = new HashSet<KeyValuePair<string, object>>();
 
             worldData.Add(new KeyValuePair<string, object>("isHungry", aiController.aiStats.IsHungry));
-            worldData.Add(new KeyValuePair<string, object>("forcePickUp", aiController.aiStats.IsHungry));
+            worldData.Add(new KeyValuePair<string, object>("forcedAction", aiController.performingForcedAction));
             //worldData.Add(new KeyValuePair<string, object>("inCombat", aiController.inCombat));
             //worldData.Add(new KeyValuePair<string, object>("hasTarget", aiController.target != null));
             //worldData.Add(new KeyValuePair<string, object>("hasWeaponInInventory", aiController.inventory.HasWeaponInInventory()));

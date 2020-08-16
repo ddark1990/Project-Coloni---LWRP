@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace ProjectColoni
 {
-    public class SmartActionManager : MonoBehaviour
+    public class UI_SmartActionManager : MonoBehaviour
     {
         [SerializeField] private UIView rightClickPanel;
 
@@ -63,7 +63,7 @@ namespace ProjectColoni
                 case AiController aiController: //if colonist is selected, colonist related actions for that object is presented
 
                     //open & populate right click panel
-                    ToggleRightClickPanel();
+                    ToggleRightClickPanel(aiController, _selectionManager.hoveringObject as SmartObject);
                     
                     break;
                 case Item item:
@@ -73,7 +73,7 @@ namespace ProjectColoni
             }
         }
         
-        private void ToggleRightClickPanel()
+        private void ToggleRightClickPanel(AiController aiController, SmartObject smartObject)
         {
             ClearRightClickButtons();
             SetPanelPosToMouse(_panelOffset);
@@ -81,25 +81,29 @@ namespace ProjectColoni
             rightClickPanel.Show();
             //rightClickPanel.gameObject.SetActive(true);
             
-            PopulateActionButtonsData();
+            PopulateActionButtonsData(aiController, smartObject);
         }
         
-        private void PopulateActionButtonsData()
+        private void PopulateActionButtonsData(AiController aiController, SmartObject smartObject)
         {
-            var collectionOfActions = _selectionManager.hoveringObject.GetComponent<Selectable>().rightClickActions;
-            var aiController = _selectionManager.currentlySelectedObject as AiController;
+            var collectionOfActions = _selectionManager.hoveringObject.GetComponent<SmartObject>().smartActionDictionary;
             
             var collectionIndex = 0;
             foreach (var action in collectionOfActions)
             {
-                collectionIndex++;
-                
                 var button = _actionButtons[collectionIndex].GetComponent<UI_SmartActionButton>();
                 button.gameObject.SetActive(true);
 
-                button.actionName.text = action.Value.Method.Name;
-                button.actionButton.onClick.AddListener(delegate { action.Value(aiController); });
+                foreach (var sprites in GameManager.Instance.globalSpriteContainer.spriteCollection)
+                {
+                    if (sprites.Value == action.Key)
+                        button.actionName.text = sprites.Key; //fix
+                }
+                
+                button.actionButton.onClick.AddListener(delegate { action.Value(aiController, smartObject); });
                 button.actionImage.sprite = action.Key;
+                
+                collectionIndex++;
             }
         }
         

@@ -9,6 +9,8 @@ TagManager:
   - Colonist
   - Animal
   - Resource
+  - Wood
+  - Stone
   layers:
   - Default
   - TransparentFX

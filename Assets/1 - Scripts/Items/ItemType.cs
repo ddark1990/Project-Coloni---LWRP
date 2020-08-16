@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 namespace ProjectColoni
 {
-    public class ItemType : ScriptableObject
+    public abstract class ItemType : ScriptableObject
     {
         [Serializable]
         public struct ItemData
@@ -15,6 +15,8 @@ namespace ProjectColoni
             public StatusModifier[] statusModifiers;
         }
 
+        //public abstract void InitializeSmartAction(SmartObject smartObject);
+        
         /*
     [Serializable]
     public struct ItemSoundData

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public List<AiController> playerControlledColonists;
     public SpriteContainer globalSpriteContainer;
 
     private void Awake()
@@ -21,5 +22,18 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void AddAiToColony(AiController ai)
+    {
+        AddColonistToList(ai);
+        ai.playerControlled = true;
+        
+        //add colonist button to UI
+    }
+
+    private void AddColonistToList(AiController colonist)
+    {
+        playerControlledColonists.Add(colonist);
     }
 }

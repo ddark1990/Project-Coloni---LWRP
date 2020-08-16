@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using ProjectColoni;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 namespace ProjectColoni
 {
@@ -11,43 +13,156 @@ namespace ProjectColoni
     {
         [Header("Ai")]
         public bool performingForcedAction;
-        
-        [HideInInspector] public NavMeshAgent navMeshAgent;
-        [HideInInspector] public Animator animator;
-        private Selectable _selectable;
-        private Camera _camera;
-        private LineRenderer _destinationLineRenderer;
+        public bool pickUpAvailable;
+        public bool inAction;
 
+        [Header("Settings")]
+        public float rotSpeed = 5;
+        
+        [Header("Debug")]
+        public bool playerControlled;
+        
+        public SmartObject _tempSmartObject;
+        public float _tempActionCounter;
+        public bool _animationStop; //needed to run once in update loop
+        private static readonly int ActionLength = Animator.StringToHash("actionLength");
 
         private void Start()
         {
-            GetComponents();
-            
             OnStartInitializeComponents();
             InitializeSelectable();
         }
         
         private void Update()
         {
-            DrawLineRendererPaths(navMeshAgent, _destinationLineRenderer);
-            OutlineHighlight();
+            DrawLineRendererPaths(navMeshAgent, destinationLineRenderer);
             
-            /*
-            if (Input.GetMouseButtonDown(1) && _selectable.selected)
+            if (!EventSystem.current.IsPointerOverGameObject())
             {
-                //SetDestinationToMousePosition();
+                OutlineHighlight();
             }
-        */
+            
             UpdateAction(_tempSmartObject);
         }
-        private void GetComponents()
+
+        //ai ver 1
+        private void UpdateAction(SmartObject smartObject) //work on switching actions/ canceling one out
         {
-            navMeshAgent = GetComponent<NavMeshAgent>();
-            animator = GetComponent<Animator>();
-            _selectable = GetComponent<Selectable>();
-            _destinationLineRenderer = GetComponent<LineRenderer>();
-            _camera = SelectionManager.Instance.cam;
+            if (smartObject == null || !performingForcedAction) return;
+
+            PerformAction(smartObject);
         }
+        public void StartAction(SmartObject smartObject)
+        {
+            performingForcedAction = true;
+
+            //cache the data
+            _tempSmartObject = smartObject; 
+            _tempActionCounter = smartObject.actionLength;
+            
+            smartObject.SetSmartObjectData(this);
+
+            if (InRange(smartObject)) return;
+            
+            //Debug.Log("Going to object!");
+            MoveAgent(smartObject.objectCollider.ClosestPointOnBounds(transform.position));
+        }
+        private void PerformAction(SmartObject smartObject)
+        {
+            if (!InRange(smartObject)) return;
+            
+            navMeshAgent.isStopped = true;
+            
+            _tempActionCounter -= Time.deltaTime;
+            animator.SetFloat(ActionLength, _tempActionCounter); //maybe reset with another trigger, also create cancel action logic that works buttery smooth
+
+            RotateTowardsObject(smartObject, rotSpeed);
+            PlayAnimation(smartObject.animationTrigger);
+            
+            //Debug.Log("Starting Action!");
+            inAction = true;
+            
+            smartObject.activeAction.Act(this, smartObject);
+            
+            if (!(_tempActionCounter <= 0)) return;
+            
+            inAction = false;
+            Debug.Log("Finished Action!");
+
+            ResetAction(smartObject);
+        }
+        private void MoveAgent(Vector3 targetPosition)
+        {
+            ResetAgent();
+            
+            navMeshAgent.SetDestination(targetPosition);
+        }
+        private void ResetAction(SmartObject smartObject)
+        {
+            ResetAgent();
+            
+            smartObject.ResetSmartObject();
+            
+            animator.ResetTrigger(smartObject.animationTrigger);
+
+            performingForcedAction = false;
+            _tempSmartObject = null;
+        }
+        private void ResetAgent()
+        {
+            navMeshAgent.ResetPath();
+            navMeshAgent.isStopped = false;
+            _animationStop = false;
+            
+        }
+        private void PlayAnimation(string animName)
+        {
+            if (_animationStop) return;
+            
+            animator.SetTrigger(animName);
+            _animationStop = true;
+        }
+
+        private void CancelAction()
+        {
+            Debug.Log("CanceledAction");
+        }
+
+        #region SmartActionAi ver2
+
+
+        #endregion
+        
+        private void RotateTowardsObject(SmartObject smartObject, float rotationSpeed)
+        {
+            var step = Time.deltaTime * rotationSpeed;
+
+            var direction = (smartObject.transform.position - transform.position).normalized;
+            var lookRotation = Quaternion.LookRotation(direction);
+ 
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, step);
+        }
+
+        private bool InRange(SmartObject smartObject)
+        {
+            return (smartObject.transform.position - transform.position).magnitude <= smartObject.stoppingDistance;
+        }
+        public AnimationClip GetRuntimeAnimationClipInfo(string animationName)
+        {
+            var clips = animator.runtimeAnimatorController.animationClips;
+            var animationClip = new AnimationClip();
+            
+            foreach(var clip in clips)
+            {
+                if (clip.name.Equals(animationName))
+                {
+                    animationClip = clip;
+                }
+            }
+
+            return animationClip;
+        }
+       
         
         /*private void SetDestinationToMousePosition()
         {
@@ -67,134 +182,6 @@ namespace ProjectColoni
             
             Destroy(obj, 3);
         }*/
-        private void DrawLineRendererPaths(NavMeshAgent agent, LineRenderer lineRenderer) //navigation path render line for in game *currently allocates 88 bytes per line drawn
-        {
-            
-            if (agent.remainingDistance <= 0.1f || !_selectable.selected) //should only be visible when that unit is selected
-            {
-                lineRenderer.enabled = false;
-                return;
-            }
 
-            var agentPath = agent.path;
-            
-            lineRenderer.positionCount = agentPath.corners.Length;
-            lineRenderer.SetPositions(agentPath.corners);
-            lineRenderer.enabled = true;
-        }
-
-        //ai
-        private void UpdateAction(SmartObject smartObject)
-        {
-            if (smartObject == null || !performingForcedAction) return;
-
-            PerformAction(smartObject);
-        }
-
-        private SmartObject _tempSmartObject;
-        public float _tempActionCounter;
-        public void StartAction(SmartObject smartObject)
-        {
-
-            performingForcedAction = true;
-            
-            //cache the data
-            _tempSmartObject = smartObject; 
-            _tempActionCounter = smartObject.actionLength;
-            
-            smartObject.SetSmartObjectData(this);
-
-            if (InRange(smartObject)) return;
-            
-            //Debug.Log("Going to object!");
-            MoveAgent(smartObject.objectCollider.ClosestPointOnBounds(transform.position));
-        }
-
-        public float rotSpeed = 5;
-        private void PerformAction(SmartObject smartObject)
-        {
-            if (!InRange(smartObject)) return;
-            
-            navMeshAgent.isStopped = true;
-            
-            _tempActionCounter -= Time.deltaTime;
-
-            RotateTowardsObject(smartObject, rotSpeed);
-            PlayAnimation(smartObject.animationTrigger);
-            
-            //Debug.Log("Starting Action!");
-
-            if (!(_tempActionCounter <= 0)) return;
-            
-            //Debug.Log("Finished Action!");
-                
-            
-            
-            ResetAction(smartObject);
-        }
-
-        private void MoveAgent(Vector3 targetPosition)
-        {
-            ResetAgent();
-            
-            navMeshAgent.SetDestination(targetPosition);
-        }
-
-        private void ResetAction(SmartObject smartObject)
-        {
-            ResetAgent();
-            
-            smartObject.ResetSmartObject();
-            
-            performingForcedAction = false;
-            _tempSmartObject = null;
-        }
-
-        private void ResetAgent()
-        {
-            navMeshAgent.ResetPath();
-            navMeshAgent.isStopped = false;
-            _animationStop = false;
-        }
-
-        private bool _animationStop; //needed to run once in update loop
-        private void PlayAnimation(string animName)
-        {
-            if (_animationStop) return;
-            
-            animator.SetTrigger(animName);
-            _animationStop = true;
-        }
-        
-        private void RotateTowardsObject(SmartObject smartObject, float rotationSpeed)
-        {
-            var step = Time.deltaTime * rotationSpeed;
-
-            var direction = (smartObject.transform.position - transform.position).normalized;
-            var lookRotation = Quaternion.LookRotation(direction);
- 
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, step);
-        }
-
-        private bool InRange(SmartObject smartObject)
-        {
-            return (smartObject.transform.position - transform.position).magnitude <= smartObject.stoppingDistance;
-        }
-
-        public AnimationClip GetRuntimeAnimationClipInfo(string animationName)
-        {
-            var clips = animator.runtimeAnimatorController.animationClips;
-            var animationClip = new AnimationClip();
-            
-            foreach(var clip in clips)
-            {
-                if (clip.name.Equals(animationName))
-                {
-                    animationClip = clip;
-                }
-            }
-
-            return animationClip;
-        }
     }
 }

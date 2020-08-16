@@ -24,9 +24,13 @@ namespace ProjectColoni
         public Camera cam;
         //private RaycastHit _hit;
         [HideInInspector] public Selectable selectedTemp;
+
+        [Header("Outline Materials")] 
+        public Material outlineMaskMaterial;
+        public Material outlineMaterial;
         
         
-        private void Awake()
+        private void Start()
         {
             InitializeSelectionManager();
         }

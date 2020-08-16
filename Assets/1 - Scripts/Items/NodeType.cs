@@ -10,7 +10,7 @@ namespace ProjectColoni
         [Serializable]
         public struct NodeData
         {
-            
+
         }
         
         public NodeData nodeData;

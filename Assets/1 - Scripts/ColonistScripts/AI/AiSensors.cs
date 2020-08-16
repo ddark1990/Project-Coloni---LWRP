@@ -7,7 +7,7 @@ namespace ProjectColoni
 {
     public class AiSensors : MonoBehaviour
     {
-        public Transform target;
+        public Transform focus;
         [Space]
         [Range(0, 100)] public float radius = 10;
         [Range(0, 360)] public float viewAngle;
@@ -60,22 +60,22 @@ namespace ProjectColoni
 
             for (var i = 0; i < _numOfHits; i++)
             {
-                target = FindClosestTransform(overlapSphereNonAllocResult, transform);
+                focus = FindClosestTransform(overlapSphereNonAllocResult, transform);
 
-                if (target == null) return;
+                if (focus == null) return;
                 
-                var dirToTarget = (target.position - transform.position).normalized;
+                var dirToTarget = (focus.position - transform.position).normalized;
 
                 if (!(Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)) continue;
 
-                var distToTarget = Vector3.Distance(transform.position, target.position);
+                var distToTarget = Vector3.Distance(transform.position, focus.position);
 
                 if (Physics.Raycast(transform.position + new Vector3(0, rayHeight, 0),
                     dirToTarget + new Vector3(0, rayHeight, 0), distToTarget, layerMask))
                     continue; //change target mask when obstacles are present
 
 
-                if (!_foundTarget && target != transform) //if target is not us and we haven't found one already
+                if (!_foundTarget && focus != transform) //if target is not us and we haven't found one already
                 {
                     //ai has vision of the object within his field of view
                     _foundTarget = true;

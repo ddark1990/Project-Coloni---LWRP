@@ -18,7 +18,7 @@ namespace ProjectColoni
 
 		/**
 	 * An action often has to perform on an object. This is that object. Can be null. */
-		public Transform target;
+		public Selectable target;
 
 		public GoapAction() {
 			preconditions = new HashSet<KeyValuePair<string,object>> ();

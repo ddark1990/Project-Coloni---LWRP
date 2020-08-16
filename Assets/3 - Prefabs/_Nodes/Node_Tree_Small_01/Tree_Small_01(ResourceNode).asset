@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Tree_Small_01(ResourceNode)
   m_EditorClassIdentifier: 
   resourceSettings:
+    resourceType: 1
     resources: []

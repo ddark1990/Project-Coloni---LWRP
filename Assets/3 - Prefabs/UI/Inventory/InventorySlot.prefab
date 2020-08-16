@@ -1028,7 +1028,7 @@ MonoBehaviour:
   expandHeight: 1
   heightRect: {fileID: 7588981918720992664}
   expandHeightTo: 60
-  expandWidth: 1
+  expandWidth: 0
   widthRect: {fileID: 1443575721}
   expandWidthTo: 200
   fadeInText: 1
@@ -1042,5 +1042,7 @@ MonoBehaviour:
   canvasGroupsArray:
   - {fileID: 779013866}
   expandSpeed: 15
-  fadeSpeed: 10
+  fadeInSpeed: 5
+  fadeOutSpeed: 25
   expand: 0
+  fullyExpanded: 0

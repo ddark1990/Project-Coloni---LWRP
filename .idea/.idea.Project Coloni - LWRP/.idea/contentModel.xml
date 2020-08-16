@@ -13,6 +13,7 @@
           <e p="ColonistGenerator.cs" t="Include" />
           <e p="ColonistScripts" t="Include">
             <e p="AI" t="Include">
+              <e p="Ai_Inventory.cs" t="Include" />
               <e p="AIBase.cs" t="Include" />
               <e p="AIController.cs" t="Include" />
               <e p="AiSensorFOVEditor.cs" t="Include" />
@@ -38,7 +39,7 @@
                     <e p="UnEquipWeaponGoapAction.cs" t="Include" />
                   </e>
                   <e p="AgentTypes" t="Include">
-                    <e p="AI_HumanoidAgent.cs" t="Include" />
+                    <e p="AI_HumanoidGOAPAgent.cs" t="Include" />
                     <e p="PassiveAnimalAgent.cs" t="Include" />
                   </e>
                   <e p="FSM" t="Include">
@@ -53,7 +54,6 @@
                   </e>
                 </e>
               </e>
-              <e p="SmartObject.cs" t="Include" />
               <e p="Stats.cs" t="Include" />
               <e p="StatusModifiers.cs" t="Include" />
               <e p="StatusNotifications.cs" t="Include" />
@@ -73,7 +73,6 @@
           <e p="GlobalObjectDictionary.cs" t="Include" />
           <e p="Items" t="Include">
             <e p="Consumable.cs" t="Include" />
-            <e p="Inventory.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="ItemType.cs" t="Include" />
             <e p="Node.cs" t="Include" />
@@ -86,6 +85,9 @@
             <e p="ObjectSpawnerDataset.cs" t="Include" />
             <e p="SpawnGameObjectsEditor.cs" t="Include" />
           </e>
+          <e p="Outline" t="Include">
+            <e p="OutlineRelay.cs" t="Include" />
+          </e>
           <e p="RTSCamera.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="SkillsAndTraits - SnowFul" t="Include">
@@ -97,8 +99,16 @@
             </e>
           </e>
           <e p="SmartObjectsManager" t="Include">
-            <e p="SmartActionManager.cs" t="Include" />
+            <e p="SmartAction.cs" t="Include" />
+            <e p="SmartAction_Eat.cs" t="Include" />
+            <e p="SmartAction_HarvestNode.cs" t="Include" />
+            <e p="SmartAction_HaulAway.cs" t="Include" />
+            <e p="SmartAction_Inspect.cs" t="Include" />
+            <e p="SmartAction_PickUpItem.cs" t="Include" />
+            <e p="SmartActions.cs" t="Include" />
+            <e p="SmartObject.cs" t="Include" />
             <e p="UI_SmartActionButton.cs" t="Include" />
+            <e p="UI_SmartActionManager.cs" t="Include" />
           </e>
           <e p="SnapshotCamera.cs" t="Include" />
           <e p="SpriteContainer.cs" t="Include" />
@@ -1628,7 +1638,7 @@
           </e>
           <e p="QuickOutline" t="Include">
             <e p="readme.txt" t="Include" />
-            <e p="Resources" t="Include">
+            <e p="Resources321" t="Include">
               <e p="Shaders" t="Include">
                 <e p="OutlineFill.shader" t="Include" />
                 <e p="OutlineMask.shader" t="Include" />
@@ -1755,6 +1765,20 @@
             <e p="readme.txt" t="Include" />
             <e p="TransparencyCaptureToFile.cs" t="Include" />
             <e p="zzTransparencyCapture.cs" t="Include" />
+          </e>
+          <e p="Unity-Logs-Viewer" t="Include">
+            <e p="Reporter" t="Include">
+              <e p="Editor" t="Include">
+                <e p="ReporterEditor.cs" t="Include" />
+              </e>
+              <e p="MultiKeyDictionary.cs" t="Include" />
+              <e p="Reporter.cs" t="Include" />
+              <e p="ReporterGUI.cs" t="Include" />
+              <e p="ReporterMessageReceiver.cs" t="Include" />
+              <e p="Test" t="Include">
+                <e p="TestReporter.cs" t="Include" />
+              </e>
+            </e>
           </e>
         </e>
         <e p="6 - Fonts" t="Include">

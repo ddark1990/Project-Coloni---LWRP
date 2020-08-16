@@ -8,7 +8,7 @@ namespace ProjectColoni
         [SerializeField] private UI_SkillTab[] skillTabs;
 
 
-        private void OnEnable()
+        private void Start()
         {
             if (SelectionManager.Instance.currentlySelectedObject == null) return;
             

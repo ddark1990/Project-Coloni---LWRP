@@ -25,32 +25,12 @@ namespace ProjectColoni
         private void Start()
         {
             InitializeSelectable();
-            InitializeSmartActions();
 
             GlobalObjectDictionary.Instance.AddToGlobalDictionary(baseObjectInfo.Id, this);
+            
+            smartActions.InitializeSmartActions(this);
         }
         
-        /// <summary>
-        /// Adds all the required contextual right click actions for object.
-        /// </summary>
-        /// <exception cref="ArgumentOutOfRangeException"></exception>
-        private void InitializeSmartActions()
-        {
-            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["PickUp"], PickUp);
- 
-            switch (itemData)
-            {
-                case Consumable consumable:
-                    AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Eat"], Eat);
-                    break;
-                case Resource resource:
-
-                    break;
-            }
-            
-            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Drop"], Drop);
-            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["HaulAway"], HaulAway);
-        }
         private void InitializeBaseObjectData()
         {
             baseObjectInfo = baseData != null ? new BaseObjectData(StaticUtility.GenerateUniqueHashId(), baseData.objectName, baseData.description, baseData.sprite) 

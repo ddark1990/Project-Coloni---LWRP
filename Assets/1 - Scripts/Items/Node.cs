@@ -11,7 +11,7 @@ namespace ProjectColoni
         public NodeType nodeData;
         
         public BaseObjectData baseObjectInfo;
-        
+
         
         private void Awake()
         {
@@ -21,7 +21,9 @@ namespace ProjectColoni
         private void Start()
         {
             InitializeSelectable();
-            InitializeSmartActions();
+            //InitializeSmartActions();
+            
+            smartActions.InitializeSmartActions(this);
         }
 
         /// <summary>
@@ -33,14 +35,14 @@ namespace ProjectColoni
                 : new BaseObjectData(StaticUtility.GenerateUniqueHashId(), "", "", null);
         }
 
-        /// <summary>
+        /*/// <summary>
         /// Adds all the required contextual right click actions for object.
         /// </summary>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         private void InitializeSmartActions()
         {
-            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Inspect"], Inspect);
-            AddActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Gather"], Gather);
-        }
+            AddSmartActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Inspect"], Inspect);
+            AddSmartActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Gather"], Gather);
+        }*/
     }
 }

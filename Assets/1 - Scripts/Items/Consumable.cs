@@ -20,6 +20,24 @@ namespace ProjectColoni
         }
 
         [Tooltip("How much & what you will gain from consuming this item.")] public ConsumableSettings consumableSettings;
+
+        //smart actions could maybe be created here as well
+        /*
+        public override void InitializeSmartAction(SmartObject smartObject)
+        {
+            smartObject.AddSmartActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Inspect"], Inspect);
+            smartObject.AddSmartActionToCollection(GameManager.Instance.globalSpriteContainer.spriteCollection["Eat"], Eat);
+        }
         
+        private void Inspect(AiController aiController, SmartObject smartObject)
+        {
+            Debug.Log("Inspecting " + aiController);
+        }
+        
+        private void Eat(AiController aiController, SmartObject smartObject)
+        {
+            Debug.Log("Eating " + aiController);
+        }
+    */
     }
 }
