@@ -31,6 +31,9 @@ namespace ProjectColoni
                     break;
                 case ResourceNode.ResourceSettings.ResourceType.Variety:
                     break;
+                case ResourceNode.ResourceSettings.ResourceType.Bush:
+                    smartObject.animationTrigger = "GatherBush";
+                    break;
             }
             
             smartObject.actionLength = Mathf.Infinity; 

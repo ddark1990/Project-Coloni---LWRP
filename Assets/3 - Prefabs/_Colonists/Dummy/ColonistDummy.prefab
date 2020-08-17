@@ -964,6 +964,7 @@ GameObject:
   - component: {fileID: 4303725912926133582}
   - component: {fileID: 470982891}
   - component: {fileID: 470982892}
+  - component: {fileID: 1111222000}
   m_Layer: 31
   m_Name: ColonistDummy
   m_TagString: Colonist
@@ -1039,7 +1040,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.4
+  m_Radius: 0.3
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
@@ -1190,16 +1191,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   objectCollider: {fileID: 0}
+  smartActions: {fileID: 0}
   beingUsed: 0
   usedBy: {fileID: 0}
+  actionLength: 1
   stoppingDistance: 0.2
+  animationTrigger: 
+  activeAction: {fileID: 0}
+  debugGizmosEnabled: 0
   aiStats: {fileID: 0}
   sensors: {fileID: 0}
   status: {fileID: 0}
-  enableGizmos: 0
-  performingForcedAction: 0
+  inventory: {fileID: 0}
   navMeshAgent: {fileID: 0}
   animator: {fileID: 0}
+  selectable: {fileID: 0}
+  cam: {fileID: 0}
+  destinationLineRenderer: {fileID: 0}
+  enableGizmos: 0
+  performingForcedAction: 0
+  pickUpAvailable: 0
+  inAction: 0
+  rotSpeed: 4
+  playerControlled: 0
+  _tempSmartObject: {fileID: 0}
+  _tempActionCounter: 0
+  _animationStop: 0
 --- !u!114 &4304678335175400363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1212,7 +1229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f806682a90e68048a487234bb3b72cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  focus: {fileID: 0}
   radius: 10
   viewAngle: 142
   rayHeight: 1.6
@@ -1277,11 +1294,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fde4dbf9d1535747abb51533d4c15c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionArr:
-  - {fileID: 261508970}
+  actionArr: []
   debugPlanner: 0
   aiController: {fileID: 0}
   goalDebug: 0
+--- !u!114 &1111222000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4304678335175400337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82eb0960d9eba8f40adf40b9274692d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4304679635107265303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,7 +1600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4299141705775714989}
   - component: {fileID: 4202051553238028371}
-  - component: {fileID: 4305165130060011836}
+  - component: {fileID: 1799982393}
   m_Layer: 31
   m_Name: Character_Dummy_Male_01
   m_TagString: Untagged
@@ -1694,7 +1722,7 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 85.52081, z: -0.8454952}
     m_Extent: {x: 102.7469, y: 93.28432, z: 16.079613}
   m_DirtyAABB: 0
---- !u!114 &4305165130060011836
+--- !u!114 &1799982393
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1703,15 +1731,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4305165130060011809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Script: {fileID: 11500000, guid: 01743d161ef0b3b4c8cbb817a41bb1a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 3
-  outlineColor: {r: 0.2627451, g: 0.89411765, b: 0.12941177, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 1
-  bakeKeys: []
-  bakeValues: []
+  outlineColor: {r: 0, g: 0, b: 0, a: 0}
+  outlineWidth: 0
+  meshRenderer: {fileID: 0}
+  cachedMaterials: []
+  outlineMaterials: []
 --- !u!1 &4305179104816160773
 GameObject:
   m_ObjectHideFlags: 0

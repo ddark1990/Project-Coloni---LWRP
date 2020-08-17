@@ -56,7 +56,7 @@ namespace ProjectColoni
             //Debug.Log("Right Clicked On: " + _hit.collider);
             //DebugSelectedRightClick(currentlySelectedObject, hit);
 
-            if (!_selectionManager.currentlySelectedObject.selected) return;
+            if (_selectionManager.currentlySelectedObject == null) return;
                 
             switch (_selectionManager.currentlySelectedObject)
             {

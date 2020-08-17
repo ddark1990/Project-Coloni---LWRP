@@ -49,11 +49,14 @@ namespace ProjectColoni
         private void UpdateAction(SmartObject smartObject) //work on switching actions/ canceling one out
         {
             if (smartObject == null || !performingForcedAction) return;
-
+            
             PerformAction(smartObject);
         }
+        
         public void StartAction(SmartObject smartObject)
         {
+            if(_tempSmartObject != null) ResetAction(_tempSmartObject); //clear agent first if anything from previous action still persisting 
+            
             performingForcedAction = true;
 
             //cache the data
@@ -71,10 +74,8 @@ namespace ProjectColoni
         {
             if (!InRange(smartObject)) return;
             
-            navMeshAgent.isStopped = true;
-            
             _tempActionCounter -= Time.deltaTime;
-            animator.SetFloat(ActionLength, _tempActionCounter); //maybe reset with another trigger, also create cancel action logic that works buttery smooth
+            animator.SetFloat(ActionLength, _tempActionCounter); 
 
             RotateTowardsObject(smartObject, rotSpeed);
             PlayAnimation(smartObject.animationTrigger);
@@ -101,19 +102,17 @@ namespace ProjectColoni
         {
             ResetAgent();
             
-            smartObject.ResetSmartObject();
+            //smartObject.ResetSmartObject();
             
-            animator.ResetTrigger(smartObject.animationTrigger);
-
             performingForcedAction = false;
             _tempSmartObject = null;
         }
         private void ResetAgent()
         {
             navMeshAgent.ResetPath();
-            navMeshAgent.isStopped = false;
             _animationStop = false;
-            
+            inAction = false;
+            animator.SetFloat(ActionLength, 0);
         }
         private void PlayAnimation(string animName)
         {

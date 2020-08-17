@@ -18,8 +18,8 @@ namespace ProjectColoni
         private void OnCliCkPickUp(AiController aiController, SmartObject smartObject)
         {
             smartObject.activeAction = this;
-            
             smartObject.animationTrigger = "PickUp"; //might need a ref for diff types of inspect animations later on
+
             smartObject.actionLength = aiController.GetRuntimeAnimationClipInfo(smartObject.animationTrigger).length; //get length of animation to be played
 
             aiController.StartAction(smartObject); //commence the action based on given data

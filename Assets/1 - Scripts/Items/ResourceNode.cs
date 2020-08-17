@@ -13,7 +13,7 @@ namespace ProjectColoni
         {
             public enum ResourceType
             {
-                Stone, Wood, Variety
+                Stone, Wood, Bush, Variety
             }
             
             public ResourceType resourceType;

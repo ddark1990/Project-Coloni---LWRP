@@ -57,6 +57,7 @@
               <e p="Stats.cs" t="Include" />
               <e p="StatusModifiers.cs" t="Include" />
               <e p="StatusNotifications.cs" t="Include" />
+              <e p="WeaponHolderRelay.cs" t="Include" />
             </e>
             <e p="AnimationController.cs" t="Include" />
             <e p="BaseObjectData.cs" t="Include" />
