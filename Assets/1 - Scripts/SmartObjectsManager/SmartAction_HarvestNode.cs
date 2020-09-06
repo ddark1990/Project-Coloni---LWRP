@@ -23,6 +23,9 @@ namespace ProjectColoni
             
             switch (((ResourceNode) ((Node) smartObject).nodeData).resourceSettings.resourceType)
             {
+                case ResourceNode.ResourceSettings.ResourceType.Bush:
+                    smartObject.animationTrigger = "GatherBush";
+                    break;
                 case ResourceNode.ResourceSettings.ResourceType.Stone:
                     smartObject.animationTrigger = "GatherStone";
                     break;
@@ -31,9 +34,8 @@ namespace ProjectColoni
                     break;
                 case ResourceNode.ResourceSettings.ResourceType.Variety:
                     break;
-                case ResourceNode.ResourceSettings.ResourceType.Bush:
-                    smartObject.animationTrigger = "GatherBush";
-                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
             
             smartObject.actionLength = Mathf.Infinity; 

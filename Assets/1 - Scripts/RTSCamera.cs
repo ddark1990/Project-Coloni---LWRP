@@ -1,4 +1,5 @@
 ﻿using System;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -13,6 +14,7 @@ public class RTSCamera : MonoBehaviour
     public float panSens = 0.3f;
     public float smoothDamp = 4f;
     public float rotationSens = 1.5f;
+    public float rotationSmooth = 25;
 
     [Header("Zoom Settings")]
     public float minHeight = 10f;
@@ -44,6 +46,7 @@ public class RTSCamera : MonoBehaviour
     
     private void Awake()
     {
+        Application.targetFrameRate = 60;
         if(Instance == null)
         {
             Instance = this;
@@ -73,7 +76,6 @@ public class RTSCamera : MonoBehaviour
         HandleMovementInput();
         HandleRotationInput();
         HandleMouseInput();
-
     }
     
     private void HandleMovementInput() //add camera smoothing
@@ -83,12 +85,13 @@ public class RTSCamera : MonoBehaviour
         
         _newPos += facing * panSens;
 
-        _transform.position = Vector3.Lerp(_transform.position, new Vector3(_newPos.x, _targetHeight + _difference, _newPos.z), Time.deltaTime * smoothDamp);
+        _transform.position = Vector3.Lerp(_transform.position, new Vector3(_newPos.x, _targetHeight + _difference, _newPos.z), Time.deltaTime * GetNormalizedValue(smoothDamp, 1f, 10f));
     }
 
-    private void HandleRotationInput()
+    private void HandleRotationInput() //add smoothing
     {
-        Cursor.visible = _rotating ? Cursor.visible = false : Cursor.visible = true; //shows and hides mouse when rotating
+        Cursor.visible = _rotating ? Cursor.visible = false : Cursor.visible = true;
+        Cursor.lockState = _rotating ? CursorLockMode.Locked : CursorLockMode.None;
 
         var transformEulerAngles = _transform.eulerAngles;
 
@@ -101,21 +104,30 @@ public class RTSCamera : MonoBehaviour
             transformEulerAngles.x = 45;
             transformEulerAngles.z = 0;
             transformEulerAngles.y += _mouseAxis.x;
+            
         }
         else _rotating = false;
 
-        //_transform.rotation = Quaternion.Lerp(_transform.rotation, _newRot, Time.deltaTime * rotationAmount); //old
+        //_transform.rotation = Quaternion.Lerp(_transform.rotation, Quaternion.Euler(transformEulerAngles), Time.deltaTime * rotationSmooth); //old
         
-        _transform.eulerAngles = Vector3.Lerp(_transform.eulerAngles, transformEulerAngles, Time.deltaTime * rotationSens);
+        _transform.eulerAngles = Vector3.Lerp(_transform.eulerAngles, transformEulerAngles, Time.deltaTime * GetNormalizedValue(rotationSens, 1f, 200));
     }
 
+    public float shit;
+    public Vector3 fuck;
+
+    float GetNormalizedValue(float value,float newMin,float newMax)
+    {
+        return newMin + value * (newMax - newMin);
+    }
+    
     private void HandleMouseInput()
     {
         if (EventSystem.current.IsPointerOverGameObject()) return;
     
         _distanceToGround = DistanceToGround();
         
-        _zoomPos += _mouseScroll * Time.deltaTime * scrollZoomSensitivity;
+        _zoomPos += _mouseScroll * Time.deltaTime * GetNormalizedValue(scrollZoomSensitivity, 1f, 50);
         
         _zoomPos = Mathf.Clamp01(_zoomPos);
 
@@ -124,7 +136,7 @@ public class RTSCamera : MonoBehaviour
         _difference = _distanceToGround != _targetHeight ? _targetHeight - _distanceToGround : 0;
         
         _transform.position = Vector3.Lerp(_transform.position, 
-            new Vector3(_transform.position.x, _targetHeight + _difference, _transform.position.z), Time.deltaTime * heightDampening);
+            new Vector3(_transform.position.x, _targetHeight + _difference, _transform.position.z), Time.deltaTime * GetNormalizedValue(heightDampening, 1f, 10));
     }
     
     private float DistanceToGround()

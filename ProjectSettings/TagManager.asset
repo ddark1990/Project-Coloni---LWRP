@@ -36,13 +36,13 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Celling
+  - Railling
+  - Doorway
+  - Wall
+  - FoundationStair
+  - Foundation
+  - Build
   - Selectable
   m_SortingLayers:
   - name: Default

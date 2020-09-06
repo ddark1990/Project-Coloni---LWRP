@@ -15,7 +15,9 @@ namespace ProjectColoni
         public bool beingUsed;
         public AiController usedBy;
         public float actionLength = 1;
+        [Header("Settings")]
         public float stoppingDistance = 0.2f;
+        
         public string animationTrigger;
 
         public SmartAction activeAction;

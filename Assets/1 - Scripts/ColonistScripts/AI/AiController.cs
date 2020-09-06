@@ -24,7 +24,8 @@ namespace ProjectColoni
         
         public SmartObject _tempSmartObject;
         public float _tempActionCounter;
-        public bool _animationStop; //needed to run once in update loop
+        public float _tempLogicCounter;
+        public bool _animationPlay; //needed to run once in update loop
         private static readonly int ActionLength = Animator.StringToHash("actionLength");
 
         private void Start()
@@ -35,6 +36,8 @@ namespace ProjectColoni
         
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Mouse0)) SetDestinationToMousePosition();
+            
             DrawLineRendererPaths(navMeshAgent, destinationLineRenderer);
             
             if (!EventSystem.current.IsPointerOverGameObject())
@@ -74,6 +77,8 @@ namespace ProjectColoni
         {
             if (!InRange(smartObject)) return;
             
+            navMeshAgent.isStopped = true;
+
             _tempActionCounter -= Time.deltaTime;
             animator.SetFloat(ActionLength, _tempActionCounter); 
 
@@ -110,16 +115,17 @@ namespace ProjectColoni
         private void ResetAgent()
         {
             navMeshAgent.ResetPath();
-            _animationStop = false;
+            navMeshAgent.isStopped = false;
+            _animationPlay = false;
             inAction = false;
             animator.SetFloat(ActionLength, 0);
         }
         private void PlayAnimation(string animName)
         {
-            if (_animationStop) return;
+            if (_animationPlay) return;
             
             animator.SetTrigger(animName);
-            _animationStop = true;
+            _animationPlay = true;
         }
 
         private void CancelAction()
@@ -163,11 +169,11 @@ namespace ProjectColoni
         }
        
         
-        /*private void SetDestinationToMousePosition()
+        private void SetDestinationToMousePosition()
         {
-            if (_camera == null) return;
+            if (cam == null) return;
             
-            var ray = _camera.ScreenPointToRay(Input.mousePosition);
+            var ray = cam.ScreenPointToRay(Input.mousePosition);
             if (!Physics.Raycast(ray, out var hit)) return;
 
             MoveAgent(hit.point);
@@ -180,7 +186,7 @@ namespace ProjectColoni
             obj.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             
             Destroy(obj, 3);
-        }*/
+        }
 
     }
 }

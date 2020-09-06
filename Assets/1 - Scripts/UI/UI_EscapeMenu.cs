@@ -29,8 +29,6 @@ namespace ProjectColoni
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) ToggleEscapeMenu();
-
-        UpdateSliders(); //update sliders every time slider is moved instead of every frame
         
         if(_showEscapeMenu && _showOptionsMenu) UIView.ShowView("UI" ,"EscapeMenuOptions");
         else
@@ -65,14 +63,29 @@ namespace ProjectColoni
         zoomSmoothingSlider.value = RTSCamera.Instance.heightDampening;
     }
 
-    private void UpdateSliders()
+    public void SetCameraPanSpeed(float speed)
     {
-        RTSCamera.Instance.panSens = moveSpeedSlider.value;
-        RTSCamera.Instance.smoothDamp = stopSpeedSlider.value;
-        RTSCamera.Instance.rotationSens = rotationSpeedSlider.value;
-        RTSCamera.Instance.scrollZoomSensitivity = scrollSensSlider.value;
-        RTSCamera.Instance.maxHeight = zoomMaxHeightSlider.value;
-        RTSCamera.Instance.heightDampening = zoomSmoothingSlider.value;
+        RTSCamera.Instance.panSens = speed;
+    }
+    public void SetCameraStopSpeed(float stopSpeed)
+    {
+        RTSCamera.Instance.smoothDamp = stopSpeed;
+    }
+    public void SetCameraRotationSens(float rotSens)
+    {
+        RTSCamera.Instance.rotationSens = rotSens;
+    }
+    public void SetCameraZoomSens(float zoomSens)
+    {
+        RTSCamera.Instance.scrollZoomSensitivity = zoomSens;
+    }
+    public void SetCameraMaxHeight(float maxHeight)
+    {
+        RTSCamera.Instance.maxHeight = maxHeight;
+    }
+    public void SetCameraHeightDamp(float heightDamp)
+    {
+        RTSCamera.Instance.heightDampening = heightDamp;
     }
     
     public void ToggleOptions()

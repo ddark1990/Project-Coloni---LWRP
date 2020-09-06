@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0dcfa3f4172b14598d4ff4c79d992b, type: 3}
   m_Name: Node_Bush(BaseData)
   m_EditorClassIdentifier: 
-  objectName: 
-  description: 
-  sprite: {fileID: 0}
+  objectName: Bush W
+  description: ...
+  sprite: {fileID: 21300000, guid: 02fbaba8afef6654595ab4e701e14a17, type: 3}

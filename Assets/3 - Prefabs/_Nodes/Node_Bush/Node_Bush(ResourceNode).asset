@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Node_Bush(ResourceNode)
   m_EditorClassIdentifier: 
   resourceSettings:
-    resourceType: 0
+    resourceType: 2
     resources: []

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e49cdf604678542aa494032e75e70c, type: 3}
+  m_Name: SO_Foundation(BuildingPart)
+  m_EditorClassIdentifier: 
+  buildOn:
+    serializedVersion: 2
+    m_Bits: 512
+  snappingParts:
+  - partName: 0
+    snapPoints:
+    - name: Snap1
+      position: {x: 2.96875, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+    - name: Snap2
+      position: {x: -2.96875, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+    - name: Snap3
+      position: {x: 0, y: 0, z: 2.96875}
+      rotation: {x: 0, y: 0, z: 0}
+    - name: Snap4
+      position: {x: 0, y: 0, z: -2.96875}
+      rotation: {x: 0, y: 0, z: 0}
+  - partName: 1
+    snapPoints: []

@@ -10,6 +10,7 @@ namespace ProjectColoni
         public struct ItemData
         {
             public int stackLimit;
+            public float itemWeight;
             public Sprite inventorySprite;
             [Tooltip("Create modifiers by right clicking and going to ProjectColoni/Objects/AI/StatusNotifications/New StatusModifier")] 
             public StatusModifier[] statusModifiers;

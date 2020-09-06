@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 3834413903622661093}
   - component: {fileID: 3846261238220724140}
   - component: {fileID: 3846261238220724141}
-  - component: {fileID: 3846261238220724138}
+  - component: {fileID: 583135563}
+  - component: {fileID: 583135557}
   m_Layer: 31
   m_Name: Item_Food_Uncooked_Meat
   m_TagString: Item
@@ -28,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3846261238220724139}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 82.68842, y: 0.022833731, z: 77.76352}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -109,10 +110,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: 0
+  objectCollider: {fileID: 0}
+  smartActions: {fileID: 11400000, guid: 1b3b93d1ec8da534eadd620a1b94350b, type: 2}
+  beingUsed: 0
+  usedBy: {fileID: 0}
+  actionLength: 1
+  stoppingDistance: 0.5
+  animationTrigger: 
+  activeAction: {fileID: 0}
+  debugGizmosEnabled: 0
   itemCount: 1
   baseData: {fileID: 11400000, guid: c07ad0c4a5c180d41af4ef10db858826, type: 2}
+  ignore: 0
   itemData: {fileID: 11400000, guid: 178ff5ca87ecf1a428789682e052ab25, type: 2}
---- !u!114 &3846261238220724138
+--- !u!54 &583135563
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3846261238220724139}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &583135557
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,118 +148,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3846261238220724139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Script: {fileID: 11500000, guid: 01743d161ef0b3b4c8cbb817a41bb1a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 1
-  bakeKeys:
-  - {fileID: 4300000, guid: 21fdc31ef1a8eb54599fefb75d943a7d, type: 3}
-  bakeValues:
-  - data:
-    - {x: -0.5294151, y: 0.54116845, z: 0.6533425}
-    - {x: -0.5294151, y: -0.54116845, z: 0.6533425}
-    - {x: 0.5294676, y: -0.5411994, z: 0.65327436}
-    - {x: 0.5294676, y: 0.5411994, z: 0.65327436}
-    - {x: 0.47605744, y: 0.5153199, z: -0.7126112}
-    - {x: 0.47605744, y: -0.5153199, z: -0.7126112}
-    - {x: -0.480286, y: -0.51704437, z: -0.7085129}
-    - {x: -0.480286, y: 0.51704437, z: -0.7085129}
-    - {x: -0.88215363, y: 0.47044605, z: -0.022034366}
-    - {x: -0.88215363, y: -0.47044605, z: -0.022034366}
-    - {x: -0.86192364, y: -0.44786474, z: 0.23770757}
-    - {x: -0.86192364, y: 0.44786474, z: 0.23770757}
-    - {x: 0.88611156, y: 0.44826135, z: 0.11776316}
-    - {x: 0.88611156, y: -0.44826135, z: 0.11776316}
-    - {x: 0.87719035, y: -0.4563325, z: -0.1493246}
-    - {x: 0.87719035, y: 0.4563325, z: -0.1493246}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: -0.480286, y: 0.51704437, z: -0.7085129}
-    - {x: -0.480286, y: -0.51704437, z: -0.7085129}
-    - {x: -0.88215363, y: -0.47044605, z: -0.022034366}
-    - {x: -0.88215363, y: 0.47044605, z: -0.022034366}
-    - {x: 0.87719035, y: 0.4563325, z: -0.1493246}
-    - {x: 0.87719035, y: -0.4563325, z: -0.1493246}
-    - {x: 0.47605744, y: -0.5153199, z: -0.7126112}
-    - {x: 0.47605744, y: 0.5153199, z: -0.7126112}
-    - {x: -0.86192364, y: 0.44786474, z: 0.23770757}
-    - {x: -0.86192364, y: -0.44786474, z: 0.23770757}
-    - {x: -0.5294151, y: -0.54116845, z: 0.6533425}
-    - {x: -0.5294151, y: 0.54116845, z: 0.6533425}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0.5294676, y: 0.5411994, z: 0.65327436}
-    - {x: 0.5294676, y: -0.5411994, z: 0.65327436}
-    - {x: 0.88611156, y: -0.44826135, z: 0.11776316}
-    - {x: 0.88611156, y: 0.44826135, z: 0.11776316}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0.87719035, y: 0.4563325, z: -0.1493246}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0.88611156, y: 0.44826135, z: 0.11776316}
-    - {x: 0.47605744, y: 0.5153199, z: -0.7126112}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0.5294676, y: 0.5411994, z: 0.65327436}
-    - {x: -0.480286, y: 0.51704437, z: -0.7085129}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: -0.5294151, y: 0.54116845, z: 0.6533425}
-    - {x: -0.88215363, y: 0.47044605, z: -0.022034366}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0, y: 1, z: 0}
-    - {x: -0.86192364, y: 0.44786474, z: 0.23770757}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0.87719035, y: -0.4563325, z: -0.1493246}
-    - {x: 0.88611156, y: -0.44826135, z: 0.11776316}
-    - {x: 0.47605744, y: -0.5153199, z: -0.7126112}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0.5294676, y: -0.5411994, z: 0.65327436}
-    - {x: -0.480286, y: -0.51704437, z: -0.7085129}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: -0.5294151, y: -0.54116845, z: 0.6533425}
-    - {x: -0.88215363, y: -0.47044605, z: -0.022034366}
-    - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -1, z: 0}
-    - {x: -0.86192364, y: -0.44786474, z: 0.23770757}
+  outlineColor: {r: 0, g: 0, b: 0, a: 0}
+  outlineWidth: 0
+  meshRenderer: {fileID: 0}
+  cachedMaterials: []
+  outlineMaterials: []

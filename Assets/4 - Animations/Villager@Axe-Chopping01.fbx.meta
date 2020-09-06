@@ -383,7 +383,7 @@ ModelImporter:
     second: //RootNode
   - first:
       74: 7400000
-    second: Villager@Axe-Chopping01
+    second: GatherWood
   - first:
       95: 9500000
     second: //RootNode
@@ -422,7 +422,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Villager@Axe-Chopping01
+      name: GatherWood
       takeName: Default Take
       internalID: 0
       firstFrame: 0

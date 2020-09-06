@@ -4,6 +4,7 @@ using System.Text;
 using Doozy.Engine.UI;
 using ProjectColoni;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace ProjectColoni
@@ -22,7 +23,9 @@ namespace ProjectColoni
         [Header("PanelCache")]
         public Image selectedImage;
         public Text selectedName;
-
+        [Header("Cache")] 
+        public UI_InventoryPanelController inventoryPanelController;
+        
         private SelectionManager _selectionManager;
         private UI_SkillPanel _skillPanel;
 
@@ -49,7 +52,7 @@ namespace ProjectColoni
             _skillPanel = GetComponentInChildren<UI_SkillPanel>();
         }
 
-        private void LateUpdate()
+        private void LateUpdate() //refactor into separate controllers
         {
             if(selectedColonistPanel.activeInHierarchy) PopulateColonistVitalsData();
             if(selectedResourcePanel.activeInHierarchy) PopulateResourceData();
@@ -134,12 +137,12 @@ namespace ProjectColoni
             colonistPanelRelay.recreationBar.fillAmount = aiController.aiStats.stats.Recreation / 100;
                     
             //text
-            colonistPanelRelay.healthText.text = _cachedIntToString[(int)aiController.aiStats.stats.Health];
-            colonistPanelRelay.staminaText.text = _cachedIntToString[(int)aiController.aiStats.stats.Stamina];
-            colonistPanelRelay.foodText.text = _cachedIntToString[(int)aiController.aiStats.stats.Food ];
-            colonistPanelRelay.energyText.text = _cachedIntToString[(int) aiController.aiStats.stats.Energy];
-            colonistPanelRelay.comfortText.text = _cachedIntToString[(int)aiController.aiStats.stats.Comfort];
-            colonistPanelRelay.recreationText.text = _cachedIntToString[(int)aiController.aiStats.stats.Recreation ];
+            colonistPanelRelay.healthText.text = CachedIntToString[(int)aiController.aiStats.stats.Health];
+            colonistPanelRelay.staminaText.text = CachedIntToString[(int)aiController.aiStats.stats.Stamina];
+            colonistPanelRelay.foodText.text = CachedIntToString[(int)aiController.aiStats.stats.Food ];
+            colonistPanelRelay.energyText.text = CachedIntToString[(int) aiController.aiStats.stats.Energy];
+            colonistPanelRelay.comfortText.text = CachedIntToString[(int)aiController.aiStats.stats.Comfort];
+            colonistPanelRelay.recreationText.text = CachedIntToString[(int)aiController.aiStats.stats.Recreation ];
             
             //status notifications
             
@@ -152,7 +155,7 @@ namespace ProjectColoni
         {
             var resource = _selectionManager.selectedTemp.GetComponentInChildren<Node>();
 
-            resourcePanelRelay.amountText.text = _cachedIntToString[resource.amount];
+            resourcePanelRelay.amountText.text = CachedIntToString[resource.amount];
         }
 
         [HideInInspector] public UI_ItemPanelRelay itemPanelRelay;
@@ -161,7 +164,7 @@ namespace ProjectColoni
         {
             var item = _selectionManager.selectedTemp.GetComponentInChildren<Item>();
 
-            itemPanelRelay.amountText.text = _cachedIntToString[item.itemCount];
+            itemPanelRelay.amountText.text = CachedIntToString[item.itemCount];
         }
        
         //button events
@@ -170,7 +173,7 @@ namespace ProjectColoni
             ResetColonistWindows(_skillWindowOpen);
             _skillWindowOpen = !_skillWindowOpen;
 
-            ToggleWindowView(_skillWindowOpen, "Selected", "SkillInfoPanel");
+            SwitchToWindowView(_skillWindowOpen, "Selected", "SkillInfoPanel");
         }
         
         public void ToggleHealthWindow()
@@ -178,7 +181,7 @@ namespace ProjectColoni
             ResetColonistWindows(_healthWindowOpen);
             _healthWindowOpen = !_healthWindowOpen;
             
-            ToggleWindowView(_healthWindowOpen, "Selected", "HealthInfoPanel");
+            SwitchToWindowView(_healthWindowOpen, "Selected", "HealthInfoPanel");
         }
         
         public void ToggleInventoryWindow()
@@ -186,7 +189,7 @@ namespace ProjectColoni
             ResetColonistWindows(_inventoryWindowOpen);
             _inventoryWindowOpen = !_inventoryWindowOpen;
             
-            ToggleWindowView(_inventoryWindowOpen, "Selected", "InventoryInfoPanel");
+            SwitchToWindowView(_inventoryWindowOpen, "Selected", "InventoryInfoPanel");
         }
         
         public void ToggleInfoWindow()
@@ -194,7 +197,7 @@ namespace ProjectColoni
             ResetColonistWindows(_infoWindowOpen);
             _infoWindowOpen = !_infoWindowOpen;
             
-            ToggleWindowView(_infoWindowOpen, "General", "InfoPanel");
+            SwitchToWindowView(_infoWindowOpen, "General", "InfoPanel");
         }
         //
         
@@ -203,10 +206,10 @@ namespace ProjectColoni
             if(_selectionManager.currentlySelectedObject != null) UIView.ShowView("Selected", "SelectedInfoPanel");
         }
 
-        private string _tempCategoryName;
-        private string _tempPanelName;
+        private static string _tempCategoryName;
+        private static string _tempPanelName;
         
-        private void ToggleWindowView(bool active, string categoryName, string panelName) //toggles views while caching old view and category names
+        public static void SwitchToWindowView(bool active, string categoryName, string panelName) //toggles views while caching old view and category names
         {
             if (_tempPanelName != string.Empty && _tempCategoryName != string.Empty)
             {
@@ -215,6 +218,19 @@ namespace ProjectColoni
             
             _tempPanelName = panelName;
             _tempCategoryName = categoryName;
+            
+            if(active) UIView.ShowView(categoryName, panelName);
+        }
+
+        private static string _tempCategoryToggleReset;
+        public static void ToggleWindowViewWithReset(bool active, string categoryName, string panelName)
+        {
+            if (_tempCategoryToggleReset != string.Empty)
+            {
+                UIView.HideViewCategory(_tempCategoryToggleReset);
+            }
+
+            _tempCategoryToggleReset = categoryName;
             
             if(active) UIView.ShowView(categoryName, panelName);
         }
@@ -256,7 +272,7 @@ namespace ProjectColoni
             UIView.HideViewCategory("Selected");
         }
         
-        private readonly CacheIntString _cachedIntToString = new CacheIntString(
+        public static readonly CacheIntString CachedIntToString = new CacheIntString(
             (values)=>values , //describe how seconds (key) are translated to useful value (hash)
             (value)=>value.ToString("0") //you describe how string is built based on value (hash)
             , 0 , 150 , 1 //initialization range and step, so cache will be warmed up and ready

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemData:
     stackLimit: 20
+    itemWeight: 0.5
     inventorySprite: {fileID: 21300000, guid: 4f2033daf07657044b3602f91f725baf, type: 3}
     statusModifiers: []
   consumableSettings:

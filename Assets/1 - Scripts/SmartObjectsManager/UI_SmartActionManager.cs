@@ -17,6 +17,16 @@ namespace ProjectColoni
         public float _panelOffset = .91f;
 
 
+        private void OnEnable()
+        {
+            rightClickPanel.HideBehavior.OnFinished.Action += OnPanelHidden;
+        }
+
+        private void OnDisable()
+        {
+            //rightClickPanel.HideBehavior.OnFinished.Action -= OnPanelHidden;
+        }
+
         private void Start()
         {
             _selectionManager = SelectionManager.Instance;
@@ -32,6 +42,9 @@ namespace ProjectColoni
             {
                 RightClickSelection();
             }
+            
+            if(!EventSystem.current.IsPointerOverGameObject() && Input.GetKey(KeyCode.Mouse0)) ClearRightClickButtons();
+
         }
 
         private void GetActionButtons()
@@ -86,7 +99,7 @@ namespace ProjectColoni
         
         private void PopulateActionButtonsData(AiController aiController, SmartObject smartObject)
         {
-            var collectionOfActions = _selectionManager.hoveringObject.GetComponent<SmartObject>().smartActionDictionary;
+            var collectionOfActions = _selectionManager.hoveringObject.GetComponentInChildren<SmartObject>().smartActionDictionary;
             
             var collectionIndex = 0;
             foreach (var action in collectionOfActions)
@@ -107,7 +120,14 @@ namespace ProjectColoni
             }
         }
         
-        private void ClearRightClickButtons()
+        private void ClearRightClickButtons() //hides panel and uses its on finished action to disable and reset buttons
+        {
+            if (rightClickPanel.Visibility == VisibilityState.Hiding) return;
+            
+            rightClickPanel.Hide();
+        }
+
+        private void OnPanelHidden(GameObject go) //gives panel as gameObject
         {
             foreach (var button in _actionButtons)
             {

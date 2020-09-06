@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992cc8816e5d5504390a752a4c860cb6, type: 3}
   m_Name: Action_Pick Up Item
   m_EditorClassIdentifier: 
+  animationLogicCounter: 1.5

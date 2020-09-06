@@ -19,7 +19,8 @@ namespace ProjectColoni
         {
             smartObject.activeAction = this;
             smartObject.animationTrigger = "Inspect"; //might need a ref for diff types of inspect animations later on
-            
+            Debug.Log(aiController.GetRuntimeAnimationClipInfo(smartObject.animationTrigger).length);
+
             smartObject.actionLength = aiController.GetRuntimeAnimationClipInfo(smartObject.animationTrigger).length; //get length of animation to be played
 
             aiController.StartAction(smartObject); //commence the action based on given data

@@ -23,16 +23,281 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/ResourceNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/ResourceNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Ai_Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Ai_Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/NewLayer.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/NewLayer.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_HarvestNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_HarvestNode.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_Inspect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_Inspect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_PickUpItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_PickUpItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/UI_SmartActionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/UI_SmartActionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_EscapeMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_EscapeMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/RTSCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/RTSCamera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/UI/Inventory/InventorySlot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/UI/Inventory/InventorySlot.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Colonists/Dummy/ColonistDummy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Colonists/Dummy/ColonistDummy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels(ItemData).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels(ItemData).asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Food_MeatCooked/Item_Food_Cooked_Meat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Food_MeatCooked/Item_Food_Cooked_Meat.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/_SmartObjectsData/Action_Pick Up Item.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/_SmartObjectsData/Action_Pick Up Item.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush(BaseData).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush(BaseData).asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush(ResourceNode).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush(ResourceNode).asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush_Test.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush_Test.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Stone_01/Node_Stone_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Stone_01/Node_Stone_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Tree_Small_01/Tree_Small_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Tree_Small_01/Tree_Small_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_02.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_03.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_04.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Stone(BaseData).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Stone(BaseData).asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Stone(ItemData).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Stone(ItemData).asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/4 - Animations/AnimationControllers/ColonistAnimationController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4 - Animations/AnimationControllers/ColonistAnimationController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Axe-Chopping01.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Axe-Chopping01.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Carrying-Lift01.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Carrying-Lift01.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Pickaxe-Mining01.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Pickaxe-Mining01.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Picking Up Object.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Picking Up Object.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Gradient_X 200x400.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Gradient_X 200x400.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Gradient_X.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Gradient_X.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/BaseGrass_normals.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/BaseGrass_normals.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Cliffwall.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Cliffwall.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Cliffwall_normals.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Cliffwall_normals.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Flowers.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Flowers.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Flowers_normals.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Flowers_normals.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Grass.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Grass.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/GrassHigherDetail_normals.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/GrassHigherDetail_normals.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Grass_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Grass_02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_normals_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_normals_01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Moss.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Moss.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Mud.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Mud.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Mud_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Mud_Normal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Pebbles.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Pebbles.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Pebbles_Sand.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Pebbles_Sand.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Pebbles_normals.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Pebbles_normals.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Rockwall.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Rockwall.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Rockwall_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Rockwall_Normal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Sand.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Sand.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Sand_Darker.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Sand_Darker.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Sand_Desert.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Sand_Desert.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Snow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Snow.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/ColonistDummy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/ColonistDummy.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Cooked_Wolf_Meat_icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Cooked_Wolf_Meat_icon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Food_CookedMeat.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Food_CookedMeat.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Item_Food_Jack_Daniels.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Item_Food_Jack_Daniels.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Item_Food_Uncooked_Meat.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Item_Food_Uncooked_Meat.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Node_Stone_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Node_Stone_01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Tree_Small_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Tree_Small_01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Tree_Willow_Small_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Tree_Willow_Small_01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/apple.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/apple.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/box.wooden.large.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/box.wooden.large.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/hatcheticon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/hatcheticon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/mushroomicon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/mushroomicon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/stones.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/stones.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/waterjugicon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/waterjugicon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/wood.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/wood.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/126x126BasicFilledSquare.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/126x126BasicFilledSquare.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/126x740BasicFilledSquare.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/126x740BasicFilledSquare.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/128ANVIL.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/128ANVIL.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/64ANVIL.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/64ANVIL.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/brokenbone_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/brokenbone_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/droplet_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/droplet_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/eatingicon32.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/eatingicon32.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energY_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energY_inverse_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_1024_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_1024_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_512_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_512_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_heavy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_heavy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_inverse_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_med_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_med_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_1024_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_1024_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_512_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_512_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_heavy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_heavy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_inverse_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_inverse_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_med_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_med_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_inverse_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_inverse_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_1024_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_1024_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_512_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_512_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_heavy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_heavy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_inverse_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_inverse_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_med_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_med_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_1024_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_1024_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_512_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_512_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_heavy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_heavy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_inverse_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_inverse_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_med_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_med_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_1024_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_1024_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_512_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_512_square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_heavy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_heavy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_inverse_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_inverse_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_med_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_med_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_heavy_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_heavy_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_inverse_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_inverse_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_med_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_med_512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon32.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon32.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon64.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon64.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/player-buttons-png-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/player-buttons-png-2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/spoonandfork.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/spoonandfork.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_heavy_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_heavy_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_inverse_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_inverse_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_med_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_med_256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/circlegradient.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/circlegradient.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/gradient-background-png-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/gradient-background-png-3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/hammer_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/hammer_inverse_1024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimationIdleStates.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimationIdleStates.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_0.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_0.terrainlayer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_1.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_1.terrainlayer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_2.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_2.terrainlayer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_3.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_3.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_4.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_4.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/test123.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/test123.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +309,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/StartUI.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/AnimationIdleStates.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/2d/f6c2fbe5/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_DevTools.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/Lux URP Essentials/Shaders/Lit Extended/Lux URP Lit Extended.shader" root0="FORCE_HIGHLIGHTING" />
@@ -57,20 +322,23 @@
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/QuickOutline/Scripts/OutlineObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4BEC26B5-CBC7-4715-8442-F1499E984732/bd/d5cf516a/Type.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/IconGenerator/IconGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityGame/ColonyGame 0.0.19/ColonyGame 0.0.18/ColonyGame/Assets/MainGame/Scripts/TerrainDeformation/Procedural Landmass Generation/Scripts/EndlessTerrain.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/StaticUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_EscapeMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/test123.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Eat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ColonistPanelRelay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/UI_SmartActionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillTab.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_InfoPanelRelay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/Doozy/Engine/UI/UIView/UIViewBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/TransparencyCapture/example/zzTransparencyCaptureExample.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_Inspect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../FPS Bolt/Assets/1 - Scripts/EventRelay.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6F28216F-EA9F-453A-BF2E-05B770ED3EE4/e0/beb006fa/EditorGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UnityEditor/2019.3.0f6/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildPartCustomInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/GameManagerTut.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/ColonyGame 0.0.19/ColonyGame 0.0.18/ColonyGame/Assets/MainGame/Scripts/UI Scripts/InfoPanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/NetworkPlayerCar.cs" root0="SKIP_HIGHLIGHTING" />
@@ -80,6 +348,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/Lexic/Scripts/NameGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/ObjectSpawnerDataset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/EventRelay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildPart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UnityEditor/2019.4.0f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/LayoutElement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapPlanner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiBaseCustomInspector.cs" root0="FORCE_HIGHLIGHTING" />
@@ -100,19 +369,23 @@
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensors.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LWRP-FPS/FPS - LWRP/Assets/_Scripts/AI/AiSensor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/GlobalObjectDictionary.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_InventorySlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../FPS Bolt/Assets/1 - Scripts/PlayerScripts/ControllerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4BEC26B5-CBC7-4715-8442-F1499E984732/94/9a1ef732/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/10 - Shaders/BlurRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/BaseScriptableData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/GlobalObjectDictionaryInspector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_InventoryPanelController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/623DD1C5-ED6E-43BC-8659-6AF9203BEC21/48/9795866d/TweenSettingsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AnimationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/d6/234ddf82/Material.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/BaseObjectData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/Foundation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Items/ResourceNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/ColonistController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MapGeneratorEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Items/Resource.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/StatusNotifications.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SpriteContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAgent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -120,6 +393,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3DC54541-A257-4AC7-826A-004A212A4332/fe/332bdb73/LayerMask.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensorFOVEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Wander.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/ConvertGameObjects.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/Noise.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidGOAPAgent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/StatusModifiers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Ai_Inventory.cs" root0="FORCE_HIGHLIGHTING" />
@@ -127,33 +402,43 @@
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/FSM/FSM.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/FSM/FSMState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Items/NodeType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MapGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/Polygon/PolygonZombies/Shaders/POLYGON_Zombies.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MapDisplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_PickUpItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/Unity-Logs-Viewer/Reporter/Reporter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiSensorsCustomInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2C5EB708-1BDE-4311-A3E4-4270B15169E4/8b/99dcae82/NavMeshAgent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ExpandableBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/11BD515F-D2A0-4526-8509-D23726DE0F46/ab/196c308f/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_HarvestNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_HarvestNode.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/WeaponHolderRelay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6F28216F-EA9F-453A-BF2E-05B770ED3EE4/b2/ae35e1db/LocalizationGroup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/862B9365-843C-4BF1-BA93-210C124BB523/5a/ca40a1ce/Queue`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_HaulAway.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/Lux URP Essentials/Shaders/Outline/Lux URP Fast Outline.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_Eat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6F28216F-EA9F-453A-BF2E-05B770ED3EE4/bf/40507be0/Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LWRP-FPS/FPS - LWRP/Assets/Editor/AiStateControllerEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Items/Node.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LWRP-FPS/FPS - LWRP/Assets/Editor/RagdollCreator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LWRP-FPS/FPS - LWRP/Assets/_Scripts/Jobs/JobManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../SimplePoolManager/PoolManagerPlugin/Assets/EasyPoolManager/Scrips/SimplePoolManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/Trait.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/Skill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/SkillSet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SkillsAndTraits - SnowFul/Scripts/ColonistSkills.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/ColonyGame 0.0.19/ColonyGame 0.0.18/ColonyGame/Assets/MainGame/Scripts/UI Scripts/ColonistSelectionUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../FPS Bolt/Assets/1 - Scripts/PlayerScripts/FPSController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/com/heparo/terrain/toolkit/editor/TerrainToolkitEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/38/ac220397/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/BuildScriptsOnly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/LobbyTopPanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/NetworkConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -170,14 +455,19 @@
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Outline/OutlineRelay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/IGoap.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/GameSetup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_BuildController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingPart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/LobbyCreator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/PhotonPlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SnapshotCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/QuickOutline/Resources321/Shaders/OutlineFill.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Constants.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/_preload.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingManagerCustomInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6F28216F-EA9F-453A-BF2E-05B770ED3EE4/79/0b7b50b0/GUID.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0D2763AD-8235-4FC6-A022-A2846086CA7B/e7/7484c49c/AnimationClip.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MeshDestroy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartActions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/ColonyGame 0.0.19/ColonyGame 0.0.18/ColonyGame/Assets/MainGame/Scripts/Colonist Scripts/ColonistSensors.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/TerrainGenerator.cs" root0="FORCE_HIGHLIGHTING" />
@@ -195,34 +485,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickActionButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SpriteContainer.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/UI_RightClickManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/RightClickManager/SmartActionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAgent.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_Wander.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Harvestables/ResourceNode.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartActionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/NodeData.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStatus.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/StatusModifiers.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidAgent.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/Actions/GoapAction_PickUpItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiSensors.cs" />
-        <option value="$PROJECT_DIR$/Assets/12-ImportedPackages/QuickOutline/Scripts/OutlineObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/12-ImportedPackages/Lux URP Essentials/Demos/Scripts/Outline Demo/MouseSelect.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/SelectionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SkillPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/AgentTypes/AI_HumanoidGOAPAgent.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_ExpandableBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/BaseScriptableData.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Ai_Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/SmartObject.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartState.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Node.cs" />
@@ -230,22 +492,50 @@
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiBase.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_HaulAway.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartActions.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Consumable.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Resource.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/NodeType.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Outline/OutlineRelay.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/UI_SmartActionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_HarvestNode.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_PickUpItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_Inspect.cs" />
         <option value="$PROJECT_DIR$/Assets/12-ImportedPackages/Polygon/PolygonZombies/Shaders/POLYGON_Zombies.shader" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/WeaponHolderRelay.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/ResourceNode.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_HarvestNode.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_EscapeMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_Inspect.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_MainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_InventorySlot.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_InventoryPanelController.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/ConvertGameObjectsInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/12-ImportedPackages/Lux URP Essentials/Shaders/Lit Extended/Lux URP Lit Extended.shader" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MapGeneratorEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/Noise.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MapDisplay.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MapGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MeshDestroy.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/UI_SmartActionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_PickUpItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/ConvertGameObjects.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Ai_Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_BuildController.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/BuildingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/12-ImportedPackages/com/heparo/terrain/toolkit/editor/TerrainToolkitEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Dick.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingPart.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingManagerCustomInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/Foundation.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingManagerCustomInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildPartCustomInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingPart.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildPart.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingManager.cs" />
       </list>
     </option>
   </component>
@@ -270,6 +560,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -278,10 +569,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="20868">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="20868" />
+      <option name="pid" />
       <method v="2" />
     </configuration>
   </component>
@@ -357,7 +648,13 @@
       <workItem from="1597132549339" duration="4391000" />
       <workItem from="1597346371708" duration="1205000" />
       <workItem from="1597384864718" duration="39180000" />
-      <workItem from="1597572035010" duration="25211000" />
+      <workItem from="1597572035010" duration="26604000" />
+      <workItem from="1597741433905" duration="26101000" />
+      <workItem from="1597914402321" duration="30510000" />
+      <workItem from="1598283758937" duration="18221000" />
+      <workItem from="1598594375731" duration="19029000" />
+      <workItem from="1599072199345" duration="7806000" />
+      <workItem from="1599113733635" duration="72006000" />
     </task>
     <servers />
   </component>
@@ -386,91 +683,91 @@
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
     <state x="-1040" y="165" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1591470370259" />
-    <state width="1441" height="310" key="GridCell.Tab.0.bottom" timestamp="1597695595516">
+    <state width="1441" height="310" key="GridCell.Tab.0.bottom" timestamp="1597706539910">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595516" />
+    <state width="1441" height="310" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539910" />
     <state width="1921" height="382" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
-    <state width="1441" height="310" key="GridCell.Tab.0.center" timestamp="1597695595516">
+    <state width="1441" height="310" key="GridCell.Tab.0.center" timestamp="1597706539910">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595516" />
+    <state width="1441" height="310" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539910" />
     <state width="1921" height="382" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
-    <state width="1441" height="310" key="GridCell.Tab.0.left" timestamp="1597695595516">
+    <state width="1441" height="310" key="GridCell.Tab.0.left" timestamp="1597706539910">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595516" />
+    <state width="1441" height="310" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539910" />
     <state width="1921" height="382" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
-    <state width="1441" height="310" key="GridCell.Tab.0.right" timestamp="1597695595516">
+    <state width="1441" height="310" key="GridCell.Tab.0.right" timestamp="1597706539910">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595516" />
+    <state width="1441" height="310" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539910" />
     <state width="1921" height="382" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
-    <state width="1441" height="310" key="GridCell.Tab.1.bottom" timestamp="1597695595516">
+    <state width="1441" height="310" key="GridCell.Tab.1.bottom" timestamp="1597706539911">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595516" />
+    <state width="1441" height="310" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539911" />
     <state width="1921" height="382" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.1.center" timestamp="1597695595516">
+    <state width="1441" height="310" key="GridCell.Tab.1.center" timestamp="1597706539911">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.1.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595516" />
+    <state width="1441" height="310" key="GridCell.Tab.1.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539911" />
     <state width="1921" height="382" key="GridCell.Tab.1.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
-    <state width="1441" height="310" key="GridCell.Tab.1.left" timestamp="1597695595516">
+    <state width="1441" height="310" key="GridCell.Tab.1.left" timestamp="1597706539910">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.1.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595516" />
+    <state width="1441" height="310" key="GridCell.Tab.1.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539910" />
     <state width="1921" height="382" key="GridCell.Tab.1.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456198" />
-    <state width="1441" height="310" key="GridCell.Tab.1.right" timestamp="1597695595516">
+    <state width="1441" height="310" key="GridCell.Tab.1.right" timestamp="1597706539911">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.1.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595516" />
+    <state width="1441" height="310" key="GridCell.Tab.1.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539911" />
     <state width="1921" height="382" key="GridCell.Tab.1.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.2.bottom" timestamp="1597695595516">
+    <state width="1441" height="310" key="GridCell.Tab.2.bottom" timestamp="1597706539912">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595516" />
+    <state width="1441" height="310" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539912" />
     <state width="1921" height="382" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.2.center" timestamp="1597695595516">
+    <state width="1441" height="310" key="GridCell.Tab.2.center" timestamp="1597706539912">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.2.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595516" />
+    <state width="1441" height="310" key="GridCell.Tab.2.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539912" />
     <state width="1921" height="382" key="GridCell.Tab.2.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.2.left" timestamp="1597695595516">
+    <state width="1441" height="310" key="GridCell.Tab.2.left" timestamp="1597706539912">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.2.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595516" />
+    <state width="1441" height="310" key="GridCell.Tab.2.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539912" />
     <state width="1921" height="382" key="GridCell.Tab.2.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.2.right" timestamp="1597695595516">
+    <state width="1441" height="310" key="GridCell.Tab.2.right" timestamp="1597706539912">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.2.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595516" />
+    <state width="1441" height="310" key="GridCell.Tab.2.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539912" />
     <state width="1921" height="382" key="GridCell.Tab.2.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.3.bottom" timestamp="1597695595517">
+    <state width="1441" height="310" key="GridCell.Tab.3.bottom" timestamp="1597706539912">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595517" />
+    <state width="1441" height="310" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539912" />
     <state width="1921" height="382" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.3.center" timestamp="1597695595516">
+    <state width="1441" height="310" key="GridCell.Tab.3.center" timestamp="1597706539912">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.3.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595516" />
+    <state width="1441" height="310" key="GridCell.Tab.3.center/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539912" />
     <state width="1921" height="382" key="GridCell.Tab.3.center/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.3.left" timestamp="1597695595516">
+    <state width="1441" height="310" key="GridCell.Tab.3.left" timestamp="1597706539912">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.3.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595516" />
+    <state width="1441" height="310" key="GridCell.Tab.3.left/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539912" />
     <state width="1921" height="382" key="GridCell.Tab.3.left/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state width="1441" height="310" key="GridCell.Tab.3.right" timestamp="1597695595516">
+    <state width="1441" height="310" key="GridCell.Tab.3.right" timestamp="1597706539912">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state width="1441" height="310" key="GridCell.Tab.3.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597695595516" />
+    <state width="1441" height="310" key="GridCell.Tab.3.right/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597706539912" />
     <state width="1921" height="382" key="GridCell.Tab.3.right/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595795456199" />
-    <state x="-867" y="183" key="RiderGenerateDialog" timestamp="1597531807863">
+    <state x="-867" y="183" key="RiderGenerateDialog" timestamp="1599074935950">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state x="-867" y="183" key="RiderGenerateDialog/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1597531807863" />
-    <state x="764" y="221" key="RiderGenerateDialog/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1596052827399" />
+    <state x="-867" y="183" key="RiderGenerateDialog/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1599074935950" />
+    <state x="764" y="221" key="RiderGenerateDialog/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1598135787451" />
     <state x="-1348" y="92" width="1256" height="676" maximized="true" key="VCS.FileHistoryDialog" timestamp="1596832573952">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
@@ -480,6 +777,11 @@
     </state>
     <state x="598" y="139" width="1456" height="948" key="dock-window-1/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1595877992033" />
     <state x="-1440" y="0" width="1456" height="948" maximized="true" key="dock-window-1/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1595873992478" />
+    <state x="-978" y="198" key="run.anything.popup" timestamp="1598220400847">
+      <screen x="-1440" y="0" width="1440" height="860" />
+    </state>
+    <state x="-978" y="198" key="run.anything.popup/0.0.1920.1040/-1440.0.1440.860@-1440.0.1440.860" timestamp="1598220400847" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1598131498555" />
     <state x="-973" y="186" width="670" height="561" key="search.everywhere.popup" timestamp="1593651247628">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>

@@ -9,6 +9,16 @@
       <e p="Assets" t="Include">
         <e p="1 - Scripts" t="Include">
           <e p="_preload.cs" t="Include" />
+          <e p="BuildingSystem" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="BuildingManager.cs" t="Include" />
+              <e p="BuildingManagerCustomInspector.cs" t="Include" />
+              <e p="BuildingPart.cs" t="Include" />
+              <e p="BuildPart.cs" t="Include" />
+              <e p="BuildPartCustomInspector.cs" t="Include" />
+              <e p="Foundation.cs" t="Include" />
+            </e>
+          </e>
           <e p="CacheStrings.cs" t="Include" />
           <e p="ColonistGenerator.cs" t="Include" />
           <e p="ColonistScripts" t="Include">
@@ -25,6 +35,7 @@
                 <e p="AiBaseCustomInspector.cs" t="Include" />
                 <e p="AiSensorsCustomInspector.cs" t="Include" />
                 <e p="AiStatsCustomInspector.cs" t="Include" />
+                <e p="ConvertGameObjects.cs" t="Include" />
                 <e p="GlobalObjectDictionaryInspector.cs" t="Include" />
               </e>
               <e p="GOAP" t="Include">
@@ -60,14 +71,15 @@
               <e p="WeaponHolderRelay.cs" t="Include" />
             </e>
             <e p="AnimationController.cs" t="Include" />
+            <e p="AnimationIdleStates.cs" t="Include" />
             <e p="BaseObjectData.cs" t="Include" />
             <e p="BaseScriptableData.cs" t="Include" />
             <e p="ColonistController.cs" t="Include" />
           </e>
           <e p="Constants.cs" t="Include" />
           <e p="EventRelay.cs" t="Include" />
-          <e p="GameManager.cs" t="Include" />
           <e p="GameScripts" t="Include">
+            <e p="GameManager.cs" t="Include" />
             <e p="Selectable.cs" t="Include" />
             <e p="SelectionManager.cs" t="Include" />
           </e>
@@ -80,6 +92,13 @@
             <e p="NodeType.cs" t="Include" />
             <e p="Resource.cs" t="Include" />
             <e p="ResourceNode.cs" t="Include" />
+          </e>
+          <e p="MapGeneration" t="Include">
+            <e p="MapDisplay.cs" t="Include" />
+            <e p="MapGenerator.cs" t="Include" />
+            <e p="MapGeneratorEditor.cs" t="Include" />
+            <e p="MeshDestroy.cs" t="Include" />
+            <e p="Noise.cs" t="Include" />
           </e>
           <e p="ObjectPlacer" t="Include">
             <e p="ObjectSpawner.cs" t="Include" />
@@ -117,11 +136,14 @@
           <e p="TerrainGenerator.cs" t="Include" />
           <e p="ThirdPersonCharacter.cs" t="Include" />
           <e p="UI" t="Include">
+            <e p="UI_BuildController.cs" t="Include" />
             <e p="UI_ColonistPanelRelay.cs" t="Include" />
             <e p="UI_DevTools.cs" t="Include" />
             <e p="UI_EscapeMenu.cs" t="Include" />
             <e p="UI_ExpandableBar.cs" t="Include" />
             <e p="UI_InfoPanelRelay.cs" t="Include" />
+            <e p="UI_InventoryPanelController.cs" t="Include" />
+            <e p="UI_InventorySlot.cs" t="Include" />
             <e p="UI_ItemPanelRelay.cs" t="Include" />
             <e p="UI_MainMenu.cs" t="Include" />
             <e p="UI_PanelHolderRelay.cs" t="Include" />
@@ -1793,8 +1815,6 @@
             <e p="LICENSE.txt" t="Include" />
           </e>
         </e>
-        <e p="AnimationIdleStates.cs" t="Include" />
-        <e p="test123.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
