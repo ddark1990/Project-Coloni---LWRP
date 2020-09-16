@@ -123,7 +123,7 @@ public class RTSCamera : MonoBehaviour
     
     private void HandleMouseInput()
     {
-        if (EventSystem.current.IsPointerOverGameObject()) return;
+        if (EventSystem.current.IsPointerOverGameObject() || BuildingManager.Instance.heightAdjusting) return;
     
         _distanceToGround = DistanceToGround();
         

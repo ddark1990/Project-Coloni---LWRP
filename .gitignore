@@ -12,7 +12,9 @@
 .idea/
 5-Models/
 12-ImportedPackages
-
+Ludiq/
+Ludiq.Generated/
+BuildingSystem/
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta

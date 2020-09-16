@@ -20,284 +20,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b94e7643-efd0-4934-b8a0-0256359f3c2b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Ai_Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/Ai_Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/ItemType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/NewLayer.terrainlayer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/NewLayer.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Build_Transperant.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Build_Transperant.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Foundation(Wood)/Foundation.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Foundation(Wood)/Foundation.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Foundation(Wood)/Foundation.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Foundation(Wood)/Foundation.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Foundation(Wood)/Texture/Foundation_FoundationStairs_AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Foundation(Wood)/Texture/Foundation_FoundationStairs_AO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Foundation(Wood)/Texture/Foundation_FoundationStairs_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Foundation(Wood)/Texture/Foundation_FoundationStairs_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Foundation(Wood)/Texture/Foundation_FoundationStairs_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Foundation(Wood)/Texture/Foundation_FoundationStairs_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Foundation(Wood)/Texture/Foundation_FoundationStairs_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Foundation(Wood)/Texture/Foundation_FoundationStairs_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Foundation(Wood)/Texture/Materials/Foundation_FoundationStairs_BaseColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Foundation(Wood)/Texture/Materials/Foundation_FoundationStairs_BaseColor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Foundation_Stairs.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Foundation_Stairs.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_AO.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_AO.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_AO.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_AO.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_BaseColor.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_BaseColor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_BaseColor.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_BaseColor.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_Normal.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_Normal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_Normal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_Roughness.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_Roughness.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_Roughness.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Foundation_Stairs_FoundationStairs_Roughness.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Materials/Foundation_Stairs_FoundationStairs_BaseColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/FoundationStairs(Wood)/Texture/Materials/Foundation_Stairs_FoundationStairs_BaseColor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/InvisibleMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/InvisibleMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood).meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Foundation.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Foundation.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture/FoundationWood_Base_Color - Darkend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture/FoundationWood_Base_Color - Darkend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture/FoundationWood_Base_Color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture/FoundationWood_Base_Color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture/FoundationWood_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture/FoundationWood_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture/FoundationWood_Mixed_AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture/FoundationWood_Mixed_AO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture/FoundationWood_Normal_DirectX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture/FoundationWood_Normal_DirectX.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture/FoundationWood_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture/FoundationWood_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture/Materials/FoundationWood_Base_Color.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Old_Foundation(Wood)/Texture/Materials/FoundationWood_Base_Color.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Wall.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/Wall.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Prefabs/Foundation.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Prefabs/Foundation.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Prefabs/Foundation_Stairs.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Prefabs/Foundation_Stairs.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Prefabs/SO_Foundation(BuildingPart).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Prefabs/SO_Foundation(BuildingPart).asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Prefabs/SO_Foundation_Stairs(BuildingPart).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Prefabs/SO_Foundation_Stairs(BuildingPart).asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Prefabs/SO_Wall(BuildingPart).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Prefabs/SO_Wall(BuildingPart).asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildPart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildPart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingPart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingPart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/WoodWall.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/WoodWall.fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_HarvestNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_HarvestNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_Inspect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_Inspect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_PickUpItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_PickUpItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/UI_SmartActionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/UI_SmartActionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_EscapeMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_EscapeMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/StaticUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/StaticUtility.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/RTSCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/RTSCamera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/UI/Inventory/InventorySlot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/UI/Inventory/InventorySlot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Colonists/Dummy/ColonistDummy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Colonists/Dummy/ColonistDummy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels(ItemData).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels(ItemData).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Alcohol_JackDaniels/Item_Food_Jack_Daniels.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Food_MeatCooked/Item_Food_Cooked_Meat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Food_MeatCooked/Item_Food_Cooked_Meat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/Food/Food_MeatUncooked/Item_Food_Uncooked_Meat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/_SmartObjectsData/Action_Pick Up Item.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Items/_SmartObjectsData/Action_Pick Up Item.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush(BaseData).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush(BaseData).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush(ResourceNode).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush(ResourceNode).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush_Test.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush_Test.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Stone_01/Node_Stone_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Stone_01/Node_Stone_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Tree_Small_01/Tree_Small_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Tree_Small_01/Tree_Small_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_03.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Resource_Stone_04.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Stone(BaseData).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Stone(BaseData).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Stone(ItemData).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Resource/Stone/Stone(ItemData).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/4 - Animations/AnimationControllers/ColonistAnimationController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4 - Animations/AnimationControllers/ColonistAnimationController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Axe-Chopping01.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Axe-Chopping01.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Carrying-Lift01.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Carrying-Lift01.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Pickaxe-Mining01.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Pickaxe-Mining01.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Picking Up Object.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4 - Animations/Villager@Picking Up Object.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Gradient_X 200x400.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Gradient_X 200x400.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Gradient_X.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Gradient_X.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/BaseGrass_normals.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/BaseGrass_normals.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Cliffwall.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Cliffwall.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Cliffwall_normals.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Cliffwall_normals.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Flowers.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Flowers.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Flowers_normals.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Flowers_normals.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Grass.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Grass.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/GrassHigherDetail_normals.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/GrassHigherDetail_normals.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Grass_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Grass_02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_normals_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Leaves_normals_01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Moss.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Moss.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Mud.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Mud.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Mud_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Mud_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Pebbles.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Pebbles.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Pebbles_Sand.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Pebbles_Sand.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Pebbles_normals.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Pebbles_normals.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Rockwall.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Rockwall.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Rockwall_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Rockwall_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Sand.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Sand.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Sand_Darker.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Sand_Darker.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Sand_Desert.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Sand_Desert.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Snow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Ground_Textures/Snow.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/ColonistDummy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/ColonistDummy.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Cooked_Wolf_Meat_icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Cooked_Wolf_Meat_icon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Food_CookedMeat.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Food_CookedMeat.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Item_Food_Jack_Daniels.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Item_Food_Jack_Daniels.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Item_Food_Uncooked_Meat.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Item_Food_Uncooked_Meat.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Node_Stone_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Node_Stone_01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Tree_Small_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Tree_Small_01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Tree_Willow_Small_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/Tree_Willow_Small_01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/apple.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/apple.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/box.wooden.large.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/box.wooden.large.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/hatcheticon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/hatcheticon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/mushroomicon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/mushroomicon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/stones.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/stones.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/waterjugicon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/waterjugicon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/wood.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/GameIcons/wood.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/126x126BasicFilledSquare.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/126x126BasicFilledSquare.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/126x740BasicFilledSquare.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/126x740BasicFilledSquare.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/128ANVIL.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/128ANVIL.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/64ANVIL.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/64ANVIL.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_heavy_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_heavy_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_inverse_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_inverse_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_med_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/backpack_med_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_heavy_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_heavy_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_inverse_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_inverse_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_med_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/book_med_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/brokenbone_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/brokenbone_inverse_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_heavy_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_heavy_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_inverse_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_inverse_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_med_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/campfire_med_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/droplet_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/droplet_inverse_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/eatingicon32.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/eatingicon32.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energY_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energY_inverse_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_1024_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_1024_square.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_512_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_512_square.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_heavy_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_heavy_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_inverse_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_med_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/energy_med_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_heavy_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_heavy_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_inverse_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_inverse_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_med_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/fire_med_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_1024_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_1024_square.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_512_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_512_square.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_heavy_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_heavy_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_inverse_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_inverse_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_med_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/food_med_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_heavy_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_inverse_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_inverse_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/hammer_med_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_1024_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_1024_square.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_512_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_512_square.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_heavy_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_heavy_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_inverse_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_inverse_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_med_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/health_med_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_1024_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_1024_square.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_512_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_512_square.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_heavy_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_heavy_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_inverse_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_inverse_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_med_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/love_med_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_1024_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_1024_square.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_512_square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_512_square.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_heavy_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_heavy_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_inverse_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_inverse_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_med_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_med_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_heavy_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_heavy_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_heavy_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_heavy_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_inverse_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_inverse_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_inverse_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_med_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_med_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_med_512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/mood_sad_med_512.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_heavy_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_heavy_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_inverse_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_inverse_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_med_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music1_med_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_heavy_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_heavy_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_inverse_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_inverse_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_med_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music2_med_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_heavy_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_heavy_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_inverse_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_inverse_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_med_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/music3_med_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_heavy_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_heavy_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_inverse_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_inverse_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_med_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/musicnotes_med_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon32.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon32.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon64.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/pickuphandicon64.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/player-buttons-png-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/player-buttons-png-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/spoonandfork.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/spoonandfork.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_heavy_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_heavy_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_inverse_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_inverse_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_med_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/stamina_med_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_heavy_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_heavy_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_heavy_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_heavy_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_inverse_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_inverse_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_inverse_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_inverse_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_med_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_med_128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_med_256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Icons/UIIcons/zzz_med_256.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/circlegradient.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/circlegradient.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/gradient-background-png-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/gradient-background-png-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/hammer_inverse_1024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/hammer_inverse_1024.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnimationIdleStates.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnimationIdleStates.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 4.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 4.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_0.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_0.terrainlayer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_1.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_1.terrainlayer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_2.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_2.terrainlayer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_3.terrainlayer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_3.terrainlayer.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_4.terrainlayer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainToolkitLayers/Demo_Terrain_Layers/Layer_4.terrainlayer.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/test123.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/test123.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -349,10 +139,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ObjectPlacer/ObjectSpawnerDataset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/EventRelay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildPart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Runtime/Volume/VolumeComponent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UnityEditor/2019.4.0f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/LayoutElement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/GOAP/MainGOAP/GOAP/GoapPlanner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/AiBaseCustomInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/ColonyGame 0.0.19/ColonyGame 0.0.18/ColonyGame/Assets/MainGame/Scripts/UI Scripts/ColonistUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingsHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityGame/Car/Assets/__BlockChainCarGame/Scripts/RacingGame.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4BEC26B5-CBC7-4715-8442-F1499E984732/a9/2c65772c/CultureInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/623DD1C5-ED6E-43BC-8659-6AF9203BEC21/98/e44c47ce/DOTween.cs" root0="SKIP_HIGHLIGHTING" />
@@ -380,6 +172,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/623DD1C5-ED6E-43BC-8659-6AF9203BEC21/48/9795866d/TweenSettingsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AnimationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/d6/234ddf82/Material.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/FloorsHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/BaseObjectData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/Foundation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Items/ResourceNode.cs" root0="FORCE_HIGHLIGHTING" />
@@ -462,6 +255,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/SnapshotCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/12-ImportedPackages/QuickOutline/Resources321/Shaders/OutlineFill.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/Constants.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingManager.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/_preload.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingManagerCustomInspector.cs" root0="FORCE_HIGHLIGHTING" />
@@ -485,9 +279,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartState.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/Node.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_Eat.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiBase.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_HaulAway.cs" />
@@ -502,7 +293,6 @@
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/Items/ResourceNode.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_HarvestNode.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_EscapeMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartAction_Inspect.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_MainMenu.cs" />
@@ -533,7 +323,11 @@
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/Foundation.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingManagerCustomInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildPartCustomInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/RTSCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/StaticUtility.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingPart.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/FloorsHolder.cs" />
+        <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingsHolder.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildPart.cs" />
         <option value="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingManager.cs" />
       </list>
@@ -654,7 +448,8 @@
       <workItem from="1598283758937" duration="18221000" />
       <workItem from="1598594375731" duration="19029000" />
       <workItem from="1599072199345" duration="7806000" />
-      <workItem from="1599113733635" duration="72006000" />
+      <workItem from="1599113733635" duration="149463000" />
+      <workItem from="1600068620657" duration="30953000" />
     </task>
     <servers />
   </component>
