@@ -10,14 +10,14 @@ public class BaseObjectData
     public string Id;
     public string ObjectName;
     public string Description;
-    public Sprite Sprite;
+    public Texture SpriteTexture;
 
-    public BaseObjectData(string id, string baseName, string description, Sprite sprite)
+    public BaseObjectData(string id, string baseName, string description, Texture spriteTexture)
     {
         Id = id; //must be unique
         ObjectName = baseName;
         Description = description;
-        Sprite = sprite;
+        SpriteTexture = spriteTexture;
     }
 
     public void SetName(string name)
@@ -28,9 +28,9 @@ public class BaseObjectData
     {
         Description = description;
     }
-    public void SetIcon(Sprite sprite)
+    public void SetIcon(Texture spriteTexture)
     {
-        Sprite = sprite;
+        SpriteTexture = spriteTexture;
     }
 }
 

@@ -15,6 +15,7 @@
 Ludiq/
 Ludiq.Generated/
 BuildingSystem/
+Gaia User Data/
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta

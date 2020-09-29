@@ -7,6 +7,6 @@ namespace ProjectColoni
     {
         public string objectName;
         [TextArea] public string description;
-        public Sprite sprite;
+        public Texture spriteTexture;
     }
 }

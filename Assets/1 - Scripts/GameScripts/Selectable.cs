@@ -37,12 +37,15 @@ namespace ProjectColoni
             _outline.OutlineColor = _selectionManager.selectedColor;
         }
 
+        public GameObject _navMeshTemp;
+        
         private void Update() //if inheriting, must update from top class
         {
             if (!EventSystem.current.IsPointerOverGameObject())
             {
                 OutlineHighlight();
             }
+
         }
 
         protected void OutlineHighlight()

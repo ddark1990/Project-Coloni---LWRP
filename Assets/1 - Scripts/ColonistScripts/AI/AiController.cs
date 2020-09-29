@@ -16,6 +16,12 @@ namespace ProjectColoni
         public bool pickUpAvailable;
         public bool inAction;
 
+        [Header("NavMesh Settings")] 
+        public Vector3 navMeshSize = new Vector3(30,30,30);
+        public float navMeshUpdateDistance = 5;
+
+        private NavMeshSurface _surface;
+        
         [Header("Settings")]
         public float rotSpeed = 5;
         
@@ -28,24 +34,29 @@ namespace ProjectColoni
         public bool _animationPlay; //needed to run once in update loop
         private static readonly int ActionLength = Animator.StringToHash("actionLength");
 
+        
         private void Start()
         {
             OnStartInitializeComponents();
             InitializeSelectable();
+            
+            CreateNavMeshSurface();
         }
+
         
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0)) SetDestinationToMousePosition();
+            //if (selected && Input.GetKeyDown(KeyCode.Mouse1)) SetDestinationToMousePosition();
             
             DrawLineRendererPaths(navMeshAgent, destinationLineRenderer);
-            
-            if (!EventSystem.current.IsPointerOverGameObject())
-            {
-                OutlineHighlight();
-            }
-            
+            if (!EventSystem.current.IsPointerOverGameObject()) OutlineHighlight();
+
             UpdateAction(_tempSmartObject);
+            
+            if (_surface != null)
+            {
+                NavMeshBuilder.UpdateNavMesh(_surface, transform.position, navMeshUpdateDistance);
+            }
         }
 
         //ai ver 1
@@ -55,6 +66,7 @@ namespace ProjectColoni
             
             PerformAction(smartObject);
         }
+
         
         public void StartAction(SmartObject smartObject)
         {
@@ -71,7 +83,8 @@ namespace ProjectColoni
             if (InRange(smartObject)) return;
             
             //Debug.Log("Going to object!");
-            MoveAgent(smartObject.objectCollider.ClosestPointOnBounds(transform.position));
+            //MoveAgent(smartObject.objectCollider.ClosestPointOnBounds(transform.position));
+            MoveAgent(smartObject.transform.position);
         }
         private void PerformAction(SmartObject smartObject)
         {
@@ -109,6 +122,7 @@ namespace ProjectColoni
             
             //smartObject.ResetSmartObject();
             
+            smartObject.beingUsed = false;
             performingForcedAction = false;
             _tempSmartObject = null;
         }
@@ -188,5 +202,14 @@ namespace ProjectColoni
             Destroy(obj, 3);
         }
 
+        //navmesh
+        private void CreateNavMeshSurface()
+        {
+            if (_surface != null) return;
+            _surface = NavMeshBuilder.CreateNavSurface(this, navMeshSize).GetComponentInChildren<NavMeshSurface>();
+            NavMeshBuilder.UpdateNavMesh(_surface, transform.position, navMeshUpdateDistance);
+        }
+
+        
     }
 }

@@ -123,7 +123,6 @@ namespace ProjectColoni
             ClearConflictingComponents(selectedObject);
             
             var collider = selectedObject.AddComponent<MeshCollider>();
-            collider.convex = true;
             
             var rb = selectedObject.AddComponent<Rigidbody>();
             rb.collisionDetectionMode = CollisionDetectionMode.Continuous;

@@ -21,7 +21,7 @@ namespace ProjectColoni
         [SerializeField] private GameObject selectedResourcePanel;
         [SerializeField] private GameObject selectedItemPanel;
         [Header("PanelCache")]
-        public Image selectedImage;
+        public RawImage selectedImage;
         public Text selectedName;
         [Header("Cache")] 
         public UI_InventoryPanelController inventoryPanelController;
@@ -98,21 +98,24 @@ namespace ProjectColoni
             {
                 case AiController aiController:
                     panelHolderRelay.objectName.text = aiController.aiStats.baseObjectInfo.ObjectName;
-                    panelHolderRelay.objectImage.sprite = aiController.aiStats.baseObjectInfo.Sprite;
+                    //panelHolderRelay.objectImage.sprite = aiController.aiStats.baseObjectInfo.Sprite;
+                    panelHolderRelay.objectImage.texture = aiController.aiStats.baseObjectInfo.SpriteTexture;
 
                     infoPanelRelay.descriptionText.text = aiController.aiStats.baseObjectInfo.Description;
                     
                     break;
                 case Node harvestable:
                     panelHolderRelay.objectName.text = harvestable.baseObjectInfo.ObjectName;
-                    panelHolderRelay.objectImage.sprite = harvestable.baseObjectInfo.Sprite;
+                    //panelHolderRelay.objectImage.sprite = harvestable.baseObjectInfo.Sprite;
+                    panelHolderRelay.objectImage.texture = harvestable.baseObjectInfo.SpriteTexture;
 
                     infoPanelRelay.descriptionText.text = harvestable.baseObjectInfo.Description;
                         
                     break;
                 case Item item:
                     panelHolderRelay.objectName.text = item.baseObjectInfo.ObjectName;
-                    panelHolderRelay.objectImage.sprite = item.baseObjectInfo.Sprite;
+                    //panelHolderRelay.objectImage.sprite = item.baseObjectInfo.Sprite;
+                    panelHolderRelay.objectImage.texture = item.baseObjectInfo.SpriteTexture;
 
                     infoPanelRelay.descriptionText.text = item.baseObjectInfo.Description;
                     

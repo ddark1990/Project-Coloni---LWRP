@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using ProjectColoni;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
@@ -17,7 +18,7 @@ namespace ProjectColoni
         public float actionLength = 1;
         [Header("Settings")]
         public float stoppingDistance = 0.2f;
-        
+        [Header("Debug")]
         public string animationTrigger;
 
         public SmartAction activeAction;
@@ -44,6 +45,14 @@ namespace ProjectColoni
             {
                 
             }
+            
+            if (SelectionManager.Instance.hoveringObject == this && _navMeshTemp == null)
+            {
+                _navMeshTemp = NavMeshBuilder.CreateNavSurface(transform.position);
+                NavMeshBuilder.UpdateNavMesh(_navMeshTemp.GetComponentInChildren<NavMeshSurface>());
+            }
+            else if (SelectionManager.Instance.hoveringObject == null && !beingUsed) Destroy(_navMeshTemp, 1);
+
         }
 
         public void SetSmartObjectData(AiController aiController)
@@ -59,61 +68,6 @@ namespace ProjectColoni
             activeAction = null;
             animationTrigger = string.Empty;
             actionLength = 0;
-        }
-        
-        //general
-        protected void Inspect(AiController aiController) //should be able to inspect pretty much anything selectable 
-        {
-            animationTrigger = "Inspect";
-
-            actionLength = aiController.GetRuntimeAnimationClipInfo(animationTrigger).length;
-            
-            //aiController.StartAction(this);
-            
-        }
-        
-        //items
-        protected void PickUp(AiController aiController) //pick up mostly items
-        {
-            animationTrigger = "PickUp";
-            actionLength = aiController.GetRuntimeAnimationClipInfo(animationTrigger).length;
-            
-            //aiController.StartAction(this);
-            
-            /*
-            if(aiController.InRange(this))
-                aiController.inventory.AddItemToInventory(this as Item);
-                */
-
-        }
-        protected void Drop(AiController aiController)
-        {
-            
-        }
-        protected void Eat(AiController aiController)
-        {
-            
-        }
-        
-        //resources
-        protected void HaulAway(AiController aiController) //haul away items that are too heavy to carry inside inventory
-        {
-            
-        }
-        protected void Gather(AiController aiController) //gather only from resource nodes of some sort
-        {
-            switch (gameObject.tag)
-            {
-                case "Wood":
-                    animationTrigger = "GatherWood";
-                    break;
-                case "Stone":
-                    animationTrigger = "GatherStone";
-                    break;
-            }
-            actionLength = 5;
-            
-            //aiController.StartAction(this);
         }
 
         public bool debugGizmosEnabled;

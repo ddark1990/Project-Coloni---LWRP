@@ -219,7 +219,7 @@ namespace ProjectColoni
                     {
                         if (Enum.GetName(typeof(BuildingPart.SnappingParts.PartName), snap.partName) !=
                             Enum.GetName(typeof(BuildingPart.BuildName), _previewPart.buildingPart.buildName)) continue;
-                        
+
                         foreach (var point in snap.snapPoints)
                         {
                             var pointDistance = _hitPart.transform.position + _hitPart.transform.TransformDirection(point.position);
@@ -241,8 +241,11 @@ namespace ProjectColoni
                     pointList.Sort((a, b) =>
                         Vector3.Distance(hit.point, a.Position).CompareTo(Vector3.Distance(hit.point, b.Position)));
 
-                    _previewPart.transform.position = pointList[0].Position; //sorted so can use first in list
-                    _previewPart.transform.eulerAngles = pointList[0].Rotation; //fix rotation
+                    if (pointList.Count > 0)
+                    {
+                        _previewPart.transform.position = pointList[0].Position; //sorted so can use first in list
+                        _previewPart.transform.eulerAngles = _snappedRotation + pointList[0].Rotation;
+                    }
 
                     return;
                 }
@@ -285,11 +288,16 @@ namespace ProjectColoni
         public float rotateFriction = 0.3f;
         public float rotateSmoothness = 25;
         public Quaternion _resultRotation;
+        public Vector3 _snappedRotation;
         
         private void RotatePreview()
         {
             if (inSnap)
             {
+                var currentEuler = _previewPart.transform.eulerAngles;
+                if (Input.GetKeyDown (KeyCode.E)) _snappedRotation = new Vector3(0, 90, 0) + currentEuler;
+                if (Input.GetKeyDown (KeyCode.Q)) _snappedRotation = new Vector3(0, -90, 0) + currentEuler;
+
                 _resultRotation = Quaternion.identity;
                 return;
             }
@@ -297,7 +305,7 @@ namespace ProjectColoni
 
             if (Input.GetKey (KeyCode.E)) _resultRotation = Quaternion.Euler(0, 1 * rotateSpeed * rotateFriction, 0) * currentRotation;
             if (Input.GetKey (KeyCode.Q)) _resultRotation = Quaternion.Euler(0, -1 * rotateSpeed * rotateFriction, 0) * currentRotation;
-            
+
             _previewPart.transform.rotation = Quaternion.Lerp(currentRotation, _resultRotation,
                 Time.deltaTime * rotateSmoothness);
         }
@@ -321,6 +329,14 @@ namespace ProjectColoni
         public void OnCellingBuildPress()
         {
             CreatePreview("Celling");
+        }
+        public void OnWindowWallBuildPress()
+        {
+            CreatePreview("WindowWall");
+        }
+        public void OnRailingBuildPress()
+        {
+            CreatePreview("Railing");
         }
 
         [Serializable]

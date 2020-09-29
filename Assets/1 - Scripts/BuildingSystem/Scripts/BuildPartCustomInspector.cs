@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿#if UNITY_EDITOR
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -71,13 +72,16 @@ namespace ProjectColoni
                     EditorGUILayout.BeginVertical(EditorStyles.helpBox);
                     
                     EditorGUILayout.BeginHorizontal(GUI.skin.box);
-            
                     EditorGUILayout.LabelField("Snapping Points", EditorStyles.boldLabel);
+                    
                     var onAddSnappingPointPress = GUILayout.Button(" + ", EditorStyles.miniButton, GUILayout.Width(50));
-            
                     EditorGUILayout.EndHorizontal();
+                    
+                    EditorGUILayout.BeginHorizontal(GUI.skin.box);
+                    //var onCopySnappingPointPress = GUILayout.Button("Copy Snapping Points", EditorStyles.miniButton, GUILayout.Width(150));
 
                     EditorGUILayout.PropertyField(partName);
+                    EditorGUILayout.EndHorizontal();
 
 
                     for (int j = 0; j < snapPoints.arraySize; j++)
@@ -163,3 +167,4 @@ namespace ProjectColoni
         }
     }
 }
+#endif

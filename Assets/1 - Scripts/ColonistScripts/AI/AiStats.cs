@@ -35,7 +35,7 @@ namespace ProjectColoni
         /// </summary>
         private void InitializeBaseObjectData()
         {
-            baseObjectInfo = baseData != null ? new BaseObjectData(StaticUtility.GenerateUniqueHashId(), baseData.objectName, baseData.description, baseData.sprite) 
+            baseObjectInfo = baseData != null ? new BaseObjectData(StaticUtility.GenerateUniqueHashId(), baseData.objectName, baseData.description, baseData.spriteTexture) 
                 : new BaseObjectData(StaticUtility.GenerateUniqueHashId(), "", "", null); //should generate random base stats, maybe
         }
         

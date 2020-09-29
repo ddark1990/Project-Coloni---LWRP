@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if UNITY_EDITOR
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -82,7 +83,7 @@ namespace ProjectColoni
                         var partObject = new SerializedObject(prefab.objectReferenceValue);
                 
                         var icon = AssetPreview.GetAssetPreview(prefab.objectReferenceValue);
-
+                        
                         //GUI.DrawTexture(new Rect(removeRect.x + slider1, removeRect.y + slider2, removeRect.width + slider3, removeRect.height + slider4), icon, ScaleMode.ScaleToFit);
                         if(prefab.objectReferenceValue != null)
                             EditorGUI.DrawPreviewTexture(new Rect(removeRect.x + 7.5f, removeRect.y + 7.5f, removeRect.width + -15, removeRect.height + -15), icon);
@@ -157,3 +158,5 @@ namespace ProjectColoni
         }
     }
 }
+#endif
+

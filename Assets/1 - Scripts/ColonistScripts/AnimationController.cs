@@ -7,54 +7,85 @@ namespace ProjectColoni
 {
     public class AnimationController : MonoBehaviour
     {
-        private Animator _animator;
-        [SerializeField] private float moveSpeedMultiplier = 1f;
-        [SerializeField] private float animSpeedMultiplier = 1f;
+        [SerializeField] private float moveSpeedMultiplier = 1;
+        [SerializeField] private float animSpeedMultiplier = 1;
+        [SerializeField] private float turnSpeedMultiplier = 360;
+        [SerializeField] private float stationaryTurnSpeed = 180;
+
+        private AiController _controller;
+        private float _forwardAmount;
+        private float _turnAmount;
 
         private int _hash;
         private Animator _lastAnimatorCache; 
         private readonly Dictionary<string,int> _animatorParamCache = new Dictionary<string,int>( );
 
-        private static readonly int Horizontal = Animator.StringToHash("Horizontal");
-        private static readonly int Vertical = Animator.StringToHash("Vertical");
+        private static readonly int Forward = Animator.StringToHash("Forward");
+        private static readonly int Turn = Animator.StringToHash("Turn");
 
-        
-        void Start()
+
+        private void Start()
         {
-            _animator = GetComponent<Animator>();
+            _controller = GetComponent<AiController>();
+            //_controller.animator.applyRootMotion = true;
         }
 
         private void Update()
         {
+            Move(_controller.navMeshAgent.remainingDistance > _controller.navMeshAgent.stoppingDistance
+                ? _controller.navMeshAgent.desiredVelocity
+                : Vector3.zero);
+        }
+
+        private void Move(Vector3 move)
+        {
+            if (move.magnitude > 1f) move.Normalize();
+            move = transform.InverseTransformDirection(move);
             
+            _forwardAmount = move.z;
+            _turnAmount = Mathf.Atan2(move.x, move.z);
+
+            ApplyExtraTurnRotation();
+            
+            UpdateAnimator();
         }
         
-        /*public void OnAnimatorMove()
+        public void OnAnimatorMove()
         {
-             _playerController.playerRigidBody.velocity = _animator.deltaPosition * moveSpeedMultiplier / Time.deltaTime; //apply root motion control
+            var deltaPosition = _controller.animator.deltaPosition;
+            var velocity = deltaPosition * moveSpeedMultiplier / Time.deltaTime;
+            
+            var v = (deltaPosition * moveSpeedMultiplier) / Time.deltaTime;
+
+            // we preserve the existing y part of the current velocity.
+            v.y = velocity.y;
+            velocity = v;
+            _controller.rigidBody.velocity = velocity;
         }
         
-        private void UpdateAnimator() //start updating all the animation states
+        private void ApplyExtraTurnRotation()
         {
-            if( TryGetAnimatorParam( _animator, "Vertical", out _hash ) ) //up and down
+            // help the character turn faster (this is in addition to root rotation in the animation)
+            var turnSpeed = Mathf.Lerp(stationaryTurnSpeed, turnSpeedMultiplier, _forwardAmount);
+            transform.Rotate(0, _turnAmount * turnSpeed * Time.deltaTime, 0);
+        }
+        
+        private void UpdateAnimator()
+        {
+            if( TryGetAnimatorParam(  _controller.animator, "Forward", out _hash ) ) 
             {
-                //_animator.SetFloat(Vertical, _playerController.axisInput.y);
+                _controller.animator.SetFloat(Forward, _forwardAmount);
             }
-            if( TryGetAnimatorParam( _animator, "Horizontal", out _hash ) ) //left and right
+            if( TryGetAnimatorParam(  _controller.animator, "Turn", out _hash ) ) 
             {
-                //_animator.SetFloat(Horizontal, _playerController.axisInput.x);
+                _controller.animator.SetFloat(Turn, _turnAmount);
             }
 
-            if (_playerController.playerRigidBody.velocity.magnitude > 0)
+            if (_controller.rigidBody.velocity.magnitude > 0)
             {
-                _animator.speed = animSpeedMultiplier;
+                _controller.animator.speed = animSpeedMultiplier;
             }
-            else
-            {
-                // don't use that while airborne
-                _animator.speed = 1;
-            }
-        }*/
+        }
         
         private bool TryGetAnimatorParam( Animator animator, string paramName, out int hash ) //caches and resolves the params with no GC allocation per param
         {

@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEditor;
 using UnityEngine;
 
 namespace ProjectColoni
@@ -31,7 +32,23 @@ namespace ProjectColoni
         /// </summary>
         private void InitializeBaseObjectData()
         {
-            baseObjectInfo = baseData != null ? new BaseObjectData(StaticUtility.GenerateUniqueHashId(), baseData.objectName, baseData.description, baseData.sprite) 
+            /*
+            var path = PrefabUtility.GetPrefabAssetPathOfNearestInstanceRoot(this);
+            Debug.Log(path);
+            */
+            
+            //var a = PrefabUtility.GetOutermostPrefabInstanceRoot(gameObject);
+            //Debug.Log(a);
+            //var a = PrefabUtility.GetCorrespondingObjectFromOriginalSource(gameObject);
+            //var a = PrefabUtility.GetCorrespondingObjectFromSource(gameObject);
+            //Debug.Log(a);
+            //var path = AssetDatabase.GetAssetPath(a);
+            //Debug.Log(path);
+
+            //var iconTexture = AssetPreview.GetAssetPreview(this); //fix
+            //Debug.Log(iconTexture);
+        
+            baseObjectInfo = baseData != null ? new BaseObjectData(StaticUtility.GenerateUniqueHashId(), baseData.objectName, baseData.description, baseData.spriteTexture) 
                 : new BaseObjectData(StaticUtility.GenerateUniqueHashId(), "", "", null);
         }
 

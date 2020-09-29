@@ -11,6 +11,14 @@ TagManager:
   - Resource
   - Wood
   - Stone
+  - PW - Prop
+  - PW - Building
+  - Synty Tree
+  - PW - Nature
+  - Synty Medium Farm
+  - Synty Small Farm
+  - Tree
+  - GaiaTerrainMask
   layers:
   - Default
   - TransparentFX
@@ -22,6 +30,10 @@ TagManager:
   - 
   - PostProcessing
   - Ground
+  - PW_VFX
+  - PW_Object_Small
+  - PW_Object_Medium
+  - PW_Object_Large
   - 
   - 
   - 
@@ -31,11 +43,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - WallWindow
   - Celling
   - Railling
   - Doorway

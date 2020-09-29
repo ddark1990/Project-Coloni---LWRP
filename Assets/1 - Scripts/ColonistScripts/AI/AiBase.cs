@@ -18,6 +18,7 @@ namespace ProjectColoni
         [HideInInspector] public Selectable selectable;
         [HideInInspector] public Camera cam;
         [HideInInspector] public LineRenderer destinationLineRenderer;
+        [HideInInspector] public Rigidbody rigidBody;
 
         [HideInInspector] public bool enableGizmos;
 
@@ -28,6 +29,7 @@ namespace ProjectColoni
             sensors = GetComponent<AiSensors>();
             status = GetComponent<AiStatus>();
             inventory = GetComponent<Ai_Inventory>();
+            rigidBody = GetComponent<Rigidbody>();
             navMeshAgent = GetComponent<NavMeshAgent>();
             animator = GetComponent<Animator>();
             selectable = GetComponent<Selectable>();
