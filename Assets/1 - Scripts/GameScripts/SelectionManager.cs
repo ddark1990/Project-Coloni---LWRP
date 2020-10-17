@@ -11,9 +11,10 @@ namespace ProjectColoni
     {
         public static SelectionManager Instance { get; private set; }
 
+        [Header("Selectables")]
         public Selectable currentlySelectedObject;
         public Selectable hoveringObject;
-
+        
         public LayerMask selectableMask;
         
         public Color hoverOverColor;

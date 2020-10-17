@@ -6,14 +6,15 @@ namespace ProjectColoni
 {
     public class Item : SmartObject
     {
-        [Header("Item")]
+        [Header("Item")] 
+        public bool equipped;
         public int itemCount;
         [SerializeField] private BaseScriptableData baseData; 
         
         [Header("Debug")]
         public bool ignore;
         
-        public ItemType itemData;
+        public ItemType itemTypeData;
         public BaseObjectData baseObjectInfo;
 
         

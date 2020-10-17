@@ -19,6 +19,7 @@ TagManager:
   - Synty Small Farm
   - Tree
   - GaiaTerrainMask
+  - BuildingParts
   layers:
   - Default
   - TransparentFX
@@ -29,20 +30,20 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - Ground
+  - Grass
   - PW_VFX
   - PW_Object_Small
   - PW_Object_Medium
   - PW_Object_Large
+  - BuildingNavMesh
   - 
   - 
   - 
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Obstacle
+  - Ground
   - WallWindow
   - Celling
   - Railling

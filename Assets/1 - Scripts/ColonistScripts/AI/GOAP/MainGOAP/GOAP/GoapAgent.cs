@@ -221,7 +221,7 @@ namespace ProjectColoni
 			foreach (GoapAction a in actions) {
 				availableActions.Add (a);
 			}
-			Debug.Log("Found actions: "+prettyPrint(actions));
+			//Debug.Log("Found actions: "+prettyPrint(actions));
 		}
 
 		public static string prettyPrint(HashSet<KeyValuePair<string,object>> state) {

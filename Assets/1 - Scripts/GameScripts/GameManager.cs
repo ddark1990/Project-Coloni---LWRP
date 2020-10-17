@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     public void AddAiToColony(AiController ai)
     {
         AddColonistToList(ai);
-        ai.playerControlled = true;
+        ai.playerOwned = true;
         
         //add colonist button to UI
     }

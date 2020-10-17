@@ -281,6 +281,8 @@ namespace ProjectColoni
                 
                 _heightAdjustment += heightAdjustment;
                 _heightAdjustment = Mathf.Clamp(_heightAdjustment, -0.5f, 0.5f);
+                
+                Debug.Log(heightAdjustment);
             }
         }
         

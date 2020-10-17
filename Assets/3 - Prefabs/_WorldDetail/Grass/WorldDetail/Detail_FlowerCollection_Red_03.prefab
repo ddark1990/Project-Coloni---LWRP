@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4565035689436828916}
   - component: {fileID: 4554203222085169498}
   - component: {fileID: 4546490496504841982}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Detail_FlowerCollection_Red_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

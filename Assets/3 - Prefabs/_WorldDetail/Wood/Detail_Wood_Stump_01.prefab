@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7494482761350110938}
   - component: {fileID: 7523295974211999442}
   - component: {fileID: 7513030151124155022}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Detail_Wood_Stump_01
-  m_TagString: Untagged
+  m_TagString: GaiaTerrainMask
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -25,7 +25,7 @@ namespace ProjectColoni
         public Text selectedName;
         [Header("Cache")] 
         public UI_InventoryPanelController inventoryPanelController;
-        
+
         private SelectionManager _selectionManager;
         private UI_SkillPanel _skillPanel;
 
@@ -201,6 +201,24 @@ namespace ProjectColoni
             _infoWindowOpen = !_infoWindowOpen;
             
             SwitchToWindowView(_infoWindowOpen, "General", "InfoPanel");
+        }
+
+        public void ToggleWalkFaster()
+        {
+            if (_selectionManager.currentlySelectedObject == null) return;
+            
+            _selectionManager.currentlySelectedObject.gameObject.GetComponent<AiController>().moveFaster =
+                !_selectionManager.currentlySelectedObject.gameObject.GetComponent<AiController>().moveFaster;
+        }
+
+        public void OnDraftedColonistButtonPressed()
+        {
+            var colonist = SelectionManager.Instance.currentlySelectedObject as AiController;
+            if (colonist == null) return;
+            colonist.aiStateController.ToggleDraftState();
+            
+            var color = colonist.aiStateController.Drafted ? new Color(1,1,1,1) : new Color(1,1,1,.15f);
+            colonistPanelRelay.draftButton.image.color = color;
         }
         //
         

@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/2 - Scenes/Testing/SmallTestIsland.unity
+    guid: 514ef1f399fb56c4ba1d5aa9ad241eb7
+  - enabled: 0
     path: Assets/2 - Scenes/Game/MainMenu.unity
     guid: 9e22a359d6653bb42b9070373b42e4ad
-  - enabled: 1
+  - enabled: 0
     path: Assets/2 - Scenes/Game/GameScene.unity
     guid: be2b7388562955f4cbe8bda2497de222
   m_configObjects: {}

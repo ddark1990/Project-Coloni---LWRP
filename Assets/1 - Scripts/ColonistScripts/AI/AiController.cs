@@ -11,22 +11,30 @@ namespace ProjectColoni
 {
     public class AiController : AiBase
     {
-        [Header("Ai")]
+        public enum AiStates
+        {
+            Idle,
+            Drafted,
+            Combat,
+            Crafting,
+            Feeding,
+            Relaxing
+        }
+
+        [Header("Ai")] 
+        public AiStates aiStates;
+        public bool moveFaster;
         public bool performingForcedAction;
         public bool pickUpAvailable;
-        public bool inAction;
-
-        [Header("NavMesh Settings")] 
-        public Vector3 navMeshSize = new Vector3(30,30,30);
-        public float navMeshUpdateDistance = 5;
-
-        private NavMeshSurface _surface;
+        public bool actionInProgress;
+        public bool playerOwned;
+        public bool enablePlayerControl;
         
         [Header("Settings")]
         public float rotSpeed = 5;
-        
-        [Header("Debug")]
-        public bool playerControlled;
+
+        [Header("Debug")] 
+        public bool debugControlEnabled;
         
         public SmartObject _tempSmartObject;
         public float _tempActionCounter;
@@ -37,28 +45,55 @@ namespace ProjectColoni
         
         private void Start()
         {
-            OnStartInitializeComponents();
+            OnStartInitializeComponents(this);
             InitializeSelectable();
-            
-            CreateNavMeshSurface();
         }
 
         
         private void Update()
         {
-            //if (selected && Input.GetKeyDown(KeyCode.Mouse1)) SetDestinationToMousePosition();
+            if (selected && Input.GetKeyDown(KeyCode.Mouse1) && enablePlayerControl || debugControlEnabled) SetDestinationToMousePosition();
             
-            DrawLineRendererPaths(navMeshAgent, destinationLineRenderer);
+            //DrawLineRendererPaths(navMeshAgent, destinationLineRenderer); //fix for both ai
             if (!EventSystem.current.IsPointerOverGameObject()) OutlineHighlight();
 
             UpdateAction(_tempSmartObject);
             
-            if (_surface != null)
+            UpdateColonistTerrainHeight();
+            UpdateColonistState();
+        }
+
+        private void UpdateColonistState()
+        {
+            if (aiStateController.Drafted)
             {
-                NavMeshBuilder.UpdateNavMesh(_surface, transform.position, navMeshUpdateDistance);
+                
             }
         }
 
+        public LayerMask terrainHeightMask;
+        private void UpdateColonistTerrainHeight() //move to IK controller, and change to update only when moving
+        {
+            //temp clamp for colonists rotating when picking up objects
+            var a = transform.eulerAngles;
+            a.x = Mathf.Clamp(a.x, 0, 0);
+            transform.eulerAngles = a;
+            
+            Ray ray = new Ray(transform.position + new Vector3(0,2f,0), new Vector3(0,-2,0));
+            //Debug.DrawRay(ray.origin, ray.direction, Color.red);
+            
+            if(Physics.Raycast(ray, out var hitInfo, Mathf.Infinity, terrainHeightMask))
+            {
+                var y = hitInfo.point.y;
+                var transform1 = transform;
+                var pos = transform1.position;
+ 
+                pos.y = y;
+ 
+                transform1.position = pos;
+            }
+        }
+        
         //ai ver 1
         private void UpdateAction(SmartObject smartObject) //work on switching actions/ canceling one out
         {
@@ -90,22 +125,33 @@ namespace ProjectColoni
         {
             if (!InRange(smartObject)) return;
             
-            navMeshAgent.isStopped = true;
+            switch (aiType)
+            {
+                case AiType.Unity:
+                    navMeshAgent.isStopped = true;
+
+                    break;
+                case AiType.AStar:
+                    aiPath.isStopped = true;
+
+                    break;
+            }
 
             _tempActionCounter -= Time.deltaTime;
             animator.SetFloat(ActionLength, _tempActionCounter); 
 
-            RotateTowardsObject(smartObject, rotSpeed);
+            if(!InRange(smartObject)) RotateTowardsObject(smartObject, rotSpeed);
+
             PlayAnimation(smartObject.animationTrigger);
             
             //Debug.Log("Starting Action!");
-            inAction = true;
+            actionInProgress = true;
             
             smartObject.activeAction.Act(this, smartObject);
             
             if (!(_tempActionCounter <= 0)) return;
             
-            inAction = false;
+            actionInProgress = false;
             Debug.Log("Finished Action!");
 
             ResetAction(smartObject);
@@ -113,25 +159,46 @@ namespace ProjectColoni
         private void MoveAgent(Vector3 targetPosition)
         {
             ResetAgent();
-            
-            navMeshAgent.SetDestination(targetPosition);
+
+            switch (aiType)
+            {
+                case AiType.Unity:
+                    navMeshAgent.SetDestination(targetPosition);
+
+                    break;
+                case AiType.AStar:
+                    aiPath.destination = targetPosition;
+                    
+                    break;
+            }
         }
         private void ResetAction(SmartObject smartObject)
         {
             ResetAgent();
             
             //smartObject.ResetSmartObject();
-            
+
             smartObject.beingUsed = false;
             performingForcedAction = false;
             _tempSmartObject = null;
         }
         private void ResetAgent()
         {
-            navMeshAgent.ResetPath();
-            navMeshAgent.isStopped = false;
+            switch (aiType)
+            {
+                case AiType.Unity:
+                    navMeshAgent.ResetPath();
+                    navMeshAgent.isStopped = false;
+
+                    break;
+                case AiType.AStar:
+                    aiPath.destination = transform.position;
+                    aiPath.isStopped = false;
+
+                    break;
+            }
             _animationPlay = false;
-            inAction = false;
+            actionInProgress = false;
             animator.SetFloat(ActionLength, 0);
         }
         private void PlayAnimation(string animName)
@@ -191,7 +258,7 @@ namespace ProjectColoni
             if (!Physics.Raycast(ray, out var hit)) return;
 
             MoveAgent(hit.point);
-            OnGroundClickSpawn(hit.point);
+            //OnGroundClickSpawn(hit.point);
         }
         private void OnGroundClickSpawn(Vector3 posClicked)
         {
@@ -201,15 +268,5 @@ namespace ProjectColoni
             
             Destroy(obj, 3);
         }
-
-        //navmesh
-        private void CreateNavMeshSurface()
-        {
-            if (_surface != null) return;
-            _surface = NavMeshBuilder.CreateNavSurface(this, navMeshSize).GetComponentInChildren<NavMeshSurface>();
-            NavMeshBuilder.UpdateNavMesh(_surface, transform.position, navMeshUpdateDistance);
-        }
-
-        
     }
 }

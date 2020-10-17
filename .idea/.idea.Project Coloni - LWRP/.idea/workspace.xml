@@ -20,84 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b94e7643-efd0-4934-b8a0-0256359f3c2b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Coloni - LWRP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/InvisibleMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/BuildingSystem_Models/InvisibleMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildPartCustomInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildPartCustomInspector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingManagerCustomInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/BuildingSystem/Scripts/BuildingManagerCustomInspector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/AiStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/ConvertGameObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AI/CustomInspector/ConvertGameObjects.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/AnimationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/BaseObjectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/BaseObjectData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/BaseScriptableData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ColonistScripts/BaseScriptableData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/GameScripts/Selectable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/Items/Node.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/Map.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/Map.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MapDisplay.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MapDisplay.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MapGenerator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MapGenerator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MapGeneratorEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MapGeneratorEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MeshDestroy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/MeshDestroy.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/Noise.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/MapGeneration/Noise.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/SmartObjectsManager/SmartObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/ThirdPersonCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/ThirdPersonCharacter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_PanelHolderRelay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_PanelHolderRelay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1 - Scripts/UI/UI_SelectionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/13 - Settigns/LWRP-HighQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/13 - Settigns/LWRP-HighQuality.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene/NavMesh.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene/NavMesh.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene/ReflectionProbe-0.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2 - Scenes/Game/GameScene/ReflectionProbe-0.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Colonists/Dummy/ColonistDummy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3 - Prefabs/_Colonists/Dummy/ColonistDummy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush(BaseData).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush(BaseData).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush(ResourceNode).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush(ResourceNode).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush_Test.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Bush/Node_Bush_Test.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Stone_01.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Stone_01/Node_Stone_01(BaseData).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Stone_01/Node_Stone_01(BaseData).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Stone_01/Node_Stone_01(ResourceNode).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Stone_01/Node_Stone_01(ResourceNode).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Stone_01/Node_Stone_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Stone_01/Node_Stone_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Tree_Small_01.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Tree_Small_01/Tree_Small_01(BaseData).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Tree_Small_01/Tree_Small_01(BaseData).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Tree_Small_01/Tree_Small_01(ResourceNode).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Tree_Small_01/Tree_Small_01(ResourceNode).asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Tree_Small_01/Tree_Small_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Tree_Small_01/Tree_Small_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Tree_Willow_Small_01.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Tree_Willow_Small_01/Tree_Willow_Small_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3 - Prefabs/_Nodes/Node_Tree_Willow_Small_01/Tree_Willow_Small_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/4 - Animations/AnimationControllers/ColonistAnimationController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4 - Animations/AnimationControllers/ColonistAnimationController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Terrain/GrassLayer.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Terrain/GrassLayer.terrainlayer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Terrain/SandLayer.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Terrain/SandLayer.terrainlayer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/8 - Art/Terrain/Terrain.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/8 - Art/Terrain/Terrain.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -497,7 +421,7 @@
       <workItem from="1600919602989" duration="24374000" />
       <workItem from="1601061958340" duration="8574000" />
       <workItem from="1601154641890" duration="3735000" />
-      <workItem from="1601291693186" duration="8280000" />
+      <workItem from="1601291693186" duration="9537000" />
     </task>
     <servers />
   </component>

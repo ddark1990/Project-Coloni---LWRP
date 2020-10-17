@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8930088163472089045}
   - component: {fileID: 8906331060837059905}
   - component: {fileID: 8913314846043053183}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Detail_Wood_Branch_01
-  m_TagString: Untagged
+  m_TagString: GaiaTerrainMask
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

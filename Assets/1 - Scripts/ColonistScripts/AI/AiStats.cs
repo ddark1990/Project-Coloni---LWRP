@@ -14,6 +14,8 @@ namespace ProjectColoni
         
         public BaseObjectData baseObjectInfo;
         public Stats stats;
+
+        private AiController _controller;
         
         private float _damageOverTimeTimer;
 
@@ -26,7 +28,8 @@ namespace ProjectColoni
         {
             InitializeStats();
             InitializeBaseObjectData();
-            
+
+            _controller = GetComponent<AiController>();
             //Debug.Log(baseObjectInfo.Id);
         }
         
@@ -71,7 +74,7 @@ namespace ProjectColoni
         {
             UpdateVitals();
         }
-        
+
         private void UpdateVitals()
         {
             if (IsDead) return;
@@ -79,6 +82,29 @@ namespace ProjectColoni
             DecreaseClampedFloat(stats.Food, stats.HungerRate, out stats.Food);
             DecreaseClampedFloat(stats.Energy, stats.EnergyRate, out stats.Energy);
 
+            if (stats.Stamina <= 0) _controller.moveFaster = false;
+
+            switch (_controller.aiStats.stats.gender)
+            {
+                case Stats.Gender.Male:
+                    if(_controller.moveFaster && _controller.rigidBody.velocity.magnitude > 0) stats.Stamina -= Time.deltaTime * stats.StaminaRate;
+
+                    break;
+                case Stats.Gender.Female:
+                    if(_controller.moveFaster && _controller.rigidBody.velocity.magnitude > 0) stats.Stamina -= Time.deltaTime * stats.StaminaRate;
+
+                    break;
+                case Stats.Gender.Robot:
+                    break;
+                case Stats.Gender.Alien:
+                    break;
+                case Stats.Gender.Animal:
+                    if(_controller.moveFaster && _controller.aiPath.velocity.magnitude > 0) stats.Stamina -= Time.deltaTime * stats.StaminaRate;
+    
+                    break;
+            }
+            if (stats.Stamina < statsData.maxStamina) stats.Stamina += Time.deltaTime * stats.StaminaRate / stats.StaminaRate;
+            
             if (stats.Food <= 0)
             {
                 TakeDamageOverTime(10,3);
@@ -123,6 +149,8 @@ namespace ProjectColoni
         {
             IsDead = true;
 
+            _controller.animator.SetTrigger("Die");
+            
             Debug.Log("Died " + obj);
         }
     }

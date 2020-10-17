@@ -10,7 +10,8 @@ namespace ProjectColoni
             Male = 0,
             Female,
             Robot,
-            Alien
+            Alien, 
+            Animal
         }
 
         //primary info

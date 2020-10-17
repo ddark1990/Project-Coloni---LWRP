@@ -9,6 +9,8 @@ namespace ProjectColoni
         [Serializable]
         public struct ItemData
         {
+            public bool equipment;
+            public EquipmentSlot.EquipmentType equipmentType;
             public int stackLimit;
             public float itemWeight;
             public Sprite inventorySprite;

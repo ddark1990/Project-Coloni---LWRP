@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 554849048053246916}
   - component: {fileID: 561744717716106808}
   - component: {fileID: 571870104790579988}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Detail_Wood_Twig_02
-  m_TagString: Untagged
+  m_TagString: GaiaTerrainMask
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
