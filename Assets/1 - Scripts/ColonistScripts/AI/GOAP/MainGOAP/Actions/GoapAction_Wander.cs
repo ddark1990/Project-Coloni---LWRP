@@ -14,7 +14,6 @@ namespace ProjectColoni
     
         private float _tempWaitTime;
         private float _elapsedTime;
-        private NavMeshPath _path;
         private bool _completed;
 
         public GoapAction_Wander()
@@ -44,34 +43,25 @@ namespace ProjectColoni
             return false;
         }
 
+        private Vector3 tempVector;
         public override bool checkProceduralPrecondition(AiController controller)
         {
+            tempVector = StaticUtility.GetRandomRadialPos(transform, wanderRadius);
             return true;
         }
 
         public override bool perform(AiController controller)
         {
-            if (_elapsedTime <= 0 && !controller.navMeshAgent.hasPath)
-            {
-                //Debug.Log("Starting to wander.");
-                _path = new NavMeshPath();
+            if (_elapsedTime <= 0 && tempVector != transform.position) controller.aiPath.destination = tempVector;
 
-                NavMesh.CalculatePath(controller.navMeshAgent.transform.position, StaticUtility.GetRandomRadialPos(transform, wanderRadius), NavMesh.AllAreas, _path);
-                //Debug.Log("Path Calculated for " + agent.name);
-
-                controller.navMeshAgent.SetPath(_path);
-                //Debug.Log("Path Set for " + agent.name);
-            }
-
-            if (!(controller.navMeshAgent.remainingDistance <= controller.navMeshAgent.stoppingDistance)) return true;
+            if (!(controller.aiPath.remainingDistance <= controller.aiPath.endReachedDistance)) return true;
             
             //Debug.Log("Started waiting.");
             _elapsedTime += Time.deltaTime;
 
             if (!(_elapsedTime >= _tempWaitTime)) return true;
-            
+
             //Debug.Log("Finished waiting.");
-            controller.navMeshAgent.ResetPath();
             _completed = true;
 
             return true;

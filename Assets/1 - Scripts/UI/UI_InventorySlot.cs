@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace ProjectColoni
 {
-    public class UI_InventorySlot : MonoBehaviour
+    public class UI_InventorySlot : Slot
     {
         public bool active;
         
@@ -12,5 +13,10 @@ namespace ProjectColoni
         public Text itemDescription;
         public Text itemCount;
         public Text itemWeight;
+
+        public Button useButton;
+        public Button dropButton;
+        public Button equipButton;
+       
     }
 }

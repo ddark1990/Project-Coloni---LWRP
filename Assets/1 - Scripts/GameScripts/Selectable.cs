@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Doozy.Engine.Events;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
@@ -36,8 +37,6 @@ namespace ProjectColoni
             _outline.OutlineWidth = _selectionManager.outlineWidth;
             _outline.OutlineColor = _selectionManager.selectedColor;
         }
-
-        public GameObject _navMeshTemp;
         
         private void Update() //if inheriting, must update from top class
         {

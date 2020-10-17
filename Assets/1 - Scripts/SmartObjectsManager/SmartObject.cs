@@ -41,18 +41,10 @@ namespace ProjectColoni
                 OutlineHighlight();
             }
 
-            if (usedBy != null && usedBy.inAction)
+            if (usedBy != null && usedBy.actionInProgress)
             {
                 
             }
-            
-            if (SelectionManager.Instance.hoveringObject == this && _navMeshTemp == null)
-            {
-                _navMeshTemp = NavMeshBuilder.CreateNavSurface(transform.position);
-                NavMeshBuilder.UpdateNavMesh(_navMeshTemp.GetComponentInChildren<NavMeshSurface>());
-            }
-            else if (SelectionManager.Instance.hoveringObject == null && !beingUsed) Destroy(_navMeshTemp, 1);
-
         }
 
         public void SetSmartObjectData(AiController aiController)

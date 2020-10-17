@@ -22,6 +22,12 @@ public class RTSCamera : MonoBehaviour
     public float scrollZoomSensitivity = 10f;
     public float heightDampening = 5f;
 
+    [Header("Movement Bounds")]
+    public float cameraBoundMinX;
+    public float cameraBoundMaxX;
+    public float cameraBoundMinZ;
+    public float cameraBoundMaxZ;
+
     [Header("Axis Strings")]
     public string horizontalAxis = "Horizontal";
     public string verticalAxis = "Vertical";
@@ -72,7 +78,8 @@ public class RTSCamera : MonoBehaviour
         _inputAxis = new Vector2(Input.GetAxis(horizontalAxis), Input.GetAxis(verticalAxis)).normalized;
         _mouseAxis = new Vector2(Input.GetAxis(mouseHorizontalAxis), Input.GetAxis(mouseVerticalAxis)).normalized;
         _mouseScroll = Input.GetAxisRaw(zoomingAxis);
-        
+
+        ClampCameraBounds();
         HandleMovementInput();
         HandleRotationInput();
         HandleMouseInput();
@@ -82,10 +89,11 @@ public class RTSCamera : MonoBehaviour
     {
         var transform1 = transform;
         var facing = _inputAxis.magnitude > 0 ? transform1.forward.normalized * _inputAxis.y + transform1.right.normalized * _inputAxis.x : Vector3.zero;
-        
         _newPos += facing * panSens;
 
-        _transform.position = Vector3.Lerp(_transform.position, new Vector3(_newPos.x, _targetHeight + _difference, _newPos.z), Time.deltaTime * GetNormalizedValue(smoothDamp, 1f, 10f));
+        _transform.position = Vector3.Lerp(_transform.position, 
+            new Vector3(Mathf.Clamp(_newPos.x, cameraBoundMinX, cameraBoundMaxX), _targetHeight + _difference, Mathf.Clamp(_newPos.z, cameraBoundMinZ, cameraBoundMaxZ)), 
+            Time.deltaTime * GetNormalizedValue(smoothDamp, 1f, 10f));
     }
 
     private void HandleRotationInput() //add smoothing
@@ -120,6 +128,18 @@ public class RTSCamera : MonoBehaviour
     {
         return newMin + value * (newMax - newMin);
     }
+
+    
+    private void ClampCameraBounds()
+    {
+        var position = _newPos;
+        
+        position = new Vector3(
+            Mathf.Clamp(position.x, cameraBoundMinX, cameraBoundMaxX),
+            Mathf.Clamp(position.y, minHeight, maxHeight),
+            Mathf.Clamp(position.z, cameraBoundMinZ, cameraBoundMaxZ));
+        _newPos = position;
+    }
     
     private void HandleMouseInput()
     {
@@ -143,7 +163,7 @@ public class RTSCamera : MonoBehaviour
     {
         var ray = new Ray(_transform.position, Vector3.down);
         
-        var distanceToGround = Physics.Raycast(ray, out var hit, groundMask) ? (hit.point - _transform.position).magnitude : 0f;
+        var distanceToGround = Physics.Raycast(ray, out var hit, Mathf.Infinity, groundMask) ? (hit.point - _transform.position).magnitude : 0f;
         
         Debug.DrawLine(ray.origin, hit.point);
 

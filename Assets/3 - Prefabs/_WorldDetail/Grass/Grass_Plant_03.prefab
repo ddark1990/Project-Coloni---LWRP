@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3183535806824653042}
   - component: {fileID: 3194992817865305424}
   - component: {fileID: 3202609512154964688}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Grass_Plant_03
   m_TagString: GaiaTerrainMask
   m_Icon: {fileID: 0}

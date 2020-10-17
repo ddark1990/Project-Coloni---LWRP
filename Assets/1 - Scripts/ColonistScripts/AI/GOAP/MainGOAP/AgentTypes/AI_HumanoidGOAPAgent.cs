@@ -93,10 +93,10 @@ namespace ProjectColoni
          
             if (!aiController.aiStats.IsDead)
             {
-                aiController.navMeshAgent.SetDestination(nextAction.target.transform.position);
+                aiController.aiPath.destination = nextAction.target.transform.position;
             }
 
-            if (aiController.navMeshAgent.hasPath && !aiController.navMeshAgent.pathPending && aiController.navMeshAgent.remainingDistance <= aiController.navMeshAgent.stoppingDistance)
+            if (aiController.aiPath.hasPath && !aiController.aiPath.pathPending && aiController.aiPath.remainingDistance <= aiController.aiPath.endReachedDistance)
             {
                 nextAction.setInRange(true);
                 previousDestination = nextAction.target.transform.position;

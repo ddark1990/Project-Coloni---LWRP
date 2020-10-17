@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 9193212150517404665}
   - component: {fileID: 9219005778001458533}
   - component: {fileID: 9210303774803467411}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Detail_Wood_Log_01
-  m_TagString: Untagged
+  m_TagString: GaiaTerrainMask
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

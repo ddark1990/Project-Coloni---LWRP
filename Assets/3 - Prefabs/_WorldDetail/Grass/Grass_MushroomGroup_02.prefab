@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 911402050478637962}
   - component: {fileID: 905042611552048112}
   - component: {fileID: 977188654328490814}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Grass_MushroomGroup_02
   m_TagString: GaiaTerrainMask
   m_Icon: {fileID: 0}

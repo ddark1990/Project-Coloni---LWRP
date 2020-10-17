@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace ProjectColoni
@@ -9,6 +10,8 @@ namespace ProjectColoni
     {
         [SerializeField] private float moveSpeedMultiplier = 1;
         [SerializeField] private float animSpeedMultiplier = 1;
+        [SerializeField] [Range(.1f, 10f)]private float nonRootAnimSpeedMultiplier = 4.2f;
+        [SerializeField] [Range(.1f, 10f)]private float nonRootIdleSpeedMultiplier = 5.5f;
         [SerializeField] private float turnSpeedMultiplier = 360;
         [SerializeField] private float stationaryTurnSpeed = 180;
 
@@ -22,29 +25,99 @@ namespace ProjectColoni
 
         private static readonly int Forward = Animator.StringToHash("Forward");
         private static readonly int Turn = Animator.StringToHash("Turn");
+        private static readonly int MoveFaster = Animator.StringToHash("MoveFaster");
+        private static readonly int DraftedState = Animator.StringToHash("DraftedState");
+        private static readonly int DrawPistol = Animator.StringToHash("DrawPistol");
 
 
         private void Start()
         {
             _controller = GetComponent<AiController>();
-            //_controller.animator.applyRootMotion = true;
         }
 
         private void Update()
         {
-            Move(_controller.navMeshAgent.remainingDistance > _controller.navMeshAgent.stoppingDistance
-                ? _controller.navMeshAgent.desiredVelocity
-                : Vector3.zero);
+            switch (_controller.aiType)
+            {
+                case AiBase.AiType.Unity:
+                    Move(_controller.navMeshAgent.remainingDistance > _controller.navMeshAgent.stoppingDistance
+                        ? _controller.navMeshAgent.desiredVelocity
+                        : Vector3.zero);
+
+                    break;
+                case AiBase.AiType.AStar:
+                    switch (_controller.aiStats.stats.gender)
+                    {
+                        case Stats.Gender.Male:
+                            Move(_controller.aiPath.remainingDistance > _controller.aiPath.endReachedDistance
+                                ? _controller.aiPath.desiredVelocity
+                                : Vector3.zero);
+
+                            break;
+                        case Stats.Gender.Female:
+                            Move(_controller.aiPath.remainingDistance > _controller.aiPath.endReachedDistance
+                                ? _controller.aiPath.desiredVelocity
+                                : Vector3.zero);
+
+                            break;
+                        case Stats.Gender.Robot:
+                            break;
+                        case Stats.Gender.Alien:
+                            break;
+                        case Stats.Gender.Animal:
+                            Move(_controller.aiPath.remainingDistance > _controller.aiPath.endReachedDistance
+                                ? _controller.aiPath.desiredVelocity
+                                : Vector3.zero);
+                            break;
+                    }
+
+                    break;
+            }
         }
 
         private void Move(Vector3 move)
         {
             if (move.magnitude > 1f) move.Normalize();
             move = transform.InverseTransformDirection(move);
-            
             _forwardAmount = move.z;
             _turnAmount = Mathf.Atan2(move.x, move.z);
 
+            switch (_controller.aiType)
+            {
+                case AiBase.AiType.Unity:
+
+                    break;
+                
+                case AiBase.AiType.AStar:
+
+                    switch (_controller.aiStats.stats.gender) 
+                    {
+                        case Stats.Gender.Male:
+                            //_controller.aiPath.canMove = false;
+                            _controller.aiPath.MovementUpdate(Time.deltaTime, out move, out var nextRotation1);
+                            _controller.animator.applyRootMotion = true;
+
+                            break;
+                        case Stats.Gender.Female:
+                            //_controller.aiPath.canMove = false;
+                            _controller.aiPath.MovementUpdate(Time.deltaTime, out move, out var nextRotation2);
+                            _controller.animator.applyRootMotion = true;
+
+                            break;
+                        case Stats.Gender.Robot:
+                            break;
+                        case Stats.Gender.Alien:
+                            break;
+                        case Stats.Gender.Animal:
+                            //_controller.aiPath.canMove = true;
+                            _controller.animator.applyRootMotion = false;
+
+                            break;
+                    }
+
+                    break;
+            }
+            
             ApplyExtraTurnRotation();
             
             UpdateAnimator();
@@ -52,15 +125,42 @@ namespace ProjectColoni
         
         public void OnAnimatorMove()
         {
-            var deltaPosition = _controller.animator.deltaPosition;
-            var velocity = deltaPosition * moveSpeedMultiplier / Time.deltaTime;
+            Vector3 deltaPosition;
+            Vector3 velocity;
+            Vector3 v;
+            switch (_controller.aiStats.stats.gender) 
+            {
+                case Stats.Gender.Male:
+                    deltaPosition = _controller.animator.deltaPosition;
+                    velocity = deltaPosition * moveSpeedMultiplier / Time.deltaTime;
             
-            var v = (deltaPosition * moveSpeedMultiplier) / Time.deltaTime;
+                    v = (deltaPosition * moveSpeedMultiplier) / Time.deltaTime;
 
-            // we preserve the existing y part of the current velocity.
-            v.y = velocity.y;
-            velocity = v;
-            _controller.rigidBody.velocity = velocity;
+                    // we preserve the existing y part of the current velocity.
+                    v.y = velocity.y;
+                    velocity = v;
+                    _controller.rigidBody.velocity = velocity;
+
+                    break;
+                case Stats.Gender.Female:
+                    deltaPosition = _controller.animator.deltaPosition;
+                    velocity = deltaPosition * moveSpeedMultiplier / Time.deltaTime;
+            
+                    v = (deltaPosition * moveSpeedMultiplier) / Time.deltaTime;
+
+                    // we preserve the existing y part of the current velocity.
+                    v.y = velocity.y;
+                    velocity = v;
+                    _controller.rigidBody.velocity = velocity;
+
+                    break;
+                case Stats.Gender.Robot:
+                    break;
+                case Stats.Gender.Alien:
+                    break;
+                case Stats.Gender.Animal:
+                    break;
+            }
         }
         
         private void ApplyExtraTurnRotation()
@@ -72,6 +172,7 @@ namespace ProjectColoni
         
         private void UpdateAnimator()
         {
+            Debug.Log(_controller.equipment.IsEquipped(EquipmentSlot.EquipmentType.RangedWep));
             if( TryGetAnimatorParam(  _controller.animator, "Forward", out _hash ) ) 
             {
                 _controller.animator.SetFloat(Forward, _forwardAmount);
@@ -80,10 +181,54 @@ namespace ProjectColoni
             {
                 _controller.animator.SetFloat(Turn, _turnAmount);
             }
-
-            if (_controller.rigidBody.velocity.magnitude > 0)
+            if( TryGetAnimatorParam(  _controller.animator, "MoveFaster", out _hash ) ) 
             {
-                _controller.animator.speed = animSpeedMultiplier;
+                _controller.animator.SetBool(MoveFaster, _controller.moveFaster);
+            }
+            if( TryGetAnimatorParam(  _controller.animator, "DraftedState", out _hash ) ) 
+            {
+                _controller.animator.SetBool(DraftedState, _controller.aiStateController.Drafted);
+            }
+            if( _controller.aiStateController.Drafted && 
+                _controller.equipment.IsEquipped(EquipmentSlot.EquipmentType.RangedWep) && 
+                TryGetAnimatorParam(  _controller.animator, "DrawPistol", out _hash ) ) //fix af
+            {
+                _controller.animator.SetTrigger(DrawPistol);
+            }
+            
+            switch (_controller.aiStats.stats.gender)
+            {
+                case Stats.Gender.Male:
+                    if (_controller.rigidBody.velocity.magnitude > 0)
+                    {
+                        _controller.animator.speed = animSpeedMultiplier;
+                    }
+                    break;
+                case Stats.Gender.Female:
+                    if (_controller.rigidBody.velocity.magnitude > 0)
+                    {
+                        _controller.animator.speed = animSpeedMultiplier;
+                    }
+                    break;
+                case Stats.Gender.Robot:
+                    break;
+                case Stats.Gender.Alien:
+                    break;
+                case Stats.Gender.Animal:
+                    var animSpeed = _controller.aiPath.desiredVelocity.magnitude * nonRootAnimSpeedMultiplier;
+
+                    if (_controller.aiPath.remainingDistance > _controller.aiPath.endReachedDistance)
+                    {
+                        _controller.animator.speed = animSpeed;
+                    }
+                    else
+                    {
+                        animSpeed /= nonRootIdleSpeedMultiplier;
+                        _controller.animator.speed = animSpeed;
+
+                    }
+
+                    break;
             }
         }
         

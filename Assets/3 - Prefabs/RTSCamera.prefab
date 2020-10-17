@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5117194073028250611}
   - component: {fileID: 5117194073028250612}
   - component: {fileID: 5117194073028250615}
+  - component: {fileID: 1369660933}
   m_Layer: 0
   m_Name: RTSCamera
   m_TagString: MainCamera
@@ -48,7 +49,7 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
+  m_SensorSize: {x: 70.41, y: 52.63}
   m_LensShift: {x: 0, y: 0}
   m_FocalLength: 50
   m_NormalizedViewPortRect:
@@ -71,7 +72,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -101,18 +102,18 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_CameraOutput: 0
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 1
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 2
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
+  m_ClearDepth: 1
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
@@ -128,13 +129,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733b657b73c3a9d42aaf7c52f9324032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panSens: 0.3
-  smoothDamp: 4
-  rotationSens: 100
-  minHeight: 2
-  maxHeight: 75
-  scrollZoomSensitivity: 30
-  heightDampening: 5
+  panSens: 0.5
+  smoothDamp: 0.5
+  rotationSens: 0.8
+  rotationSmooth: 0
+  minHeight: 5
+  maxHeight: 35
+  scrollZoomSensitivity: 0.2
+  heightDampening: 0.1
+  cameraBoundMinX: -110
+  cameraBoundMaxX: 75
+  cameraBoundMinZ: -110
+  cameraBoundMaxZ: 75
   horizontalAxis: Horizontal
   verticalAxis: Vertical
   zoomingAxis: Mouse ScrollWheel
@@ -142,5 +148,20 @@ MonoBehaviour:
   mouseVerticalAxis: Mouse Y
   groundMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 4194304
   cameraSmoothing: 1
+  shit: 0
+  fuck: {x: 0, y: 0, z: 0}
+--- !u!114 &1369660933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5117194073028250608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d696a6f8c03944a3fa50697627133c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderSize: -2

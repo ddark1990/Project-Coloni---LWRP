@@ -22,5 +22,5 @@ MonoBehaviour:
   comfort: 100
   recreation: 100
   hungerRate: 0.5
-  staminaRate: 0.1
+  staminaRate: 5
   energyRate: 0.05

@@ -17,10 +17,4 @@ MonoBehaviour:
   workSpeedModifier: 0
   movementSpeedModifier: 0
   learnSpeedModifier: 0
-  skillModifiers:
-  - skillName: 
-    levelMod: 0
-    disabled: 0
-  - skillName: 
-    levelMod: 0
-    disabled: 0
+  skillModifiers: []

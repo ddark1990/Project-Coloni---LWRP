@@ -20,6 +20,8 @@ namespace ProjectColoni
         public Text foodText;
         public Text comfortText;
         public Text recreationText;
+        [Header("Buttons")]
+        public Button draftButton;
 
         private void OnEnable()
         {
