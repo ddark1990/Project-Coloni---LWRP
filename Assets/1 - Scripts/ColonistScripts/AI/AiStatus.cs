@@ -18,7 +18,7 @@ namespace ProjectColoni
             if(statusNotifications.Contains(notification)) statusNotifications.Remove(notification);
         }
         
-        public void AddModifier(StatusModifier modifier)
+        /*public void AddModifier(StatusModifier modifier)
         {
             if (statusNotifications.Contains(modifier) && modifier.stackable)
             {
@@ -42,6 +42,6 @@ namespace ProjectColoni
         public void RemoveModifier(StatusModifier modifier)
         {
             if(statusNotifications.Contains(modifier)) statusNotifications.Remove(modifier);
-        }
+        }*/
     }
 }

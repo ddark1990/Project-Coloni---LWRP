@@ -40,7 +40,10 @@ namespace ProjectColoni
             sensors = GetComponent<AiSensors>();
             status = GetComponent<AiStatus>();
             inventory = GetComponent<Ai_Inventory>();
+            
             equipment = GetComponent<Ai_Equipment>();
+            equipment.weaponHolderRelay = GetComponentInChildren<WeaponHolderRelay>();
+            
             rigidBody = GetComponent<Rigidbody>();
             
             switch (aiType)

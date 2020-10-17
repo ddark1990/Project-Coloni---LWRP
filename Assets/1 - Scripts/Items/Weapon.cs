@@ -9,12 +9,17 @@ namespace ProjectColoni
     {
         public enum WeaponType
         {
-            Melee,
-            Ranged,
-            Tool
+            Pistol,
+            Riffle,
+            Bow,
+            Hatchet,
+            PickAxe,
+            Hammer,
+            Spear
         }
 
         public WeaponType weaponType;
+        public string weaponTag; //pre much the name tag, defined in the WeaponModel class with the tag (not the item)
 
         public int damage;
         [Tooltip("If ranged.")] public int clipSize;

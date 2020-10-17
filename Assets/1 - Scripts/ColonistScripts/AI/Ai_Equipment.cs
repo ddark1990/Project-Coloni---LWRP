@@ -10,6 +10,8 @@ namespace ProjectColoni
     {
         public EquipmentSlot[] equipmentSlots;
         
+        [HideInInspector] public WeaponHolderRelay weaponHolderRelay;
+        
         private AiController _controller;
 
         public void EquipItem(Item item)
