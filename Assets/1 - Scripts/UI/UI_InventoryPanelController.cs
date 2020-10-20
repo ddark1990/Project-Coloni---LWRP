@@ -74,7 +74,7 @@ namespace ProjectColoni
                     
                     slot.itemIcon.sprite = item.itemTypeData.itemData.inventorySprite;
                     
-                    slot.dropButton.onClick.AddListener(delegate { controller.inventory.DropItem(item); });
+                    slot.dropButton.onClick.AddListener(delegate { EventRelay.OnItemDropped(item); });
 
                     var useCanvasGroup = slot.useButton.GetComponent<CanvasGroup>();
                     var dropCanvasGroup = slot.dropButton.GetComponent<CanvasGroup>();
@@ -99,7 +99,7 @@ namespace ProjectColoni
                             SetCanvasGroupSettings(dropCanvasGroup, 1, true);
                             SetCanvasGroupSettings(equipCanvasGroup, 1, true);
                             
-                            slot.equipButton.onClick.AddListener(delegate { controller.equipment.EquipItem(item); });
+                            slot.equipButton.onClick.AddListener(delegate { EventRelay.OnItemEquipped(item); });
                             
                             break;
                     }
@@ -145,8 +145,8 @@ namespace ProjectColoni
                     SetCanvasGroupSettings(_dropButtonCanvasGroup, 1, true);
                     SetCanvasGroupSettings(_unEquipButtonCanvasGroup, 1, true);
                     
-                    slot.unEquipButton.onClick.AddListener(delegate { controller.equipment.UnEquipItem(item); });
-                    slot.dropButton.onClick.AddListener(delegate { controller.inventory.DropEquippedItem(item); });
+                    slot.unEquipButton.onClick.AddListener(delegate { EventRelay.OnItemUnEquipped(item); });
+                    slot.dropButton.onClick.AddListener(delegate { EventRelay.OnItemDropped(item); });
                     
                 }
             }

@@ -16,7 +16,9 @@ namespace ProjectColoni
         }
 
         [HideInInspector] public AiStats aiStats;
-        [HideInInspector] public AiStateController aiStateController;
+        [HideInInspector] public AiStateController stateController;
+        [HideInInspector] public AnimationController animationController;
+        [HideInInspector] public Ai_CombatController combatController;
         [HideInInspector] public AiSensors sensors;
         [HideInInspector] public AiStatus status;
         [HideInInspector] public Ai_Inventory inventory;
@@ -58,9 +60,11 @@ namespace ProjectColoni
                     break;
             }
             
-            aiStateController = new AiStateController(aiController);
+            stateController = new AiStateController(aiController);
+            combatController = new Ai_CombatController(aiController);
             
             animator = GetComponent<Animator>();
+            animationController = GetComponent<AnimationController>();
             selectable = GetComponent<Selectable>();
             destinationLineRenderer = GetComponent<LineRenderer>();
             cam = SelectionManager.Instance.cam;

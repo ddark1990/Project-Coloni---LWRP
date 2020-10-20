@@ -215,10 +215,19 @@ namespace ProjectColoni
         {
             var colonist = SelectionManager.Instance.currentlySelectedObject as AiController;
             if (colonist == null) return;
-            colonist.aiStateController.ToggleDraftState();
             
-            var color = colonist.aiStateController.Drafted ? new Color(1,1,1,1) : new Color(1,1,1,.15f);
+            colonist.combatController.ToggleDraftState();
+            
+            var color = colonist.stateController.Drafted ? new Color(1,1,1,1) : new Color(1,1,1,.15f);
             colonistPanelRelay.draftButton.image.color = color;
+        }
+        
+        public void OnChangeCombatModeButtonPress()
+        {
+            var colonist = SelectionManager.Instance.currentlySelectedObject as AiController;
+            if (colonist == null) return;
+
+            colonist.combatController.ToggleCombatMode();
         }
         //
         

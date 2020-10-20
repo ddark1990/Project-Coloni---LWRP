@@ -6,7 +6,6 @@ namespace ProjectColoni
 {
     public class WeaponModel : MonoBehaviour
     {
-        public Weapon.WeaponType weaponType;
-        public string weaponTag;
+        //will hold IK reference transforms/data
     }
 }

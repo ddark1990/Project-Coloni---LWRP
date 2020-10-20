@@ -11,18 +11,7 @@ namespace ProjectColoni
 {
     public class AiController : AiBase
     {
-        public enum AiStates
-        {
-            Idle,
-            Drafted,
-            Combat,
-            Crafting,
-            Feeding,
-            Relaxing
-        }
-
         [Header("Ai")] 
-        public AiStates aiStates;
         public bool moveFaster;
         public bool performingForcedAction;
         public bool pickUpAvailable;
@@ -42,13 +31,14 @@ namespace ProjectColoni
         public bool _animationPlay; //needed to run once in update loop
         private static readonly int ActionLength = Animator.StringToHash("actionLength");
 
+        public LayerMask terrainHeightMask;
+        
         
         private void Start()
         {
             OnStartInitializeComponents(this);
             InitializeSelectable();
         }
-
         
         private void Update()
         {
@@ -65,13 +55,12 @@ namespace ProjectColoni
 
         private void UpdateColonistState()
         {
-            if (aiStateController.Drafted)
+            if (stateController.Drafted)
             {
                 
             }
         }
 
-        public LayerMask terrainHeightMask;
         private void UpdateColonistTerrainHeight() //move to IK controller, and change to update only when moving
         {
             //temp clamp for colonists rotating when picking up objects
@@ -213,11 +202,6 @@ namespace ProjectColoni
         {
             Debug.Log("CanceledAction");
         }
-
-        #region SmartActionAi ver2
-
-
-        #endregion
         
         private void RotateTowardsObject(SmartObject smartObject, float rotationSpeed)
         {

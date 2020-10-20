@@ -10,20 +10,11 @@ namespace ProjectColoni
         public bool Drafted;
         public bool InCombat;
 
-        private AiController _aiController; //in case for now
+        private readonly AiController _aiController; //in case for now
 
         public AiStateController(AiController aiController)
         {
             _aiController = aiController;
-        }
-
-        /// <summary>
-        /// Toggles the the ability for the player to control the colonist directly with right clicks & puts the colonist in a drafted state where he can do combat.
-        /// </summary>
-        public void ToggleDraftState()
-        {
-            Drafted = !Drafted;
-            _aiController.enablePlayerControl = Drafted;
         }
     }
 }

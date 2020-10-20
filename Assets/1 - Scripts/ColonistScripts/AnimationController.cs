@@ -28,8 +28,10 @@ namespace ProjectColoni
         private static readonly int MoveFaster = Animator.StringToHash("MoveFaster");
         private static readonly int DraftedState = Animator.StringToHash("DraftedState");
         private static readonly int DrawPistol = Animator.StringToHash("DrawPistol");
+        private static readonly int CombatRangedMode = Animator.StringToHash("CombatRangedMode");
+        private static readonly int CombatModeMelee = Animator.StringToHash("CombatModeMelee");
 
-
+        
         private void Start()
         {
             _controller = GetComponent<AiController>();
@@ -172,7 +174,6 @@ namespace ProjectColoni
         
         private void UpdateAnimator()
         {
-            Debug.Log(_controller.equipment.IsEquipped(EquipmentSlot.EquipmentType.RangedWep));
             if( TryGetAnimatorParam(  _controller.animator, "Forward", out _hash ) ) 
             {
                 _controller.animator.SetFloat(Forward, _forwardAmount);
@@ -187,11 +188,15 @@ namespace ProjectColoni
             }
             if( TryGetAnimatorParam(  _controller.animator, "DraftedState", out _hash ) ) 
             {
-                _controller.animator.SetBool(DraftedState, _controller.aiStateController.Drafted);
+                _controller.animator.SetBool(DraftedState, _controller.stateController.Drafted);
             }
-            if( _controller.aiStateController.Drafted && 
+            if( TryGetAnimatorParam(  _controller.animator, "CombatModeMelee", out _hash ) ) 
+            {
+                _controller.animator.SetBool(CombatModeMelee, _controller.combatController.combatModeMelee);
+            }
+            if( _controller.stateController.Drafted && 
                 _controller.equipment.IsEquipped(EquipmentSlot.EquipmentType.RangedWep) && 
-                TryGetAnimatorParam(  _controller.animator, "DrawPistol", out _hash ) ) //fix af
+                TryGetAnimatorParam(  _controller.animator, "DrawPistol", out _hash ) ) 
             {
                 _controller.animator.SetTrigger(DrawPistol);
             }
@@ -230,6 +235,11 @@ namespace ProjectColoni
 
                     break;
             }
+        }
+
+        public void ActivateDrawWeaponAnim(Weapon.WeaponType weaponType)
+        {
+            _controller.animator.SetTrigger(Enum.GetName(typeof(Weapon.WeaponType), weaponType));
         }
         
         private bool TryGetAnimatorParam( Animator animator, string paramName, out int hash ) //caches and resolves the params with no GC allocation per param

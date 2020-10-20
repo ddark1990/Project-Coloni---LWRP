@@ -33,7 +33,9 @@ namespace ProjectColoni
             if (aiController._tempLogicCounter > 0) return;
             aiController._tempLogicCounter = 0;
             
-            aiController.inventory.AddItemToInventory(smartObject as Item);
+            //aiController.inventory.AddItemToInventory(smartObject as Item);
+            //event
+            EventRelay.OnItemPickedUp(smartObject as Item);
         }
     }
 }

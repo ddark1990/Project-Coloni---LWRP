@@ -14,30 +14,48 @@ namespace ProjectColoni
         
         private AiController _controller;
 
-        public void EquipItem(Item item)
+
+        private void OnEnable()
+        {
+            EventRelay.OnItemEquipped += EquipItem;
+            EventRelay.OnItemUnEquipped += UnEquipItem;
+
+            EventRelay.OnToggleDrafted += ActivateWeaponModel;
+            EventRelay.OnCombatModeToggled += ActivateWeaponModel;
+        }
+
+        private void EquipItem(Item item)
         {
             _controller = SelectionManager.Instance.currentlySelectedObject as AiController;
-
+            
             for (int i = 0; i < equipmentSlots.Length; i++)
             {
+                if (_controller == null) break;
+                
                 var slot = equipmentSlots[i];
-
-                if (slot.equipmentType.Equals(item.itemTypeData.itemData.equipmentType))
+                
+                //make sure equipment types match between slot and item
+                if (slot.equipmentType.Equals(item.itemTypeData.itemData.equipmentType)) 
                 {
-                    if (slot.equippedItem != null)
+                    if (slot.equippedItem != null) //if another item equipped, un equip old item first
                     {
-                        if (_controller != null) _controller.equipment.UnEquipItem(slot.equippedItem);
+                        _controller.equipment.UnEquipItem(slot.equippedItem);
                     }
                     
                     slot.equippedItem = item;
                     item.equipped = true;
+                    
+                    //creates item model from the items type model reference,
+                    //if the item has a modelReference, stays null if item is not
+                    slot.modelReference = CreateWeaponModel(item); 
+                    
                     UI_SelectionController.Instance.inventoryPanelController.UpdateEquipmentUi(item, slot, true);
                     UI_SelectionController.Instance.inventoryPanelController.UpdateInventoryUi(item, false);
                 }
             }
         }
 
-        public void UnEquipItem(Item item)
+        private void UnEquipItem(Item item)
         {
             foreach (var slot in equipmentSlots)
             {
@@ -47,16 +65,96 @@ namespace ProjectColoni
                     UI_SelectionController.Instance.inventoryPanelController.UpdateEquipmentUi(item, slot, false);
                     UI_SelectionController.Instance.inventoryPanelController.UpdateInventoryUi(item, true);
                     slot.equippedItem = null;
+                    
+                    ClearWeaponModel(slot); 
                 }
             }
         }
 
         public bool IsEquipped(EquipmentSlot.EquipmentType type)
         {
-            return equipmentSlots.Any(slot => slot.equipmentType.Equals(type) && slot.equippedItem != null);
+            foreach (var slot in equipmentSlots)
+            {
+                if (slot.equipmentType == type && slot.equippedItem != null) return true;
+            }
+
+            return false;
+        }
+
+        public EquipmentSlot GetEquipmentSlot(EquipmentSlot.EquipmentType type)
+        {
+            foreach (var slot in equipmentSlots)
+            {
+                if (slot.equipmentType == type) return slot;
+            }
+
+            return null;
+        }
+        
+        private WeaponModel CreateWeaponModel(Item item) 
+        {
+            if (!(item.itemTypeData is Weapon weapon)) return null;
+            
+            var controllerTransform = _controller.equipment.weaponHolderRelay.transform;
+                        
+            var model = Instantiate(weapon.modelReference, controllerTransform);
+            var modelTransform = model.transform;
+            
+            modelTransform.localPosition = weapon.modelTransform.position;
+            modelTransform.localRotation = Quaternion.Euler(weapon.modelTransform.rotation);
+                        
+            //change back to normal scale cuz root bone of the dummy colonist is at 0.01
+            modelTransform.localScale = new Vector3(100,100,100); 
+            
+            //toggle the created model off
+            ToggleWeaponModel(model, false); 
+            
+            _controller.equipment.weaponHolderRelay.weaponModels.Add(model);
+
+            return model;
+        }
+
+        private EquipmentSlot _activeCombatEquipmentSlot;
+        public WeaponModel _activeModelReference;
+
+        private void ActivateWeaponModel(AiController controller) //event being fired twice issue
+        {
+            if (_activeModelReference != null)
+            {
+                ToggleWeaponModel(_activeModelReference, false);
+                _activeModelReference = null;
+            }
+            
+            switch (controller.combatController.combatMode)
+            {
+                case Ai_CombatController.CombatMode.Melee:
+                    _activeCombatEquipmentSlot = controller.equipment.GetEquipmentSlot(EquipmentSlot.EquipmentType.MeleeWep);
+                    break;
+                case Ai_CombatController.CombatMode.Ranged:
+                    _activeCombatEquipmentSlot = controller.equipment.GetEquipmentSlot(EquipmentSlot.EquipmentType.RangedWep);
+                    break;
+            }
+
+            if (_activeCombatEquipmentSlot.modelReference != null && controller.stateController.Drafted && _activeModelReference == null)
+            {
+                ToggleWeaponModel(_activeCombatEquipmentSlot.modelReference, true);
+                _activeModelReference = _activeCombatEquipmentSlot.modelReference;
+            }
+        }
+        
+        private void ToggleWeaponModel(WeaponModel model, bool active)
+        {
+            model.gameObject.SetActive(active);
+        }
+        
+        private void ClearWeaponModel(EquipmentSlot slot)
+        {
+            Destroy(slot.modelReference.gameObject);
+            //slot.modelReference = null;
         }
     }
 
+    
     [Serializable]
     public class EquipmentSlot
     {
@@ -77,5 +175,6 @@ namespace ProjectColoni
         public string name;
         public EquipmentType equipmentType;
         public Item equippedItem;
+        public WeaponModel modelReference;
     }
 }

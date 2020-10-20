@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,9 +19,17 @@ namespace ProjectColoni
             Spear
         }
 
+        public WeaponModel modelReference;
+        public ModelReferenceTransform modelTransform;
         public WeaponType weaponType;
-        public string weaponTag; //pre much the name tag, defined in the WeaponModel class with the tag (not the item)
-
+        
+        [Serializable]
+        public struct ModelReferenceTransform
+        {
+            public Vector3 position;
+            public Vector3 rotation;
+        }
+        
         public int damage;
         [Tooltip("If ranged.")] public int clipSize;
     }

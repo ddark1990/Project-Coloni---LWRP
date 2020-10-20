@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace ProjectColoni
@@ -10,8 +11,14 @@ namespace ProjectColoni
         public Dictionary<string, Item> holdingItems = new Dictionary<string, Item>();
         public float currentWeight; 
         public float weightLimit = 15; //default 15 lbs
-        
-        public void AddItemToInventory(Item item)
+
+        private void OnEnable()
+        {
+            EventRelay.OnItemPickedUp += AddItemToInventory;
+            EventRelay.OnItemDropped += DropItem;
+        }
+
+        private void AddItemToInventory(Item item)
         {
             if (holdingItems.ContainsKey(item.baseObjectInfo.Id) || 
                 (currentWeight + item.itemTypeData.itemData.itemWeight) > weightLimit) return;
@@ -20,13 +27,13 @@ namespace ProjectColoni
             currentWeight += item.itemTypeData.itemData.itemWeight;
             
             SetItemTransform(item, inventoryHolder.transform, new Vector3(0,0,0), false);
-            UI_SelectionController.Instance.inventoryPanelController.UpdateInventoryUi(item, true);
+            UI_SelectionController.Instance.inventoryPanelController.UpdateInventoryUi(item, true); //fix
         }
-
-        public void DropItem(Item item)
+        
+        private void DropItem(Item item)
         {
             if (!holdingItems.ContainsKey(item.baseObjectInfo.Id)) return;
-
+            
             holdingItems.Remove(item.baseObjectInfo.Id);
             currentWeight -= item.itemTypeData.itemData.itemWeight;
 
@@ -59,5 +66,6 @@ namespace ProjectColoni
             item.gameObject.SetActive(active);
 
         }
+
     }
 }
