@@ -40,6 +40,7 @@ namespace ProjectColoni
         
         private void Update() //if inheriting, must update from top class
         {
+            
             if (!EventSystem.current.IsPointerOverGameObject())
             {
                 OutlineHighlight();
@@ -47,23 +48,38 @@ namespace ProjectColoni
 
         }
 
+        private Color _tempColor;
+        
         protected void OutlineHighlight()
         {
+            _outline.meshRenderer.sharedMaterials = _outline.outlineMaterials;
+            _outline.OutlineColor = Color.Lerp(_outline.OutlineColor, _tempColor, _selectionManager.fadeSpeed * Time.deltaTime);
+
             if (selected)
             {
-                _outline.meshRenderer.sharedMaterials = _outline.outlineMaterials;
-                _outline.OutlineColor = Color.Lerp(_outline.OutlineColor, _selectionManager.selectedColor, _selectionManager.fadeSpeed * Time.deltaTime);
+                _tempColor = _selectionManager.selectedColor;
+
                 return;
             }
+            
+            /*if (_selectionManager.currentlySelectedObject != null && _selectionManager.hoveringObject.Equals(this) && !((AiController)_selectionManager.hoveringObject).playerOwned
+                && ((AiController) _selectionManager.currentlySelectedObject).stateController.Drafted)
+            {
+                _tempColor = _selectionManager.attackHoverColor;
+
+                return;
+            }*/
             
             if (_selectionManager.hoveringObject != null && _selectionManager.hoveringObject.Equals(this))
             {
-                _outline.meshRenderer.sharedMaterials = _outline.outlineMaterials;
-                _outline.OutlineColor = Color.Lerp(_outline.OutlineColor, _selectionManager.hoverOverColor, _selectionManager.fadeSpeed * Time.deltaTime);
+                _tempColor = _selectionManager.hoverOverColor;
+
                 return;
             }
+
+            if (_selectionManager.currentlySelectedObject == this && _selectionManager.hoveringObject == this) return;
             
-            _outline.OutlineColor = Color.Lerp(_outline.OutlineColor, Color.clear, _selectionManager.fadeSpeed * Time.deltaTime);
+            _tempColor = Color.clear;
 
             if (_outline.OutlineColor.a <= 0.5f)
             {
@@ -85,6 +101,11 @@ namespace ProjectColoni
         {
             if(_selectionManager.hoveringObject.Equals(this))
                 _selectionManager.hoveringObject = null;
+        }
+
+        private void OnMouseOver()
+        {
+            
         }
     }
 }

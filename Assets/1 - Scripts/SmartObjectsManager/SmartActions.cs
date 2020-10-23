@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace ProjectColoni
 {
@@ -6,7 +7,7 @@ namespace ProjectColoni
     public class SmartActions : ScriptableObject
     {
         [Tooltip("Right click actions.")] public SmartAction[] actions;
-
+        
         public void InitializeSmartActions(SmartObject smartObject)
         {
             if (actions.Length == 0) return;

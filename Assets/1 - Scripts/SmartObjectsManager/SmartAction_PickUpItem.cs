@@ -20,20 +20,15 @@ namespace ProjectColoni
             smartObject.activeAction = this;
             smartObject.animationTrigger = "PickUp"; //might need a ref for diff types of inspect animations later on
             
-            smartObject.actionLength = aiController.GetRuntimeAnimationClipInfo(smartObject.animationTrigger).length; //get length of animation to be played
-            aiController._tempLogicCounter = animationLogicCounter;
+            //smartObject.actionLength = aiController.GetRuntimeAnimationClipInfo(smartObject.animationTrigger).length; //get length of animation to be played
+            smartObject.actionLength = aiController.GetRuntimeAnimationClipInfo(smartObject.animationTrigger).length + animationLengthModifier; 
+            //aiController._animationWaitTime = animationLengthModifier;
             
-            aiController.StartAction(smartObject); //commence the action based on given data
+            aiController.StartAction(smartObject, false); //commence the action based on given data
         }
 
         private void PickUp(AiController aiController, SmartObject smartObject)
         {
-            aiController._tempLogicCounter -= Time.deltaTime;
-
-            if (aiController._tempLogicCounter > 0) return;
-            aiController._tempLogicCounter = 0;
-            
-            //aiController.inventory.AddItemToInventory(smartObject as Item);
             //event
             EventRelay.OnItemPickedUp(smartObject as Item);
         }

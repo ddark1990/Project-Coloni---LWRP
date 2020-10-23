@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -53,6 +54,24 @@ namespace ProjectColoni
             _controller.enablePlayerControl = _controller.stateController.Drafted;
 
             EventRelay.OnToggleDrafted(_controller);
+        }
+
+        public void Attack(SmartObject smartObject)
+        {
+            switch (smartObject)
+            {
+                case AiController aiController:
+                    aiController.aiStats.TakeDamage(10);
+                    
+                    if(aiController.aiStats.stats.Health <= 0)
+                        _controller.ResetAction(smartObject);
+                    
+                    Debug.Log("Attacking " + aiController + " | Health Left: " + aiController.aiStats.stats.Health);
+                    break;
+                case PlaceableObject placeableObject:
+                    
+                    break;
+            }
         }
     }
 }

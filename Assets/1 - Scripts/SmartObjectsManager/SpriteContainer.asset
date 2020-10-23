@@ -31,3 +31,5 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 810bdad3d1985544b9de782fcf5b96dd, type: 3}
   - spriteName: CombatMode_Ranged
     sprite: {fileID: 21300000, guid: 02fbaba8afef6654595ab4e701e14a17, type: 3}
+  - spriteName: Shooting
+    sprite: {fileID: 21300000, guid: 8d1bdb18067a1994da0332d098977420, type: 3}

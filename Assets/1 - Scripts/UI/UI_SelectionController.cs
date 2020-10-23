@@ -83,8 +83,11 @@ namespace ProjectColoni
 
                     PopulateBaseData(item);
                     break;
-                default:
-                    throw new ArgumentOutOfRangeException();
+                case PlaceableObject placeableObject:
+                    SetActivePanel(selectedItemPanel.name);
+
+                    PopulateBaseData(placeableObject);
+                    break;
             }
         }
 

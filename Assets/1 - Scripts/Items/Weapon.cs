@@ -19,9 +19,21 @@ namespace ProjectColoni
             Spear
         }
 
+        public enum AmmoType
+        {
+            Pistol,
+            Riffle,
+            Energy
+        }
+        
+        [Header("Weapon Data")]
         public WeaponModel modelReference;
         public ModelReferenceTransform modelTransform;
         public WeaponType weaponType;
+        public AmmoType ammoType;
+
+        [Header("Animation")] 
+        public string animationAttackTrigger;
         
         [Serializable]
         public struct ModelReferenceTransform
@@ -29,8 +41,29 @@ namespace ProjectColoni
             public Vector3 position;
             public Vector3 rotation;
         }
-        
+
+        [Range(0, 100)] public float attackRange;
+        [Range(0, 25)] public float attackSpeed;
+        [Range(0, 25)] public float reloadSpeed;
         public int damage;
-        [Tooltip("If ranged.")] public int clipSize;
+        public int clipSize;
+
+        [Serializable]
+        public struct AudioData
+        {
+            public AudioClip attackSound;
+            public AudioClip hitSound;
+        }
+        [Serializable]
+        public struct ParticleData
+        {
+            public ParticleSystem muzzleFlash;
+            public ParticleSystem impact;
+            public ParticleSystem bulletEject;
+        }
+        
+        [Header("Misc Data")]
+        public AudioData audioData;
+        public ParticleData particleData;
     }
 }

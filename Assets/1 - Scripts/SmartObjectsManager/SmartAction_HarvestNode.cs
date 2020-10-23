@@ -20,7 +20,7 @@ namespace ProjectColoni
         private void OnClickHarvest(AiController aiController, SmartObject smartObject)
         {
             smartObject.activeAction = this;
-            
+
             switch (((ResourceNode) ((Node) smartObject).nodeData).resourceSettings.resourceType)
             {
                 case ResourceNode.ResourceSettings.ResourceType.Bush:
@@ -34,13 +34,11 @@ namespace ProjectColoni
                     break;
                 case ResourceNode.ResourceSettings.ResourceType.Variety:
                     break;
-                default:
-                    throw new ArgumentOutOfRangeException();
             }
             
             smartObject.actionLength = Mathf.Infinity; 
 
-            aiController.StartAction(smartObject);
+            aiController.StartAction(smartObject, true);
         }
 
         private void Harvest(AiController aiController, SmartObject smartObject)

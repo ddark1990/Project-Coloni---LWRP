@@ -21,7 +21,7 @@ namespace ProjectColoni
         }
 
         public ResourceSettings resourceSettings;
-        
-        
+        [Range(0, 20)] public float gatherSpeed; //gather intervals
+
     }
 }

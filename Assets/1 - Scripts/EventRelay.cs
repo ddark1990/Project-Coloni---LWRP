@@ -17,6 +17,7 @@ namespace ProjectColoni
         public static Action<Item> OnItemUnEquipped { get; set; }
         public static Action<AiController> OnToggleDrafted { get; set; }
         public static Action<AiController> OnCombatModeToggled { get; set; }
+        public static Action<AiController> OnAttackInitiated { get; set; }
         
     }
 }

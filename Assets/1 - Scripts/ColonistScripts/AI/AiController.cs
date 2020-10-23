@@ -25,10 +25,10 @@ namespace ProjectColoni
         [Header("Debug")] 
         public bool debugControlEnabled;
         
-        public SmartObject _tempSmartObject;
-        public float _tempActionCounter;
-        public float _tempLogicCounter;
-        public bool _animationPlay; //needed to run once in update loop
+        public SmartObject _activeSmartObject;
+        public float _actionLength;
+        public float _animationWaitTime;
+        public bool _animationPlaying; //needed to run once in update loop
         private static readonly int ActionLength = Animator.StringToHash("actionLength");
 
         public LayerMask terrainHeightMask;
@@ -38,78 +38,72 @@ namespace ProjectColoni
         {
             OnStartInitializeComponents(this);
             InitializeSelectable();
+            
+            if(smartActions != null)
+                smartActions.InitializeSmartActions(this);
         }
         
         private void Update()
         {
-            if (selected && Input.GetKeyDown(KeyCode.Mouse1) && enablePlayerControl || debugControlEnabled) SetDestinationToMousePosition();
+            if (selected && Input.GetKeyDown(KeyCode.Mouse1) && enablePlayerControl 
+                && SelectionManager.Instance.hoveringObject == null) SetDestinationToMousePosition();
+            
+            if (selected && Input.GetKeyDown(KeyCode.Mouse1) && debugControlEnabled 
+                && SelectionManager.Instance.hoveringObject == null) SetDestinationToMousePosition();
             
             //DrawLineRendererPaths(navMeshAgent, destinationLineRenderer); //fix for both ai
             if (!EventSystem.current.IsPointerOverGameObject()) OutlineHighlight();
 
-            UpdateAction(_tempSmartObject);
+            UpdateAction(_activeSmartObject);
             
             UpdateColonistTerrainHeight();
-            UpdateColonistState();
-        }
-
-        private void UpdateColonistState()
-        {
-            if (stateController.Drafted)
-            {
-                
-            }
-        }
-
-        private void UpdateColonistTerrainHeight() //move to IK controller, and change to update only when moving
-        {
-            //temp clamp for colonists rotating when picking up objects
-            var a = transform.eulerAngles;
-            a.x = Mathf.Clamp(a.x, 0, 0);
-            transform.eulerAngles = a;
-            
-            Ray ray = new Ray(transform.position + new Vector3(0,2f,0), new Vector3(0,-2,0));
-            //Debug.DrawRay(ray.origin, ray.direction, Color.red);
-            
-            if(Physics.Raycast(ray, out var hitInfo, Mathf.Infinity, terrainHeightMask))
-            {
-                var y = hitInfo.point.y;
-                var transform1 = transform;
-                var pos = transform1.position;
- 
-                pos.y = y;
- 
-                transform1.position = pos;
-            }
         }
         
         //ai ver 1
         private void UpdateAction(SmartObject smartObject) //work on switching actions/ canceling one out
         {
-            if (smartObject == null || !performingForcedAction) return;
+            if (smartObject != null && performingForcedAction && InRange(smartObject))
+            {
+                _animationWaitTime -= Time.deltaTime;
+            }
+
+            if (smartObject == null || !performingForcedAction || _animationWaitTime > 0) return;
             
+            //what allows intervals between recurring actions logic
+            if (_animationWaitTime < 0) _animationWaitTime = 0; //clamp down to 0
+
+            //move agent if target happens to move from last known position
+            /*
+            if (smartObject.transform.position != _lastPos)
+                MoveAgent(smartObject.transform.position);
+                */
             PerformAction(smartObject);
         }
-
         
-        public void StartAction(SmartObject smartObject)
+        private Vector3 _lastSmartObjectPosition;
+        private bool _recurringAction;
+
+        public void StartAction(SmartObject smartObject, bool recurring)
         {
-            if(_tempSmartObject != null) ResetAction(_tempSmartObject); //clear agent first if anything from previous action still persisting 
+            if(_activeSmartObject != null) ResetAction(_activeSmartObject); //clear agent first if anything from previous action still persisting 
             
             performingForcedAction = true;
-
+            _recurringAction = recurring;
             //cache the data
-            _tempSmartObject = smartObject; 
-            _tempActionCounter = smartObject.actionLength;
+            _activeSmartObject = smartObject; 
+            _actionLength = smartObject.actionLength;
             
             smartObject.SetSmartObjectData(this);
 
             if (InRange(smartObject)) return;
             
-            //Debug.Log("Going to object!");
-            //MoveAgent(smartObject.objectCollider.ClosestPointOnBounds(transform.position));
-            MoveAgent(smartObject.transform.position);
+            Debug.Log("Going to object!");
+            var position = smartObject.transform.position;
+            
+            MoveAgent(position);
+            _lastSmartObjectPosition = position;
         }
+
         private void PerformAction(SmartObject smartObject)
         {
             if (!InRange(smartObject)) return;
@@ -126,24 +120,57 @@ namespace ProjectColoni
                     break;
             }
 
-            _tempActionCounter -= Time.deltaTime;
-            animator.SetFloat(ActionLength, _tempActionCounter); 
+            if (_recurringAction && actionLength > 0)
+            {
+                PlayAnimation(smartObject.animationTrigger);
 
-            if(!InRange(smartObject)) RotateTowardsObject(smartObject, rotSpeed);
+                _actionLength -= Time.deltaTime;
+                animator.SetFloat(ActionLength, _actionLength);
 
-            PlayAnimation(smartObject.animationTrigger);
+                if(_actionLength <= 0) //bug
+                {
+                    ResetAnimation();
+                    smartObject.activeAction.Act(this, smartObject);
+                    _actionLength = smartObject.actionLength;
+                }
+                
+                Debug.Log("Recurring Action In Progress!");
+                actionInProgress = true;
+                
+                RotateTowardsObject(smartObject, rotSpeed);
+
+                return;
+            }
+
+            if (_actionLength > 0)
+            {
+                _actionLength -= Time.deltaTime;
+                animator.SetFloat(ActionLength, _actionLength);
+                
+                PlayAnimation(smartObject.animationTrigger);
+                Debug.Log("Action In Progress!");
+                actionInProgress = true;
+                
+                RotateTowardsObject(smartObject, rotSpeed);
+
+                if(_actionLength <= 0)
+                    smartObject.activeAction.Act(this, smartObject);
+
+                return;
+            }
+
+            //if(!InRange(smartObject)) RotateTowardsObject(smartObject, rotSpeed);
             
-            //Debug.Log("Starting Action!");
-            actionInProgress = true;
+            //if (!float.IsPositiveInfinity(_actionLength)) return;
             
-            smartObject.activeAction.Act(this, smartObject);
-            
-            if (!(_tempActionCounter <= 0)) return;
-            
-            actionInProgress = false;
             Debug.Log("Finished Action!");
-
             ResetAction(smartObject);
+
+            /*
+            if(!_recurringAction)
+                ResetAction(smartObject);
+                */
+
         }
         private void MoveAgent(Vector3 targetPosition)
         {
@@ -161,7 +188,7 @@ namespace ProjectColoni
                     break;
             }
         }
-        private void ResetAction(SmartObject smartObject)
+        public void ResetAction(SmartObject smartObject)
         {
             ResetAgent();
             
@@ -169,7 +196,10 @@ namespace ProjectColoni
 
             smartObject.beingUsed = false;
             performingForcedAction = false;
-            _tempSmartObject = null;
+            _activeSmartObject = null;
+            _animationPlaying = false;
+            _recurringAction = false;
+            actionInProgress = false;
         }
         private void ResetAgent()
         {
@@ -186,16 +216,20 @@ namespace ProjectColoni
 
                     break;
             }
-            _animationPlay = false;
             actionInProgress = false;
             animator.SetFloat(ActionLength, 0);
         }
-        private void PlayAnimation(string animName)
+        private void PlayAnimation(string animTrigger)
         {
-            if (_animationPlay) return;
+            if (_animationPlaying) return;
             
-            animator.SetTrigger(animName);
-            _animationPlay = true;
+            animator.SetTrigger(animTrigger);
+            _animationPlaying = true;
+        }
+
+        public void ResetAnimation()
+        {
+            _animationPlaying = false;
         }
 
         private void CancelAction()
@@ -205,11 +239,14 @@ namespace ProjectColoni
         
         private void RotateTowardsObject(SmartObject smartObject, float rotationSpeed)
         {
+            var lookRotation = Quaternion.identity;
+            
             var step = Time.deltaTime * rotationSpeed;
 
             var direction = (smartObject.transform.position - transform.position).normalized;
-            var lookRotation = Quaternion.LookRotation(direction);
- 
+            if(direction != Vector3.zero)
+                lookRotation = Quaternion.LookRotation(direction);
+            
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, step);
         }
 
@@ -252,5 +289,28 @@ namespace ProjectColoni
             
             Destroy(obj, 3);
         }
+        
+        private void UpdateColonistTerrainHeight() //move to IK controller, and change to update only when moving
+        {
+            //temp clamp for colonists rotating when picking up objects
+            var a = transform.eulerAngles;
+            a.x = Mathf.Clamp(a.x, 0, 0);
+            transform.eulerAngles = a;
+            
+            Ray ray = new Ray(transform.position + new Vector3(0,2f,0), new Vector3(0,-2,0));
+            //Debug.DrawRay(ray.origin, ray.direction, Color.red);
+            
+            if(Physics.Raycast(ray, out var hitInfo, Mathf.Infinity, terrainHeightMask))
+            {
+                var y = hitInfo.point.y;
+                var transform1 = transform;
+                var pos = transform1.position;
+ 
+                pos.y = y;
+ 
+                transform1.position = pos;
+            }
+        }
+
     }
 }

@@ -24,5 +24,18 @@ MonoBehaviour:
   modelTransform:
     position: {x: 2.33, y: 1.51, z: -3.62}
     rotation: {x: 2.142, y: 87.802, z: -102.371}
+  weaponType: 0
+  ammoType: 0
+  animationAttackTrigger: ShootPistol
+  attackRange: 10
+  attackSpeed: 1
+  reloadSpeed: 1
   damage: 20
   clipSize: 12
+  audioData:
+    attackSound: {fileID: 0}
+    hitSound: {fileID: 0}
+  particleData:
+    muzzleFlash: {fileID: 0}
+    impact: {fileID: 0}
+    bulletEject: {fileID: 0}

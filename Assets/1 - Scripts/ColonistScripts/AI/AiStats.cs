@@ -24,9 +24,14 @@ namespace ProjectColoni
         public bool IsTired => stats.Energy <= 20;
         public bool IsDead { get; set; }
 
-        private void Start()
+
+        private void Awake()
         {
             InitializeStats();
+        }
+
+        private void Start()
+        {
             InitializeBaseObjectData();
 
             _controller = GetComponent<AiController>();

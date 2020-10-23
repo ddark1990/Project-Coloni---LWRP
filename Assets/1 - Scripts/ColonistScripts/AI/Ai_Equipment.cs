@@ -2,12 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using UnityEngine;
 
 namespace ProjectColoni
 {
     public class Ai_Equipment : MonoBehaviour
     {
+        [Header("Active Equipment")] 
+        public Item activeWeapon;
+        
+        [Header("Slots")]
         public EquipmentSlot[] equipmentSlots;
         
         [HideInInspector] public WeaponHolderRelay weaponHolderRelay;
@@ -44,7 +49,7 @@ namespace ProjectColoni
                     
                     slot.equippedItem = item;
                     item.equipped = true;
-                    
+
                     //creates item model from the items type model reference,
                     //if the item has a modelReference, stays null if item is not
                     slot.modelReference = CreateWeaponModel(item); 
@@ -115,13 +120,13 @@ namespace ProjectColoni
         }
 
         private EquipmentSlot _activeCombatEquipmentSlot;
-        public WeaponModel _activeModelReference;
+        private WeaponModel _activeModelReference;
 
         private void ActivateWeaponModel(AiController controller) //event being fired twice issue
         {
             if (_activeModelReference != null)
             {
-                ToggleWeaponModel(_activeModelReference, false);
+                StartCoroutine(Coroutine_ToggleWeaponModel(_activeCombatEquipmentSlot.modelReference, false, _shortWait));
                 _activeModelReference = null;
             }
             
@@ -137,11 +142,22 @@ namespace ProjectColoni
 
             if (_activeCombatEquipmentSlot.modelReference != null && controller.stateController.Drafted && _activeModelReference == null)
             {
-                ToggleWeaponModel(_activeCombatEquipmentSlot.modelReference, true);
+                StartCoroutine(Coroutine_ToggleWeaponModel(_activeCombatEquipmentSlot.modelReference, true, _shortWait));
                 _activeModelReference = _activeCombatEquipmentSlot.modelReference;
             }
         }
         
+        //animation related stuff, should move
+        private readonly WaitForSeconds _shortWait = new WaitForSeconds(0.5f);
+        private readonly WaitForSeconds _longWait = new WaitForSeconds(1f);
+        
+        private IEnumerator Coroutine_ToggleWeaponModel(WeaponModel model, bool active, WaitForSeconds waitForSeconds)
+        {
+            yield return waitForSeconds;
+                
+            model.gameObject.SetActive(active);
+        }
+
         private void ToggleWeaponModel(WeaponModel model, bool active)
         {
             model.gameObject.SetActive(active);
@@ -152,9 +168,32 @@ namespace ProjectColoni
             Destroy(slot.modelReference.gameObject);
             //slot.modelReference = null;
         }
+
+        public Weapon GetActiveWeapon()
+        {
+            if (!_controller.stateController.Drafted)
+            {
+                Debug.Log("Not in drafted state.", this);
+                return null;
+            }
+            
+            switch (_controller.combatController.combatMode)
+            {
+                case Ai_CombatController.CombatMode.Melee:
+                    if (GetEquipmentSlot(EquipmentSlot.EquipmentType.MeleeWep).equippedItem != null)
+                        return GetEquipmentSlot(EquipmentSlot.EquipmentType.MeleeWep).equippedItem
+                            .itemTypeData as Weapon;
+                    else
+                        return null;
+                case Ai_CombatController.CombatMode.Ranged:
+                    return GetEquipmentSlot(EquipmentSlot.EquipmentType.RangedWep).equippedItem.itemTypeData as Weapon;
+            }
+
+            return null;
+        }
     }
 
-    
+
     [Serializable]
     public class EquipmentSlot
     {

@@ -23,7 +23,7 @@ namespace ProjectColoni
 
             smartObject.actionLength = aiController.GetRuntimeAnimationClipInfo(smartObject.animationTrigger).length; //get length of animation to be played
 
-            aiController.StartAction(smartObject); //commence the action based on given data
+            aiController.StartAction(smartObject, false); //commence the action based on given data
         }
 
         private void Inspect(AiController aiController, SmartObject smartObject) //action logic, ai is the activator that is currently selected, smartObject is the object activated from a right click action (SmartAction)

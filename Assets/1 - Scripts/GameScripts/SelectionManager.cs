@@ -17,6 +17,7 @@ namespace ProjectColoni
         
         public LayerMask selectableMask;
         
+        public Color attackHoverColor; //when in draft mode the selection manager hover color should change to red instead of switching directly
         public Color hoverOverColor;
         public Color selectedColor;
         public float fadeSpeed = 1;
@@ -105,6 +106,11 @@ namespace ProjectColoni
                 //ui
                 UI_SelectionController.Instance.ResetWindows();
             }
+        }
+
+        public bool SelectionAndHoverClear()
+        {
+            return currentlySelectedObject == null && hoveringObject == null;
         }
     }
 }
