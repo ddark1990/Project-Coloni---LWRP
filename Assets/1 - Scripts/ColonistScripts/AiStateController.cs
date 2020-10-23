@@ -16,5 +16,30 @@ namespace ProjectColoni
         {
             _aiController = aiController;
         }
+
+        public void DraftedToggled(AiController controller) //fix this shit
+        {
+            if (controller.equipment.activeWeapon == null) return;
+            
+            if(AnimationController.TryGetAnimatorParam(  controller.animator, 
+                controller.animationController.lastAnimatorCache, 
+                controller.animationController.animatorParamCache, 
+                controller.equipment.activeWeapon.animationDrawTrigger, 
+                out controller.animationController.hash ) ) 
+            {
+                controller.animator.SetTrigger(controller.equipment.activeWeapon.animationDrawTrigger);
+            }
+        }
+        public void CombatModeToggled(AiController controller)
+        {
+            if(AnimationController.TryGetAnimatorParam(  controller.animator, 
+                controller.animationController.lastAnimatorCache, 
+                controller.animationController.animatorParamCache, 
+                controller.equipment.activeWeapon.animationDrawTrigger, 
+                out controller.animationController.hash ) ) 
+            {
+                controller.animator.SetTrigger(controller.equipment.activeWeapon.animationDrawTrigger);
+            }
+        }
     }
 }

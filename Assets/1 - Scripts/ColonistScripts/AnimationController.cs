@@ -19,9 +19,9 @@ namespace ProjectColoni
         private float _forwardAmount;
         private float _turnAmount;
 
-        private int _hash;
-        private Animator _lastAnimatorCache; 
-        private readonly Dictionary<string,int> _animatorParamCache = new Dictionary<string,int>( );
+        [HideInInspector] public int hash;
+        [HideInInspector] public Animator lastAnimatorCache; 
+        [HideInInspector] public Dictionary<string,int> animatorParamCache = new Dictionary<string,int>( );
 
         private static readonly int Forward = Animator.StringToHash("Forward");
         private static readonly int Turn = Animator.StringToHash("Turn");
@@ -174,32 +174,27 @@ namespace ProjectColoni
         
         private void UpdateAnimator()
         {
-            if( TryGetAnimatorParam(  _controller.animator, "Forward", out _hash ) ) 
+            if( TryGetAnimatorParam(  _controller.animator, lastAnimatorCache, animatorParamCache, "Forward", out hash ) ) 
             {
                 _controller.animator.SetFloat(Forward, _forwardAmount);
             }
-            if( TryGetAnimatorParam(  _controller.animator, "Turn", out _hash ) ) 
+            if( TryGetAnimatorParam(  _controller.animator, lastAnimatorCache, animatorParamCache, "Turn", out hash ) ) 
             {
                 _controller.animator.SetFloat(Turn, _turnAmount);
             }
-            if( TryGetAnimatorParam(  _controller.animator, "MoveFaster", out _hash ) ) 
+            if( TryGetAnimatorParam(  _controller.animator, lastAnimatorCache, animatorParamCache, "MoveFaster", out hash ) ) 
             {
                 _controller.animator.SetBool(MoveFaster, _controller.moveFaster);
             }
-            if( TryGetAnimatorParam(  _controller.animator, "DraftedState", out _hash ) ) 
+            if( TryGetAnimatorParam(  _controller.animator, lastAnimatorCache, animatorParamCache, "DraftedState", out hash ) ) 
             {
                 _controller.animator.SetBool(DraftedState, _controller.stateController.Drafted);
             }
-            if( TryGetAnimatorParam(  _controller.animator, "CombatModeMelee", out _hash ) ) 
+            if( TryGetAnimatorParam(  _controller.animator, lastAnimatorCache, animatorParamCache, "CombatModeMelee", out hash ) ) 
             {
                 _controller.animator.SetBool(CombatModeMelee, _controller.combatController.combatModeMelee);
             }
-            if( _controller.stateController.Drafted && 
-                _controller.equipment.IsEquipped(EquipmentSlot.EquipmentType.RangedWep) && 
-                TryGetAnimatorParam(  _controller.animator, "DrawPistol", out _hash ) ) 
-            {
-                _controller.animator.SetTrigger(DrawPistol);
-            }
+            
             
             switch (_controller.aiStats.stats.gender)
             {
@@ -242,20 +237,20 @@ namespace ProjectColoni
             _controller.animator.SetTrigger(Enum.GetName(typeof(Weapon.WeaponType), weaponType));
         }
         
-        private bool TryGetAnimatorParam( Animator animator, string paramName, out int hash ) //caches and resolves the params with no GC allocation per param
+        public static bool TryGetAnimatorParam( Animator animator,Animator lastAnimator, Dictionary<string,int> animatorParam, string paramName, out int hash ) //caches and resolves the params with no GC allocation per param
         {
-            if( (_lastAnimatorCache == null || _lastAnimatorCache != animator) && animator != null ) // Rebuild cache
+            if( (lastAnimator == null || lastAnimator != animator) && animator != null ) // Rebuild cache
             {
-                _lastAnimatorCache = animator;
-                _animatorParamCache.Clear( );
+                lastAnimator = animator;
+                animatorParam.Clear( );
                 foreach( var param in animator.parameters )
                 {
                     var paramHash = Animator.StringToHash( param.name ); // could use param.nameHash property but this is clearer
-                    _animatorParamCache.Add( param.name, paramHash );
+                    animatorParam.Add( param.name, paramHash );
                 }
             }
 
-            if( _animatorParamCache != null && _animatorParamCache.TryGetValue( paramName, out hash ) )
+            if( animatorParam != null && animatorParam.TryGetValue( paramName, out hash ) )
             {
                 return true;
             }

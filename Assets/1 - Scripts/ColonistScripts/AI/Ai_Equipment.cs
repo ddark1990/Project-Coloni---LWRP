@@ -10,7 +10,7 @@ namespace ProjectColoni
     public class Ai_Equipment : MonoBehaviour
     {
         [Header("Active Equipment")] 
-        public Item activeWeapon;
+        public Weapon activeWeapon;
         
         [Header("Slots")]
         public EquipmentSlot[] equipmentSlots;

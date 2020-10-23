@@ -36,7 +36,7 @@ namespace ProjectColoni
         public AiType aiType;
 
         
-        protected void OnStartInitializeComponents(AiController aiController)
+        protected void OnStartInitializeComponents(AiController aiController) //fix this trash
         {
             aiStats = GetComponent<AiStats>();
             sensors = GetComponent<AiSensors>();
@@ -72,6 +72,9 @@ namespace ProjectColoni
             cam = SelectionManager.Instance.cam;
 
             animator.applyRootMotion = true;
+            
+            EventRelay.OnToggleDrafted += stateController.DraftedToggled;
+            EventRelay.OnCombatModeToggled += stateController.CombatModeToggled;
         }
 
         private void Update()

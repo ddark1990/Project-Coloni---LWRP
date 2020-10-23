@@ -33,7 +33,7 @@ namespace ProjectColoni
 
         public LayerMask terrainHeightMask;
         
-        
+
         private void Start()
         {
             OnStartInitializeComponents(this);
@@ -224,6 +224,7 @@ namespace ProjectColoni
             if (_animationPlaying) return;
             
             animator.SetTrigger(animTrigger);
+            Debug.Log(animTrigger);
             _animationPlaying = true;
         }
 

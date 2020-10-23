@@ -34,6 +34,7 @@ namespace ProjectColoni
 
         [Header("Animation")] 
         public string animationAttackTrigger;
+        public string animationDrawTrigger;
         
         [Serializable]
         public struct ModelReferenceTransform
