@@ -58,10 +58,13 @@ namespace ProjectColoni
 
         public void Attack(SmartObject smartObject)
         {
+            if (!_controller.stateController.InCombat)
+                _controller.stateController.InCombat = true;
+            
             switch (smartObject)
             {
                 case AiController aiController:
-                    aiController.aiStats.TakeDamage(10);
+                    aiController.aiStats.TakeDamage(1);
                     
                     if(aiController.aiStats.stats.Health <= 0)
                         _controller.ResetAction(smartObject);
@@ -72,6 +75,8 @@ namespace ProjectColoni
                     
                     break;
             }
+            
+            EventRelay.OnCombatModeInitiated(smartObject);
         }
     }
 }

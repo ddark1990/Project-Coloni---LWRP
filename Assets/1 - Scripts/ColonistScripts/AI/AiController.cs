@@ -32,8 +32,13 @@ namespace ProjectColoni
         private static readonly int ActionLength = Animator.StringToHash("actionLength");
 
         public LayerMask terrainHeightMask;
-        
 
+
+        private void OnEnable()
+        {
+            EventRelay.OnToggleDrafted += CancelAction;
+        }
+        
         private void Start()
         {
             OnStartInitializeComponents(this);
@@ -72,11 +77,6 @@ namespace ProjectColoni
             //what allows intervals between recurring actions logic
             if (_animationWaitTime < 0) _animationWaitTime = 0; //clamp down to 0
 
-            //move agent if target happens to move from last known position
-            /*
-            if (smartObject.transform.position != _lastPos)
-                MoveAgent(smartObject.transform.position);
-                */
             PerformAction(smartObject);
         }
         
@@ -88,6 +88,8 @@ namespace ProjectColoni
             if(_activeSmartObject != null) ResetAction(_activeSmartObject); //clear agent first if anything from previous action still persisting 
             
             performingForcedAction = true;
+            actionInProgress = true;
+
             _recurringAction = recurring;
             //cache the data
             _activeSmartObject = smartObject; 
@@ -104,30 +106,31 @@ namespace ProjectColoni
             _lastSmartObjectPosition = position;
         }
 
+        /// <summary>
+        /// Performs the operation based on input per frame in the update loop.
+        /// </summary>
+        /// <param name="smartObject"></param>
         private void PerformAction(SmartObject smartObject)
         {
-            if (!InRange(smartObject)) return;
-            
-            switch (aiType)
+            if (!InRange(smartObject))
             {
-                case AiType.Unity:
-                    navMeshAgent.isStopped = true;
-
-                    break;
-                case AiType.AStar:
-                    aiPath.isStopped = true;
-
-                    break;
+                StopAgent(false);
+                MoveAgent(smartObject.transform.position); //maybe
+                return;
             }
-
+            
+            //when in range stop
+            StopAgent(InRange(smartObject));
+            
             if (_recurringAction && actionLength > 0)
             {
-                PlayAnimation(smartObject.animationTrigger);
-
                 _actionLength -= Time.deltaTime;
                 animator.SetFloat(ActionLength, _actionLength);
 
-                if(_actionLength <= 0) //bug
+                PlayAnimationTrigger(smartObject.animationTrigger);
+                RotateTowardsObject(smartObject, rotSpeed);
+                
+                if(_actionLength <= 0) 
                 {
                     ResetAnimation();
                     smartObject.activeAction.Act(this, smartObject);
@@ -135,42 +138,26 @@ namespace ProjectColoni
                 }
                 
                 Debug.Log("Recurring Action In Progress!");
-                actionInProgress = true;
-                
-                RotateTowardsObject(smartObject, rotSpeed);
-
                 return;
             }
 
-            if (_actionLength > 0)
+            if (!_recurringAction && _actionLength > 0)
             {
                 _actionLength -= Time.deltaTime;
                 animator.SetFloat(ActionLength, _actionLength);
                 
-                PlayAnimation(smartObject.animationTrigger);
-                Debug.Log("Action In Progress!");
-                actionInProgress = true;
-                
+                PlayAnimationTrigger(smartObject.animationTrigger);
                 RotateTowardsObject(smartObject, rotSpeed);
-
+                
                 if(_actionLength <= 0)
                     smartObject.activeAction.Act(this, smartObject);
-
+                
+                Debug.Log("Action In Progress!");
                 return;
             }
-
-            //if(!InRange(smartObject)) RotateTowardsObject(smartObject, rotSpeed);
-            
-            //if (!float.IsPositiveInfinity(_actionLength)) return;
             
             Debug.Log("Finished Action!");
             ResetAction(smartObject);
-
-            /*
-            if(!_recurringAction)
-                ResetAction(smartObject);
-                */
-
         }
         private void MoveAgent(Vector3 targetPosition)
         {
@@ -216,10 +203,11 @@ namespace ProjectColoni
 
                     break;
             }
-            actionInProgress = false;
             animator.SetFloat(ActionLength, 0);
         }
-        private void PlayAnimation(string animTrigger)
+
+        
+        private void PlayAnimationTrigger(string animTrigger)
         {
             if (_animationPlaying) return;
             
@@ -227,14 +215,32 @@ namespace ProjectColoni
             Debug.Log(animTrigger);
             _animationPlaying = true;
         }
+        
+        private void StopAgent(bool active)
+        {
+            switch (aiType)
+            {
+                case AiType.Unity:
+                    navMeshAgent.isStopped = active;
+
+                    break;
+                case AiType.AStar:
+                    aiPath.isStopped = active;
+
+                    break;
+            }
+        }
 
         public void ResetAnimation()
         {
             _animationPlaying = false;
         }
 
-        private void CancelAction()
+        private void CancelAction(SmartObject smartObject)
         {
+            if (!actionInProgress) return;
+            
+            ResetAction(smartObject);
             Debug.Log("CanceledAction");
         }
         

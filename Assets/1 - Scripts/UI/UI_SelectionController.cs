@@ -221,6 +221,7 @@ namespace ProjectColoni
             
             colonist.combatController.ToggleDraftState();
             
+            //update button visually somehow
             var color = colonist.stateController.Drafted ? new Color(1,1,1,1) : new Color(1,1,1,.15f);
             colonistPanelRelay.draftButton.image.color = color;
         }

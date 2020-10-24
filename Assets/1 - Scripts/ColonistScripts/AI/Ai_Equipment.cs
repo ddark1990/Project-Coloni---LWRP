@@ -145,6 +145,8 @@ namespace ProjectColoni
                 StartCoroutine(Coroutine_ToggleWeaponModel(_activeCombatEquipmentSlot.modelReference, true, _shortWait));
                 _activeModelReference = _activeCombatEquipmentSlot.modelReference;
             }
+            
+            activeWeapon = GetActiveWeapon();
         }
         
         //animation related stuff, should move

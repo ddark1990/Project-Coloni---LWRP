@@ -17,7 +17,7 @@ namespace ProjectColoni
             _aiController = aiController;
         }
 
-        public void DraftedToggled(AiController controller) //fix this shit
+        public void DraftedToggled(AiController controller) 
         {
             if (controller.equipment.activeWeapon == null) return;
             
@@ -32,6 +32,8 @@ namespace ProjectColoni
         }
         public void CombatModeToggled(AiController controller)
         {
+            if (controller.equipment.activeWeapon == null) return;
+
             if(AnimationController.TryGetAnimatorParam(  controller.animator, 
                 controller.animationController.lastAnimatorCache, 
                 controller.animationController.animatorParamCache, 

@@ -75,6 +75,8 @@ namespace ProjectColoni
             {
                 case AiController aiController: //if colonist is selected, colonist related actions for that object is presented
 
+                    if (aiController.stateController.Drafted) return;
+
                     //open & populate right click panel
                     ToggleRightClickPanel(aiController, _selectionManager.hoveringObject as SmartObject);
                     

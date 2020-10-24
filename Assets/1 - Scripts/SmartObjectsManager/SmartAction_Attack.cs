@@ -14,20 +14,23 @@ namespace ProjectColoni
 
         public override void Initialize(SmartObject smartObject) 
         {
+            Debug.Log(smartObject.smartActionDictionary);
+            
             smartObject.AddSmartActionToCollection(
                 GameManager.Instance.globalSpriteContainer.spriteCollection["Shooting"], OnClickAttack);
         }
 
         private void OnClickAttack(AiController aiController, SmartObject smartObject)
         {
-            _activeWeapon = aiController.equipment.GetActiveWeapon();
+            //cache, maybe
+            var activeWeapon = aiController.equipment.activeWeapon;
             
             smartObject.activeAction = this;
             //might need a ref for diff types of inspect animations later on
-            smartObject.animationTrigger = _activeWeapon.animationAttackTrigger;
-            smartObject.stoppingDistance = _activeWeapon.attackRange;
+            smartObject.animationTrigger = activeWeapon.animationAttackTrigger;
+            smartObject.stoppingDistance = activeWeapon.attackRange;
             //set length of action, in this case infinity until target is dead or action canceled 
-            smartObject.actionLength = _activeWeapon.attackSpeed; 
+            smartObject.actionLength = activeWeapon.attackSpeed; 
             //allows a wait time between logic
             //aiController._animationWaitTime = _activeWeapon.attackSpeed;
             
@@ -35,8 +38,6 @@ namespace ProjectColoni
             aiController.StartAction(smartObject, true);
             //EventRelay.OnAttackInitiated(aiController);
         }
-
-        private Weapon _activeWeapon;
         
         private void Attack(AiController aiController, SmartObject smartObject)
         {

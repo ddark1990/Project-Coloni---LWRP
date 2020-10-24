@@ -22,10 +22,13 @@ namespace ProjectColoni
         public string animationTrigger;
 
         public SmartAction activeAction;
-        public Dictionary<Sprite, UnityAction<AiController, SmartObject>> smartActionDictionary; //dont rly need name cuz can get name from the actual action method
+        //dont rly need name cuz can get name from the actual action method
+        public Dictionary<Sprite, UnityAction<AiController, SmartObject>> smartActionDictionary 
+            = new Dictionary<Sprite, UnityAction<AiController, SmartObject>>();
 
         private void OnEnable()
         {
+            //should not be null but in case
             if (smartActionDictionary == null) smartActionDictionary = new Dictionary<Sprite, UnityAction<AiController, SmartObject>>();
         }
 
