@@ -146,7 +146,7 @@ namespace ProjectColoni
                 _activeModelReference = _activeCombatEquipmentSlot.modelReference;
             }
             
-            activeWeapon = GetActiveWeapon();
+            activeWeapon = GetActiveWeapon(controller);
         }
         
         //animation related stuff, should move
@@ -171,15 +171,15 @@ namespace ProjectColoni
             //slot.modelReference = null;
         }
 
-        public Weapon GetActiveWeapon()
+        public Weapon GetActiveWeapon(AiController controller)
         {
-            if (!_controller.stateController.Drafted)
+            if (!controller.stateController.Drafted)
             {
                 Debug.Log("Not in drafted state.", this);
                 return null;
             }
             
-            switch (_controller.combatController.combatMode)
+            switch (controller.combatController.combatMode)
             {
                 case Ai_CombatController.CombatMode.Melee:
                     if (GetEquipmentSlot(EquipmentSlot.EquipmentType.MeleeWep).equippedItem != null)

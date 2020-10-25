@@ -296,7 +296,8 @@ namespace ProjectColoni
             
             Destroy(obj, 3);
         }
-        
+
+        [Range(-5, 5)]public float heightOffset = -0.01f;
         private void UpdateColonistTerrainHeight() //move to IK controller, and change to update only when moving
         {
             //temp clamp for colonists rotating when picking up objects
@@ -304,12 +305,12 @@ namespace ProjectColoni
             a.x = Mathf.Clamp(a.x, 0, 0);
             transform.eulerAngles = a;
             
-            Ray ray = new Ray(transform.position + new Vector3(0,2f,0), new Vector3(0,-2,0));
+            Ray ray = new Ray(transform.position + new Vector3(0,2,0), Vector3.down);
             //Debug.DrawRay(ray.origin, ray.direction, Color.red);
             
             if(Physics.Raycast(ray, out var hitInfo, Mathf.Infinity, terrainHeightMask))
             {
-                var y = hitInfo.point.y;
+                var y = hitInfo.point.y + heightOffset;
                 var transform1 = transform;
                 var pos = transform1.position;
  

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8c769ce523c7d42a1ccf7f0a3e7bd4, type: 3}
+  m_Name: Fist(ItemData)
+  m_EditorClassIdentifier: 
+  itemData:
+    equipment: 0
+    equipmentType: 9
+    stackLimit: 0
+    itemWeight: 0
+    inventorySprite: {fileID: 0}
+    statusModifiers: []
+  modelReference: {fileID: 0}
+  modelTransform:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0}
+  weaponType: 0
+  ammoType: 0
+  animationAttackTrigger: AttackFists
+  animationDrawTrigger: DrawFists
+  attackRange: 0.5
+  attackSpeed: 0.5
+  reloadSpeed: 0
+  damage: 10
+  clipSize: 0
+  audioData:
+    attackSound: {fileID: 0}
+    hitSound: {fileID: 0}
+  particleData:
+    muzzleFlash: {fileID: 0}
+    impact: {fileID: 0}
+    bulletEject: {fileID: 0}

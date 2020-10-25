@@ -14,12 +14,11 @@ namespace ProjectColoni
 
         public override void Initialize(SmartObject smartObject) 
         {
-            Debug.Log(smartObject.smartActionDictionary);
-            
             smartObject.AddSmartActionToCollection(
                 GameManager.Instance.globalSpriteContainer.spriteCollection["Shooting"], OnClickAttack);
         }
 
+        //should put in draft mode if not already
         private void OnClickAttack(AiController aiController, SmartObject smartObject)
         {
             //cache, maybe

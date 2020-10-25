@@ -73,8 +73,8 @@ namespace ProjectColoni
 
             animator.applyRootMotion = true;
             
-            EventRelay.OnToggleDrafted += stateController.DraftedToggled;
-            EventRelay.OnCombatModeToggled += stateController.CombatModeToggled;
+            EventRelay.OnToggleDrafted += stateController.UpdateCombatDrawTriggers;
+            EventRelay.OnCombatModeToggled += stateController.UpdateCombatDrawTriggers;
         }
 
         private void Update()

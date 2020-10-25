@@ -11,15 +11,27 @@ namespace ProjectColoni
         public bool InCombat;
 
         private readonly AiController _aiController; //in case for now
+        private static readonly int DrawFists = Animator.StringToHash("DrawFists");
 
         public AiStateController(AiController aiController)
         {
             _aiController = aiController;
         }
 
-        public void DraftedToggled(AiController controller) 
+        public void UpdateCombatDrawTriggers(AiController controller) 
         {
-            if (controller.equipment.activeWeapon == null) return;
+            if (controller.equipment.activeWeapon == null)
+            {
+                if(AnimationController.TryGetAnimatorParam(  controller.animator, 
+                    controller.animationController.lastAnimatorCache, 
+                    controller.animationController.animatorParamCache, 
+                    "DrawFists", 
+                    out controller.animationController.hash ) ) 
+                {
+                    controller.animator.SetTrigger(DrawFists);
+                }
+                return;
+            }
             
             if(AnimationController.TryGetAnimatorParam(  controller.animator, 
                 controller.animationController.lastAnimatorCache, 
@@ -30,18 +42,6 @@ namespace ProjectColoni
                 controller.animator.SetTrigger(controller.equipment.activeWeapon.animationDrawTrigger);
             }
         }
-        public void CombatModeToggled(AiController controller)
-        {
-            if (controller.equipment.activeWeapon == null) return;
 
-            if(AnimationController.TryGetAnimatorParam(  controller.animator, 
-                controller.animationController.lastAnimatorCache, 
-                controller.animationController.animatorParamCache, 
-                controller.equipment.activeWeapon.animationDrawTrigger, 
-                out controller.animationController.hash ) ) 
-            {
-                controller.animator.SetTrigger(controller.equipment.activeWeapon.animationDrawTrigger);
-            }
-        }
     }
 }

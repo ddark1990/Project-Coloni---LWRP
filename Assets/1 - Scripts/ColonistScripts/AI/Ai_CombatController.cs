@@ -32,7 +32,7 @@ namespace ProjectColoni
         public void ToggleCombatMode()
         {
             if (!_controller.equipment.IsEquipped(EquipmentSlot.EquipmentType.RangedWep))
-            {
+            {                
                 Debug.Log("No Ranged Weapon Equipped!");
                 return;
             }
@@ -51,6 +51,7 @@ namespace ProjectColoni
         public void ToggleDraftState()
         {
             _controller.stateController.Drafted = !_controller.stateController.Drafted;
+            //give player the ability to control the colonist
             _controller.enablePlayerControl = _controller.stateController.Drafted;
 
             EventRelay.OnToggleDrafted(_controller);

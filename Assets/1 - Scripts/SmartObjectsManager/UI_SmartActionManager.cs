@@ -73,12 +73,25 @@ namespace ProjectColoni
                 
             switch (_selectionManager.currentlySelectedObject)
             {
-                case AiController aiController: //if colonist is selected, colonist related actions for that object is presented
-
-                    if (aiController.stateController.Drafted) return;
+                //if colonist is selected, colonist related actions for that object are presented
+                case AiController aiController:
+                    switch (aiController.aiStats.stats.gender)
+                    {
+                        case Stats.Gender.Male:
+                            ToggleRightClickPanel(aiController, _selectionManager.hoveringObject as SmartObject);
+                            break;
+                        case Stats.Gender.Female:
+                            ToggleRightClickPanel(aiController, _selectionManager.hoveringObject as SmartObject);
+                            break;
+                        case Stats.Gender.Robot:
+                            break;
+                        case Stats.Gender.Alien:
+                            break;
+                        case Stats.Gender.Animal:
+                            break;
+                    }
 
                     //open & populate right click panel
-                    ToggleRightClickPanel(aiController, _selectionManager.hoveringObject as SmartObject);
                     
                     break;
                 case Item item:
