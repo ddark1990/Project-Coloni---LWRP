@@ -1,77 +1,70 @@
 ﻿using System;
-using System.Globalization;
-using System.Text;
+using System.Collections;
+using System.Collections.Generic;
 using Doozy.Engine.UI;
-using ProjectColoni;
+using Doozy.Engine.Utils;
+using Ludiq.PeekCore;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 namespace ProjectColoni
 {
     public class UI_SelectionController : MonoBehaviour
     {
-        public static UI_SelectionController Instance { get; private set; }
-
-        [Header("Canvases")]
-        [SerializeField] private GameObject canvas;
+        //TODO: item data population inside inventory, equipment logic and its UI updates
         [Header("Panels")]
         [SerializeField] private GameObject selectedPanelHolder;
         [SerializeField] private GameObject selectedColonistPanel;
         [SerializeField] private GameObject selectedResourcePanel;
         [SerializeField] private GameObject selectedItemPanel;
-        [Header("PanelCache")]
-        public RawImage selectedImage;
-        public Text selectedName;
-        [Header("Cache")] 
-        public UI_InventoryPanelController inventoryPanelController;
-
-        private SelectionManager _selectionManager;
-        private UI_SkillPanel _skillPanel;
-
-        private bool _skillWindowOpen;
-        private bool _healthWindowOpen;
-        private bool _inventoryWindowOpen;
-        private bool _infoWindowOpen;
-    
         
-        private void Start()
+        public static UI_ColonistPanelRelay ColonistPanelRelay;
+        public static UI_ResourcePanelRelay ResourcePanelRelay;
+        public static UI_ItemPanelRelay ItemPanelRelay;
+
+        private AiController _aiController;
+
+        [Header("Manual Cache")]
+        [SerializeField] private UI_InventoryPanelController inventoryPanelController;
+        
+        #region Unity Functions
+        
+        private void OnEnable()
         {
-            if(Instance == null)
-            {
-                Instance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+            //update the ui of selected/deselected object
+            EventRelay.OnObjectSelected += UpdateSelectionUI;
+            EventRelay.OnInventoryUpdated += UpdateSelectionUI;
             
-            _selectionManager = SelectionManager.Instance;
+            EventRelay.OnObjectSelected += ToggleSelectedObjectUi;
+            EventRelay.OnObjectDeselected += CloseSelectedPanel;
 
-            _skillPanel = GetComponentInChildren<UI_SkillPanel>();
+            UIView.OnUIViewAction += UIViewEvents;
+            UIButton.OnUIButtonAction += UIButtonEvents;
         }
-
-        private void LateUpdate() //refactor into separate controllers
+        
+        private void LateUpdate()
         {
             if(selectedColonistPanel.activeInHierarchy) PopulateColonistVitalsData();
             if(selectedResourcePanel.activeInHierarchy) PopulateResourceData();
             if(selectedItemPanel.activeInHierarchy) PopulateItemData();
         }
+        
+        #endregion
 
-        public void TogglePanelHolder() 
+        #region Panels
+        
+        private void ToggleSelectedObjectUi(Selectable selected)
         {
             OpenSelectedPanel();
-
-            if (_selectionManager.currentlySelectedObject == null) return;
-
-            switch (_selectionManager.currentlySelectedObject)
+            
+            switch (selected)
             {
                 case AiController aiController:
                     SetActivePanel(selectedColonistPanel.name);
                     
                     PopulateBaseData(aiController);
-                    
+
+                    //get ai reference for the inventory updates
+                    _aiController = aiController;
                     break;
                 case Node harvestable:
                     SetActivePanel(selectedResourcePanel.name);
@@ -90,183 +83,19 @@ namespace ProjectColoni
                     break;
             }
         }
-
-        [SerializeField] private UI_InfoPanelRelay infoPanelRelay;
-        
-        private void PopulateBaseData(Selectable selected)
-        {
-            var panelHolderRelay = selectedPanelHolder.GetComponentInChildren<UI_PanelHolderRelay>();
-            
-            switch (selected)
-            {
-                case AiController aiController:
-                    panelHolderRelay.objectName.text = aiController.aiStats.baseObjectInfo.ObjectName;
-                    //panelHolderRelay.objectImage.sprite = aiController.aiStats.baseObjectInfo.Sprite;
-                    panelHolderRelay.objectImage.texture = aiController.aiStats.baseObjectInfo.SpriteTexture;
-
-                    infoPanelRelay.descriptionText.text = aiController.aiStats.baseObjectInfo.Description;
-                    
-                    break;
-                case Node harvestable:
-                    panelHolderRelay.objectName.text = harvestable.baseObjectInfo.ObjectName;
-                    //panelHolderRelay.objectImage.sprite = harvestable.baseObjectInfo.Sprite;
-                    panelHolderRelay.objectImage.texture = harvestable.baseObjectInfo.SpriteTexture;
-
-                    infoPanelRelay.descriptionText.text = harvestable.baseObjectInfo.Description;
-                        
-                    break;
-                case Item item:
-                    panelHolderRelay.objectName.text = item.baseObjectInfo.ObjectName;
-                    //panelHolderRelay.objectImage.sprite = item.baseObjectInfo.Sprite;
-                    panelHolderRelay.objectImage.texture = item.baseObjectInfo.SpriteTexture;
-
-                    infoPanelRelay.descriptionText.text = item.baseObjectInfo.Description;
-                    
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-        }
-
-        [HideInInspector] public UI_ColonistPanelRelay colonistPanelRelay;
-        
-        private void PopulateColonistVitalsData() 
-        {
-            var aiController = _selectionManager.selectedTemp.GetComponentInChildren<AiController>();
-
-            //bars
-            colonistPanelRelay.healthBar.fillAmount = aiController.aiStats.stats.Health / aiController.aiStats.stats.MaxHealth;
-            colonistPanelRelay.staminaBar.fillAmount = aiController.aiStats.stats.Stamina / aiController.aiStats.stats.MaxStamina;
-            colonistPanelRelay.foodBar.fillAmount = aiController.aiStats.stats.Food / 100;
-            colonistPanelRelay.energyBar.fillAmount = aiController.aiStats.stats.Energy / 100;
-            colonistPanelRelay.comfortBar.fillAmount = aiController.aiStats.stats.Comfort / 100;
-            colonistPanelRelay.recreationBar.fillAmount = aiController.aiStats.stats.Recreation / 100;
-                    
-            //text
-            colonistPanelRelay.healthText.text = CachedIntToString[(int)aiController.aiStats.stats.Health];
-            colonistPanelRelay.staminaText.text = CachedIntToString[(int)aiController.aiStats.stats.Stamina];
-            colonistPanelRelay.foodText.text = CachedIntToString[(int)aiController.aiStats.stats.Food ];
-            colonistPanelRelay.energyText.text = CachedIntToString[(int) aiController.aiStats.stats.Energy];
-            colonistPanelRelay.comfortText.text = CachedIntToString[(int)aiController.aiStats.stats.Comfort];
-            colonistPanelRelay.recreationText.text = CachedIntToString[(int)aiController.aiStats.stats.Recreation ];
-            
-            //status notifications
-            
-            
-        }
-
-        [HideInInspector] public UI_ResourcePanelRelay resourcePanelRelay;
-        
-        private void PopulateResourceData()
-        {
-            var resource = _selectionManager.selectedTemp.GetComponentInChildren<Node>();
-
-            resourcePanelRelay.amountText.text = CachedIntToString[resource.amount];
-        }
-
-        [HideInInspector] public UI_ItemPanelRelay itemPanelRelay;
-        
-        private void PopulateItemData()
-        {
-            var item = _selectionManager.selectedTemp.GetComponentInChildren<Item>();
-
-            itemPanelRelay.amountText.text = CachedIntToString[item.itemCount];
-        }
-       
-        //button events
-        public void ToggleSkillWindow()
-        {
-            ResetColonistWindows(_skillWindowOpen);
-            _skillWindowOpen = !_skillWindowOpen;
-
-            SwitchToWindowView(_skillWindowOpen, "Selected", "SkillInfoPanel");
-        }
-        
-        public void ToggleHealthWindow()
-        {
-            ResetColonistWindows(_healthWindowOpen);
-            _healthWindowOpen = !_healthWindowOpen;
-            
-            SwitchToWindowView(_healthWindowOpen, "Selected", "HealthInfoPanel");
-        }
-        
-        public void ToggleInventoryWindow()
-        {
-            ResetColonistWindows(_inventoryWindowOpen);
-            _inventoryWindowOpen = !_inventoryWindowOpen;
-            
-            SwitchToWindowView(_inventoryWindowOpen, "Selected", "InventoryInfoPanel");
-        }
-        
-        public void ToggleInfoWindow()
-        {
-            ResetColonistWindows(_infoWindowOpen);
-            _infoWindowOpen = !_infoWindowOpen;
-            
-            SwitchToWindowView(_infoWindowOpen, "General", "InfoPanel");
-        }
-
-        public void ToggleWalkFaster()
-        {
-            if (_selectionManager.currentlySelectedObject == null) return;
-            
-            _selectionManager.currentlySelectedObject.gameObject.GetComponent<AiController>().moveFaster =
-                !_selectionManager.currentlySelectedObject.gameObject.GetComponent<AiController>().moveFaster;
-        }
-
-        public void OnDraftedColonistButtonPressed()
-        {
-            var colonist = SelectionManager.Instance.currentlySelectedObject as AiController;
-            if (colonist == null) return;
-            
-            colonist.combatController.ToggleDraftState();
-            
-            //update button visually somehow
-            var color = colonist.stateController.Drafted ? new Color(1,1,1,1) : new Color(1,1,1,.15f);
-            colonistPanelRelay.draftButton.image.color = color;
-        }
-        
-        public void OnChangeCombatModeButtonPress()
-        {
-            var colonist = SelectionManager.Instance.currentlySelectedObject as AiController;
-            if (colonist == null) return;
-
-            colonist.combatController.ToggleCombatMode();
-        }
-        //
         
         private void OpenSelectedPanel()
         {
-            if(_selectionManager.currentlySelectedObject != null) UIView.ShowView("Selected", "SelectedInfoPanel");
+            if(SelectionManager.CurrentlySelectedObject != null) UIView.ShowView("Selected", "SelectedInfoPanel");
         }
-
-        private static string _tempCategoryName;
-        private static string _tempPanelName;
         
-        public static void SwitchToWindowView(bool active, string categoryName, string panelName) //toggles views while caching old view and category names
+        private void CloseSelectedPanel(Selectable deselected)
         {
-            if (_tempPanelName != string.Empty && _tempCategoryName != string.Empty)
-            {
-                UIView.HideView(_tempCategoryName, _tempPanelName);
-            }
-            
-            _tempPanelName = panelName;
-            _tempCategoryName = categoryName;
-            
-            if(active) UIView.ShowView(categoryName, panelName);
-        }
+            //hides the selection panel
+            UIView.HideViewCategory("Selected");
 
-        private static string _tempCategoryToggleReset;
-        public static void ToggleWindowViewWithReset(bool active, string categoryName, string panelName)
-        {
-            if (_tempCategoryToggleReset != string.Empty)
-            {
-                UIView.HideViewCategory(_tempCategoryToggleReset);
-            }
-
-            _tempCategoryToggleReset = categoryName;
-            
-            if(active) UIView.ShowView(categoryName, panelName);
+            //reset any open colonist panels (inventory, skills, health, etc)
+            ResetColonistActivePanelWindows();
         }
         
         private void SetActivePanel(string activePanel)
@@ -275,41 +104,254 @@ namespace ProjectColoni
             selectedResourcePanel.SetActive(activePanel.Equals(selectedResourcePanel.name));
             selectedItemPanel.SetActive(activePanel.Equals(selectedItemPanel.name));
         }
-
-        private void ResetColonistWindows(bool active)
+        #endregion
+        
+        #region Ui Data
+        private void PopulateBaseData(Selectable selected)
         {
-            if (active)
-            {
-                return;
-            }
+            var panelHolderRelay = selectedPanelHolder.GetComponentInChildren<UI_PanelHolderRelay>();
             
-            _inventoryWindowOpen = false;
-            _healthWindowOpen = false;
-            _skillWindowOpen = false;
-            _infoWindowOpen = false;
-        }
+            panelHolderRelay.objectName.text = selected.baseObjectInfo.ObjectName;
+            //panelHolderRelay.objectImage.sprite = selected.baseObjectInfo.Sprite;
+            panelHolderRelay.objectImage.texture = selected.baseObjectInfo.SpriteTexture;
 
-        public void ResetWindows()
-        {
-            _inventoryWindowOpen = false;
-            _healthWindowOpen = false;
-            _skillWindowOpen = false;
-            _infoWindowOpen = false;
-            
-            CloseSelectedPanel();
+            //infoPanelRelay.descriptionText.text = selected.baseObjectInfo.Description;
         }
         
-        private void CloseSelectedPanel()
+        
+        private void PopulateColonistVitalsData() 
         {
-            if(_selectionManager.hoveringObject == null) UIView.HideViewCategory("General");
+            if (!SelectionManager.CurrentlySelectedObject) return;
 
-            UIView.HideViewCategory("Selected");
+            var aiController = SelectionManager.CurrentlySelectedObject.GetComponentInChildren<AiController>();
+
+            //bars
+            ColonistPanelRelay.healthBar.fillAmount = aiController.aiStats.stats.Health / 
+                                                      aiController.aiStats.stats.MaxHealth;
+            ColonistPanelRelay.staminaBar.fillAmount = aiController.aiStats.stats.Stamina / 
+                                                       aiController.aiStats.stats.MaxStamina;
+            ColonistPanelRelay.foodBar.fillAmount = aiController.aiStats.stats.Food / 100;
+            ColonistPanelRelay.energyBar.fillAmount = aiController.aiStats.stats.Energy / 100;
+            ColonistPanelRelay.comfortBar.fillAmount = aiController.aiStats.stats.Comfort / 100;
+            ColonistPanelRelay.recreationBar.fillAmount = aiController.aiStats.stats.Recreation / 100;
+                    
+            //text
+            ColonistPanelRelay.healthText.text = CachedIntToString[(int)aiController.aiStats.stats.Health];
+            ColonistPanelRelay.staminaText.text = CachedIntToString[(int)aiController.aiStats.stats.Stamina];
+            ColonistPanelRelay.foodText.text = CachedIntToString[(int)aiController.aiStats.stats.Food ];
+            ColonistPanelRelay.energyText.text = CachedIntToString[(int) aiController.aiStats.stats.Energy];
+            ColonistPanelRelay.comfortText.text = CachedIntToString[(int)aiController.aiStats.stats.Comfort];
+            ColonistPanelRelay.recreationText.text = CachedIntToString[(int)aiController.aiStats.stats.Recreation ];
+            
+            //status notifications
+            
+            
         }
+        private void PopulateResourceData()
+        {
+            if (!SelectionManager.CurrentlySelectedObject) return;
+
+            var resource = SelectionManager.CurrentlySelectedObject.GetComponentInChildren<Node>();
+
+            ResourcePanelRelay.amountText.text = CachedIntToString[resource.amount];
+        }
+
+        
+        private void PopulateItemData()
+        {
+            if (!SelectionManager.CurrentlySelectedObject) return;
+            
+            var item = SelectionManager.CurrentlySelectedObject.GetComponentInChildren<Item>();
+
+            ItemPanelRelay.amountText.text = CachedIntToString[item.ItemCount];
+        }
+
+        #endregion
+        
+        #region Button Events
+
+        //on button clicks
+        private void TriggerButtonEvent(string buttonName)
+        {
+            switch (buttonName)
+            {
+                //colonist panel buttons
+                case "InventoryButton":
+                    SwitchActivePanel("ColonistUIPanels", "InventoryPanel");
+
+                    break;
+                case "SkillsButton":
+                    SwitchActivePanel("ColonistUIPanels", "SkillPanel");
+                    
+                    break;
+                case "HealthButton":
+                    SwitchActivePanel("ColonistUIPanels", "HealthPanel");
+                    
+                    break;
+                //
+                
+                //
+                case "InfoButton":
+                    Debug.Log(buttonName);
+
+                    break;
+                case "WalkFasterButton":
+                    OnToggleWalkFasterPressed();
+
+                    break;
+                case "DraftColonistButton":
+                    OnDraftedColonistButtonPressed();
+
+                    break;
+                case "FightModeButton":
+                    OnFightModeButtonPress();
+
+                    break;
+                //
+                
+            }
+        }
+        
+        private void OnToggleWalkFasterPressed()
+        {
+            if (SelectionManager.CurrentlySelectedObject == null) return;
+            
+            SelectionManager.CurrentlySelectedObject.gameObject.GetComponent<AiController>().moveFaster =
+                !SelectionManager.CurrentlySelectedObject.gameObject.GetComponent<AiController>().moveFaster;
+        }
+        private void OnDraftedColonistButtonPressed()
+        {
+            var colonist = SelectionManager.CurrentlySelectedObject as AiController;
+
+            if (colonist == null) return;
+            colonist.combatController.ToggleDraftState();
+
+            //update button visually somehow
+            var color = colonist.stateController.Drafted ? new Color(1, 1, 1, 1) : new Color(1, 1, 1, .15f);
+            ColonistPanelRelay.draftButton.image.color = color;
+        }
+        private void OnFightModeButtonPress()
+        {
+            var colonist = SelectionManager.CurrentlySelectedObject as AiController;
+            if (colonist == null) return;
+
+            colonist.combatController.ToggleCombatMode();
+        }
+        //TODO: update UI panels with one method
+        /*private void ToggleInventoryWindow()
+        {
+            ResetActivePanelWindows(_inventoryWindowOpen);
+            
+            _inventoryWindowOpen = !_inventoryWindowOpen;
+            
+            SwitchToWindowView(_inventoryWindowOpen, "ColonistUIPanels", "InventoryPanel");
+        }
+        private void ToggleSkillWindow()
+        {
+            ResetActivePanelWindows(_skillWindowOpen);
+            
+            _skillWindowOpen = !_skillWindowOpen;
+            
+            SwitchToWindowView(_skillWindowOpen, "ColonistUIPanels", "SkillPanel");
+        }*/
+        
+        private void ResetColonistActivePanelWindows()
+        {
+            UIView.HideViewCategory("ColonistUIPanels");
+            
+            inventoryPanelController.ClearInventoryUISlots();
+        }
+        
+        private string _previousCategoryName;
+        private string _previousPanelName;
+        private void SwitchActivePanel(string categoryName, string panelName) 
+        {
+            if (UIView.IsViewVisible(categoryName, panelName))
+                UIView.HideView(categoryName, panelName);
+            else
+            {
+                //hides previously opened view if opened
+                if (UIView.IsViewVisible(_previousCategoryName, _previousPanelName))
+                    UIView.HideView(_previousCategoryName, _previousPanelName);
+                
+                UIView.ShowView(categoryName, panelName);
+                
+                _previousCategoryName = categoryName;
+                _previousPanelName = panelName;
+            }
+        }
+        #endregion
+        
+        #region Events
+        
+        private void UIButtonEvents(UIButton button, UIButtonBehaviorType behaviourType)
+        {
+            switch (behaviourType)
+            {
+                case UIButtonBehaviorType.OnClick:
+                    TriggerButtonEvent(button.ButtonName);
+                    break;
+                case UIButtonBehaviorType.OnDoubleClick:
+                    break;
+                case UIButtonBehaviorType.OnLongClick:
+                    break;
+                case UIButtonBehaviorType.OnPointerEnter:
+                    break;
+                case UIButtonBehaviorType.OnPointerExit:
+                    break;
+                case UIButtonBehaviorType.OnPointerDown:
+                    break;
+                case UIButtonBehaviorType.OnPointerUp:
+                    break;
+                case UIButtonBehaviorType.OnSelected:
+                    break;
+                case UIButtonBehaviorType.OnDeselected:
+                    break;
+                case UIButtonBehaviorType.OnRightClick:
+                    break;
+            }
+        }
+        
+        //updates the ui when a selection happens from EventRelay.OnObjectSelected
+        private void UpdateSelectionUI(Selectable selectedObject)
+        {
+            switch (selectedObject)
+            {
+                case AiController aiController:
+                    inventoryPanelController.PopulateInventoryData(aiController);
+                    break;
+                case Item item:
+                    break;
+                case Node node:
+                    break;
+            }
+        }
+        
+        //might not need
+        private void UIViewEvents(UIView view, UIViewBehaviorType behaviourType)
+        {
+            switch (behaviourType)
+            {
+                case UIViewBehaviorType.Unknown:
+                    break;
+                case UIViewBehaviorType.Show:
+                    break;
+                case UIViewBehaviorType.Hide:
+                    break;
+                case UIViewBehaviorType.Loop:
+                    break;
+            }
+        }
+        #endregion
+        
+        #region Statics
         
         public static readonly CacheIntString CachedIntToString = new CacheIntString(
             (values)=>values , //describe how seconds (key) are translated to useful value (hash)
             (value)=>value.ToString("0") //you describe how string is built based on value (hash)
             , 0 , 150 , 1 //initialization range and step, so cache will be warmed up and ready
         );
+        
+        #endregion
     }
 }

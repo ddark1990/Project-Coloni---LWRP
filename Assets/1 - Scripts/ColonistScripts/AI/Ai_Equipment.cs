@@ -29,13 +29,13 @@ namespace ProjectColoni
             EventRelay.OnCombatModeToggled += ActivateWeaponModel;
         }
 
-        private void EquipItem(Item item)
+        private void EquipItem(AiController controller, Item item)
         {
-            _controller = SelectionManager.Instance.currentlySelectedObject as AiController;
+            _controller = controller;
             
             for (int i = 0; i < equipmentSlots.Length; i++)
             {
-                if (_controller == null) break;
+                if (controller == null) break;
                 
                 var slot = equipmentSlots[i];
                 
@@ -44,7 +44,7 @@ namespace ProjectColoni
                 {
                     if (slot.equippedItem != null) //if another item equipped, un equip old item first
                     {
-                        _controller.equipment.UnEquipItem(slot.equippedItem);
+                        controller.equipment.UnEquipItem(controller, slot.equippedItem);
                     }
                     
                     slot.equippedItem = item;
@@ -54,21 +54,25 @@ namespace ProjectColoni
                     //if the item has a modelReference, stays null if item is not
                     slot.modelReference = CreateWeaponModel(item); 
                     
-                    UI_SelectionController.Instance.inventoryPanelController.UpdateEquipmentUi(item, slot, true);
-                    UI_SelectionController.Instance.inventoryPanelController.UpdateInventoryUi(item, false);
+                    /*
+                    UI_Controller.Instance.inventoryPanelController.UpdateEquipmentUi(item, slot, true);
+                    UI_Controller.Instance.inventoryPanelController.UpdateInventoryUi(controller, item, false);
+                */
                 }
             }
         }
 
-        private void UnEquipItem(Item item)
+        private void UnEquipItem(AiController controller, Item item)
         {
             foreach (var slot in equipmentSlots)
             {
                 if (slot.equipmentType.Equals(item.itemTypeData.itemData.equipmentType))
                 {
                     item.equipped = false;
-                    UI_SelectionController.Instance.inventoryPanelController.UpdateEquipmentUi(item, slot, false);
-                    UI_SelectionController.Instance.inventoryPanelController.UpdateInventoryUi(item, true);
+                    /*
+                    UI_Controller.Instance.inventoryPanelController.UpdateEquipmentUi(item, slot, false);
+                    UI_Controller.Instance.inventoryPanelController.UpdateInventoryUi(controller, item, true);
+                    */
                     slot.equippedItem = null;
                     
                     ClearWeaponModel(slot); 
@@ -210,7 +214,8 @@ namespace ProjectColoni
             LegsArmor,
             Backpack,
             RangedWep,
-            MeleeWep
+            MeleeWep,
+            HarvestingTool
         }
 
         public string name;

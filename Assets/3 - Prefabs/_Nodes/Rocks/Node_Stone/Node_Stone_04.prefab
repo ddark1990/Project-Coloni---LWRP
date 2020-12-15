@@ -134,7 +134,7 @@ MonoBehaviour:
   beingUsed: 0
   usedBy: {fileID: 0}
   actionLength: 1
-  stoppingDistance: 2
+  stoppingDistance: 2.5
   animationTrigger: 
   activeAction: {fileID: 0}
   debugGizmosEnabled: 0

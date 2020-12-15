@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using ProjectColoni;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Animations.Rigging;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
@@ -46,15 +47,16 @@ namespace ProjectColoni
             
             if(smartActions != null)
                 smartActions.InitializeSmartActions(this);
+            
         }
         
         private void Update()
         {
             if (selected && Input.GetKeyDown(KeyCode.Mouse1) && enablePlayerControl 
-                && SelectionManager.Instance.hoveringObject == null) SetDestinationToMousePosition();
+                && SelectionManager.HoveringObject == null) SetDestinationToMousePosition();
             
             if (selected && Input.GetKeyDown(KeyCode.Mouse1) && debugControlEnabled 
-                && SelectionManager.Instance.hoveringObject == null) SetDestinationToMousePosition();
+                && SelectionManager.HoveringObject == null) SetDestinationToMousePosition();
             
             //DrawLineRendererPaths(navMeshAgent, destinationLineRenderer); //fix for both ai
             if (!EventSystem.current.IsPointerOverGameObject()) OutlineHighlight();
@@ -62,6 +64,7 @@ namespace ProjectColoni
             UpdateAction(_activeSmartObject);
             
             UpdateColonistTerrainHeight();
+            
         }
         
         //ai ver 1
@@ -137,7 +140,7 @@ namespace ProjectColoni
                     _actionLength = smartObject.actionLength;
                 }
                 
-                Debug.Log("Recurring Action In Progress!");
+                //Debug.Log("Recurring Action In Progress!");
                 return;
             }
 
@@ -152,11 +155,11 @@ namespace ProjectColoni
                 if(_actionLength <= 0)
                     smartObject.activeAction.Act(this, smartObject);
                 
-                Debug.Log("Action In Progress!");
+                //Debug.Log("Action In Progress!");
                 return;
             }
             
-            Debug.Log("Finished Action!");
+            //Debug.Log("Finished Action!");
             ResetAction(smartObject);
         }
         private void MoveAgent(Vector3 targetPosition)
@@ -310,7 +313,7 @@ namespace ProjectColoni
             
             if(Physics.Raycast(ray, out var hitInfo, Mathf.Infinity, terrainHeightMask))
             {
-                var y = hitInfo.point.y + heightOffset;
+                var y = hitInfo.point.y/* + heightOffset*/;
                 var transform1 = transform;
                 var pos = transform1.position;
  

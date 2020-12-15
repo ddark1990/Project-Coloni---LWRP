@@ -8,16 +8,7 @@ namespace ProjectColoni
     {
         [Header("Node")]
         public int amount;
-        [SerializeField] private BaseScriptableData baseData; //for manual creation from scriptableObjects 
         public NodeType nodeData;
-        
-        public BaseObjectData baseObjectInfo;
-
-        
-        private void Awake()
-        {
-            InitializeBaseObjectData();
-        }
 
         private void Start()
         {
@@ -25,31 +16,6 @@ namespace ProjectColoni
             //InitializeSmartActions();
             
             smartActions.InitializeSmartActions(this);
-        }
-
-        /// <summary>
-        /// Initialize base data from a scriptable object if one is available .
-        /// </summary>
-        private void InitializeBaseObjectData()
-        {
-            /*
-            var path = PrefabUtility.GetPrefabAssetPathOfNearestInstanceRoot(this);
-            Debug.Log(path);
-            */
-            
-            //var a = PrefabUtility.GetOutermostPrefabInstanceRoot(gameObject);
-            //Debug.Log(a);
-            //var a = PrefabUtility.GetCorrespondingObjectFromOriginalSource(gameObject);
-            //var a = PrefabUtility.GetCorrespondingObjectFromSource(gameObject);
-            //Debug.Log(a);
-            //var path = AssetDatabase.GetAssetPath(a);
-            //Debug.Log(path);
-
-            //var iconTexture = AssetPreview.GetAssetPreview(this); //fix
-            //Debug.Log(iconTexture);
-        
-            baseObjectInfo = baseData != null ? new BaseObjectData(StaticUtility.GenerateUniqueHashId(), baseData.objectName, baseData.description, baseData.spriteTexture) 
-                : new BaseObjectData(StaticUtility.GenerateUniqueHashId(), "", "", null);
         }
 
         /*/// <summary>

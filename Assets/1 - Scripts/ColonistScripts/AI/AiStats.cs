@@ -8,11 +8,7 @@ namespace ProjectColoni
     public class AiStats : MonoBehaviour
     {
         [Header("Ai Object Data")]
-        [Tooltip("If null, will generate random values for the base data.")] 
-        [SerializeField] private BaseScriptableData baseData;
         [SerializeField] private AiStatsObject statsData;
-        
-        public BaseObjectData baseObjectInfo;
         public Stats stats;
 
         private AiController _controller;
@@ -32,20 +28,9 @@ namespace ProjectColoni
 
         private void Start()
         {
-            InitializeBaseObjectData();
-
             _controller = GetComponent<AiController>();
-            //Debug.Log(baseObjectInfo.Id);
         }
         
-        /// <summary>
-        /// Initialize base data from a scriptable object if one is available .
-        /// </summary>
-        private void InitializeBaseObjectData()
-        {
-            baseObjectInfo = baseData != null ? new BaseObjectData(StaticUtility.GenerateUniqueHashId(), baseData.objectName, baseData.description, baseData.spriteTexture) 
-                : new BaseObjectData(StaticUtility.GenerateUniqueHashId(), "", "", null); //should generate random base stats, maybe
-        }
         
         private void InitializeStats()
         {
@@ -88,15 +73,16 @@ namespace ProjectColoni
             DecreaseClampedFloat(stats.Energy, stats.EnergyRate, out stats.Energy);
 
             if (stats.Stamina <= 0) _controller.moveFaster = false;
-
+            
+            //make sure gravity is off on rigid body
             switch (_controller.aiStats.stats.gender)
             {
                 case Stats.Gender.Male:
-                    if(_controller.moveFaster && _controller.rigidBody.velocity.magnitude > 0) stats.Stamina -= Time.deltaTime * stats.StaminaRate;
+                    if(_controller.moveFaster && _controller.rigidBody.velocity.magnitude > 0.1f) stats.Stamina -= Time.deltaTime * stats.StaminaRate;
 
                     break;
                 case Stats.Gender.Female:
-                    if(_controller.moveFaster && _controller.rigidBody.velocity.magnitude > 0) stats.Stamina -= Time.deltaTime * stats.StaminaRate;
+                    if(_controller.moveFaster && _controller.rigidBody.velocity.magnitude > 0.1f) stats.Stamina -= Time.deltaTime * stats.StaminaRate;
 
                     break;
                 case Stats.Gender.Robot:
@@ -104,7 +90,7 @@ namespace ProjectColoni
                 case Stats.Gender.Alien:
                     break;
                 case Stats.Gender.Animal:
-                    if(_controller.moveFaster && _controller.aiPath.velocity.magnitude > 0) stats.Stamina -= Time.deltaTime * stats.StaminaRate;
+                    if(_controller.moveFaster && _controller.aiPath.velocity.magnitude > 0.1f) stats.Stamina -= Time.deltaTime * stats.StaminaRate;
     
                     break;
             }

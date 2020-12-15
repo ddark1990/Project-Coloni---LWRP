@@ -30,22 +30,17 @@ public class ColonistGenerator : MonoBehaviour
         _nameGen = FindObjectOfType<NameGenerator>();
 
     }
-
-    void Update()
-    {
-        
-    }
-
+    
     public void GenerateRandomColonist(Vector3 placePos)
     {
-        var colonist = Instantiate(colonists[0], placePos, Quaternion.identity);
+        var colonist = Instantiate(colonists[0], placePos, Quaternion.identity).GetComponent<AiController>();
 
+        GameManager.Instance.AddAiToColony(colonist);
+        
         var skinnedMeshRenderer = colonist.GetComponentInChildren<SkinnedMeshRenderer>();
         
         GenerateRandomColor(skinnedMeshRenderer);
         GenerateColonistData();
-        
-        Debug.Log(skinnedMeshRenderer.gameObject);
     }
     
     private void GenerateRandomColor(Renderer meshRenderer) 

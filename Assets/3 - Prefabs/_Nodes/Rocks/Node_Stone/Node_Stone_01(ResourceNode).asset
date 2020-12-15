@@ -19,3 +19,4 @@ MonoBehaviour:
     - {fileID: 190783428262204700, guid: 1d550239be5d2fd48ab22acda554e552, type: 3}
     - {fileID: 4975095194000327386, guid: 3a9a1363f3f1c634cbd88afe29655202, type: 3}
     - {fileID: 4006803359611483153, guid: 47a0f180d21abaa4984ff57fb1858e53, type: 3}
+  gatherSpeed: 0

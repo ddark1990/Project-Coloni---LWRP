@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    [HideInInspector] public ResourceManager resourceManager;
+
     public List<AiController> playerControlledColonists;
     public SpriteContainer globalSpriteContainer;
 
@@ -22,6 +24,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        resourceManager = GetComponent<ResourceManager>();
     }
 
     public void AddAiToColony(AiController ai)
@@ -29,6 +33,7 @@ public class GameManager : MonoBehaviour
         AddColonistToList(ai);
         ai.playerOwned = true;
         
+        UI_Controller.Instance.colonistPanel.UpdateColonistPanel(ai);
         //add colonist button to UI
     }
 

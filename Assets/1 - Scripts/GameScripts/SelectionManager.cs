@@ -11,9 +11,11 @@ namespace ProjectColoni
     {
         public static SelectionManager Instance { get; private set; }
 
+        public static Selectable CurrentlySelectedObject { get; private set; }
+        public static List<Selectable> CurrentlySelectedObjects { get; private set; }
+        public static Selectable HoveringObject; //maybe fix
+        
         [Header("Selectables")]
-        public Selectable currentlySelectedObject;
-        public Selectable hoveringObject;
         
         public LayerMask selectableMask;
         
@@ -25,13 +27,17 @@ namespace ProjectColoni
 
         public Camera cam;
         //private RaycastHit _hit;
-        [HideInInspector] public Selectable selectedTemp;
+        public static Selectable LastSelectedObject;
 
         [Header("Outline Materials")] 
         public Material outlineMaskMaterial;
         public Material outlineMaterial;
-        
-        
+
+        private void OnEnable()
+        {
+            EventRelay.OnObjectSelected += SelectObject;
+        }
+
         private void Start()
         {
             InitializeSelectionManager();
@@ -39,9 +45,11 @@ namespace ProjectColoni
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (EventSystem.current.IsPointerOverGameObject() || CurrentlySelectedObject == null) return;
+
+            if (!Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Escape))
             {
-                DeselectObject();
+                DeselectOnKeyPress();
             }
         }
 
@@ -61,56 +69,79 @@ namespace ProjectColoni
             
             cam = RTSCamera.Instance.GetComponent<Camera>();
         }
-
-        
-
         private void DebugSelectedRightClick(Selectable selectedObject, RaycastHit hit)
         {
             if(selectedObject.selected)
                 Debug.Log("Right clicked on " + hit.collider.name + " while " + selectedObject.name + " is selected.");
 
         }
-        
-        public void SelectObject(Selectable selectedObject)
+
+        /// <summary>
+        /// Activated by an event which is called from the Selectable.cs objects. 
+        /// </summary>
+        /// <param name="selectingObject"></param>
+        private void SelectObject(Selectable selectingObject)
         {
-            if (EventSystem.current.IsPointerOverGameObject()) return;
-            
-            if (selectedTemp != null)
+            //deselect CurrentlySelectedObject if selecting the same object again
+            //trigger deselect event
+            if (CurrentlySelectedObject != null && CurrentlySelectedObject.Equals(selectingObject))
             {
-                selectedTemp.selected = false;
-                
-                //ui
-                UI_SelectionController.Instance.ResetWindows();
+                DeselectObject();                
+                return;
             }
             
-            currentlySelectedObject = selectedObject;
-            currentlySelectedObject.selected = true;
+            //multi selection
+            if (Input.GetKey(KeyCode.LeftControl))
+            {
+                return;
+            }
             
-            //Let ui know what we selected
-            UI_SelectionController.Instance.TogglePanelHolder(); //rewrite how this works
+            //deselect previously selected object if the new one selectingObject != CurrentlySelectedObject
+            //trigger deselect event
+            if (CurrentlySelectedObject != null && CurrentlySelectedObject != selectingObject)
+            {
+                //reset object selection & invoke deselection event
+                DeselectObject();                
+            }
+            
+            //set newly selected object cache
+            CurrentlySelectedObject = selectingObject;
+            CurrentlySelectedObject.selected = true;
+
+            //UpdateSelectionUI(CurrentlySelectedObject);
         }
         
+        /// <summary>
+        /// Deselect objects when clicking on anything but another selectable. Outputs OnObjectDeselected(obj) event
+        /// which you can subscribe to.
+        /// </summary>
+        private void DeselectOnKeyPress()
+        {
+            var ray = cam.ScreenPointToRay(Input.mousePosition);
+            
+            if (Physics.Raycast(ray, out var hitInfo, Mathf.Infinity, selectableMask)) return;
+            
+            if (HoveringObject != null) return;
+                
+            DeselectObject();
+        }
+
+        //deselects CurrentlySelectedObject and invokes an event 
         private void DeselectObject()
         {
-            if (EventSystem.current.IsPointerOverGameObject()) return;
+            Debug.Log("Deselecting | " + CurrentlySelectedObject);
             
-            if (currentlySelectedObject != null)
-            {
-                selectedTemp = currentlySelectedObject;
-
-                if (hoveringObject != null) return;
+            EventRelay.OnObjectDeselected?.Invoke(CurrentlySelectedObject);
                 
-                currentlySelectedObject.selected = false;
-                currentlySelectedObject = null;
-                
-                //ui
-                UI_SelectionController.Instance.ResetWindows();
-            }
+            CurrentlySelectedObject.selected = false;
+            CurrentlySelectedObject = null;
         }
-
+        
+        
+        
         public bool SelectionAndHoverClear()
         {
-            return currentlySelectedObject == null && hoveringObject == null;
+            return CurrentlySelectedObject == null && HoveringObject == null;
         }
     }
 }

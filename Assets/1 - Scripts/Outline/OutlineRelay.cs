@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using UnityEngine;
 
 namespace ProjectColoni
@@ -41,6 +42,7 @@ namespace ProjectColoni
         private SelectionManager _selectionManager;
         private static readonly int BaseColor = Shader.PropertyToID("_BaseColor");
 
+
         private void Awake()
         {
             meshRenderer = GetComponentInChildren<Renderer>();
@@ -69,7 +71,7 @@ namespace ProjectColoni
             _needsUpdate = false;
         }
 
-        private void CreateOutlineMaterials() 
+        public void CreateOutlineMaterials() 
         {
             _outlineMaskMaterial = Instantiate(_selectionManager.outlineMaskMaterial);
             _outlineMaterial = Instantiate(_selectionManager.outlineMaterial);
@@ -92,7 +94,7 @@ namespace ProjectColoni
         */
         }
     
-        private void CacheMaterialData()
+        public void CacheMaterialData()
         {
             cachedMaterials = new Material[meshRenderer.sharedMaterials.Length];
 

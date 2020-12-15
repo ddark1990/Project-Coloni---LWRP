@@ -14,6 +14,7 @@ namespace ProjectColoni
             Riffle,
             Bow,
             Hatchet,
+            TwoHAxe,
             PickAxe,
             Hammer,
             Spear

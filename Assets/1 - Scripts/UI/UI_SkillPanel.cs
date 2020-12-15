@@ -10,14 +10,14 @@ namespace ProjectColoni
 
         private void Start()
         {
-            if (SelectionManager.Instance.currentlySelectedObject == null) return;
+            if (SelectionManager.CurrentlySelectedObject == null) return;
             
             PopulateSkills();
         }
 
         private void PopulateSkills()
         {
-            var skillList = SelectionManager.Instance.currentlySelectedObject.GetComponent<ColonistSkills>().skillSet
+            var skillList = SelectionManager.CurrentlySelectedObject.GetComponent<ColonistSkills>().skillSet
                 .Skills;
             
             for (int i = 0; i < skillTabs.Length; i++)

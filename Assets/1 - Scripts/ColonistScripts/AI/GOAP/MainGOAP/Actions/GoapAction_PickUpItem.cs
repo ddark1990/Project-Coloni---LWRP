@@ -52,6 +52,7 @@ namespace ProjectColoni
 
             if ((Time.time - _startTime > controller.animator.GetCurrentAnimatorStateInfo(1).length + extraWaitTime)) //wait til animation is over
             {
+                //use event
                 //Debug.Log("Picked up item.");
         
                 //controller.inventory.AddItemToInventory(_targetItem);

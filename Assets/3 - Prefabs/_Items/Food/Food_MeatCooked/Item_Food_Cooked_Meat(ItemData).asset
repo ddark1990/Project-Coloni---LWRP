@@ -16,7 +16,7 @@ MonoBehaviour:
     equipment: 0
     equipmentType: 0
     stackLimit: 75
-    itemWeight: 0
+    itemWeight: 0.1
     inventorySprite: {fileID: 21300000, guid: 2ca6c52d1b461a543817a75d49b82530, type: 3}
     statusModifiers:
     - {fileID: 11400000, guid: 37ee8e60022e0044c8315a8ac017d8bf, type: 2}

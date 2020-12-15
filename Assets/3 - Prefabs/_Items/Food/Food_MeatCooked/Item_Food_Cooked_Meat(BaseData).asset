@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: Cooked Meat
   description: Cooked meat.
-  sprite: {fileID: 21300000, guid: 2ca6c52d1b461a543817a75d49b82530, type: 3}
+  spriteTexture: {fileID: 2800000, guid: 7f238522a11367a4985130296ec208b4, type: 3}

@@ -29,13 +29,14 @@ namespace ProjectColoni
         [SerializeField] private float fadeInSpeed = 5;
         [SerializeField] private float fadeOutSpeed = 25;
 
-        [HideInInspector] public bool expand;
+        public bool expand;
         public bool fullyExpanded;
         
         private float _expandXFrom;
         private float _expandYFrom;
         private Vector2 _heightDelta;
         private Vector2 _widthDelta;
+        private Color _iconColor = Color.clear;
 
         private void Start()
         {
@@ -73,7 +74,17 @@ namespace ProjectColoni
         {
             if (!fadeInText) return;
 
-            _textColor = expand ? new Color(_textColor.r, _textColor.g, _textColor.b, Mathf.Lerp(_textColor.a, 1, Time.deltaTime * expandSpeed)) : new Color(_textColor.r, _textColor.g, _textColor.b, Mathf.Lerp(_textColor.a, 0, Time.deltaTime * expandSpeed));
+            /*
+            _textColor = expand ? new Color(_textColor.r, _textColor.g, _textColor.b, 
+                    Mathf.Lerp(_textColor.a, 1, Time.deltaTime * fadeInSpeed)) : 
+                new Color(_textColor.r, _textColor.g, _textColor.b, 
+                    Mathf.Lerp(_textColor.a, 0, Time.deltaTime * fadeOutSpeed));
+            */
+            _textColor = !expand ?
+                new Color(_textColor.r, _textColor.g, _textColor.b, 
+                    Mathf.Lerp(_textColor.a, 0, Time.deltaTime * fadeOutSpeed)) :
+                new Color(_textColor.r, _textColor.g, _textColor.b, 
+                    Mathf.Lerp(_textColor.a, 1, Time.deltaTime * fadeInSpeed)) ;
             
             foreach (var text in fadeTextArray)
             {
@@ -81,12 +92,22 @@ namespace ProjectColoni
             }
         }
         
-        private Color _iconColor = Color.white;
         private void FadeInIcons()
         {
             if (!fadeInIcon) return;
             
-            _iconColor = fullyExpanded ? new Color(_iconColor.r, _iconColor.g, _iconColor.b, Mathf.Lerp(_iconColor.a, 1, Time.deltaTime * fadeInSpeed)) : new Color(_iconColor.r, _iconColor.g, _iconColor.b, Mathf.Lerp(_iconColor.a, 0, Time.deltaTime * fadeOutSpeed));
+            /*
+            _iconColor = fullyExpanded ? new Color(_iconColor.r, _iconColor.g, _iconColor.b, 
+                    Mathf.Lerp(_iconColor.a, 1, Time.deltaTime * fadeInSpeed)) : 
+                new Color(_iconColor.r, _iconColor.g, _iconColor.b, 
+                    Mathf.Lerp(_iconColor.a, 0, Time.deltaTime * fadeOutSpeed));
+            */
+            
+            _iconColor = !fullyExpanded ?  
+                new Color(_iconColor.r, _iconColor.g, _iconColor.b, 
+                    Mathf.Lerp(_iconColor.a, 0, Time.deltaTime * fadeOutSpeed)) :
+                new Color(_iconColor.r, _iconColor.g, _iconColor.b, 
+                    Mathf.Lerp(_iconColor.a, 1, Time.deltaTime * fadeInSpeed));
 
             foreach (var icon in iconImagesArray)
             {
@@ -100,7 +121,13 @@ namespace ProjectColoni
 
             foreach (var canvasGroup in canvasGroupsArray)
             {
-                canvasGroup.alpha = expand ? Mathf.Lerp(canvasGroup.alpha, 1, Time.deltaTime * fadeInSpeed) :  Mathf.Lerp(canvasGroup.alpha, 0, Time.deltaTime * fadeOutSpeed);
+                /*
+                canvasGroup.alpha = expand ? Mathf.Lerp(canvasGroup.alpha, 1, Time.deltaTime * fadeInSpeed) :  
+                    Mathf.Lerp(canvasGroup.alpha, 0, Time.deltaTime * fadeOutSpeed);
+                */
+                canvasGroup.alpha = !expand ? 
+                    Mathf.Lerp(canvasGroup.alpha, 0, Time.deltaTime * fadeOutSpeed) :
+                    Mathf.Lerp(canvasGroup.alpha, 1, Time.deltaTime * fadeInSpeed) ;
             }
         }
 
@@ -108,7 +135,20 @@ namespace ProjectColoni
         {
             if (!expandHeight) return;
             
-            _heightDelta = expand ? new Vector2(heightRect.sizeDelta.x, Mathf.Lerp(_heightDelta.y, expandHeightTo, Time.deltaTime * expandSpeed)) : new Vector2(heightRect.sizeDelta.x, Mathf.Lerp(_heightDelta.y, _expandYFrom, Time.deltaTime * expandSpeed));
+            /*
+            _heightDelta = expand ? new Vector2(heightRect.sizeDelta.x, 
+                Mathf.Lerp(_heightDelta.y, expandHeightTo, Time.deltaTime * expandSpeed)) : 
+                new Vector2(heightRect.sizeDelta.x, 
+                    Mathf.Lerp(_heightDelta.y, _expandYFrom, Time.deltaTime * expandSpeed));
+                    */
+            
+            _heightDelta = !expand ? 
+                new Vector2(heightRect.sizeDelta.x, 
+                    Mathf.Lerp(_heightDelta.y, _expandYFrom, Time.deltaTime * expandSpeed)) : 
+                new Vector2(heightRect.sizeDelta.x,
+                    Mathf.Lerp(_heightDelta.y, expandHeightTo, Time.deltaTime * expandSpeed));
+            
+            
             heightRect.sizeDelta = _heightDelta;
         }
 
@@ -116,7 +156,19 @@ namespace ProjectColoni
         {
             if (!expandWidth) return;
             
-            _widthDelta = expand ? new Vector2(Mathf.Lerp(_widthDelta.x, expandWidthTo, Time.deltaTime * expandSpeed), widthRect.sizeDelta.y) : new Vector2(Mathf.Lerp(_widthDelta.x, _expandXFrom, Time.deltaTime * expandSpeed),widthRect.sizeDelta.y);
+            /*
+            _widthDelta = expand ? new Vector2(
+                Mathf.Lerp(_widthDelta.x, expandWidthTo, Time.deltaTime * expandSpeed), widthRect.sizeDelta.y) : 
+                new Vector2(
+                    Mathf.Lerp(_widthDelta.x, _expandXFrom, Time.deltaTime * expandSpeed),widthRect.sizeDelta.y);
+                    */
+            
+            _widthDelta = !expand ?
+                new Vector2(
+                    Mathf.Lerp(_widthDelta.x, _expandXFrom, Time.deltaTime * expandSpeed),widthRect.sizeDelta.y) :
+                new Vector2(
+                    Mathf.Lerp(_widthDelta.x, expandWidthTo, Time.deltaTime * expandSpeed), widthRect.sizeDelta.y);
+            
             widthRect.sizeDelta = _widthDelta;
         }
         

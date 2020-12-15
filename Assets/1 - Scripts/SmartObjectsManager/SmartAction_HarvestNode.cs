@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using static ProjectColoni.Resource;
 
 namespace ProjectColoni
 {
@@ -25,14 +24,18 @@ namespace ProjectColoni
             {
                 case ResourceNode.ResourceSettings.ResourceType.Bush:
                     smartObject.animationTrigger = "GatherBush";
+                    
                     break;
                 case ResourceNode.ResourceSettings.ResourceType.Stone:
                     smartObject.animationTrigger = "GatherStone";
+                    
                     break;
                 case ResourceNode.ResourceSettings.ResourceType.Wood:
                     smartObject.animationTrigger = "GatherWood";
+                    
                     break;
                 case ResourceNode.ResourceSettings.ResourceType.Variety:
+                    
                     break;
             }
             
@@ -45,6 +48,7 @@ namespace ProjectColoni
         {
             Debug.Log("Harvesting");
 
+            
         }
     }
 }

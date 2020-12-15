@@ -19,7 +19,7 @@ public class UI_BuildController : MonoBehaviour
         _buildButtonPanelOpen = !_buildButtonPanelOpen;
         BuildingManager.Instance.inBuildingMode = _buildButtonPanelOpen;
 
-        UI_SelectionController.ToggleWindowViewWithReset(_buildButtonPanelOpen, "Build", "BuildOptions");
+        UI_Controller.ToggleWindowViewWithReset(_buildButtonPanelOpen, "Build", "BuildOptions");
     }
     
     public void OnConstructionButtonPress()
@@ -28,7 +28,7 @@ public class UI_BuildController : MonoBehaviour
         
         _constructButtonPanelOpen = !_constructButtonPanelOpen;
 
-        UI_SelectionController.SwitchToWindowView(_constructButtonPanelOpen, "Build", "ConstructionOptions");
+        UI_Controller.SwitchToWindowView(_constructButtonPanelOpen, "Build", "ConstructionOptions");
     }
     
     public void OnZoneButtonPress()
@@ -37,7 +37,7 @@ public class UI_BuildController : MonoBehaviour
 
         _zoneButtonPanelOpen = !_zoneButtonPanelOpen;
 
-        UI_SelectionController.SwitchToWindowView(_zoneButtonPanelOpen, "Build", "ZoneOptions");
+        UI_Controller.SwitchToWindowView(_zoneButtonPanelOpen, "Build", "ZoneOptions");
     }
 
     private void ResetWindows()

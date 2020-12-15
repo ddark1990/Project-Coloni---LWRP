@@ -66,7 +66,6 @@ namespace ProjectColoni
         }
 
         public bool debugGizmosEnabled;
-        
         private void OnDrawGizmos()
         {
             if (debugGizmosEnabled)

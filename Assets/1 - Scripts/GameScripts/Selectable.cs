@@ -15,50 +15,60 @@ namespace ProjectColoni
         [Header("Selectable")]
         public bool selected;
         
-        private OutlineRelay _outline;
+        [HideInInspector] public OutlineRelay outline;
         private SelectionManager _selectionManager;
 
         [HideInInspector] public Collider objectCollider;
+        
+        [Header("BaseData")]
+        [Tooltip("If null, will generate random values for the base data.")] 
+        [SerializeField] private BaseScriptableData baseData;
+        public BaseObjectData baseObjectInfo;
 
-
-
+        
         private void Start()
         {
             InitializeSelectable();
         }
-        
+
         protected void InitializeSelectable()
         {
-            
             _selectionManager = SelectionManager.Instance;
             objectCollider = GetComponent<Collider>();
             
-            _outline = GetComponentInChildren<OutlineRelay>();
-            _outline.OutlineWidth = _selectionManager.outlineWidth;
-            _outline.OutlineColor = _selectionManager.selectedColor;
+            outline = GetComponentInChildren<OutlineRelay>();
+            outline.OutlineWidth = _selectionManager.outlineWidth;
+            outline.OutlineColor = _selectionManager.hoverOverColor;
+            
+            InitializeBaseObjectData();
         }
         
+        /// <summary>
+        /// Initialize base data from a scriptable object if one is available .
+        /// </summary>
+        private void InitializeBaseObjectData()
+        {
+            baseObjectInfo = baseData != null ? new BaseObjectData(StaticUtility.GenerateUniqueHashId(), baseData.objectName, baseData.description, baseData.spriteTexture) 
+                : new BaseObjectData(StaticUtility.GenerateUniqueHashId(), "", "", null); //should generate random base stats, maybe
+        }
         private void Update() //if inheriting, must update from top class
         {
-            
-            if (!EventSystem.current.IsPointerOverGameObject())
-            {
-                OutlineHighlight();
-            }
-
+            OutlineHighlight();
         }
 
         private Color _tempColor;
         
         protected void OutlineHighlight()
         {
-            _outline.meshRenderer.sharedMaterials = _outline.outlineMaterials;
-            _outline.OutlineColor = Color.Lerp(_outline.OutlineColor, _tempColor, _selectionManager.fadeSpeed * Time.deltaTime);
+            if (EventSystem.current.IsPointerOverGameObject()) return;
+            
+            outline.meshRenderer.sharedMaterials = outline.outlineMaterials;
+            outline.OutlineColor = Color.Lerp(outline.OutlineColor, _tempColor, _selectionManager.fadeSpeed * Time.deltaTime);
 
             if (selected)
             {
                 _tempColor = _selectionManager.selectedColor;
-
+                
                 return;
             }
             
@@ -70,42 +80,40 @@ namespace ProjectColoni
                 return;
             }*/
             
-            if (_selectionManager.hoveringObject != null && _selectionManager.hoveringObject.Equals(this))
+            if (SelectionManager.HoveringObject != null && SelectionManager.HoveringObject.Equals(this))
             {
                 _tempColor = _selectionManager.hoverOverColor;
 
                 return;
             }
 
-            if (_selectionManager.currentlySelectedObject == this && _selectionManager.hoveringObject == this) return;
+            if (SelectionManager.CurrentlySelectedObject == this && SelectionManager.HoveringObject == this) return;
             
             _tempColor = Color.clear;
 
-            if (_outline.OutlineColor.a <= 0.5f)
+            if (outline.OutlineColor.a <= 0.5f)
             {
-                _outline.meshRenderer.sharedMaterials = _outline.cachedMaterials;
+                outline.meshRenderer.sharedMaterials = outline.cachedMaterials;
             }
         }
 
         private void OnMouseEnter()
         {
-            _selectionManager.hoveringObject = this;
+            SelectionManager.HoveringObject = this;
         }
 
         private void OnMouseDown()
         {
-            _selectionManager.SelectObject(this);
+            if (EventSystem.current.IsPointerOverGameObject()) return;
+            
+            EventRelay.OnObjectSelected(this);
+            //SelectionManager.SelectObject(this);
         }
 
         private void OnMouseExit()
         {
-            if(_selectionManager.hoveringObject.Equals(this))
-                _selectionManager.hoveringObject = null;
-        }
-
-        private void OnMouseOver()
-        {
-            
+            if(SelectionManager.HoveringObject.Equals(this))
+                SelectionManager.HoveringObject = null;
         }
     }
 }

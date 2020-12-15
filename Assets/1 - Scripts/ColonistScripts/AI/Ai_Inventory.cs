@@ -15,10 +15,10 @@ namespace ProjectColoni
         private void OnEnable()
         {
             EventRelay.OnItemPickedUp += AddItemToInventory;
-            EventRelay.OnItemDropped += DropItem;
+            EventRelay.OnItemDropped += DropInventoryItem;
         }
 
-        private void AddItemToInventory(Item item)
+        private void AddItemToInventory(AiController controller, Item item)
         {
             if (holdingItems.ContainsKey(item.baseObjectInfo.Id) || 
                 (currentWeight + item.itemTypeData.itemData.itemWeight) > weightLimit) return;
@@ -27,10 +27,11 @@ namespace ProjectColoni
             currentWeight += item.itemTypeData.itemData.itemWeight;
             
             SetItemTransform(item, inventoryHolder.transform, new Vector3(0,0,0), false);
-            UI_SelectionController.Instance.inventoryPanelController.UpdateInventoryUi(item, true); //fix
+
+            EventRelay.OnInventoryUpdated(controller);
         }
         
-        private void DropItem(Item item)
+        private void DropInventoryItem(AiController controller, Item item)
         {
             if (!holdingItems.ContainsKey(item.baseObjectInfo.Id)) return;
             
@@ -40,7 +41,8 @@ namespace ProjectColoni
             SetItemTransform(item, null, item.usedBy.transform.position + new Vector3(0,1.4f,0), true);
             item.GetComponent<Rigidbody>().AddForce(transform.forward + new Vector3(0,1,0) * 2, ForceMode.VelocityChange);
             
-            UI_SelectionController.Instance.inventoryPanelController.UpdateInventoryUi(item, false);
+            //EventRelay.OnItemDropped(controller, item);
+            EventRelay.OnInventoryUpdated(controller);
         }
 
         public void DropEquippedItem(Item item)
@@ -53,7 +55,7 @@ namespace ProjectColoni
             SetItemTransform(item, null, item.usedBy.transform.position + new Vector3(0,1.4f,0), true);
             item.GetComponent<Rigidbody>().AddForce(new Vector3(0,1,1), ForceMode.VelocityChange);
             
-            UI_SelectionController.Instance.inventoryPanelController.ClearEquipmentSlotData(item);
+            //UI_Controller.Instance.inventoryPanelController.ClearEquipmentSlotData(item);
         }
 
         private void SetItemTransform(Item item, Transform setParent, Vector3 setPosition, bool active)

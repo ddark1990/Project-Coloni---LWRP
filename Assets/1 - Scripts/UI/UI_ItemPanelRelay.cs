@@ -10,7 +10,7 @@ namespace ProjectColoni
 
         private void OnEnable()
         {
-            UI_SelectionController.Instance.itemPanelRelay = this;
+            UI_SelectionController.ItemPanelRelay = this;
         }
     }
 }

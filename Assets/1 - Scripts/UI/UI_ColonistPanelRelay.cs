@@ -25,7 +25,7 @@ namespace ProjectColoni
 
         private void OnEnable()
         {
-            UI_SelectionController.Instance.colonistPanelRelay = this;
+            UI_SelectionController.ColonistPanelRelay = this;
         }
     }
 }

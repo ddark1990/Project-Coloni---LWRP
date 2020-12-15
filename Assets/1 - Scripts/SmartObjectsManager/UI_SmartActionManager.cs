@@ -69,19 +69,19 @@ namespace ProjectColoni
             //Debug.Log("Right Clicked On: " + _hit.collider);
             //DebugSelectedRightClick(currentlySelectedObject, hit);
 
-            if (_selectionManager.currentlySelectedObject == null) return;
+            if (SelectionManager.CurrentlySelectedObject == null) return;
                 
-            switch (_selectionManager.currentlySelectedObject)
+            switch (SelectionManager.CurrentlySelectedObject)
             {
                 //if colonist is selected, colonist related actions for that object are presented
                 case AiController aiController:
                     switch (aiController.aiStats.stats.gender)
                     {
                         case Stats.Gender.Male:
-                            ToggleRightClickPanel(aiController, _selectionManager.hoveringObject as SmartObject);
+                            ToggleRightClickPanel(aiController, SelectionManager.HoveringObject as SmartObject);
                             break;
                         case Stats.Gender.Female:
-                            ToggleRightClickPanel(aiController, _selectionManager.hoveringObject as SmartObject);
+                            ToggleRightClickPanel(aiController, SelectionManager.HoveringObject as SmartObject);
                             break;
                         case Stats.Gender.Robot:
                             break;
@@ -114,7 +114,7 @@ namespace ProjectColoni
         
         private void PopulateActionButtonsData(AiController aiController, SmartObject smartObject)
         {
-            var collectionOfActions = _selectionManager.hoveringObject.GetComponentInChildren<SmartObject>().smartActionDictionary;
+            var collectionOfActions = SelectionManager.HoveringObject.GetComponentInChildren<SmartObject>().smartActionDictionary;
             
             var collectionIndex = 0;
             foreach (var action in collectionOfActions)

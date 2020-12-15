@@ -30,7 +30,7 @@ namespace ProjectColoni
         private void PickUp(AiController aiController, SmartObject smartObject)
         {
             //event
-            EventRelay.OnItemPickedUp(smartObject as Item);
+            EventRelay.OnItemPickedUp(aiController, smartObject as Item);
         }
     }
 }

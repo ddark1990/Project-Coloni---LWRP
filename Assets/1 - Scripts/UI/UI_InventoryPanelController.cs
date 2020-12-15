@@ -10,18 +10,74 @@ namespace ProjectColoni
         [SerializeField] private List<UI_InventorySlot> inventorySlots;
         [SerializeField] private List<UI_EquipmentSlot> equipmentSlots;
 
-        private AiController _controller;
-        
-        public void UpdateInventoryUi(Item item, bool active)
+
+        [SerializeField] private List<UI_InventorySlot> tempInventorySlots;
+
+        [SerializeField] private GameObject inventorySlotPrefab;
+        [SerializeField] private GameObject inventoryHolderContent;
+
+        public void PopulateInventoryData(AiController controller)
         {
-            if (SelectionManager.Instance.currentlySelectedObject == null || SelectionManager.Instance.currentlySelectedObject as AiController == null) return;
+            ClearInventoryUISlots();
+            
+            foreach (var item in controller.inventory.holdingItems)
+            {
+                var slot = Instantiate(inventorySlotPrefab, inventoryHolderContent.transform).GetComponent<UI_InventorySlot>();
+                
+                tempInventorySlots.Add(slot);
+                slot.active = true;
 
-            _controller = SelectionManager.Instance.currentlySelectedObject as AiController;
+                slot.itemReference = item.Value;
+                    
+                slot.itemName.text = item.Value.baseObjectInfo.ObjectName;
+                slot.itemDescription.text = item.Value.baseObjectInfo.Description;
+                slot.itemCount.text = UI_SelectionController.CachedIntToString[item.Value.ItemCount];
+                    
+                slot.itemWeight.text = UI_SelectionController.CachedIntToString[(int)item.Value.itemTypeData.itemData.itemWeight];
+                    
+                slot.itemIcon.sprite = item.Value.itemTypeData.itemData.inventorySprite;
+                    
+                slot.dropButton.onClick.AddListener(delegate { EventRelay.OnItemDropped(controller, item.Value); });
+                
+                switch (item.Value.itemTypeData)
+                {
+                    case Consumable consumable:
+                            
+                        break;
+                    case Resource resource:
 
+                        break;
+                    case Weapon weapon:
+                            
+                        slot.equipButton.onClick.AddListener(delegate { EventRelay.OnItemEquipped(controller, item.Value); });
+                            
+                        break;
+                }
+            }
+        }
+
+        public void ClearInventoryUISlots()
+        {
+            if (tempInventorySlots.Count == 0) return;
+            
+            foreach (var slot in tempInventorySlots)
+            {
+                Destroy(slot.gameObject);
+            }
+            
+            tempInventorySlots.Clear();
+        }
+        
+        /*
+        #region #1
+        public void UpdateInventoryUi(AiController controller, Item item, bool active)
+        {
+            if (SelectionManager.CurrentlySelectedObject == null || SelectionManager.CurrentlySelectedObject as AiController == null) return;
+            
             if(active)
-                ActivateInventorySlotData(item, _controller);
+                ActivateInventorySlotData(item, controller);
             else
-                ClearInventorySlotData(item, _controller);
+                ClearInventorySlotData(item, controller);
         }
         private void ClearInventorySlotData(Item item, AiController controller)
         {
@@ -49,7 +105,7 @@ namespace ProjectColoni
                     
                 slot.itemWeight.text = string.Empty;
                     
-                slot.itemIcon.sprite = null;*/
+                slot.itemIcon.sprite = null;#1#
 
                 //SetCanvasGroupSettings(slot.canvasGroup, 0, false);
                 slot.gameObject.SetActive(false);
@@ -68,38 +124,26 @@ namespace ProjectColoni
                     
                     slot.itemName.text = item.baseObjectInfo.ObjectName;
                     slot.itemDescription.text = item.baseObjectInfo.Description;
-                    slot.itemCount.text = UI_SelectionController.CachedIntToString[item.itemCount];
+                    slot.itemCount.text = UI_SelectionController.CachedIntToString[item.ItemCount];
                     
                     slot.itemWeight.text = UI_SelectionController.CachedIntToString[(int)item.itemTypeData.itemData.itemWeight];
                     
                     slot.itemIcon.sprite = item.itemTypeData.itemData.inventorySprite;
                     
-                    slot.dropButton.onClick.AddListener(delegate { EventRelay.OnItemDropped(item); });
+                    slot.dropButton.onClick.AddListener(delegate { EventRelay.OnItemDropped(controller, item); });
 
-                    var useCanvasGroup = slot.useButton.GetComponent<CanvasGroup>();
-                    var dropCanvasGroup = slot.dropButton.GetComponent<CanvasGroup>();
-                    var equipCanvasGroup = slot.equipButton.GetComponent<CanvasGroup>();
                     
                     switch (item.itemTypeData)
                     {
                         case Consumable consumable:
-                            SetCanvasGroupSettings(useCanvasGroup, 1, true);
-                            SetCanvasGroupSettings(dropCanvasGroup, 1, true);
-                            SetCanvasGroupSettings(equipCanvasGroup, 0, false);
                             
                             break;
                         case Resource resource:
-                            SetCanvasGroupSettings(useCanvasGroup, 0, false);
-                            SetCanvasGroupSettings(dropCanvasGroup, 1, true);
-                            SetCanvasGroupSettings(equipCanvasGroup, 0, false);
 
                             break;
                         case Weapon weapon:
-                            SetCanvasGroupSettings(useCanvasGroup, 0, false);
-                            SetCanvasGroupSettings(dropCanvasGroup, 1, true);
-                            SetCanvasGroupSettings(equipCanvasGroup, 1, true);
                             
-                            slot.equipButton.onClick.AddListener(delegate { EventRelay.OnItemEquipped(item); });
+                            slot.equipButton.onClick.AddListener(delegate { EventRelay.OnItemEquipped(controller, item); });
                             
                             break;
                     }
@@ -114,9 +158,9 @@ namespace ProjectColoni
         
         public void UpdateEquipmentUi(Item item, EquipmentSlot equipmentSlot, bool active)
         {
-            if (SelectionManager.Instance.currentlySelectedObject == null || SelectionManager.Instance.currentlySelectedObject as AiController == null) return;
+            if (SelectionManager.CurrentlySelectedObject == null || SelectionManager.CurrentlySelectedObject as AiController == null) return;
 
-            var controller = SelectionManager.Instance.currentlySelectedObject as AiController;
+            var controller = SelectionManager.CurrentlySelectedObject as AiController;
 
             if(active)
                 ActivateEquipmentSlotData(item, controller, equipmentSlot);
@@ -145,8 +189,8 @@ namespace ProjectColoni
                     SetCanvasGroupSettings(_dropButtonCanvasGroup, 1, true);
                     SetCanvasGroupSettings(_unEquipButtonCanvasGroup, 1, true);
                     
-                    slot.unEquipButton.onClick.AddListener(delegate { EventRelay.OnItemUnEquipped(item); });
-                    slot.dropButton.onClick.AddListener(delegate { EventRelay.OnItemDropped(item); });
+                    slot.unEquipButton.onClick.AddListener(delegate { EventRelay.OnItemUnEquipped(controller,item); });
+                    slot.dropButton.onClick.AddListener(delegate { EventRelay.OnItemDropped(controller,item); });
                     
                 }
             }
@@ -172,5 +216,8 @@ namespace ProjectColoni
             canvasGroup.alpha = alpha;
             canvasGroup.interactable = interactive;
         }
+        #endregion
+        */
+        
     }
 }

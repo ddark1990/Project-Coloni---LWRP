@@ -12,5 +12,13 @@ namespace ProjectColoni
         }
             
         public ResourceType resourceType;
+        public StackLevel[] stackLevels;
+
+        [Serializable]
+        public struct StackLevel
+        {
+            public string name;
+            public Mesh skin;
+        }
     }
 }

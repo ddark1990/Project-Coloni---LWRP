@@ -17,9 +17,13 @@ namespace ProjectColoni
 
         private void Update()
         {
-            if (SelectionManager.Instance.currentlySelectedObject == null) return;
+            if (SelectionManager.CurrentlySelectedObject == null)
+            {
+                _image.color = Color.white; //set to default color
+                return;
+            }
             
-            _image.color = SelectionManager.Instance.currentlySelectedObject.GetComponent<AiController>().moveFaster
+            _image.color = SelectionManager.CurrentlySelectedObject.GetComponent<AiController>().moveFaster
                 ? Color.green
                 : Color.white;
         }
